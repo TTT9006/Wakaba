@@ -222,12 +222,20 @@ import { jlptN5Paper201307 } from './jlpt-papers-n5-2013-07';
 import { jlptN5Paper201212 } from './jlpt-papers-n5-2012-12';
 import { jlptN5Paper20102011 } from './jlpt-papers-n5-2010-2011';
 import { jlptN4Paper202407 } from './jlpt-papers-n4-2024-07';
+import { jlptN4Paper202112 } from './jlpt-papers-n4-2021-12';
+import { jlptN4Paper202107 } from './jlpt-papers-n4-2021-07';
 import { jlptN4Paper201707 } from './jlpt-papers-n4-2017-07';
 import { jlptN3Paper202307 } from './jlpt-papers-n3-2023-07';
 import { jlptN3Paper202207 } from './jlpt-papers-n3-2022-07';
+import { jlptN3Paper202112 } from './jlpt-papers-n3-2021-12';
+import { jlptN3Paper202107 } from './jlpt-papers-n3-2021-07';
+import { jlptN3Paper201812 } from './jlpt-papers-n3-2018-12';
 import { jlptN2Paper202307 } from './jlpt-papers-n2-2023-07';
 import { jlptN2Paper202207 } from './jlpt-papers-n2-2022-07';
+import { jlptN2Paper202112 } from './jlpt-papers-n2-2021-12';
 import { jlptN1Paper202307 } from './jlpt-papers-n1-2023-07';
+import { jlptN1Paper202212 } from './jlpt-papers-n1-2022-12';
+import { jlptN1Paper202207 } from './jlpt-papers-n1-2022-07';
 
 export const jlptPracticePapers = (['N5', 'N4', 'N3', 'N2'] as const).map(makePaper);
 export const jlptOfficialPapers: JlptPaper[] = [
@@ -239,12 +247,20 @@ export const jlptOfficialPapers: JlptPaper[] = [
   jlptN5Paper201212,
   jlptN5Paper20102011,
   jlptN4Paper202407,
+  jlptN4Paper202112,
+  jlptN4Paper202107,
   jlptN4Paper201707,
   jlptN3Paper202307,
   jlptN3Paper202207,
+  jlptN3Paper202112,
+  jlptN3Paper202107,
+  jlptN3Paper201812,
   jlptN2Paper202307,
   jlptN2Paper202207,
+  jlptN2Paper202112,
   jlptN1Paper202307,
+  jlptN1Paper202212,
+  jlptN1Paper202207,
 ];
 export const jlptPapers: JlptPaper[] = [...jlptPracticePapers, ...jlptOfficialPapers];
 export function paperSummary(p: JlptPaper): JlptSummary {

@@ -1212,7 +1212,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "2",
           "explanation": "Nội dung đối thoại chỉ ra hành động cần làm đầu tiên.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q01.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "では、始めます。\n問題1\n会社で、男の人と女の人が話しています。\n男の人は、まず何をしますか?\n山口さん、倉庫の整理どう?進んでる? 手伝いに来たよ。\nありがとう。\n何すればいい? ゴミ随分あるから捨ててこようか?\nそれは最後でいいよ。\nそれより古い資料の整理をお願いできる? 箱の中にたくさんあるんだけど。\nあ、これだね。\nうん。それ、棚に並べてほしいんだ。\nあ、その前に棚を拭いてくれる?\nわかった。\nそれから、後でコピー用紙事務所に運ぶのを手伝ってくれない?\nいいよ。\n男の人は、まず何をしますか?"
         },
         {
           "id": "n3-2022-07-l02",
@@ -1229,7 +1230,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "4",
           "explanation": "Nội dung chuẩn bị đồ dùng theo hướng dẫn.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q02.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "男の人は、まず何をしますか?\n2番\nレストランで、男の店長と女の店員が話しています。\n女の店員は、メニューにどんな情報を加えますか?\nテーブルに置いているメニューを作り替えようと思ってるんだけど、\n吉田さん、パソコンでそういうのを作るの、上手だったよね。お願いできる?\nはい。\n今は、料理の写真と名前と値段だけしか載せてないから、もう少し情報を加えたいと思ってるんだ。\nああ、料理の味とかカロリーとか、メニューに載ってるといいなと思ってました。\nうーん。味の説明は難しいからね。\nそうじゃなくて、アレルギーとか健康の問題で食べられないものがある人がいるでしょ?\nだから、卵とかエビとか、何を使ってるか載せた方がいいと思うんだ。写真だけじゃよく分からないしね。\nそうですね。分かりました。\n後でメモを渡すよ。カロリーも載せたいけど、計算しないといけないからね。それはまたの機会にしよう。\n女の店員は、メニューにどんな情報を加えますか?"
         },
         {
           "id": "n3-2022-07-l03",
@@ -1246,7 +1248,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "1",
           "explanation": "Địa điểm di chuyển tiếp theo.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q03.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "女の店員は、メニューにどんな情報を加えますか?\n3番。\n駅の観光案内の事務所で、女の人と係の男の人が話しています。\n女の人は、全部でいくらお金を払いますか?\nすみません。こちらでスーツケースを預かってもらえるって聞いたんですけど。\nええ。一つ、1日500円で預かりますよ。\nこちらは午後6時までですので、それまでにお戻りください。\n2つお願いしたいので、1000円ですね。\nでも、6時までに戻ってこられないかも。\nあの、今日はどちらかにお泊まりになりました?\nええ。緑ホテルです。駅から少し遠いので、この辺で観光してからチェックインしようと思って。\nそれなら荷物をお泊まりになるホテルに配達するサービスもありますよ。\n荷物をお預かりする料金のほかに配達量がかかりますが、配達量はいくつでも600円です。\nじゃあ、ぜひお願いします。これで時間を気にしないでゆっくり観光できます。\nええ、ゆっくり楽しんでください。\nそれから、すみません。料金は先にお願いします。\n女の人は、全部でいくらお金を払いますか?"
         },
         {
           "id": "n3-2022-07-l04",
@@ -1263,7 +1266,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "3",
           "explanation": "Thời hạn nộp tài liệu trong ngày.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q04.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "女の人は、全部でいくらお金を払いますか?\n4番。\n大学の国際交流会で、大学の人が留学生に話しています。\n留学生は、この後まず、何をしますか?\nこの前の交流会では、ビデオでこの街のお祭りの様子や、お祭りで踊っている様子を見ましたね。\n今日は、踊りの先生をお呼びしました。\nこの街のお祭りで、よく踊る踊りを教えてもらいましょう。\n浴衣を準備してありますから、あちらの部屋で着替えてきてください。\n手伝ってくださる方たちがいらっしゃいます。\n着替え終わったら、服やカバンはこの部屋の後ろにおいてください。\nみんな準備ができたら、早速踊りの練習を始めましょう。\n留学生は、この後まず、何をしますか?"
         },
         {
           "id": "n3-2022-07-l05",
@@ -1280,7 +1284,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "2",
           "explanation": "Hành động tiếp theo của nữ sinh.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q05.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "留学生は、この後まず、何をしますか?\n5番。\n会社で、女の人と男の人が話しています。\n男の人は、何をしなければなりませんか?\n田中さん。\nこの間話しましたけど、明日からいらっしゃる海外のお客様の通訳。\nよろしくお願いしますね。\nはい。空港に到着されるのは午前10時半でしたね。\nええ。お迎え、お願いしますね。\nあさって、工場見学の予定が入っていますが、その時は工場の社員が通訳もしてくれることになりました。\n田中さんは、この日はお客様の方は何もしなくてもいいので、いつもの仕事をしてください。\nわかりました。\n会議の通訳など、その他の予定は変わっていませんので、お願いします。\nはい。\nあ、お帰りになる時にお渡しするお土産、買わなくちゃ。\n私、何か見てきましょうか。今日は夕方、時間があるので。\nありがとう。でも大丈夫。\nこの間、デパートに行った時、素敵なものを見つけましたから。\n男の人は、何をしなければなりませんか?"
         },
         {
           "id": "n3-2022-07-l06",
@@ -1297,7 +1302,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "1",
           "explanation": "Môn học được nam sinh lựa chọn đăng ký.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q06.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "男の人は、何をしなければなりませんか?\n6番。\n大学で、男の学生と女の学生が話しています。\n男の学生は、どの科目を選択しますか?\n先輩、専門科目をあと一つ選ばなくちゃいけないんですけど、\n産業の歴史とアジアの経済学とどっちにするか悩んでるんです。\n産業の歴史は、毎週レポート出さなくちゃいけなくて大変だったよ。\n勉強になったけどね。\nえ、毎週?内容は一番興味があるんですけど、あの、アジアの経済学は取りましたか?\nうん。レポートはなかったけど、事業が進むのが早くて、ついていくのが本当に大変だった。\nあ、貿易関係の仕事がしたいって言ってたよね。\n国際関係学はどう?役に立つと思うけど。\nあ、それ、去年取りました。\nそうなんだ。\nあとは、社会学研究もあるけど、あんまり興味ない?\nそうですね。\nじゃあやっぱり、一番興味があるの頑張ってみたら?\nレポート大変かもしれないけど、勉強になると思うよ。\nそうですね。そうします。\n男の学生はどの科目を選択しますか?"
         },
         {
           "id": "n3-2022-07-l07",
@@ -1314,7 +1320,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "3",
           "explanation": "Lý do chính người nam quyết định vào công ty.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q07.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "では、始めます。\n一番。\n大学で、女の留学生と男の留学生が話しています。\n男の留学生は、どこで、どんな方法で調査をすると言っていますか?\nミンさん、卒業論文のテーマ、決めた?\nうん。日本企業で働く外国人の仕事に対する考え方に興味があって、\nそれを調査しようと思ってるんだ。\n面白そうだね。\nじゃあ、アンケートとか取るの?\nそれも考えたんだけど、それよりインタビューでいろいろ聞くことにしたよ。\n協力してくれる人とか、会社とか、見つかったの?\nうん。自分の国にある日本の会社にいくつかお願いしてあるんだ。\n夏休みに帰国するから、その時に。\nえ、日本じゃなくて?\n日本にある会社については、結構調査されてるし、\n海外の日本企業で働いている人の考え方を知りたくて。\n男の留学生は、どこで、どんな方法で調査をすると言っていますか?"
         },
         {
           "id": "n3-2022-07-l08",
@@ -1331,7 +1338,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "2",
           "explanation": "Nguyên nhân đến muộn.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q08.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "男の留学生は、どこで、どんな方法で調査をすると言っていますか?\n2番。\n女の人と男の人が、ある温泉について話しています。\n男の人は女の人に、何の情報をメールで送りますか?\n来月、初めて光温泉に行くんです。\n松本さんは光温泉、何度も言ってるんですよね。\nどこかいいところあったら、教えてくれませんか?\nああ、藤旅館っていう景色がすごくいい旅館があるんですけど、\n泊まるところ、もう予約しましたか?\nあ、その旅館、調べたんですけど、\nちょっと高いと思って、もう別のところ予約してあるんです。\nそうですか。\nあとは、あのあたりはそばも有名ですし、新しくできた和菓子の店もありますよ。\n甘いものは苦手ですけど、おそばはいいですね。\nお昼はおそばにします。\nじゃあ、美味しい店いくつか知ってるから、\n後でメールで情報を送りますよ。\nあとは…\nうーん、いつも行く土産物屋、先月平転しちゃったんです。\n種類が多くて良かったんですけど。\nそうなんですか。残念。\n男の人は女の人に、何の情報をメールで送りますか?"
         },
         {
           "id": "n3-2022-07-l09",
@@ -1348,7 +1356,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "4",
           "explanation": "Khó khăn lớn nhất mà cô gái gặp phải.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q09.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "男の人は女の人に、何の情報をメールで送りますか?\n3番。\n大学で、女の学生と男の学生が話しています。\n男の学生は、どうして熟のアルバイトをやめたと言っていますか?\n西村君、熟の先生のアルバイトをやめたんだって?\n面白いって言ってたのに、何かあったの?\nうん。色々考えてね。時給は悪くなかったんだけど。\nもっと良いアルバイト見つかったの?\nいや、そうじゃないんだけど。\nゼミでレポートが多いし、他の授業も難しくなってきたから、\nもっと勉強に時間を使いたいんだ。\n授業の準備に時間が取られるからね。\nそうか。\n頑張って成績が上がったら、小学金がもらえるかもしれないし。\nそうなるといいね。\n男の学生は、どうして授業のアルバイトをやめたと言っていますか?"
         },
         {
           "id": "n3-2022-07-l10",
@@ -1365,7 +1374,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "1",
           "explanation": "Dịch vụ được hai người thống nhất đặt chỗ.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q10.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "男の学生は、どうして授業のアルバイトをやめたと言っていますか?\n4番。\n男の留学生と女の留学生が話しています。\n女の留学生は、どうしてインターネットに日記を書き始めましたか?\nリオさん、毎日インターネットに日記を書いてるんだって?\nうん。\n見たもの、食べたもの、言ったところなんか、毎日の生活を写真に撮って載せて、その説明を書いてる。\n撮ったものを色んな人に見てほしくて始めたんだ。\n日本に来る前からなんだけどね。\nそうなんだ。\n日本に来てからは、国の家族や友人も見てくれるようになって、喜んでるみたい。\nどうしてるか、心配してたみたいで。\nそっか。\n最近、日本語で書くこともあるんだけど、読んだ人から日本語でメッセージをもらったりして交流するのが楽しいんだ。\n女の留学生は、どうしてインターネットに日記を書き始めましたか?"
         },
         {
           "id": "n3-2022-07-l11",
@@ -1382,7 +1392,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "2",
           "explanation": "Lý do quan trọng nhất khiến anh ấy chuyển nhà.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q11.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "女の留学生は、どうしてインターネットに日記を書き始めましたか?\n5番。\n社長が会議で商品について話しています。\n社長はこの商品をどう買えると言っていますか?\n去年の春に出したバッグは、人気商品になりました。\n若者が好きそうな、明るい色やデザイン。\n買いやすい値段にしたのが良かったのでしょう。\nしかし、買った人に行った調査では、価格とサイズは良いが、少し重いと感じている人が多いことが分かりました。\n今後は、今の色やサイズはそのままで、材料をもう少し軽いものにしたいと思います。\n価格をあげずにどうするか、工夫が必要です。\n社長はこの商品をどう買えると言っていますか?"
         },
         {
           "id": "n3-2022-07-l12",
@@ -1399,7 +1410,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "3",
           "explanation": "Điều tuyệt vời nhất thu được sau chuyến du học theo lời giáo viên.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q12.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "社長はこの商品をどう買えると言っていますか?\n6番。\n留学説明会で先生が話しています。\n先生は、留学して一番良かったことは何だと言っていますか?\n私も学生時代、留学した経験がありますが、留学していろいろ学ぶことができました。\nその国で生活することで、言葉が話せるようになるだけでなく、その国の文化がよくわかりましたし、自分の国についても初めて気付くことがありました。\n留学した時には、ぜひそこで友人を作ってください。\n私は、言葉や文化など国の違いを超えて、何でも話せる友人を作ることができました。\nそれが、留学して、最も意味があったことだと思います。\n先生は、留学して一番良かったことは何だと言っていますか?\nここで、ちょっと休みましょう。\nでは、また続けます。"
         },
         {
           "id": "n3-2022-07-l13",
@@ -1416,7 +1428,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "1",
           "explanation": "Nội dung khái quát lời khuyên của tiền bối khi mới vào công ty.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q13.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "では、始めます。\n1番\n会社で、女の人が侵入者員と話しています。\n松本さん。会社に入って半年だけど、どう?\n一生懸命やってるんですが、わからないことが多くて、最近疲れてしまって。\n自分で過去の資料を調べて、書類作ってみたりしてるんですが、間違ってて、結局やり直すことになるんです。\n松本さんは、何でも一人でやろうとしすぎるんじゃない?\n質問したいことがあっても、皆さん忙しそうで話しかけにくくて。\n私は、会社に入ってすぐの頃は、人に質問ばかりしてたよ。\nみんな最初はそうなんだから、わかってくれると思うけど。\nそうですか。\n人に頼ることは悪いことじゃないんだから。私にも遠慮しないでね。\nありがとうございます。\n女の人が伝えたいことは何ですか?\n1\n疲れた時は休んだほうがいい。\n2\n過去の資料を調べたほうがいい。\n3\n何でも自分でやったほうがいい。\n4\nわからないことは聞いたほうがいい。"
         },
         {
           "id": "n3-2022-07-l14",
@@ -1433,7 +1446,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "2",
           "explanation": "Chủ đề bài chia sẻ.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q14.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "わからないことは聞いたほうがいい。\n2番\nラジオでアナウンサーが話しています。\nキッチンか。つまりキッチンがついている車ですが、\nこれを利用して車の中で料理をして売る持ち帰り専門の店が増えています。\n実際にキッチンカーでカレーの店を経営している男性に話を聞くと、\n複数の場所に移動してお客さんを増やせる点に可能性を感じたと言っていました。\nまた、キッチンカーでカフェを経営している女性に話を聞くと、\nキッチンカー一台あれば店が開けるので、お金があまりかからないのがいい点だと話してくれました。\nこのような形で店を出す人が、これからも増えていきそうですね。\nアナウンサーは何について話していますか?\n1\nキッチンカーの店に来る客のタイプ\n2\nキッチンカーの店で人気の料理\n3\nキッチンカーで店を開くことのいい点\n4\nキッチンカーで店を開く方法"
         },
         {
           "id": "n3-2022-07-l15",
@@ -1450,7 +1464,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "4",
           "explanation": "Chủ đề bài nói.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q15.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "キッチンカーで店を開く方法\n3番\nテレビで女の人が話しています。\n秋ですね。\n秋の果物といえば、やっぱり柿をイメージしますね。\n柿は日本では、リンゴや未冠に比べると消費量が少ないですが、\n風を引きにくくすると言われるビタミンが、未冠の2倍もあるんです。\nまた、2日よりや血圧の高い人にも良いそうです。\n昔から、柿を食べれば医者は要らない、という言葉もあります。\n美味しい柿を食べて、元気に過ごしたいですね。\n女の人は何について話していますか?\n1\n柿のイメージの変化\n2\n柿の消費量が少ない理由\n3\n柿の栄養とその効果\n4\n柿の美味しい食べ方"
         },
         {
           "id": "n3-2022-07-l16",
@@ -1466,7 +1481,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "1",
           "explanation": "Mẫu câu diễn đạt phù hợp với tình huống trong hình.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q16.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "1から3の中から、最も良いものを1つ選んでください。\nでは、始めます。\n1\nレストランでスプーンが使いたいですが、ありません。\n定員に何と言いますか?\n1\nあのスプーン、いただけますか?\n2\nあのスプーン、お使いください。\n3\nあのスプーン、いりません。"
         },
         {
           "id": "n3-2022-07-l17",
@@ -1482,7 +1498,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "3",
           "explanation": "Mẫu câu diễn đạt phù hợp với tình huống trong hình.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q17.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "あのスプーン、いりません。\n2番\n店で、友達がTシャツを探しています。\n友達に良さそうなTシャツを見つけました。\n何と言いますか?\n1\nこれ、来てみていい?\n2\nこれ、買うのやめたら?\n3\nこれ、いいんじゃない?"
         },
         {
           "id": "n3-2022-07-l18",
@@ -1498,7 +1515,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "2",
           "explanation": "Mẫu câu diễn đạt phù hợp với tình huống trong hình.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q18.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "これ、いいんじゃない?\n3番\nテストを返してもらいました。\n先生の点数の計算に間違いがありました。\n何と言いますか?\n1\nあの、間違っているところを教えてください。\n2\nあの、点数の計算、もうやり直しません。\n3\nあの、点数の合計があっていないと思うんですけど。"
         },
         {
           "id": "n3-2022-07-l19",
@@ -1514,7 +1532,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "1",
           "explanation": "Mẫu câu diễn đạt phù hợp với tình huống trong hình.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q19.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "あの、点数の合計があっていないと思うんですけど。\n4番\n来月、はじめの1週間、休みをとりたいです。\n課長に何と言いますか?\n1\n来月、はじめの1週間、休んでもらえませんか?\n2\n来月、はじめの1週間、休ませていただけませんか?\n3\n来月、はじめの1週間、休みをあげてください。\n5"
         },
         {
           "id": "n3-2022-07-l20",
@@ -1530,7 +1549,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "2",
           "explanation": "Câu phản xạ đối đáp trong giao tiếp hàng ngày.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q20.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "では、はじめます。\n1番\nお客様、お茶のおかわり、いかがですか?\n1\nいえ、もう結構です。\n2\n他の飲み物はいりません。\n3\nじゃあ、変わってください。"
         },
         {
           "id": "n3-2022-07-l21",
@@ -1546,7 +1566,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "1",
           "explanation": "Câu phản xạ đối đáp trong giao tiếp hàng ngày.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q21.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "じゃあ、変わってください。\n2番\nあ、課長、お出かけですか?\n今にも雨が降り出しそうですよ。\n1\nあ、闇そうなんだ。良かった。\n2\nじゃあ、傘、持っていったほうが良さそうだね。\n3\nもう降り出したの?"
         },
         {
           "id": "n3-2022-07-l22",
@@ -1562,7 +1583,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "3",
           "explanation": "Câu phản xạ đối đáp trong giao tiếp hàng ngày.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q22.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "もう降り出したの?\n3番\nあの、明日の食事会なんですが、どうしても行けなくなったんです。\n1\nはっきり決まったら、教えてください。\n2\n良かったです。今からでも出席可能ですから。\n3\nそうですか、決席ですね。分かりました。"
         },
         {
           "id": "n3-2022-07-l23",
@@ -1578,7 +1600,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "2",
           "explanation": "Câu phản xạ đối đáp trong giao tiếp hàng ngày.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q23.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "そうですか、決席ですね。分かりました。\n4番\nああ、グループ発表明日だよね。教授に準備終わらせなきゃね。\n1\nやっと終わったね。\n2\n間に合うように頑張ろうね。\n3\nあ、今日準備しなくていいんだね。"
         },
         {
           "id": "n3-2022-07-l24",
@@ -1594,7 +1617,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "1",
           "explanation": "Câu phản xạ đối đáp trong giao tiếp hàng ngày.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q24.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "あ、今日準備しなくていいんだね。\n5番\n最近、野田先生いつ行っても研究室にいらっしゃらなくて。\n1\nいつもいらっしゃるの?\n2\n研究室には行ってみた?\n3\nそうなの?まずメールで約束したら?"
         },
         {
           "id": "n3-2022-07-l25",
@@ -1610,7 +1634,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "3",
           "explanation": "Câu phản xạ đối đáp trong giao tiếp hàng ngày.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q25.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "そうなの?まずメールで約束したら?\n6番\nこのコピーの機械、最近動かなくなることがあるんだよ。\n1\nもう全然動かないの?\n2\nああ、直してもらったんだね。\n3\n修理、頼んだほうがいいね。"
         },
         {
           "id": "n3-2022-07-l26",
@@ -1626,7 +1651,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "2",
           "explanation": "Câu phản xạ đối đáp trong giao tiếp hàng ngày.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q26.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "修理、頼んだほうがいいね。\n7番\n明日、海に行くの楽しみだね。\n道が込んでないといいね。\n1\nこまなくて良かったね。\n2\nこむのは嫌だよね。\n3\nえ、明日は込んでないの?"
         },
         {
           "id": "n3-2022-07-l27",
@@ -1642,7 +1668,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "1",
           "explanation": "Câu phản xạ đối đáp trong giao tiếp hàng ngày.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q27.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "え、明日は込んでないの?\n8番\n昨日貸してくれた漫画、読んでたら時間が経つのを忘れてたよ。\n1\nそうでしょ?面白いよね。\n2\nあ、好きじゃなかった?\n3\nえ、どこかに忘れたの?"
         },
         {
           "id": "n3-2022-07-l28",
@@ -1658,7 +1685,8 @@ export const jlptN3Paper202207: JlptPaper = {
           "answer": "3",
           "explanation": "Câu phản xạ đối đáp trong giao tiếp hàng ngày.",
           "audioUrl": "/audio/jlpt/n3-2022-07/q28.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "え、どこかに忘れたの?\n9番\nね、うちの会社で営業部の木村さんほどパソコンに詳しい人はいないよね。\n1\n木村さんに聞けば何でもわかるよね。\n2\n木村さん、パソコンのこと全然知らないよね。\n3\nえ、木村さん、どこにもいないの?"
         }
       ]
     }

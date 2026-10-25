@@ -23,6 +23,14 @@ Báo cáo kiểm tra tự động 4 tiêu chí chất lượng cho từng đoạ
 | JLPT N2 07/2022 | 31/31 (Đạt) | ✔ Hợp lệ | ✔ Hợp lệ | ✔ Đúng | `khớp tự động` | 0 câu |
 | JLPT N3 07/2022 | 28/28 (Đạt) | ✔ Hợp lệ | ✔ Hợp lệ | ✔ Đúng | `khớp tự động` | 0 câu |
 | JLPT N4 07/2017 | 28/28 (Đạt) | ✔ Hợp lệ | ✔ Hợp lệ | ✔ Đúng | `khớp tự động` | 0 câu |
+| JLPT N2 12/2021 | 30/30 (Đạt) | ✔ Hợp lệ | ✔ Hợp lệ | ✔ Đúng | `khớp tự động` | 0 câu |
+| JLPT N3 12/2021 | 28/28 (Đạt) | ✔ Hợp lệ | ✔ Hợp lệ | ✔ Đúng | `khớp tự động` | 0 câu |
+| JLPT N3 12/2018 | 28/28 (Đạt) | ✔ Hợp lệ | ✔ Hợp lệ | ✔ Đúng | `khớp tự động` | 0 câu |
+| JLPT N4 12/2021 | 28/28 (Đạt) | ✔ Hợp lệ | ✔ Hợp lệ | ✔ Đúng | `khớp tự động` | 0 câu |
+| JLPT N4 07/2021 | 28/28 (Đạt) | ✔ Hợp lệ | ✔ Hợp lệ | ✔ Đúng | `khớp tự động` | 0 câu |
+| JLPT N1 12/2022 | 30/30 (Đạt) | ✔ Hợp lệ | ✔ Hợp lệ | ✔ Đúng | `khớp tự động` | 0 câu |
+| JLPT N3 07/2021 | 28/28 (Đạt) | ✔ Hợp lệ | ✔ Hợp lệ | ✔ Đúng | `khớp tự động` | 0 câu |
+| JLPT N1 07/2022 | 35/35 (Đạt) | ✔ Hợp lệ | ✔ Hợp lệ | ✔ Đúng | `khớp tự động` | 0 câu |
 
 > **Ghi chú về quy ước trạng thái:** Mọi đoạn audio cắt tự động chỉ được đặt là `khớp tự động`. Tuyệt đối không tự đặt là `đã soát thủ công` khi chưa có xác nhận từ người dùng.
 

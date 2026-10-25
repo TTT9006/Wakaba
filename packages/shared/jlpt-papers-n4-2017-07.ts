@@ -1158,7 +1158,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "自転車",
           "explanation": "Cô gái khuyên: 「じゃあ、自転車のほうが便利ですよ」 -> 男: 「じゃ、そうします」.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q01.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "答えはこのように書きます。では、始めます。\n一番\n男の人と女の人が話しています。\n男の人は何で美術館へ行きますか?\n美術館に行きたいんですけど、何で行くのが便利ですか?\n車で行けば10分ですよ。\nそうですか。電車かバスでも行けますか?\nうーん、行けますけど、時間がかかりますよ。\n自転車は持っていますか?\nはい。\nじゃあ、自転車の方が便利ですよ。\nそうですか。わかりました。じゃあ、そうします。\n男の人は何で美術館へ行きますか?"
         },
         {
           "id": "n4-2017-07-l02",
@@ -1175,7 +1176,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "カップ",
           "explanation": "Cô bạn gợi ý: 「じゃあ、カップはどう？佐藤さん、コーヒーが好きだから」 -> 男: 「うん、それにしよう」.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q02.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "男の人は何で美術館へ行きますか?\n2番\n男の学生と女の学生が話しています。\n男の学生は何を買いますか?\n来週、佐藤さんの誕生日だね。\nもうプレゼント買った?\nうん。カバン買った。\nそうか。僕はまだ決められなくて困っているんだ。\nそう。じゃあ、カップはどう?\n佐藤さん、コーヒーが好きでよく飲んでいるよ。\nうん。でも、カップはもうたくさん持っているかもしれないな。\nじゃあ、タオルはどう?よくスポーツをしているから。\nそうだね。じゃあ、そうしよう。ありがとう。\n男の学生は何を買いますか?"
         },
         {
           "id": "n4-2017-07-l03",
@@ -1192,7 +1194,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "3",
           "explanation": "Hành động người nam sẽ làm tiếp theo.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q03.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "男の学生は何を買いますか?\n3番\n男の人と女の人が話しています。\n女の人はチケットを何枚予約しますか?\n来月のコンサートのチケットを予約してくれる?\nうん。いいよ。何枚?\n僕たち2人と友達4人。\nじゃあ、6枚ね。\nあ、そうだ。ごめん。一人都合が悪くなったから5人だ。\nあ、そう。分かった。\nありがとう。じゃあ、お願い。\n女の人はチケットを何枚予約しますか?"
         },
         {
           "id": "n4-2017-07-l04",
@@ -1209,7 +1212,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "4",
           "explanation": "Địa điểm hai người quyết định tới.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q04.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "女の人はチケットを何枚予約しますか?\n4番\n女の人と男の人が写真について話しています。\n女の人はどの写真を送りますか?\n国の両親に写真を送りたいんだけど、どれがいいと思う?\nこの海の写真は顔が小さくてよく見えないね。\nうん。じゃあ、だめだね。\nこの山の写真はどう?\nうん。これいいね。\nじゃあ、これ1枚。\nもう1枚は、この私の部屋の写真は?\n部屋があまり綺麗じゃないから、やめた方がいいよ。\nそれより、大学の前で撮った写真がいいよ。\nそうだね。この2枚にしよう。\n女の人はどの写真を送りますか?"
         },
         {
           "id": "n4-2017-07-l05",
@@ -1226,7 +1230,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "3",
           "explanation": "Vật dụng người nam mang theo.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q05.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "女の人はどの写真を送りますか?\n5番\n男の留学生と女の人が話しています。\n男の留学生は何を持っていきますか?\n友達が怪我をして入院しているんです。\nお見舞いに行きたいんですが、日本では何を持っていきますか?\nそうですね。よく花や果物を持っていきます。\n両院では時間がたくさんあるから、本もいいと思いますよ。\nああ、いいですね。本読むのが好きだから、そうします。\nああ、それから、若い人なら音楽のCDもいいと思いますよ。\nうーん。でも音楽はあまり聴きませんから。\n男の留学生は何を持っていきますか?"
         },
         {
           "id": "n4-2017-07-l06",
@@ -1243,7 +1248,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "2",
           "explanation": "Hạn chót gọi điện thoại theo hướng dẫn.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q06.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "6番\n会社で男の人と女の人が話しています。\n女の人は今日、この後何をしますか?\nちょっといい?\nはい。\n今、部長から電話があって、資料のコピーを頼まれたんだ。\nお願いしてもいい?\nわかりました。明日の会議の資料ですね。\nうん。それから会議室の準備だけど、\n椅子を並べといてくれる?\nはい。でも、会議室は今使っています。\nそうか。じゃあ、それは明日だね。\n女の人は今日、この後何をしますか?"
         },
         {
           "id": "n4-2017-07-l07",
@@ -1260,7 +1266,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "2",
           "explanation": "Vị trí đặt hành lý được chỉ định.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q07.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "女の人は今日、この後何をしますか?\n7番\n教室で先生が話しています。\n学生は明日、何時にどこに集まらなければなりませんか?\nえー、これから明日のバス旅行について連絡します。\n明日は、朝8時半までに来てください。\nいつもは9時からですが、30分早いので間違えないでくださいね。\n学校の退屈館の前に集まってください。\nいいですか?教室じゃなくて、退屈館の前ですよ。\n学生は明日、何時にどこに集まらなければなりませんか?"
         },
         {
           "id": "n4-2017-07-l08",
@@ -1277,7 +1284,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "1",
           "explanation": "Hành động hai người ưu tiên làm đầu tiên.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q08.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "学生は明日、何時にどこに集まらなければなりませんか?\n8番\n図書館で、男の人と係りの人が話しています。\n男の人はこの後、どのボタンを押しますか?\nすみません。ちょっと、コピーの仕方を教えてもらえませんか?\n青いボタンを押したんですが、字が小さくなってしまったんです。\n字を大きくするなら、赤いボタンを押してください。\nあ、はい。それから、もう少し濃くしたいんです。\nじゃあ、黄色いボタンを押してください。\n薄くする時は、白いボタンです。\nそうですか。どうもありがとうございます。\n男の人はこの後、どのボタンを押しますか?"
         },
         {
           "id": "n4-2017-07-l09",
@@ -1294,7 +1302,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "4",
           "explanation": "Nguyên nhân cô gái không thể đến tham dự.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q09.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "では、始めます。\n一番\n男の学生と女の学生が話しています。\n女の学生は、誰と住んでいますか?\n山田さん、新しい生活はどう?\nはい、毎日楽しいです。\nご両親と一緒じゃなくて、寂しくない?\nええ、少し。\nでも、弟と一緒に住んでいるので大丈夫です。\nそうなんだ。兄弟は弟さん一人?\n姉もいます。姉は両親と一緒に住んでいます。\n女の学生は、誰と住んでいますか?\n第…"
         },
         {
           "id": "n4-2017-07-l10",
@@ -1311,7 +1320,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "2",
           "explanation": "Lý do người nam đến muộn.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q10.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "第…\n二番\n大学で、女の学生が男の学生と話しています。\n女の学生はいつ、男の学生に相談しますか?\n先輩、相談したいことがあるんですが、今、いいですか?\nごめん。今から授業があるんだ。\nそうですか。じゃあ、今日の夕方はどうですか?\n6時から約束があるけど、4時頃なら大丈夫だよ。\n4時ですね。\nあ、明日の昼でもいいよ。\nすみません。明日は4時があるんです。\nそう。じゃあ、やっぱり今日にしよう。\nはい、お願いします。じゃあ、教室で待っています。\n女の学生はいつ、男の学生に相談しますか?"
         },
         {
           "id": "n4-2017-07-l11",
@@ -1328,7 +1338,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "3",
           "explanation": "Điểm hẹn của hai người.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q11.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "女の学生はいつ、男の学生に相談しますか?\n3番\n学校で、男の先生と女の留学生が話しています。\n女の留学生は、どうしてアルバイトがしたいですか?\nもうすぐ冬休みですね。どこかへ旅行に行きますか?\nいいえ、冬休みはデパートでアルバイトをするつもりです。\nあ、そうですか。\n日本人の働き方が知りたいんです。\nいい経験になりますね。日本語も上手になると思いますよ。\n女の留学生は、どうしてアルバイトがしたいですか?"
         },
         {
           "id": "n4-2017-07-l12",
@@ -1345,7 +1356,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "3",
           "explanation": "Công việc người nam đảm nhận.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q12.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "女の留学生は、どうしてアルバイトがしたいですか?\n4番\n天気予報を聞いています。\n何曜日に、1日中雨が降ると言っていますか?\n東京の月曜日から1週間の天気予報です。\n月曜日と火曜日は晴れるでしょう。\n水曜日は午前中は晴れますが、午後から曇って、夜には雨になるでしょう。\n木曜日は、1日ずっと雨になるでしょう。\n金曜日と土日は晴れて、いい天気になるでしょう。\n何曜日に、1日中雨が降ると言っていますか?"
         },
         {
           "id": "n4-2017-07-l13",
@@ -1362,7 +1374,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "1",
           "explanation": "Đôi giày cô gái quyết định mua.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q13.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "何曜日に、1日中雨が降ると言っていますか?\n5番\n女の人と男の人が話しています。\n男の人は、最近どのぐらい本を読んでいますか?\n男の人です。\n山田さんは、よく本を読みますか?\nうーん、子供の時は月に10冊以上読んでいましたが、最近は全然読んでいませんね。\nそうですか。\nええ、仕事が忙しいんです。\n田中さんはどうですか?\n最近は、専門の本を月に3冊ぐらい読んでいます。\nそうですか。私も月に1冊ぐらいは読みたいんですが、\n男の人は最近どのぐらい本を読んでいますか?"
         },
         {
           "id": "n4-2017-07-l14",
@@ -1379,7 +1392,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "2",
           "explanation": "Khó khăn vất vả nhất được đề cập.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q14.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "男の人は最近どのぐらい本を読んでいますか?\n6番\n男の学生と女の学生が話しています。\n女の学生は、子供の時、何になりたかったですか?\n女の学生です。\n田中さんは将来どんな仕事がしたいですか?\n将来は、小学校の先生になりたいです。\n先生ですか?\n子供の時からですか?\n子供の時は、ピアニストになりたかったんです。\n音楽が好きだったんですね。\n私は子供の時、警察官になるのが夢でした。\n警察官ですか?\nでも最近は、看護師になりたいんです。\nへぇ、そうなんですか。\n女の学生は、子供の時、何になりたかったですか?"
         },
         {
           "id": "n4-2017-07-l15",
@@ -1396,7 +1410,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "3",
           "explanation": "Lý do được đưa ra trong bài.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q15.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "女の学生は、子供の時、何になりたかったですか?\n7番\n港で、船の案内を聞いています。\n次の船は、何時に出発しますか?\n皆様、もうすぐ次の船が出発します。\n船は、近くの島を30分で回ります。\n海からの美しい景色を楽しむことができます。\n出発は10時20分の予定です。\n出発まで10分です。\nチケットは、船の中で買うことができます。\n皆様、乗ってみませんか?\n次の船は、何時に出発しますか?"
         },
         {
           "id": "n4-2017-07-l16",
@@ -1412,7 +1427,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "1: お土産、頂きます。",
           "explanation": "Khi được người khác tặng quà lưu niệm: 「お土産、頂きます」.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q16.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "では、始めます。\n1番\nお土産を買いました。\n先輩にあげます。\n何と言いますか?\n1\nこれ、お土産です。どうぞ。\n2\nお土産、いただきます。\n3\nお土産を買っておきます。"
         },
         {
           "id": "n4-2017-07-l17",
@@ -1428,7 +1444,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "2: 明日、映画を見に行きませんか。",
           "explanation": "Rủ rê đi xem phim: 「明日、映画を見に行きませんか」.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q17.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "お土産を買っておきます。\n2番\n明日、二人で映画に行きたいです。\n何と言いますか?\n1\n明日、映画に誘いましょう。\n2\n明日、映画を見に行きませんか?\n3\n明日、映画に行きたいそうですよ。"
         },
         {
           "id": "n4-2017-07-l18",
@@ -1444,7 +1461,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "1: すいません、よく見えません。",
           "explanation": "Báo với giáo viên chữ nhỏ không đọc được: 「すいません、よく見えません」.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q18.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "明日、映画に行きたいそうですよ。\n3番\n黒板の字が小さくて読めません。\n先輩に何と言いますか?\n1\nすいません。よく見えません。\n2\nすいません。読んでもいいですか?\n3\nすいません。書きましょうか?"
         },
         {
           "id": "n4-2017-07-l19",
@@ -1460,7 +1478,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "2: ちょっとよろしいでしょうか。",
           "explanation": "Xin phép thầy cô để thảo luận: 「ちょっとよろしいでしょうか」.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q19.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "すいません。書きましょうか?\n4番\n先輩に今、相談したいです。\n何と言いますか?\n1\nあの、いつでしょうか?\n2\nちょっとよろしいでしょうか?\n3\n相談してくださいませんか?"
         },
         {
           "id": "n4-2017-07-l20",
@@ -1476,7 +1495,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "1: ペン、貸してもらえる？",
           "explanation": "Mượn bút bạn bè một cách thân mật: 「ペン、貸してもらえる？」.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q20.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "相談してくださいませんか?\n5番\n友達のペンを借りたいです。\n何と言いますか?\n1\nペン、貸してもらえる?\n2\nペン、取ってあげる?\n3\nペン、使ってくれる?\n4"
         },
         {
           "id": "n4-2017-07-l21",
@@ -1492,7 +1512,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "2: ちょっと食事に行ってきます。",
           "explanation": "Trả lời câu hỏi đi đâu: 「ちょっと食事に行ってきます」.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q21.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "では、始めます。\n1番\nどこに行くんですか?\n1\nいってらっしゃい\n2\nちょっと食事に行ってきます。\n3\n気をつけてください。"
         },
         {
           "id": "n4-2017-07-l22",
@@ -1508,7 +1529,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "3: うん、１回あるよ。",
           "explanation": "Hỏi kinh nghiệm từng đi Kyoto chưa: 「うん、１回あるよ」.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q22.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "気をつけてください。\n2番\nねえ、京都行ったことある?\n1\n行かなかったよ。\n2\nそう、行ったんだ。\n3\nうん、1回あるよ。"
         },
         {
           "id": "n4-2017-07-l23",
@@ -1524,7 +1546,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "2: 風邪をひいてしまいました。",
           "explanation": "Giải thích lý do hôm qua nghỉ học: 「風邪をひいてしまいました」.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q23.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "うん、1回あるよ。\n3番\nどうして昨日授業を休んだんですか?\n1\n休むかもしれません。\n2\n風を引いてしまいました。\n3\nゆっくり休んでください。"
         },
         {
           "id": "n4-2017-07-l24",
@@ -1540,7 +1563,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "1: 友達に会うつもりです。",
           "explanation": "Kế hoạch khi về nước nghỉ hè: 「友達に会うつもりです」.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q24.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "ゆっくり休んでください。\n4番\n夏休みに国へ帰ったら何をしますか?\n1\n友達に会うつもりです。\n2\n母に会いました。\n3\n来月にします。"
         },
         {
           "id": "n4-2017-07-l25",
@@ -1556,7 +1580,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "2: はい、連絡します。",
           "explanation": "Đáp lại lời dặn gọi điện khi nghỉ: 「はい、連絡します」.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q25.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "来月にします。\n5番\n学校を休むときは電話してください。\n1\nいつ休むんですか?\n2\nはい、連絡します。\n3\n電話を待っています。"
         },
         {
           "id": "n4-2017-07-l26",
@@ -1572,7 +1597,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "3: え、どれですか。",
           "explanation": "Nhờ lấy hộ cuốn sách: 「え、どれですか」 (cuốn nào cơ ạ?).",
           "audioUrl": "/audio/jlpt/n4-2017-07/q26.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "電話を待っています。\n6番\nあの、その方を取ってくれませんか?\n1\nありがとう。\n2\nもらいましたよ。\n3\nえ、どれですか?"
         },
         {
           "id": "n4-2017-07-l27",
@@ -1588,7 +1614,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "3: 少しならできます。",
           "explanation": "Hỏi khả năng nói tiếng Nhật: 「少しならできます」.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q27.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "え、どれですか?\n7番\nジョンさん、日本語が話せますか?\n1\n勉強してください。\n2\n分かりました。\n3\n少しならできます。"
         },
         {
           "id": "n4-2017-07-l28",
@@ -1604,7 +1631,8 @@ export const jlptN4Paper201707: JlptPaper = {
           "answer": "1: はい、すぐにやります。",
           "explanation": "Đồng ý lau bảng: 「はい、すぐにやります」.",
           "audioUrl": "/audio/jlpt/n4-2017-07/q28.mp3",
-          "annotationDisabled": true
+          "annotationDisabled": true,
+          "transcript": "少しならできます。\n8番\nあ、田中さん、\n黒板を消しておいてくれませんか?\n1\nはい、すぐにやります。\n2\n綺麗になりましたね。\n3\nここにおきましょう。\nこれで、調解試験を終わります。"
         }
       ]
     }
