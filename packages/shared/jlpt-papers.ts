@@ -226,6 +226,7 @@ import { jlptN4Paper202112 } from './jlpt-papers-n4-2021-12';
 import { jlptN4Paper202107 } from './jlpt-papers-n4-2021-07';
 import { jlptN4Paper201707 } from './jlpt-papers-n4-2017-07';
 import { jlptN3Paper202307 } from './jlpt-papers-n3-2023-07';
+import { jlptN3Paper202212 } from './jlpt-papers-n3-2022-12';
 import { jlptN3Paper202207 } from './jlpt-papers-n3-2022-07';
 import { jlptN3Paper202112 } from './jlpt-papers-n3-2021-12';
 import { jlptN3Paper202107 } from './jlpt-papers-n3-2021-07';
@@ -251,6 +252,7 @@ export const jlptOfficialPapers: JlptPaper[] = [
   jlptN4Paper202107,
   jlptN4Paper201707,
   jlptN3Paper202307,
+  jlptN3Paper202212,
   jlptN3Paper202207,
   jlptN3Paper202112,
   jlptN3Paper202107,

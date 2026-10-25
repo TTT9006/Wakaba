@@ -3031,6 +3031,272 @@
       "suspiciousCount": 0
     },
     {
+      "examId": "jlpt-n3-2022-12",
+      "examTitle": "JLPT N3 12/2022",
+      "syncStatus": "khớp tự động",
+      "totalSegments": 28,
+      "expectedCount": 28,
+      "hasCorrectCount": true,
+      "hasEmptySegments": false,
+      "hasOverlaps": false,
+      "isChronological": true,
+      "details": [
+        {
+          "id": "q01",
+          "start": 72,
+          "end": 160,
+          "duration": 88,
+          "sizeBytes": 1409085,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q02",
+          "start": 160,
+          "end": 232,
+          "duration": 72,
+          "sizeBytes": 1153294,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q03",
+          "start": 232,
+          "end": 314,
+          "duration": 82,
+          "sizeBytes": 1313372,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q04",
+          "start": 314,
+          "end": 396,
+          "duration": 82,
+          "sizeBytes": 1313372,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q05",
+          "start": 396,
+          "end": 480,
+          "duration": 84,
+          "sizeBytes": 1345137,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q06",
+          "start": 480,
+          "end": 540,
+          "duration": 60,
+          "sizeBytes": 961033,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q07",
+          "start": 605,
+          "end": 690,
+          "duration": 85,
+          "sizeBytes": 1361020,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q08",
+          "start": 690,
+          "end": 775,
+          "duration": 85,
+          "sizeBytes": 1361020,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q09",
+          "start": 775,
+          "end": 875,
+          "duration": 100,
+          "sizeBytes": 1601346,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q10",
+          "start": 875,
+          "end": 968,
+          "duration": 93,
+          "sizeBytes": 1489333,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q11",
+          "start": 968,
+          "end": 1060,
+          "duration": 92,
+          "sizeBytes": 1473033,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q12",
+          "start": 1060,
+          "end": 1148,
+          "duration": 88,
+          "sizeBytes": 1409085,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q13",
+          "start": 1150,
+          "end": 1276,
+          "duration": 126,
+          "sizeBytes": 2017216,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q14",
+          "start": 1276,
+          "end": 1432,
+          "duration": 156,
+          "sizeBytes": 2497033,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q15",
+          "start": 1432,
+          "end": 1492,
+          "duration": 60,
+          "sizeBytes": 961033,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q16",
+          "start": 1493,
+          "end": 1525,
+          "duration": 32,
+          "sizeBytes": 512980,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q17",
+          "start": 1525,
+          "end": 1556,
+          "duration": 31,
+          "sizeBytes": 497098,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q18",
+          "start": 1556,
+          "end": 1589,
+          "duration": 33,
+          "sizeBytes": 529281,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q19",
+          "start": 1589,
+          "end": 1647,
+          "duration": 58,
+          "sizeBytes": 929268,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q20",
+          "start": 1650,
+          "end": 1704,
+          "duration": 54,
+          "sizeBytes": 865320,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q21",
+          "start": 1704,
+          "end": 1731,
+          "duration": 27,
+          "sizeBytes": 433150,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q22",
+          "start": 1731,
+          "end": 1759,
+          "duration": 28,
+          "sizeBytes": 449033,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q23",
+          "start": 1759,
+          "end": 1788,
+          "duration": 29,
+          "sizeBytes": 465333,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q24",
+          "start": 1788,
+          "end": 1816,
+          "duration": 28,
+          "sizeBytes": 449033,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q25",
+          "start": 1816,
+          "end": 1843,
+          "duration": 27,
+          "sizeBytes": 433150,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q26",
+          "start": 1843,
+          "end": 1855,
+          "duration": 12,
+          "sizeBytes": 193242,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q27",
+          "start": 1855,
+          "end": 1865,
+          "duration": 10,
+          "sizeBytes": 161059,
+          "status": "ok",
+          "note": ""
+        },
+        {
+          "id": "q28",
+          "start": 1865,
+          "end": 1874.8,
+          "duration": 9.8,
+          "sizeBytes": 158133,
+          "status": "ok",
+          "note": ""
+        }
+      ],
+      "suspiciousCount": 0
+    },
+    {
       "examId": "jlpt-n4-2017-07",
       "examTitle": "JLPT N4 07/2017",
       "syncStatus": "khớp tự động",
