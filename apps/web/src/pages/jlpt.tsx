@@ -22,6 +22,13 @@ import { useUI } from '../stores/ui';
 import { Button, ErrorState, Loading, Modal, PageHeader } from '../components/ui';
 import { QuestionInput } from './tests';
 import type { JlptRunView, JlptSummary } from '../../../../packages/shared/jlpt-types';
+import { jlptPapers, paperSummary } from '../../../../packages/shared/jlpt-papers';
+import {
+  getLocalExamRun,
+  initLocalExamRun,
+  advanceLocalExamRun,
+  getLocalAudioTranscript,
+} from '../../../../packages/shared/jlpt-client-runner';
 
 async function playJapanese(text: string) {
   await speak(text);
@@ -32,10 +39,12 @@ function ExamAudioPlayer({
   src,
   questionId,
   runId,
+  paperId,
 }: {
   src?: string;
   questionId: string;
   runId?: string;
+  paperId?: string;
 }) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -65,6 +74,13 @@ function ExamAudioPlayer({
 
     // Đề luyện mẫu: nếu chưa có src nhúng sẵn, tải transcript câu hỏi và nạp audio TTS
     if (runId && questionId) {
+      if (runId.startsWith('local_') && paperId) {
+        const text = getLocalAudioTranscript(paperId, questionId);
+        if (text) {
+          setResolvedSrc(`/api/tts?text=${encodeURIComponent(text)}`);
+        }
+        return;
+      }
       let cancelled = false;
       setIsLoadingAudio(true);
       api<{ text: string }>(`/jlpt/runs/${runId}/audio/${questionId}`)
@@ -73,7 +89,15 @@ function ExamAudioPlayer({
             setResolvedSrc(`/api/tts?text=${encodeURIComponent(res.text)}`);
           }
         })
-        .catch((e) => console.warn('Không thể nạp audio cho câu hỏi nghe:', e))
+        .catch((e) => {
+          console.warn('Không thể nạp audio cho câu hỏi nghe từ server:', e);
+          if (!cancelled && paperId) {
+            const text = getLocalAudioTranscript(paperId, questionId);
+            if (text) {
+              setResolvedSrc(`/api/tts?text=${encodeURIComponent(text)}`);
+            }
+          }
+        })
         .finally(() => {
           if (!cancelled) setIsLoadingAudio(false);
         });
@@ -90,7 +114,7 @@ function ExamAudioPlayer({
         audioRef.current.pause();
       }
     };
-  }, [questionId, src, runId]);
+  }, [questionId, src, runId, paperId]);
 
   const handlePlay = () => {
     if (!audioRef.current || hasEnded || isPlaying || isLoadingAudio) return;
@@ -287,7 +311,25 @@ export function JlptSession() {
   const client = useQueryClient();
   const query = useQuery({
     queryKey: ['jlpt-paper', id],
-    queryFn: () => api<{ paper: JlptSummary; run: JlptRunView | null }>('/jlpt/papers/' + id),
+    queryFn: async () => {
+      try {
+        const res = await api<{ paper: JlptSummary; run: JlptRunView | null }>('/jlpt/papers/' + id);
+        if (res?.paper) {
+          return res;
+        }
+      } catch (err) {
+        console.warn('Backend /jlpt/papers/:id unavailable, checking local papers:', err);
+      }
+      const localPaper = jlptPapers.find((p) => p.id === id);
+      if (localPaper) {
+        const localRun = id ? getLocalExamRun(id) : null;
+        return {
+          paper: paperSummary(localPaper),
+          run: localRun,
+        };
+      }
+      throw new Error('Không tìm thấy đề thi này.');
+    },
     refetchOnWindowFocus: false,
     staleTime: 0,
   });
@@ -348,9 +390,30 @@ export function JlptSession() {
     if (!run?.runId || run.finished) return;
     locked.current = true;
     setBusy(true);
+    if (run.runId.startsWith('local_') && id) {
+      try {
+        const localRun = advanceLocalExamRun(id, 'finish', {});
+        apply(localRun);
+      } catch (e) {
+        setError((e as Error).message);
+      } finally {
+        locked.current = false;
+        setBusy(false);
+      }
+      return;
+    }
     void api<JlptRunView>('/jlpt/runs/' + run.runId)
       .then(apply)
-      .catch((e) => setError(e.message))
+      .catch((e) => {
+        if (id) {
+          try {
+            const localRun = advanceLocalExamRun(id, 'finish', {});
+            apply(localRun);
+            return;
+          } catch {}
+        }
+        setError(e.message);
+      })
       .finally(() => {
         locked.current = false;
         setBusy(false);
@@ -363,6 +426,18 @@ export function JlptSession() {
     }
     const toSave = { ...pendingAnswers.current };
     if (Object.keys(toSave).length === 0) return;
+
+    if (currentRun.runId.startsWith('local_') && id) {
+      const localRun = advanceLocalExamRun(id, 'save', toSave);
+      for (const k of Object.keys(toSave)) {
+        if (pendingAnswers.current[k] === toSave[k]) {
+          delete pendingAnswers.current[k];
+        }
+      }
+      apply(localRun);
+      return;
+    }
+
     try {
       const updated = await patch<JlptRunView>('/jlpt/runs/' + currentRun.runId, {
         action: 'save',
@@ -376,8 +451,16 @@ export function JlptSession() {
         }
       }
       apply(updated);
-    } catch (e) {
-      setError((e as Error).message);
+    } catch {
+      if (id) {
+        const localRun = advanceLocalExamRun(id, 'save', toSave);
+        for (const k of Object.keys(toSave)) {
+          if (pendingAnswers.current[k] === toSave[k]) {
+            delete pendingAnswers.current[k];
+          }
+        }
+        apply(localRun);
+      }
     }
   }
   function handleAnswer(questionId: string, value: string) {
@@ -472,6 +555,18 @@ export function JlptSession() {
       const mergedAnswers = { ...pendingAnswers.current, ...answers };
       pendingAnswers.current = {};
 
+      if (run.runId.startsWith('local_') && id) {
+        const localRun = advanceLocalExamRun(id, action, mergedAnswers);
+        apply(localRun);
+        setConfirm(false);
+        setEarlySubmitConfirm(false);
+        if (localRun.finished) {
+          void exitFullscreen();
+          setExamMode(false);
+        }
+        return;
+      }
+
       if (action === 'finish-all') {
         try {
           const res = await patch<JlptRunView>('/jlpt/runs/' + run.runId, {
@@ -508,6 +603,15 @@ export function JlptSession() {
               });
             }
           } catch {
+            if (id) {
+              const localRun = advanceLocalExamRun(id, action, mergedAnswers);
+              apply(localRun);
+              setConfirm(false);
+              setEarlySubmitConfirm(false);
+              void exitFullscreen();
+              setExamMode(false);
+              return;
+            }
             throw finishAllErr;
           }
           if (updated) {
@@ -522,17 +626,32 @@ export function JlptSession() {
         }
       }
 
-      const res = await patch<JlptRunView>('/jlpt/runs/' + run.runId, {
-        action,
-        answers: mergedAnswers,
-        revision: run.revision ?? 0,
-      });
-      apply(res);
-      setConfirm(false);
-      setEarlySubmitConfirm(false);
-      if (res.finished) {
-        void exitFullscreen();
-        setExamMode(false);
+      try {
+        const res = await patch<JlptRunView>('/jlpt/runs/' + run.runId, {
+          action,
+          answers: mergedAnswers,
+          revision: run.revision ?? 0,
+        });
+        apply(res);
+        setConfirm(false);
+        setEarlySubmitConfirm(false);
+        if (res.finished) {
+          void exitFullscreen();
+          setExamMode(false);
+        }
+      } catch (patchErr) {
+        if (id) {
+          const localRun = advanceLocalExamRun(id, action, mergedAnswers);
+          apply(localRun);
+          setConfirm(false);
+          setEarlySubmitConfirm(false);
+          if (localRun.finished) {
+            void exitFullscreen();
+            setExamMode(false);
+          }
+          return;
+        }
+        throw patchErr;
       }
     } catch (e) {
       setError((e as Error).message);
@@ -548,7 +667,19 @@ export function JlptSession() {
     setError('');
     void enterFullscreen();
     try {
-      apply(await post<JlptRunView>('/jlpt/papers/' + id + '/start'));
+      try {
+        const serverRun = await post<JlptRunView>('/jlpt/papers/' + id + '/start');
+        apply(serverRun);
+        return;
+      } catch (serverErr) {
+        console.warn('Backend /jlpt/papers/:id/start failed, starting local session:', serverErr);
+        if (id && jlptPapers.some((p) => p.id === id)) {
+          const localRun = initLocalExamRun(id);
+          apply(localRun);
+          return;
+        }
+        throw serverErr;
+      }
     } catch (e) {
       setError((e as Error).message);
     } finally {
@@ -561,10 +692,20 @@ export function JlptSession() {
     setSpeaking(true);
     setError('');
     try {
-      const text =
-        questionId && run
-          ? (await api<{ text: string }>(`/jlpt/runs/${run.runId}/audio/${questionId}`)).text
-          : '音声の確認です。日本語の音が聞こえたら、試験を始めてください。';
+      let text = '音声の確認です。日本語の音が聞こえたら、試験を始めてください。';
+      if (questionId && run) {
+        if (run.runId.startsWith('local_') && id) {
+          text = getLocalAudioTranscript(id, questionId);
+        } else {
+          try {
+            text = (await api<{ text: string }>(`/jlpt/runs/${run.runId}/audio/${questionId}`)).text;
+          } catch {
+            if (id) {
+              text = getLocalAudioTranscript(id, questionId);
+            }
+          }
+        }
+      }
       await playJapanese(text);
     } catch (e) {
       setError((e as Error).message);
@@ -869,6 +1010,7 @@ export function JlptSession() {
                       src={question.audioUrl}
                       questionId={question.id}
                       runId={run.runId}
+                      paperId={id}
                     />
                   )}
                   <QuestionInput

@@ -1,6 +1,8 @@
 import { JapaneseAnnotatedText } from '../components/japanese-annotated-text';
 import { JlptSession } from './jlpt';
 import type { JlptSummary } from '../../../../packages/shared/jlpt-types';
+import { jlptPapers, paperSummary } from '../../../../packages/shared/jlpt-papers';
+import { getLocalHistoryAttempts } from '../../../../packages/shared/jlpt-client-runner';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
@@ -142,11 +144,33 @@ export function Tests() {
 
   const { data, isLoading, error } = useQuery({
     queryKey: ['tests'],
-    queryFn: () => api<Test[]>('/tests'),
+    queryFn: async () => {
+      try {
+        const res = await api<Test[]>('/tests');
+        if (Array.isArray(res) && res.length >= jlptPapers.length) {
+          return res;
+        }
+      } catch (err) {
+        console.warn('Backend /tests unavailable or outdated, using local papers:', err);
+      }
+      return jlptPapers.map(paperSummary) as unknown as Test[];
+    },
   });
   const history = useQuery({
     queryKey: ['test-history'],
-    queryFn: () => api<Attempt[]>('/tests/history'),
+    queryFn: async () => {
+      let serverAttempts: Attempt[] = [];
+      try {
+        const res = await api<Attempt[]>('/tests/history');
+        if (Array.isArray(res)) serverAttempts = res;
+      } catch (err) {
+        console.warn('Backend /tests/history unavailable:', err);
+      }
+      const localAttempts = getLocalHistoryAttempts() as unknown as Attempt[];
+      const combined = [...localAttempts, ...serverAttempts];
+      combined.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+      return combined;
+    },
   });
 
   const examLevels = ['N5', 'N4', 'N3', 'N2', 'N1'] as const;
@@ -169,7 +193,7 @@ export function Tests() {
     <>
       <PageHeader
         eyebrow="BIẾT MÌNH ĐÃ ĐI ĐƯỢC BAO XA"
-        title="Luyện đề thi JLPT Chuẩn (N5–N2)"
+        title="Luyện đề thi JLPT (N1–N5)"
         description="Đề thi đầy đủ thời gian theo cấu trúc chuẩn JLPT. Chấm điểm ở server, lưu bài đang làm và xem lại kết quả từng nhóm."
       />
 

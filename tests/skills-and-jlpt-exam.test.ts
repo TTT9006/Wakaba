@@ -201,4 +201,37 @@ describe('JLPT Exam Qualification & Skills Practice', () => {
     }
     expect(signatures.size).toBeGreaterThan(1);
   });
+
+  it('runs client-side resilient exam workflow cleanly for newly added official exams', async () => {
+    const {
+      initLocalExamRun,
+      advanceLocalExamRun,
+      getLocalExamRun,
+      getLocalAudioTranscript,
+    } = await import('../packages/shared/jlpt-client-runner');
+
+    // Test with newly added N1 official exam
+    const testId = 'jlpt-n1-2022-07';
+    const initialRun = initLocalExamRun(testId);
+    expect(initialRun.testId).toBe(testId);
+    expect(initialRun.section).toBe(0);
+    expect(initialRun.questions.length).toBeGreaterThan(0);
+    expect(initialRun.finished).toBe(false);
+
+    // Save answer
+    const q1 = initialRun.questions[0];
+    const advanced = advanceLocalExamRun(testId, 'save', { [q1.id]: '1' });
+    expect(advanced.answers[q1.id]).toBe('1');
+
+    // Retrieve transcript
+    const transcript = getLocalAudioTranscript(testId, 'n1-2022-07-l01');
+    expect(typeof transcript).toBe('string');
+    expect(transcript.length).toBeGreaterThan(0);
+
+    // Finish exam early with finish-all
+    const finishedRun = advanceLocalExamRun(testId, 'finish-all', { [q1.id]: '1' });
+    expect(finishedRun.finished).toBe(true);
+    expect(finishedRun.report).toBeDefined();
+    expect(finishedRun.report?.score).toBeGreaterThanOrEqual(0);
+  });
 });
