@@ -1,3 +1,36 @@
+## CƠ CHẾ PHỤC HỒI ÂM THANH ĐA TẦNG CHO BÀI THI JLPT (MULTI-TIER AUDIO RESILIENCE) TRÊN MOBILE & PRODUCTION — 26/10/2026
+
+- **Nguyên nhân sự cố:**
+  - Người dùng báo lỗi trên điện thoại: "chẳng có đề nào có được file nghe cả ?", trình phát âm thanh đứng yên ở `0:00 / 0:00`, nút "Phát bài nghe" không có âm thanh.
+  - Phân tích nguyên nhân cốt lõi:
+    1. Tệp `.gitignore` chặn các định dạng `*.mp3` và thư mục `public/audio/` (nhằm tránh phình to repo Git 644MB và tuân thủ bản quyền). Toàn bộ 633 file mp3 cắt sẵn chỉ tồn tại ở máy local dev, **chưa từng được đẩy lên Git/Vercel**.
+    2. Khi người dùng truy cập trên Vercel production (`wakaba-pink.vercel.app`), thẻ `<audio>` yêu cầu `/audio/jlpt/.../q01.mp3`. Do tệp tĩnh không tồn tại, Vercel SPA rewrite trả về `index.html` (text/html, 683 bytes).
+    3. Thẻ `<audio>` nhận HTML thay vì MP3 dẫn đến lỗi giải mã âm thanh (`MEDIA_ERR_SRC_NOT_SUPPORTED`). Trong khi đó `ExamAudioPlayer` trước đây gán cứng `if (src) { setResolvedSrc(src); return; }` mà không có sự kiện `onError`, không có fallback, khiến trình phát bị treo ở `0:00 / 0:00`.
+    4. Ngoài ra, backend Render TTS trước đây bị lỗi khi xử lý văn bản tiếng Nhật dài trên 200 ký tự (do Google Translate TTS từ chối request `q` > 200 ký tự khi EdgeTTS bị trễ mạng).
+
+- **Kiến trúc Phục hồi Đa tầng (Multi-tier Audio Resilience) đã triển khai:**
+  1. **Tầng 1 (Client Smart Audio Probe & Automatic TTS Resolution):**
+     - Thêm cơ chế probe một lần thông minh `probeStaticAudio()`: Kiểm tra header `Content-Type` của máy chủ tĩnh. Nếu máy chủ trả về `text/html` (chế độ Vercel SPA) hoặc không có file tĩnh, hệ thống tự động ghi nhớ và nạp trực tiếp luồng âm thanh TTS chất lượng cao (`/api/tts?text=...`) cho 100% câu hỏi nghe tiếp theo trong 0ms.
+     - Nếu chạy ở môi trường có file tĩnh thực tế (local dev), hệ thống vẫn ưu tiên phát file mp3 gốc.
+  2. **Tầng 2 (Audio Element Error Recovery & Auto-Fallback):**
+     - Bổ sung `onError` và bọc `audio.play().catch(...)` trong `ExamAudioPlayer`.
+     - Nếu bất kỳ tệp tĩnh nào bị lỗi giải mã hoặc 404, player tự động chuyển sang `/api/tts?text=${encodeURIComponent(effectiveTranscript)}` và tiếp tục phát mượt mà.
+  3. **Tầng 3 (Device Web Speech API Fallback - Không phụ thuộc mạng):**
+     - Nếu người dùng di chuyển vào vùng mạng yếu hoặc server backend tạm thời không phản hồi, `ExamAudioPlayer` tự động kích hoạt `window.speechSynthesis` (Web Speech API tiếng Nhật `ja-JP`) tích hợp sẵn trên điện thoại (iOS / Android).
+     - Tự động mô phỏng thanh tiến trình (progress track) và thời lượng theo quy chế phòng thi, đảm bảo bài thi nghe luôn hoàn thành trọn vẹn 100%.
+  4. **Nâng cấp Backend TTS (`apps/api/src/tts.ts` & `apps/api/src/app.ts`):**
+     - Bổ sung thuật toán `splitTextForTts(text, 150)` phân tách văn bản thông minh theo ranh giới câu tiếng Nhật (`。！？\n、`) và ghép nối nhị phân `Buffer.concat()`. Xử lý hoàn hảo mọi đoạn hội thoại nghe dài (kể cả bài nghe dài nhất N1/N2 lên đến 855 ký tự).
+     - Nâng giới hạn text từ 1,000 lên 4,000 ký tự; bổ sung endpoint `POST /api/tts`.
+     - Tăng timeout EdgeTTS lên 25 giây.
+  5. **Tối ưu tra cứu Transcript (`packages/shared/jlpt-client-runner.ts`):**
+     - Nâng cấp `getLocalAudioTranscript`: Hỗ trợ chuẩn hóa cả ID dạng `n5-2018` lẫn `jlpt-n5-2018`, và tự động dự phòng tìm kiếm trực tiếp theo `questionId` trên toàn bộ 27 đề thi (745 câu nghe).
+
+- **Kết quả Kiểm thử:**
+  - Đã kiểm tra 100% (745/745) câu hỏi nghe của toàn bộ 27 đề thi: Tất cả đều có transcript đầy đủ và hợp lệ.
+  - Typecheck: 0 lỗi (`npm run typecheck`).
+  - Unit tests: 150/150 test cases passed (`npm test`), bao gồm 2 unit test mới kiểm tra tính toàn vẹn transcript và thuật toán phân đoạn TTS.
+  - Production build: Thành công 100% (`npm run build`).
+
 ## BỔ SUNG CHÚ THÍCH CÁCH ĐỌC (FURIGANA / RUBY) CHO TOÀN BỘ KANJI TRONG PHÂN HỆ LUYỆN KỸ NĂNG (/SKILLS) — 26/10/2026
 
 - **Yêu cầu & Mục tiêu:**
