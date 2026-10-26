@@ -288,4 +288,29 @@ describe('JLPT Exam Qualification & Skills Practice', () => {
     expect(resolveAudioUrl('https://custom-cdn.com/q01.mp3')).toBe('https://custom-cdn.com/q01.mp3');
     expect(resolveAudioUrl('/audio/jlpt/n5-2018/q01.mp3')).toBe('/audio/jlpt/n5-2018/q01.mp3');
   });
+
+  it('enforces strict single-play exam policy across questions and sessions', async () => {
+    const { isExamAudioPlayed, markExamAudioPlayed } = await import('../apps/web/src/pages/jlpt');
+
+    const runA = 'test_run_alpha_123';
+    const runB = 'test_run_beta_456';
+    const q1 = 'n5-2018-listening-1';
+    const q2 = 'n5-2018-listening-2';
+
+    // Initially not played
+    expect(isExamAudioPlayed(q1, runA)).toBe(false);
+    expect(isExamAudioPlayed(q2, runA)).toBe(false);
+
+    // Mark q1 as played in runA
+    markExamAudioPlayed(q1, runA);
+    expect(isExamAudioPlayed(q1, runA)).toBe(true);
+    expect(isExamAudioPlayed(q2, runA)).toBe(false);
+
+    // In a new run session (runB), q1 has fresh unplayed state
+    expect(isExamAudioPlayed(q1, runB)).toBe(false);
+
+    // Idempotent calls
+    markExamAudioPlayed(q1, runA);
+    expect(isExamAudioPlayed(q1, runA)).toBe(true);
+  });
 });

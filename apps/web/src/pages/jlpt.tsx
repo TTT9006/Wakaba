@@ -74,6 +74,35 @@ async function probeStaticAudio(): Promise<boolean> {
   return staticAudioProbe.available;
 }
 
+function getExamAudioKey(runId?: string, paperId?: string): string {
+  return `jlpt_audio_played_${runId || paperId || 'session'}`;
+}
+
+export function isExamAudioPlayed(questionId: string, runId?: string, paperId?: string): boolean {
+  if (!questionId) return false;
+  try {
+    const raw = sessionStorage.getItem(getExamAudioKey(runId, paperId));
+    if (!raw) return false;
+    const list = JSON.parse(raw);
+    return Array.isArray(list) && list.includes(questionId);
+  } catch {
+    return false;
+  }
+}
+
+export function markExamAudioPlayed(questionId: string, runId?: string, paperId?: string): void {
+  if (!questionId) return;
+  try {
+    const key = getExamAudioKey(runId, paperId);
+    const raw = sessionStorage.getItem(key);
+    const list: string[] = raw ? JSON.parse(raw) : [];
+    if (!list.includes(questionId)) {
+      list.push(questionId);
+      sessionStorage.setItem(key, JSON.stringify(list));
+    }
+  } catch {}
+}
+
 function ExamAudioPlayer({
   src,
   transcript,
@@ -89,11 +118,15 @@ function ExamAudioPlayer({
 }) {
   const targetSrc = useMemo(() => resolveAudioUrl(src), [src]);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const alreadyPlayed = useMemo(
+    () => isExamAudioPlayed(questionId, runId, paperId),
+    [questionId, runId, paperId],
+  );
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [isMuted, setIsMuted] = useState(false);
-  const [hasEnded, setHasEnded] = useState(false);
+  const [hasEnded, setHasEnded] = useState(alreadyPlayed);
   const [resolvedSrc, setResolvedSrc] = useState(targetSrc || '');
   const [isLoadingAudio, setIsLoadingAudio] = useState(false);
   const [isFallbackTts, setIsFallbackTts] = useState(false);
@@ -112,10 +145,11 @@ function ExamAudioPlayer({
   }, [transcript, paperId, questionId]);
 
   useEffect(() => {
+    const isPlayed = isExamAudioPlayed(questionId, runId, paperId);
     setIsPlaying(false);
     setCurrentTime(0);
     setDuration(0);
-    setHasEnded(false);
+    setHasEnded(isPlayed);
     setIsFallbackTts(false);
     setUseSpeechSynth(false);
     maxTimeRef.current = 0;
@@ -126,6 +160,11 @@ function ExamAudioPlayer({
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
+    }
+
+    // Quy chế thi JLPT: Câu đã từng phát trong phiên làm bài thì khóa vĩnh viễn, không nạp lại audio
+    if (isPlayed) {
+      return;
     }
 
     let cancelled = false;
@@ -221,6 +260,8 @@ function ExamAudioPlayer({
 
   const playViaSpeechSynth = async () => {
     if (!effectiveTranscript) return;
+    // Khóa ngay lập tức câu hỏi theo phiên thi
+    markExamAudioPlayed(questionId, runId, paperId);
     setIsPlaying(true);
     setUseSpeechSynth(true);
     const estDuration = Math.max(8, Math.ceil(effectiveTranscript.length * 0.25));
@@ -247,11 +288,16 @@ function ExamAudioPlayer({
       setCurrentTime(estDuration);
       setIsPlaying(false);
       setHasEnded(true);
+      markExamAudioPlayed(questionId, runId, paperId);
     }
   };
 
   const handlePlay = async () => {
     if (hasEnded || isPlaying || isLoadingAudio) return;
+
+    // QUY CHẾ PHÒNG THI THẬT: Khóa ngay câu hỏi kể từ giây phút bấm phát!
+    // Dù thí sinh có chuyển câu rồi quay lại hay tải lại trang, câu này vẫn tính là ĐÃ PHÁT.
+    markExamAudioPlayed(questionId, runId, paperId);
 
     if (useSpeechSynth) {
       await playViaSpeechSynth();
@@ -319,9 +365,10 @@ function ExamAudioPlayer({
   const handleEnded = () => {
     setIsPlaying(false);
     setHasEnded(true);
+    markExamAudioPlayed(questionId, runId, paperId);
   };
 
-  const progressPercent = duration > 0 ? (currentTime / duration) * 100 : 0;
+  const progressPercent = hasEnded ? 100 : duration > 0 ? (currentTime / duration) * 100 : 0;
 
   const formatTime = (secs: number) => {
     if (isNaN(secs) || secs < 0) return '0:00';
@@ -354,19 +401,27 @@ function ExamAudioPlayer({
       <div className="exam-audio-header">
         <span className="exam-audio-badge">
           <Headphones size={13} />
-          {isFallbackTts ? 'Mô phỏng phòng thi (AI chuẩn Tokyo)' : 'Mô phỏng phòng thi thật'}
+          {hasEnded
+            ? 'Đã hoàn thành bài nghe'
+            : isFallbackTts
+              ? 'Mô phỏng phòng thi (AI chuẩn Tokyo)'
+              : 'Mô phỏng phòng thi thật'}
         </span>
-        <span className="exam-audio-notice">Phát 1 lần · Không thể dừng hoặc tua lại</span>
+        <span className="exam-audio-notice">
+          {hasEnded
+            ? 'Đã phát 1 lần theo quy chế phòng thi · Không thể nghe lại'
+            : 'Phát 1 lần duy nhất · Không thể dừng, tua lại hoặc nghe lại'}
+        </span>
       </div>
       <div className="exam-audio-controls">
         <button
           type="button"
-          className={`exam-audio-btn ${isPlaying ? 'playing' : ''}`}
+          className={`exam-audio-btn ${isPlaying ? 'playing' : ''} ${hasEnded ? 'disabled' : ''}`}
           onClick={() => void handlePlay()}
           disabled={isPlaying || hasEnded || isLoadingAudio || (!resolvedSrc && !effectiveTranscript)}
           title={
             hasEnded
-              ? 'Đã phát hết bài nghe'
+              ? 'Bài nghe đã phát 1 lần theo quy chế phòng thi JLPT (không thể nghe lại)'
               : isPlaying
                 ? 'Đang phát bài nghe (không thể tạm dừng)'
                 : isLoadingAudio
@@ -406,7 +461,7 @@ function ExamAudioPlayer({
             <div className="exam-audio-progress-fill" style={{ width: `${progressPercent}%` }} />
           </div>
           <div className="exam-audio-time">
-            <span>{formatTime(currentTime)}</span>
+            <span>{hasEnded && duration > 0 ? formatTime(duration) : formatTime(currentTime)}</span>
             <span>/</span>
             <span>{duration > 0 ? formatTime(duration) : '--:--'}</span>
           </div>
