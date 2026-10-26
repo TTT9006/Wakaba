@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import {
@@ -35,13 +35,35 @@ async function playJapanese(text: string) {
 }
 const clock = (seconds: number) =>
   `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`;
+// Trạng thái kiểm tra tính khả dụng của file audio tĩnh trên môi trường hiện tại
+const staticAudioProbe = {
+  tested: false,
+  available: false,
+};
+
+async function probeStaticAudio(): Promise<boolean> {
+  if (staticAudioProbe.tested) return staticAudioProbe.available;
+  try {
+    const res = await fetch('/audio/jlpt/n5-2018/q01.mp3', { method: 'HEAD' });
+    const contentType = res.headers.get('content-type') || '';
+    // Nếu Vercel trả về text/html (SPA rewrite) hoặc không ok -> static audio không khả dụng trên host này
+    staticAudioProbe.available = res.ok && contentType.includes('audio');
+  } catch {
+    staticAudioProbe.available = false;
+  }
+  staticAudioProbe.tested = true;
+  return staticAudioProbe.available;
+}
+
 function ExamAudioPlayer({
   src,
+  transcript,
   questionId,
   runId,
   paperId,
 }: {
   src?: string;
+  transcript?: string;
   questionId: string;
   runId?: string;
   paperId?: string;
@@ -54,75 +76,195 @@ function ExamAudioPlayer({
   const [hasEnded, setHasEnded] = useState(false);
   const [resolvedSrc, setResolvedSrc] = useState(src || '');
   const [isLoadingAudio, setIsLoadingAudio] = useState(false);
+  const [isFallbackTts, setIsFallbackTts] = useState(false);
+  const [useSpeechSynth, setUseSpeechSynth] = useState(false);
   const maxTimeRef = useRef(0);
+  const speechIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  // Lời thoại câu hỏi nghe chuẩn xác 100%
+  const effectiveTranscript = useMemo(() => {
+    if (transcript?.trim()) return transcript.trim();
+    if (paperId && questionId) {
+      const text = getLocalAudioTranscript(paperId, questionId);
+      if (text) return text.trim();
+    }
+    return getLocalAudioTranscript('', questionId)?.trim() || '';
+  }, [transcript, paperId, questionId]);
 
   useEffect(() => {
     setIsPlaying(false);
     setCurrentTime(0);
     setDuration(0);
     setHasEnded(false);
+    setIsFallbackTts(false);
+    setUseSpeechSynth(false);
     maxTimeRef.current = 0;
+    if (speechIntervalRef.current) {
+      clearInterval(speechIntervalRef.current);
+      speechIntervalRef.current = null;
+    }
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
 
-    if (src) {
-      setResolvedSrc(src);
-      return;
-    }
+    let cancelled = false;
 
-    // Đề luyện mẫu: nếu chưa có src nhúng sẵn, tải transcript câu hỏi và nạp audio TTS
-    if (runId && questionId) {
-      if (runId.startsWith('local_') && paperId) {
-        const text = getLocalAudioTranscript(paperId, questionId);
-        if (text) {
-          setResolvedSrc(`/api/tts?text=${encodeURIComponent(text)}`);
+    const setupAudio = async () => {
+      // 1. Nếu đã xác định static audio không khả dụng (ví dụ trên Vercel production):
+      if (staticAudioProbe.tested && !staticAudioProbe.available) {
+        if (effectiveTranscript) {
+          setResolvedSrc(`/api/tts?text=${encodeURIComponent(effectiveTranscript)}`);
+          setIsFallbackTts(true);
         }
         return;
       }
-      let cancelled = false;
-      setIsLoadingAudio(true);
-      api<{ text: string }>(`/jlpt/runs/${runId}/audio/${questionId}`)
-        .then((res) => {
+
+      // 2. Nếu có src tĩnh (ví dụ /audio/jlpt/...):
+      if (src) {
+        if (!staticAudioProbe.tested) {
+          setIsLoadingAudio(true);
+          const isAvail = await probeStaticAudio();
+          if (cancelled) return;
+          setIsLoadingAudio(false);
+          if (isAvail) {
+            setResolvedSrc(src);
+            return;
+          }
+          // File tĩnh không có trên host -> Chuyển ngay sang TTS
+          if (effectiveTranscript) {
+            setResolvedSrc(`/api/tts?text=${encodeURIComponent(effectiveTranscript)}`);
+            setIsFallbackTts(true);
+            return;
+          }
+        } else {
+          setResolvedSrc(src);
+          return;
+        }
+      }
+
+      // 3. Nếu không có src hoặc là đề luyện: dùng transcript TTS
+      if (effectiveTranscript) {
+        setResolvedSrc(`/api/tts?text=${encodeURIComponent(effectiveTranscript)}`);
+        setIsFallbackTts(true);
+        return;
+      }
+
+      // 4. Nếu cần tải transcript từ server run:
+      if (runId && questionId && !runId.startsWith('local_')) {
+        setIsLoadingAudio(true);
+        try {
+          const res = await api<{ text: string }>(`/jlpt/runs/${runId}/audio/${questionId}`);
           if (!cancelled && res.text) {
             setResolvedSrc(`/api/tts?text=${encodeURIComponent(res.text)}`);
+            setIsFallbackTts(true);
           }
-        })
-        .catch((e) => {
-          console.warn('Không thể nạp audio cho câu hỏi nghe từ server:', e);
-          if (!cancelled && paperId) {
-            const text = getLocalAudioTranscript(paperId, questionId);
-            if (text) {
-              setResolvedSrc(`/api/tts?text=${encodeURIComponent(text)}`);
-            }
-          }
-        })
-        .finally(() => {
+        } catch (e) {
+          console.warn('Không thể nạp transcript từ server:', e);
+        } finally {
           if (!cancelled) setIsLoadingAudio(false);
-        });
-      return () => {
-        cancelled = true;
-        if (audioRef.current) {
-          audioRef.current.pause();
         }
-      };
-    }
+      }
+    };
+
+    void setupAudio();
 
     return () => {
+      cancelled = true;
+      if (speechIntervalRef.current) {
+        clearInterval(speechIntervalRef.current);
+        speechIntervalRef.current = null;
+      }
       if (audioRef.current) {
         audioRef.current.pause();
       }
     };
-  }, [questionId, src, runId, paperId]);
+  }, [questionId, src, runId, paperId, effectiveTranscript]);
 
-  const handlePlay = () => {
-    if (!audioRef.current || hasEnded || isPlaying || isLoadingAudio) return;
+  // Xử lý lỗi nạp thẻ <audio> (tự động phục hồi sang TTS hoặc Web Speech API)
+  const handleAudioError = () => {
+    console.warn('ExamAudioPlayer: Lỗi nạp nguồn âm thanh gốc, chuyển sang TTS...', resolvedSrc);
+    if (resolvedSrc && resolvedSrc === src) {
+      staticAudioProbe.tested = true;
+      staticAudioProbe.available = false;
+      if (effectiveTranscript) {
+        setResolvedSrc(`/api/tts?text=${encodeURIComponent(effectiveTranscript)}`);
+        setIsFallbackTts(true);
+        return;
+      }
+    }
+    // Nếu cả TTS backend cũng lỗi: chuyển sang Web Speech API của thiết bị
+    setUseSpeechSynth(true);
+    const estDuration = Math.max(8, Math.ceil((effectiveTranscript?.length || 40) * 0.25));
+    setDuration(estDuration);
+  };
+
+  const playViaSpeechSynth = async () => {
+    if (!effectiveTranscript) return;
     setIsPlaying(true);
-    audioRef.current.play().catch((e) => {
-      console.error('Audio play error:', e);
+    setUseSpeechSynth(true);
+    const estDuration = Math.max(8, Math.ceil(effectiveTranscript.length * 0.25));
+    setDuration(estDuration);
+    setCurrentTime(0);
+
+    const startTime = Date.now();
+    speechIntervalRef.current = setInterval(() => {
+      const elapsed = Math.floor((Date.now() - startTime) / 1000);
+      if (elapsed < estDuration) {
+        setCurrentTime(elapsed);
+      }
+    }, 500);
+
+    try {
+      await speak(effectiveTranscript);
+    } catch (e) {
+      console.error('SpeechSynthesis error:', e);
+    } finally {
+      if (speechIntervalRef.current) {
+        clearInterval(speechIntervalRef.current);
+        speechIntervalRef.current = null;
+      }
+      setCurrentTime(estDuration);
       setIsPlaying(false);
-    });
+      setHasEnded(true);
+    }
+  };
+
+  const handlePlay = async () => {
+    if (hasEnded || isPlaying || isLoadingAudio) return;
+
+    if (useSpeechSynth) {
+      await playViaSpeechSynth();
+      return;
+    }
+
+    if (!audioRef.current) return;
+
+    setIsPlaying(true);
+    try {
+      await audioRef.current.play();
+    } catch (playErr) {
+      console.warn('ExamAudioPlayer: Lỗi audio.play(), kích hoạt phục hồi:', playErr);
+      if (resolvedSrc === src && effectiveTranscript) {
+        staticAudioProbe.tested = true;
+        staticAudioProbe.available = false;
+        const ttsUrl = `/api/tts?text=${encodeURIComponent(effectiveTranscript)}`;
+        setResolvedSrc(ttsUrl);
+        setIsFallbackTts(true);
+        setTimeout(() => {
+          if (audioRef.current) {
+            audioRef.current.play().catch(async (ttsErr) => {
+              console.warn('ExamAudioPlayer: TTS play fail, fallback Web Speech:', ttsErr);
+              await playViaSpeechSynth();
+            });
+          }
+        }, 150);
+      } else if (effectiveTranscript) {
+        await playViaSpeechSynth();
+      } else {
+        setIsPlaying(false);
+      }
+    }
   };
 
   const toggleMute = () => {
@@ -149,8 +291,8 @@ function ExamAudioPlayer({
   };
 
   const handleLoadedMetadata = () => {
-    if (audioRef.current) {
-      setDuration(audioRef.current.duration || 0);
+    if (audioRef.current && audioRef.current.duration && !isNaN(audioRef.current.duration)) {
+      setDuration(audioRef.current.duration);
     }
   };
 
@@ -174,6 +316,7 @@ function ExamAudioPlayer({
         ref={audioRef}
         src={resolvedSrc}
         preload="metadata"
+        onError={handleAudioError}
         onTimeUpdate={handleTimeUpdate}
         onSeeking={handleSeeking}
         onLoadedMetadata={handleLoadedMetadata}
@@ -191,7 +334,7 @@ function ExamAudioPlayer({
       <div className="exam-audio-header">
         <span className="exam-audio-badge">
           <Headphones size={13} />
-          Mô phỏng phòng thi thật
+          {isFallbackTts ? 'Mô phỏng phòng thi (AI chuẩn Tokyo)' : 'Mô phỏng phòng thi thật'}
         </span>
         <span className="exam-audio-notice">Phát 1 lần · Không thể dừng hoặc tua lại</span>
       </div>
@@ -199,8 +342,8 @@ function ExamAudioPlayer({
         <button
           type="button"
           className={`exam-audio-btn ${isPlaying ? 'playing' : ''}`}
-          onClick={handlePlay}
-          disabled={isPlaying || hasEnded || isLoadingAudio || !resolvedSrc}
+          onClick={() => void handlePlay()}
+          disabled={isPlaying || hasEnded || isLoadingAudio || (!resolvedSrc && !effectiveTranscript)}
           title={
             hasEnded
               ? 'Đã phát hết bài nghe'
@@ -245,7 +388,7 @@ function ExamAudioPlayer({
           <div className="exam-audio-time">
             <span>{formatTime(currentTime)}</span>
             <span>/</span>
-            <span>{formatTime(duration)}</span>
+            <span>{duration > 0 ? formatTime(duration) : '--:--'}</span>
           </div>
         </div>
 
@@ -1008,6 +1151,7 @@ export function JlptSession() {
                     <ExamAudioPlayer
                       key={question.id}
                       src={question.audioUrl}
+                      transcript={(question as { transcript?: string }).transcript}
                       questionId={question.id}
                       runId={run.runId}
                       paperId={id}

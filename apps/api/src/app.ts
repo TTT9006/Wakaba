@@ -225,8 +225,24 @@ app.get(
   rateLimit({ windowMs: 60000, limit: 120, standardHeaders: true, legacyHeaders: false }),
   async (req, res) => {
     try {
-      const text = z.string().min(1).max(1000).parse(req.query.text);
+      const text = z.string().min(1).max(4000).parse(req.query.text);
       const voice = typeof req.query.voice === 'string' ? req.query.voice : 'ja-JP-NanamiNeural';
+      const audioBuffer = await synthesizeSpeech(text, voice);
+      res.setHeader('Content-Type', 'audio/mpeg');
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+      res.send(audioBuffer);
+    } catch (err) {
+      res.status(400).json({ error: (err as Error).message });
+    }
+  },
+);
+app.post(
+  '/api/tts',
+  rateLimit({ windowMs: 60000, limit: 120, standardHeaders: true, legacyHeaders: false }),
+  async (req, res) => {
+    try {
+      const text = z.string().min(1).max(4000).parse(req.body.text);
+      const voice = typeof req.body.voice === 'string' ? req.body.voice : 'ja-JP-NanamiNeural';
       const audioBuffer = await synthesizeSpeech(text, voice);
       res.setHeader('Content-Type', 'audio/mpeg');
       res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');

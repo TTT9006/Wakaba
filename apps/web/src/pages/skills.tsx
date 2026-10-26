@@ -255,9 +255,9 @@ export function SkillsPage() {
                 </div>
               )}
               {r.passage && (
-                <p className="jlpt-passage" lang="ja">
-                  {r.passage}
-                </p>
+                <div className="jlpt-passage" lang="ja">
+                  <JapaneseAnnotatedText text={r.passage} />
+                </div>
               )}
               <p>
                 Bạn chọn: <JapaneseAnnotatedText text={r.given || '(Chưa trả lời)'} />
@@ -285,9 +285,9 @@ export function SkillsPage() {
                   >
                     BẢN CHÉP LỜI (TRANSCRIPT)
                   </span>
-                  <p lang="ja" style={{ whiteSpace: 'pre-line', margin: '4px 0 0 0' }}>
-                    {r.transcript}
-                  </p>
+                  <div lang="ja" style={{ whiteSpace: 'pre-line', margin: '4px 0 0 0' }}>
+                    <JapaneseAnnotatedText text={r.transcript} />
+                  </div>
                 </div>
               )}
             </div>

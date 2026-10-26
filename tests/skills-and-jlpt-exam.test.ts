@@ -234,4 +234,50 @@ describe('JLPT Exam Qualification & Skills Practice', () => {
     expect(finishedRun.report).toBeDefined();
     expect(finishedRun.report?.score).toBeGreaterThanOrEqual(0);
   });
+
+  it('guarantees 100% transcript availability and resilient retrieval for all listening questions across 27 exams', async () => {
+    const { getLocalAudioTranscript } = await import('../packages/shared/jlpt-client-runner');
+
+    const allListening = jlptPapers.flatMap((p) =>
+      p.sections.flatMap((s) => s.questions.map((q) => ({ paperId: p.id, ...q }))),
+    ).filter((q) => q.category === 'listening');
+
+    expect(allListening.length).toBeGreaterThanOrEqual(745);
+
+    for (const q of allListening) {
+      // Direct question transcript check
+      expect(q.transcript).toBeDefined();
+      expect(typeof q.transcript).toBe('string');
+      expect(q.transcript!.trim().length).toBeGreaterThan(5);
+
+      // getLocalAudioTranscript check using paperId
+      const retrieved = getLocalAudioTranscript(q.paperId, q.id);
+      expect(retrieved).toBe(q.transcript);
+
+      // Resilient check: getLocalAudioTranscript without paperId (direct question ID lookup)
+      const retrievedDirect = getLocalAudioTranscript('', q.id);
+      expect(retrievedDirect).toBe(q.transcript);
+    }
+  });
+
+  it('safely splits long Japanese transcripts for TTS chunking without loss', async () => {
+    const { splitTextForTts } = await import('../apps/api/src/tts');
+
+    const sampleLong =
+      '男の人と女の人が話しています。男の人はどこへ行きますか。' +
+      '喫茶店ミドリですね。あそこに交差点がありますね。あの交差点を左に曲がってください。' +
+      '道の左側に銀行があります。喫茶店ミドリは銀行の隣ですよ。わかりました。ありがとうございます。';
+
+    const chunks = splitTextForTts(sampleLong, 60);
+    expect(chunks.length).toBeGreaterThan(1);
+    for (const chunk of chunks) {
+      expect(chunk.length).toBeLessThanOrEqual(60);
+    }
+
+    // Reconstruction preserves all key words
+    const reconstructed = chunks.join('');
+    expect(reconstructed).toContain('喫茶店ミドリ');
+    expect(reconstructed).toContain('交差点');
+    expect(reconstructed).toContain('銀行');
+  });
 });

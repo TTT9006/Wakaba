@@ -1,3 +1,31 @@
+## BỔ SUNG CHÚ THÍCH CÁCH ĐỌC (FURIGANA / RUBY) CHO TOÀN BỘ KANJI TRONG PHÂN HỆ LUYỆN KỸ NĂNG (/SKILLS) — 26/10/2026
+
+- **Yêu cầu & Mục tiêu:**
+  - Bổ sung chú thích cách đọc (Furigana / Romaji tương tự như phân hệ Ngữ pháp) cho mọi chữ Kanji xuất hiện trong phần **Luyện kỹ năng** (`/skills`).
+  - Phạm vi áp dụng tuyệt đối giới hạn trong phân hệ Kỹ năng, bao gồm:
+    - Trong lúc làm bài (`SkillPracticeModal`): Đoạn văn bài đọc (`currentQ.passage`), tiêu đề câu hỏi (`currentQ.prompt`), danh sách các đáp án lựa chọn (`currentQ.options`).
+    - Trong màn hình xem lại kết quả (`SkillPracticeModal`): Đoạn văn (`r.passage`), câu hỏi (`r.prompt`), đáp án người dùng chọn (`r.given`), đáp án đúng (`r.answer`), bản chép lời bài nghe (`r.transcript`), lời giải thích (`r.explanation`).
+    - Trong modal xem lại lịch sử làm bài kỹ năng (`SkillsPage`): Đoạn văn, câu trả lời, đáp án, transcript và giải thích.
+  - Tuân thủ nghiêm ngặt nguyên tắc: Không đụng chạm vào dữ liệu tĩnh của các phân hệ khác (JLPT thi thử, Từ vựng, Hán tự, Ngữ pháp, SRS) để tránh mọi nguy cơ xung đột hay lỗi dữ liệu.
+
+- **Giải pháp & Thực hiện:**
+  - Tận dụng component chuẩn `JapaneseAnnotatedText` (`apps/web/src/components/japanese-annotated-text.tsx`) vốn đã tích hợp đồng bộ với thiết lập người dùng (Furigana tiếng Nhật hoặc Romaji) và cơ chế phân tích Kuromoji/IPADIC.
+  - Tại `apps/web/src/components/skill-practice-modal.tsx`:
+    - Thay thế plain text bằng `<JapaneseAnnotatedText text={...} />` cho:
+      - `currentQ.passage`
+      - `currentQ.prompt`
+      - `currentQ.options`
+      - `r.passage`, `r.prompt`, `r.given`, `r.answer`, `r.transcript`, `r.explanation`.
+  - Tại `apps/web/src/pages/skills.tsx`:
+    - Bọc `JapaneseAnnotatedText` cho `r.passage` và `r.transcript` trong modal xem lại bài làm kỹ năng.
+
+- **Kết quả Kiểm thử & Đo kiểm:**
+  - **Typecheck:** `npm run typecheck` đạt 100% không lỗi (0 errors).
+  - **Unit tests:**
+    - `vitest run tests/skills-and-jlpt-exam.test.ts`: 7/7 tests passed.
+    - `vitest run tests/annotation-renderer.test.tsx`: 1/1 test passed.
+  - **Build:** `npm run build` hoàn thành xuất sắc, nén và đóng gói thành công cả frontend Vite và backend bundle.
+
 ## LOẠI BỎ TOÀN BỘ CÁC PHẦN DƯ THỪA LIÊN QUAN ĐẾN ĐIỀU KHOẢN, CHÍNH SÁCH VÀ COOKIE BANNER — 24/10/2026
 
 - **Yêu cầu & Mục tiêu:**

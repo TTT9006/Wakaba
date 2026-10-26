@@ -438,21 +438,21 @@ export function SkillPracticeModal({
                       lang="ja"
                       style={{ marginBlock: '8px', fontSize: '13px' }}
                     >
-                      {r.passage}
+                      <JapaneseAnnotatedText text={r.passage} />
                     </div>
                   )}
 
                   <p lang="ja" style={{ fontWeight: 500, marginBlock: '4px' }}>
-                    {r.prompt}
+                    <JapaneseAnnotatedText text={r.prompt} />
                   </p>
 
                   <div style={{ fontSize: '13px', marginBlock: '4px' }}>
                     <span>
-                      Bạn chọn: <strong>{r.given || '(Chưa làm)'}</strong>
+                      Bạn chọn: <strong><JapaneseAnnotatedText text={r.given || '(Chưa làm)'} /></strong>
                     </span>
                     <span style={{ marginInline: '8px' }}>·</span>
                     <span>
-                      Đáp án: <strong style={{ color: 'var(--jade)' }}>{r.answer}</strong>
+                      Đáp án: <strong style={{ color: 'var(--jade)' }}><JapaneseAnnotatedText text={r.answer} /></strong>
                     </span>
                   </div>
 
@@ -474,14 +474,14 @@ export function SkillPracticeModal({
                       >
                         BẢN CHÉP LỜI (TRANSCRIPT)
                       </span>
-                      <p lang="ja" style={{ whiteSpace: 'pre-line', margin: '4px 0 0 0' }}>
-                        {r.transcript}
-                      </p>
+                      <div lang="ja" style={{ whiteSpace: 'pre-line', margin: '4px 0 0 0' }}>
+                        <JapaneseAnnotatedText text={r.transcript} />
+                      </div>
                     </div>
                   )}
 
                   <p style={{ fontSize: '13px', color: 'var(--muted)', margin: '4px 0 0 0' }}>
-                    💡 <em>{r.explanation}</em>
+                    💡 <em><JapaneseAnnotatedText text={r.explanation} /></em>
                   </p>
                 </div>
               ))}
@@ -505,7 +505,7 @@ export function SkillPracticeModal({
                   lineHeight: '1.7',
                 }}
               >
-                {currentQ.passage}
+                <JapaneseAnnotatedText text={currentQ.passage} />
               </div>
             )}
 
@@ -587,7 +587,7 @@ export function SkillPracticeModal({
                 {currentQ.group} · CÂU {index + 1}/{questions.length}
               </span>
               <h2 lang="ja" style={{ fontSize: '18px', margin: 0 }}>
-                {currentQ.prompt}
+                <JapaneseAnnotatedText text={currentQ.prompt} />
               </h2>
             </div>
 
@@ -616,7 +616,7 @@ export function SkillPracticeModal({
                       {String.fromCharCode(65 + optIdx)}
                     </span>
                     <span lang="ja" style={{ flex: 1, fontSize: '15px' }}>
-                      {opt}
+                      <JapaneseAnnotatedText text={opt} />
                     </span>
                     {isSelected && <Check size={16} style={{ color: 'var(--jade)' }} />}
                   </button>

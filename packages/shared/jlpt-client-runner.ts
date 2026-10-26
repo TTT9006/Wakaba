@@ -248,8 +248,23 @@ export function getLocalHistoryAttempts(): LocalAttempt[] {
 }
 
 export function getLocalAudioTranscript(paperId: string, questionId: string): string {
-  const paper = jlptPapers.find((p) => p.id === paperId);
-  if (!paper) return '音声の確認です。日本語の音が聞こえたら、試験を始めてください。';
-  const q = paper.sections.flatMap((s) => s.questions).find((item) => item.id === questionId);
-  return q?.transcript || q?.prompt || '音声の確認です。';
+  // 1. Tìm theo paperId chuẩn hóa
+  const normalizedPaperId = paperId.startsWith('jlpt-') ? paperId : `jlpt-${paperId}`;
+  const paper = jlptPapers.find(
+    (p) => p.id === paperId || p.id === normalizedPaperId || p.id.replace(/^jlpt-/, '') === paperId.replace(/^jlpt-/, ''),
+  );
+  if (paper) {
+    const q = paper.sections.flatMap((s) => s.questions).find((item) => item.id === questionId);
+    if (q?.transcript) return q.transcript;
+    if (q?.prompt) return q.prompt;
+  }
+
+  // 2. Dự phòng: Tìm trực tiếp theo questionId trên toàn bộ hệ thống đề thi
+  for (const p of jlptPapers) {
+    const q = p.sections.flatMap((s) => s.questions).find((item) => item.id === questionId);
+    if (q?.transcript) return q.transcript;
+    if (q?.prompt) return q.prompt;
+  }
+
+  return '音声の確認です。日本語の音が聞こえたら、試験を始めてください。';
 }
