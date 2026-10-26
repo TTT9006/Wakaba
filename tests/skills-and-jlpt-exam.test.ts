@@ -280,4 +280,12 @@ describe('JLPT Exam Qualification & Skills Practice', () => {
     expect(reconstructed).toContain('交差点');
     expect(reconstructed).toContain('銀行');
   });
+
+  it('resolves audio URL with optional cloud CDN base URL correctly', async () => {
+    const { resolveAudioUrl } = await import('../apps/web/src/pages/jlpt');
+
+    expect(resolveAudioUrl('')).toBe('');
+    expect(resolveAudioUrl('https://custom-cdn.com/q01.mp3')).toBe('https://custom-cdn.com/q01.mp3');
+    expect(resolveAudioUrl('/audio/jlpt/n5-2018/q01.mp3')).toBe('/audio/jlpt/n5-2018/q01.mp3');
+  });
 });

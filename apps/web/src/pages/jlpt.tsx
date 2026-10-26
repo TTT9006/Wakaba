@@ -41,10 +41,23 @@ const staticAudioProbe = {
   available: false,
 };
 
+/**
+ * Chuẩn hóa URL âm thanh: nếu có cấu hình VITE_AUDIO_BASE_URL (Cloudflare R2 / S3 / Supabase CDN),
+ * tự động ghép URL đám mây; nếu không thì dùng đường dẫn tương đối tĩnh.
+ */
+export function resolveAudioUrl(path?: string): string {
+  if (!path) return '';
+  if (/^https?:\/\//i.test(path)) return path;
+  const baseUrl = ((import.meta.env.VITE_AUDIO_BASE_URL as string | undefined) || '').replace(/\/+$/, '');
+  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  return baseUrl ? `${baseUrl}${cleanPath}` : cleanPath;
+}
+
 async function probeStaticAudio(): Promise<boolean> {
   if (staticAudioProbe.tested) return staticAudioProbe.available;
   try {
-    const res = await fetch('/audio/jlpt/n5-2018/q01.mp3', { method: 'HEAD' });
+    const testUrl = resolveAudioUrl('/audio/jlpt/n5-2018/q01.mp3');
+    const res = await fetch(testUrl, { method: 'HEAD' });
     const contentType = res.headers.get('content-type') || '';
     // Nếu Vercel trả về text/html (SPA rewrite) hoặc không ok -> static audio không khả dụng trên host này
     staticAudioProbe.available = res.ok && contentType.includes('audio');
@@ -68,13 +81,14 @@ function ExamAudioPlayer({
   runId?: string;
   paperId?: string;
 }) {
+  const targetSrc = useMemo(() => resolveAudioUrl(src), [src]);
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [isMuted, setIsMuted] = useState(false);
   const [hasEnded, setHasEnded] = useState(false);
-  const [resolvedSrc, setResolvedSrc] = useState(src || '');
+  const [resolvedSrc, setResolvedSrc] = useState(targetSrc || '');
   const [isLoadingAudio, setIsLoadingAudio] = useState(false);
   const [isFallbackTts, setIsFallbackTts] = useState(false);
   const [useSpeechSynth, setUseSpeechSynth] = useState(false);
@@ -120,25 +134,25 @@ function ExamAudioPlayer({
         return;
       }
 
-      // 2. Nếu có src tĩnh (ví dụ /audio/jlpt/...):
-      if (src) {
+      // 2. Nếu có src tĩnh (ví dụ /audio/jlpt/... hoặc CDN đám mây):
+      if (targetSrc) {
         if (!staticAudioProbe.tested) {
           setIsLoadingAudio(true);
           const isAvail = await probeStaticAudio();
           if (cancelled) return;
           setIsLoadingAudio(false);
           if (isAvail) {
-            setResolvedSrc(src);
+            setResolvedSrc(targetSrc);
             return;
           }
-          // File tĩnh không có trên host -> Chuyển ngay sang TTS
+          // File tĩnh/CDN không có trên host -> Chuyển ngay sang TTS
           if (effectiveTranscript) {
             setResolvedSrc(`/api/tts?text=${encodeURIComponent(effectiveTranscript)}`);
             setIsFallbackTts(true);
             return;
           }
         } else {
-          setResolvedSrc(src);
+          setResolvedSrc(targetSrc);
           return;
         }
       }
@@ -179,12 +193,12 @@ function ExamAudioPlayer({
         audioRef.current.pause();
       }
     };
-  }, [questionId, src, runId, paperId, effectiveTranscript]);
+  }, [questionId, targetSrc, runId, paperId, effectiveTranscript]);
 
   // Xử lý lỗi nạp thẻ <audio> (tự động phục hồi sang TTS hoặc Web Speech API)
   const handleAudioError = () => {
     console.warn('ExamAudioPlayer: Lỗi nạp nguồn âm thanh gốc, chuyển sang TTS...', resolvedSrc);
-    if (resolvedSrc && resolvedSrc === src) {
+    if (resolvedSrc && resolvedSrc === targetSrc) {
       staticAudioProbe.tested = true;
       staticAudioProbe.available = false;
       if (effectiveTranscript) {
@@ -245,7 +259,7 @@ function ExamAudioPlayer({
       await audioRef.current.play();
     } catch (playErr) {
       console.warn('ExamAudioPlayer: Lỗi audio.play(), kích hoạt phục hồi:', playErr);
-      if (resolvedSrc === src && effectiveTranscript) {
+      if (resolvedSrc === targetSrc && effectiveTranscript) {
         staticAudioProbe.tested = true;
         staticAudioProbe.available = false;
         const ttsUrl = `/api/tts?text=${encodeURIComponent(effectiveTranscript)}`;
@@ -1063,7 +1077,7 @@ export function JlptSession() {
                     <audio
                       controls
                       preload="auto"
-                      src={q.audioUrl}
+                      src={resolveAudioUrl(q.audioUrl)}
                       className="jlpt-audio-element"
                     />
                   </div>
