@@ -49,8 +49,14 @@ export function resolveAudioUrl(path?: string): string {
   if (!path) return '';
   if (/^https?:\/\//i.test(path)) return path;
   const baseUrl = ((import.meta.env.VITE_AUDIO_BASE_URL as string | undefined) || '').replace(/\/+$/, '');
-  const cleanPath = path.startsWith('/') ? path : `/${path}`;
-  return baseUrl ? `${baseUrl}${cleanPath}` : cleanPath;
+  if (!baseUrl) return path.startsWith('/') ? path : `/${path}`;
+
+  let cleanPath = path.startsWith('/') ? path : `/${path}`;
+  // Tự động xử lý nếu baseUrl đã bao gồm /audio và path cũng bắt đầu bằng /audio/ để tránh lặp
+  if (baseUrl.endsWith('/audio') && cleanPath.startsWith('/audio/')) {
+    cleanPath = cleanPath.slice(6);
+  }
+  return `${baseUrl}${cleanPath.startsWith('/') ? cleanPath : `/${cleanPath}`}`;
 }
 
 async function probeStaticAudio(): Promise<boolean> {
