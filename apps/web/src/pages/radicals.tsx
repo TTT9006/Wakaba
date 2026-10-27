@@ -3,6 +3,7 @@ import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import type { Radical, KanjiInfo } from '../../../../packages/shared/kanji';
 import { normalizeVietnamese } from '../../../../packages/shared/japanese-query';
+import { enrichRadicalWithVietnamese } from '../../../../packages/shared/radical-dictionary';
 import { api, post } from '../services/api';
 import { Button, Loading, ErrorState } from '../components/ui';
 import { StrokeOrder } from '../components/stroke-order';
@@ -18,7 +19,10 @@ export function RadicalLearning({ userId }: { userId: string }) {
     notify = useUI((s) => s.notify);
   const { data, error, isLoading } = useQuery({
     queryKey: ['radicals', userId],
-    queryFn: () => api<Radical[]>('/radicals'),
+    queryFn: async () => {
+      const res = await api<Radical[]>('/radicals');
+      return (res || []).map(enrichRadicalWithVietnamese);
+    },
   });
   if (isLoading) return <Loading />;
   if (!data) return <ErrorState error={error} />;
@@ -206,7 +210,10 @@ export function KanjiDetail() {
   const { data, error, isLoading } = useQuery({
     queryKey: ['kanji', character],
     queryFn: () =>
-      api<KanjiInfo & { radical?: Radical }>('/kanji/' + encodeURIComponent(character)),
+      api<KanjiInfo & { radical?: Radical }>('/kanji/' + encodeURIComponent(character)).then((d) => ({
+        ...d,
+        radical: d.radical ? enrichRadicalWithVietnamese(d.radical) : undefined,
+      })),
   });
   if (isLoading) return <Loading />;
   if (!data) return <ErrorState error={error} />;
