@@ -1,3 +1,43 @@
+## DỊCH NGHĨA TOÀN BỘ 214 BỘ THỦ KANJI SANG TIẾNG VIỆT & NÂNG CẤP TÌM KIẾM — 27/10/2026
+
+- **Yêu cầu & Mục tiêu từ Người dùng:**
+  - Toàn bộ phần nghĩa của 214 bộ thủ tiếng Nhật trong từ điển và phân hệ Học bộ thủ (`/writing?mode=radicals`) trước đây chỉ hiển thị tiếng Anh (ví dụ: `water`, `ice`, `line`, `sword`), chưa có phần dịch nghĩa tiếng Việt.
+  - Yêu cầu dịch toàn bộ 214 bộ thủ sang tiếng Việt chuẩn mực, tự nhiên, sát với ngữ nghĩa bộ thủ học thuật (Khang Hy & Hán Việt Tự Điển).
+  - Tuân thủ quy ước làm việc mới:
+    1. Tạo môi trường độc lập (`feature/translate-radicals`) để thực hiện và kiểm thử trước khi merge vào nhánh chính `main`.
+    2. Sử dụng 100% dữ liệu thật, không mock dữ liệu giả.
+    3. Kiểm thử trình duyệt thật qua Chrome DevTools Protocol (CDP) trên cả Desktop và Mobile (390x844), chụp ảnh màn hình lưu vào báo cáo.
+
+- **Thực hiện Kỹ thuật:**
+  1. **Dữ liệu 214 Bộ thủ (`data/kanji/radicals.json`):**
+     - Bổ sung trường `vietnameseMeaning` (nghĩa ngắn gọn, cốt lõi của bộ thủ) và `vietnameseMeanings` (các nghĩa mở rộng, chi tiết theo ngữ cảnh chữ Hán) cho trọn vẹn 214/214 bộ thủ.
+     - Điền bổ sung tên Hán Việt chuẩn cho 4 bộ thủ trước đây bị khuyết:
+       - Bộ #63: `戶` -> Hán Việt: `[Hộ]` · Nghĩa: _Cửa một cánh, nhà cửa_.
+       - Bộ #174: `靑` -> Hán Việt: `[Thanh]` · Nghĩa: _Màu xanh biếc, tươi trẻ_.
+       - Bộ #201: `黃` -> Hán Việt: `[Hoàng, Huỳnh]` · Nghĩa: _Màu vàng óng_.
+       - Bộ #203: `黑` -> Hán Việt: `[Hắc]` · Nghĩa: _Màu đen kịt, tối tăm_.
+  2. **Định kiểu Dữ liệu (`packages/shared/kanji.ts`):**
+     - Bổ sung `vietnameseMeaning?: string;` và `vietnameseMeanings?: string[];` vào type `Radical`.
+  3. **Giao diện Người dùng (`apps/web/src/pages/radicals.tsx`):**
+     - Cập nhật khung chi tiết bộ thủ (`.radical-detail`):
+       - Hiển thị nổi bật: **Nghĩa của bộ thủ:** `{selected.vietnameseMeaning}`.
+       - Hiển thị danh sách giải thích chi tiết: `Ý nghĩa giải thích: {selected.vietnameseMeanings.join('; ')}`.
+       - Hiển thị nghĩa tiếng Anh gốc ở dòng phụ tham khảo.
+     - Nâng cấp bộ lọc tìm kiếm (`normalizeVietnamese`): Cho phép người học gõ tìm kiếm bộ thủ trực tiếp bằng nghĩa tiếng Việt (ví dụ: gõ "băng tuyết" lập tức lọc ra bộ 冫 #15 Băng; gõ "nước" lọc ra bộ 水 #85 Thủy).
+  4. **Thẻ nhớ SRS & Mặc định (`apps/api/src/app.ts` & `apps/api/src/default-decks.ts`):**
+     - Cập nhật endpoint tạo thẻ ôn tập SRS `/api/radicals/:id/srs`: Lưu `meaning: r.vietnameseMeaning || r.name` và ghi chú tiếng Việt chi tiết cho thẻ.
+     - Cập nhật tạo thẻ mặc định bộ thủ `defaultDecks` với nghĩa tiếng Việt.
+
+- **Kết quả Kiểm thử & Đo kiểm:**
+  - **Typecheck:** `npm run typecheck` đạt 100% không lỗi (0 errors).
+  - **Unit tests:** Chạy trên cơ sở dữ liệu thật `learning.db` đạt 100% passing (`default-decks.test.ts`, `pdf-parser.test.ts`).
+  - **Build:** `npm run build` thành công xuất sắc (Vite client và Node API esbuild).
+  - **Kiểm thử trình duyệt thật qua Chrome DevTools Protocol (CDP):**
+    - Đã khởi chạy Chrome thật qua script `scripts/test-radicals-cdp.mjs`:
+      - Desktop: Mở bộ thủ #85 Thủy -> Hiển thị chính xác nghĩa tiếng Việt "Nước, chất lỏng", giải thích "nước; dòng nước; sông suối". Ảnh: `desktop-radical-thuy-85.png`.
+      - Desktop Tìm kiếm: Gõ "băng tuyết" -> Lọc chuẩn xác ra duy nhất 1 bộ thủ 冫 (#15 Băng). Ảnh: `desktop-search-bang-tuyet.png`.
+      - Mobile (390x844): Giao diện hiển thị sắc nét, co giãn hoàn hảo, không tràn màn hình. Ảnh: `mobile-radical-thuy-85.png`.
+
 ## CƠ CHẾ PHỤC HỒI ÂM THANH ĐA TẦNG CHO BÀI THI JLPT (MULTI-TIER AUDIO RESILIENCE) TRÊN MOBILE & PRODUCTION — 26/10/2026
 
 - **Nguyên nhân sự cố:**
