@@ -378,6 +378,16 @@ Mỗi lần sửa mã, giao diện, dữ liệu hoặc cấu hình đều phải
 
 Từ ngày 15/10/2026, tự động tạo commit sau khi hoàn thành một thay đổi và chạy các kiểm tra phù hợp, không cần hỏi lại. Chỉ commit các thay đổi thuộc công việc đã hoàn thành; không đưa database, mật khẩu, .env hoặc backup vào Git. Cập nhật ngày 21/10/2026: Mỗi khi hoàn thiện và kiểm thử tính năng xong, tự động push lên Git (GitHub origin/main) mà không cần hỏi lại. Quy ước áp dụng cho cả các phiên làm việc tiếp theo; luôn kiểm tra trạng thái Git và giữ thay đổi của người dùng.
 
+**Quy tắc cách ly môi trường & Quy trình kiểm thử - xử lý sự cố (Bảo vệ dữ liệu & Chống xung đột) — Cập nhật 27/10/2026:**
+1. **Tạo nhánh / Môi trường độc lập (Isolated Worktree/Branch):**
+   - Khi có yêu cầu cập nhật hoặc thêm tính năng mới, BẮT BUỘC phải tạo một nhánh / worktree môi trường độc lập (hoặc sandbox tách biệt) để triển khai, chạy thử và kiểm thử toàn diện tính năng đó.
+   - Chỉ khi tính năng đã hoàn thiện trọn vẹn và vượt qua kiểm thử trong môi trường độc lập mới được phép đồng bộ (merge/integrate) vào mã nguồn chính của trang web.
+   - Mục đích tối thượng: Tuyệt đối tránh gây xung đột, lỗi lan sang các phân hệ khác hoặc làm mất dữ liệu người dùng (rút kinh nghiệm sâu sắc sau nhiều sự cố mất/ẩn dữ liệu trước đây).
+2. **Quy tắc Kiểm thử 3 lần & Tạm dừng khi gặp lỗi sau đồng bộ (Retry 3 Times & Pivot):**
+   - Sau khi đồng bộ vào trang web, nếu quá trình kiểm thử phát hiện lỗi: Cho phép kiểm tra, rà soát và thử khắc phục tối đa **3 lần**.
+   - Nếu sau **3 lần** sửa đổi và kiểm thử mà lỗi vẫn chưa được giải quyết triệt để: **DỪNG NGAY VIỆC KIỂM THỬ LẶP LẠI**, ghi chép chi tiết nguyên nhân, hiện tượng lỗi vào nhật ký/handoff và chuyển hướng tiếp cận khác.
+   - **BẮT BUỘC:** Phải **tham vấn và hỏi ý kiến người dùng** về hướng tiếp cận mới trước khi bắt tay vào triển khai hướng mới đó.
+
 **Quy định kiểm thử thực tế qua Chrome DevTools Protocol (CDP) & Bắt buộc chụp ảnh màn hình — Cập nhật 22/10/2026:**
 Mỗi lần cập nhật xong một tính năng hoặc thay đổi giao diện, bắt buộc phải khởi chạy trình duyệt thật qua **Chrome DevTools Protocol (CDP)** để trực tiếp thử nghiệm và tương tác toàn diện tính năng đó (thao tác click, nhập liệu, gửi yêu cầu, chuyển trạng thái). **BẮT BUỘC chụp ảnh màn hình (screenshot) kết quả kiểm thử thực tế trên cả Desktop và Mobile, lưu lại và hiển thị trực tiếp trong artifact / báo cáo để người dùng kiểm tra trực quan.** Nếu xuất hiện bất kỳ lỗi nào (lỗi giao diện, lỗi logic, lỗi API, lỗi console hoặc tràn màn hình) thì phải khắc phục và sửa ngay lập tức, sau đó tiếp tục thử nghiệm lại qua CDP. Lặp lại chu trình kiểm thử - sửa lỗi này cho tới khi tính năng hoạt động hoàn thiện, mượt mà và không còn lỗi nào thì mới được kết thúc công việc.
 
