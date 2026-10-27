@@ -83,7 +83,7 @@ export async function defaultDecks() {
           note:
             `Bộ thủ: ${info.radicalForm && info.radicalForm !== radical.character ? `${info.radicalForm} · ` : ''}${radical.character} (#${radical.id})` +
             `${radical.vietnameseNames.length ? ' · ' + radical.vietnameseNames.join(' / ') : ''}` +
-            ` — ${radical.name}. Chữ có ${info.strokes ?? '?'} nét.`,
+            ` — ${radical.vietnameseMeaning || radical.name}. Chữ có ${info.strokes ?? '?'} nét.`,
         };
       }),
     })),

@@ -321,9 +321,9 @@ app.post('/api/radicals/:id/srs', async (req, res) => {
         materialType: 'radical',
         japanese: r.character,
         reading: r.readings.join(' / '),
-        meaning: r.name,
-        english: r.meanings.join('; '),
-        note: 'Kanji ' + radicalId + ' · Tên Hán Việt: ' + r.vietnameseNames.join(', '),
+        meaning: r.vietnameseMeaning || r.name,
+        english: r.name + (r.meanings.length ? '; ' + r.meanings.join('; ') : ''),
+        note: 'Bộ thủ #' + radicalId + ' · Tên Hán Việt: ' + r.vietnameseNames.join(', ') + (r.vietnameseMeanings?.length ? ' · Ý nghĩa: ' + r.vietnameseMeanings.join('; ') : ''),
       },
       update: {},
     });

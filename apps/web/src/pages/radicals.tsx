@@ -40,6 +40,8 @@ export function RadicalLearning({ userId }: { userId: string }) {
             r.character,
             ...r.variants.map((v) => v.character),
             r.name,
+            r.vietnameseMeaning || '',
+            ...(r.vietnameseMeanings || []),
             ...r.vietnameseNames,
             ...r.readings,
             r.id,
@@ -138,8 +140,14 @@ export function RadicalLearning({ userId }: { userId: string }) {
             {selected.readings.join('・') || 'Chưa có tên bộ được ghi nhận'}
           </p>
           <p>Cách đọc của ký tự: {selected.characterReadings.join('・') || 'Chưa có dữ liệu'}</p>
-          <p>Nghĩa bộ (nguồn tiếng Anh): {selected.name}</p>
-          <p>Nghĩa ký tự theo KANJIDIC2: {selected.meanings.join('; ') || 'Chưa có dữ liệu'}</p>
+          <p>
+            <strong>Nghĩa của bộ thủ:</strong>{' '}
+            <span>{selected.vietnameseMeaning || selected.name}</span>
+          </p>
+          {selected.vietnameseMeanings && selected.vietnameseMeanings.length > 0 && (
+            <p>Ý nghĩa giải thích: {selected.vietnameseMeanings.join('; ')}</p>
+          )}
+          <p className="muted small-text">Nghĩa tiếng Anh: {selected.name}{selected.meanings.length ? ' · ' + selected.meanings.join('; ') : ''}</p>
           <div className="inline-actions wrap" aria-label="Dạng bộ thủ">
             {forms.map((f) => (
               <Button

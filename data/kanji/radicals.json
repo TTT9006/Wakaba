@@ -1,1 +1,8184 @@
-[{"id":1,"character":"一","name":"one","vietnameseNames":["Nhất"],"readings":[],"characterReadings":["イチ","イツ","ひと-","ひと.つ"],"meanings":["one","one radical (no.1)"],"strokes":1,"variants":[],"examples":["一","三","上","下","不","七","世","両"]},{"id":2,"character":"丨","name":"line","vietnameseNames":["Cổn","Thụ"],"readings":["ぼう"],"characterReadings":["コン","シ","ジョ","ニョ","すす.む","しりぞ.く"],"meanings":["number one","line","rod radical (no. 2)"],"strokes":1,"variants":[],"examples":["中","串","丨","丩","个","丫","丮","丯"]},{"id":3,"character":"丶","name":"dot","vietnameseNames":["Chủ"],"readings":["てん"],"characterReadings":["チュ"],"meanings":["dot","tick or dot radical (no. 3)"],"strokes":1,"variants":[],"examples":["主","丸","丹","丼","丶"]},{"id":4,"character":"丿","name":"slash","vietnameseNames":["Phiệt","Triệt"],"readings":["ノ","のかんむり"],"characterReadings":["ヘツ","えい","よう"],"meanings":["katakana no radical (no. 4)"],"strokes":1,"variants":[],"examples":["乗","久","之","乏","乃","丿","乀","乂"]},{"id":5,"character":"乙","name":"second","vietnameseNames":["Ất"],"readings":[],"characterReadings":["オツ","イツ","おと-","きのと"],"meanings":["the latter","duplicate","strange","witty","fishhook radical (no. 5)"],"strokes":1,"variants":[],"examples":["九","乱","乳","亀","也","乾","乙","乞"]},{"id":6,"character":"亅","name":"hook","vietnameseNames":["Quyết"],"readings":["はねぼう"],"characterReadings":["ケツ","かぎ"],"meanings":["feathered stick","barb radical (no. 6)"],"strokes":1,"variants":[],"examples":["事","予","争","了","亅","亊"]},{"id":7,"character":"二","name":"two","vietnameseNames":["Nhị"],"readings":[],"characterReadings":["ニ","ジ","ふた","ふた.つ","ふたたび"],"meanings":["two","two radical (no. 7)"],"strokes":2,"variants":[{"character":"冫","strokes":2,"sourceCharacter":"恣"}],"examples":["二","五","井","互","亜","亘","亍","于"]},{"id":8,"character":"亠","name":"lid","vietnameseNames":["Đầu"],"readings":["なべぶた"],"characterReadings":["トウ"],"meanings":["kettle lid radical (no. 8)"],"strokes":2,"variants":[],"examples":["京","交","亡","亭","亮","享","亨","亠"]},{"id":9,"character":"人","name":"man","vietnameseNames":["Nhân"],"readings":[],"characterReadings":["ジン","ニン","ひと","-り","-と"],"meanings":["person"],"strokes":2,"variants":[{"character":"亻","strokes":2,"sourceCharacter":"亻"},{"character":"乂","strokes":2,"sourceCharacter":"鬣"},{"character":"𠆢","strokes":2,"sourceCharacter":"𠆢"}],"examples":["会","人","今","代","体","作","以","保"]},{"id":10,"character":"儿","name":"legs","vietnameseNames":["Nhân"],"readings":["にんにょう","ひとあし"],"characterReadings":["ジン","ニン","がい"],"meanings":["legs radical (no. 10)"],"strokes":2,"variants":[],"examples":["党","先","元","光","児","充","免","兆"]},{"id":11,"character":"入","name":"enter","vietnameseNames":["Nhập"],"readings":[],"characterReadings":["ニュウ","ジュ","い.る","-い.る","-い.り","い.れる","-い.れ","はい.る"],"meanings":["enter","insert"],"strokes":2,"variants":[{"character":"人","strokes":2,"sourceCharacter":"痊"}],"examples":["入","全","兦","兩","兪"]},{"id":12,"character":"八","name":"eight","vietnameseNames":["Bát"],"readings":["はちがしら"],"characterReadings":["ハチ","ハツ","や","や.つ","やっ.つ","よう"],"meanings":["eight","eight radical (no. 12)"],"strokes":2,"variants":[{"character":"儿","strokes":2,"sourceCharacter":"亮"}],"examples":["八","六","公","共","兵","具","典","兼"]},{"id":13,"character":"冂","name":"down box","vietnameseNames":["Quynh"],"readings":["まきがまえ","えながまえ","どうがまえ","けいがまえ"],"characterReadings":["キョウ","ケイ"],"meanings":["upside-down box radical (no. 13)"],"strokes":2,"variants":[],"examples":["内","円","再","冊","冒","冂","冄","冉"]},{"id":14,"character":"冖","name":"cover","vietnameseNames":["Mịch"],"readings":["わかんむり","べきかんむり"],"characterReadings":["ベキ"],"meanings":["wa-shaped crown radical (no. 14)"],"strokes":2,"variants":[],"examples":["写","冠","冗","冨","冥","冤","冖","㓁"]},{"id":15,"character":"冫","name":"ice","vietnameseNames":["Băng"],"readings":["にすい"],"characterReadings":["ヒョウ","こおり"],"meanings":["two-stroke water radical or ice radical (no. 15)"],"strokes":2,"variants":[],"examples":["冷","冬","凍","准","凝","凄","冴","凌"]},{"id":16,"character":"几","name":"table","vietnameseNames":["Kỷ"],"readings":["つくえ"],"characterReadings":["キ","きにょう"],"meanings":["table","table enclosure","table or windy radical (no. 16)"],"strokes":2,"variants":[],"examples":["処","凡","凧","凱","几","凢","凥","凩"]},{"id":17,"character":"凵","name":"open box","vietnameseNames":["Khảm"],"readings":["うけばこ","かんにょう"],"characterReadings":["カン"],"meanings":["open box enclosure","open box radical (no. 17)"],"strokes":2,"variants":[],"examples":["出","凶","函","凸","凹","凵","凷","凾"]},{"id":18,"character":"刀","name":"knife","vietnameseNames":["Đao"],"readings":[],"characterReadings":["トウ","かたな","そり"],"meanings":["sword","saber","knife"],"strokes":2,"variants":[{"character":"⺉","strokes":2,"sourceCharacter":"⺉"},{"character":"刂","strokes":2,"sourceCharacter":"例"}],"examples":["分","前","制","初","判","利","別","割"]},{"id":19,"character":"力","name":"power","vietnameseNames":["Lực"],"readings":[],"characterReadings":["リョク","リキ","リイ","ちから"],"meanings":["power","strength","strong","strain","bear up","exert"],"strokes":2,"variants":[],"examples":["力","動","務","加","勝","勢","助","労"]},{"id":20,"character":"勹","name":"wrap","vietnameseNames":["Bao"],"readings":["つつみがまえ"],"characterReadings":["ホウ","つつ.む"],"meanings":["wrapping enclosure","wrapping radical (no. 20)"],"strokes":2,"variants":[{"character":"𠂊","strokes":2,"sourceCharacter":"久"},{"character":"刀","strokes":2,"sourceCharacter":"冤"}],"examples":["包","匂","勹","勺","勻","勾","勿","匀"]},{"id":21,"character":"匕","name":"spoon","vietnameseNames":["Chủy"],"readings":["さじのひ"],"characterReadings":["ヒ","さじ"],"meanings":["spoon","spoon or katakana hi radical (no. 21)"],"strokes":2,"variants":[],"examples":["化","北","匕","匘","匙"]},{"id":22,"character":"匚","name":"right open box","vietnameseNames":["Phương"],"readings":["はこがまえ"],"characterReadings":["ホウ"],"meanings":["box-on-side enclosure radical (no. 22)"],"strokes":2,"variants":[{"character":"匸","strokes":1,"sourceCharacter":"亡"}],"examples":["匠","匡","匚","匛","匜","匝","匟","匣"]},{"id":23,"character":"匸","name":"hiding enclosure","vietnameseNames":["Hệ"],"readings":["かくしがまえ"],"characterReadings":["ケイ"],"meanings":["hiding enclosure radical (no. 23)"],"strokes":2,"variants":[],"examples":["区","医","匹","匿","匸","匼","匽","匾"]},{"id":24,"character":"十","name":"ten","vietnameseNames":["Thập"],"readings":[],"characterReadings":["ジュウ","ジッ","ジュッ","とお","と","そ"],"meanings":["ten"],"strokes":2,"variants":[],"examples":["十","協","午","千","半","南","単","卒"]},{"id":25,"character":"卜","name":"divination","vietnameseNames":["Bốc"],"readings":["ぼくのと"],"characterReadings":["ボク","うらな.う","うらない"],"meanings":["divining","fortune-telling","divination or katakana to radical (no. 25)"],"strokes":2,"variants":[],"examples":["占","卜","卞","卡","卣","卦","卧"]},{"id":26,"character":"卩","name":"seal","vietnameseNames":["Tiết"],"readings":["ふしづくり"],"characterReadings":["セツ","わりふ"],"meanings":["seal radical (no. 26)"],"strokes":2,"variants":[],"examples":["危","印","却","即","卵","卸","卿","卯"]},{"id":27,"character":"厂","name":"cliff","vietnameseNames":["Hán"],"readings":["がんだれ"],"characterReadings":["カン","かりがね"],"meanings":["wild goose","trailing cliff radical (no. 27)"],"strokes":2,"variants":[],"examples":["原","厳","厚","厘","厄","厦","厨","厂"]},{"id":28,"character":"厶","name":"private","vietnameseNames":["Khư"],"readings":["む"],"characterReadings":["シ","ボウ","ム","わたくし","ござ.る"],"meanings":["I","myself","katakana mu radical (no. 28)"],"strokes":2,"variants":[],"examples":["参","去","厶","厷","厺","叀","參","叅"]},{"id":29,"character":"又","name":"again","vietnameseNames":["Hựu"],"readings":[],"characterReadings":["ユウ","また","また-","また.の-"],"meanings":["or again","furthermore","on the other hand"],"strokes":2,"variants":[],"examples":["取","受","反","収","及","友","双","又"]},{"id":30,"character":"口","name":"mouth","vietnameseNames":["Khẩu"],"readings":[],"characterReadings":["コウ","ク","くち"],"meanings":["mouth"],"strokes":3,"variants":[],"examples":["同","合","員","問","和","名","向","告"]},{"id":31,"character":"囗","name":"enclosure","vietnameseNames":["Vi"],"readings":["くにがまえ"],"characterReadings":["イ","コク"],"meanings":["box","box or enclosure radical (no. 31)"],"strokes":3,"variants":[],"examples":["国","四","回","団","図","園","因","固"]},{"id":32,"character":"土","name":"earth","vietnameseNames":["Thổ","Độ","Đỗ"],"readings":[],"characterReadings":["ド","ト","つち"],"meanings":["soil","earth","ground","Turkey"],"strokes":3,"variants":[{"character":"士","strokes":3,"sourceCharacter":"吉"}],"examples":["地","場","報","在","増","基","土","境"]},{"id":33,"character":"士","name":"scholar","vietnameseNames":["Sĩ"],"readings":["さむらい"],"characterReadings":["シ","さむらい"],"meanings":["gentleman","scholar","samurai","samurai radical (no. 33)"],"strokes":3,"variants":[],"examples":["売","声","士","壮","壷","壱","壬","壯"]},{"id":34,"character":"夂","name":"go","vietnameseNames":["Tri"],"readings":["ふゆがしら"],"characterReadings":["チ","しゅう"],"meanings":["late","delayed","winter radical (no. 34)"],"strokes":3,"variants":[],"examples":["変","夂","夅","夆"]},{"id":35,"character":"夊","name":"go slowly","vietnameseNames":["Tuy"],"readings":["すいにょう"],"characterReadings":["スイ","ゆき"],"meanings":["winter variant radical (no. 34)"],"strokes":3,"variants":[],"examples":["夏","夊","夌","复","夐","夔"]},{"id":36,"character":"夕","name":"evening","vietnameseNames":["Tịch"],"readings":[],"characterReadings":["セキ","ゆう"],"meanings":["evening"],"strokes":3,"variants":[],"examples":["外","多","夜","夕","夢","夘","夙","夛"]},{"id":37,"character":"大","name":"big","vietnameseNames":["Đại","Thái"],"readings":[],"characterReadings":["ダイ","タイ","おお-","おお.きい","-おお.いに"],"meanings":["large","big"],"strokes":3,"variants":[],"examples":["大","夫","失","天","太","央","奈","契"]},{"id":38,"character":"女","name":"woman","vietnameseNames":["Nữ","Nứ","Nhữ"],"readings":[],"characterReadings":["ジョ","ニョ","ニョウ","おんな","め"],"meanings":["woman","female"],"strokes":3,"variants":[],"examples":["女","委","始","好","姿","婦","妻","婚"]},{"id":39,"character":"子","name":"child","vietnameseNames":["Tử","Tý"],"readings":[],"characterReadings":["シ","ス","ツ","こ","-こ","ね"],"meanings":["child","sign of the rat","11PM-1AM","first sign of Chinese zodiac"],"strokes":3,"variants":[],"examples":["学","子","字","存","季","孝","孤","孫"]},{"id":40,"character":"宀","name":"roof","vietnameseNames":["Miên"],"readings":["うかんむり"],"characterReadings":["ベン","メン"],"meanings":["shaped crown","katakana u radical (no. 40)"],"strokes":3,"variants":[],"examples":["定","実","家","安","官","容","宅","害"]},{"id":41,"character":"寸","name":"inch","vietnameseNames":["Thốn"],"readings":[],"characterReadings":["スン"],"meanings":["measurement","tenth of a shaku","a little","small"],"strokes":3,"variants":[],"examples":["対","導","専","将","寺","射","封","尊"]},{"id":42,"character":"小","name":"small","vietnameseNames":["Tiểu"],"readings":[],"characterReadings":["ショウ","ちい.さい","こ-","お-","さ-"],"meanings":["little","small"],"strokes":3,"variants":[{"character":"⺌","strokes":3,"sourceCharacter":"⺌"}],"examples":["小","少","尚","尖","尒","尓","尗","尞"]},{"id":43,"character":"尢","name":"lame","vietnameseNames":["Uông"],"readings":["だいのまげあし","もっとも"],"characterReadings":["オウ"],"meanings":["crooked-big radical (no. 43)"],"strokes":3,"variants":[],"examples":["就","尢","尣","尤","尨","尫","尬","尩"]},{"id":44,"character":"尸","name":"corpse","vietnameseNames":["Thi"],"readings":["しかばね","しかばねかんむり"],"characterReadings":["シ","かたしろ"],"meanings":["corpse","remains","flag radical (no. 44)"],"strokes":3,"variants":[],"examples":["局","展","屋","層","居","尾","属","届"]},{"id":45,"character":"屮","name":"sprout","vietnameseNames":["Triệt"],"readings":["ふるくさ"],"characterReadings":["テツ","サ","ひだりて"],"meanings":["left hand","old grass radical (no. 45)"],"strokes":3,"variants":[],"examples":["屯","屮","屰"]},{"id":46,"character":"山","name":"mountain","vietnameseNames":["San","Sơn"],"readings":[],"characterReadings":["サン","セン","やま"],"meanings":["mountain"],"strokes":3,"variants":[],"examples":["山","島","岡","崎","岸","崩","岩","岳"]},{"id":47,"character":"巛","name":"river","vietnameseNames":["Khôn","Xuyên","Sào"],"readings":["まがりがわ"],"characterReadings":["セン","かわ"],"meanings":["curving river radical (no.47)"],"strokes":3,"variants":[{"character":"川","strokes":3,"sourceCharacter":"㐬"}],"examples":["川","州","巡","巣","巛","巠","巢","巤"]},{"id":48,"character":"工","name":"work","vietnameseNames":["Công"],"readings":["たくみ"],"characterReadings":["コウ","ク","グ"],"meanings":["craft","construction","katakana e radical (no. 48)"],"strokes":3,"variants":[{"character":"匚","strokes":1,"sourceCharacter":"巨"}],"examples":["工","差","左","巨","巧","巩","巫"]},{"id":49,"character":"己","name":"oneself","vietnameseNames":["Kỷ"],"readings":[],"characterReadings":["コ","キ","おのれ","つちのと","な"],"meanings":["self"],"strokes":3,"variants":[],"examples":["巻","己","巽","巴","已","巳","巷","巵"]},{"id":50,"character":"巾","name":"turban","vietnameseNames":["Cân"],"readings":["はば"],"characterReadings":["キン","フク","おお.い","ちきり","きれ"],"meanings":["towel","hanging scroll","width","cloth radical (no. 50)"],"strokes":3,"variants":[],"examples":["市","常","席","帰","師","幅","帯","幕"]},{"id":51,"character":"干","name":"dry","vietnameseNames":["Can"],"readings":[],"characterReadings":["カン","ほ.す","ほ.し-","-ぼ.し","ひ.る"],"meanings":["dry","parch","ebb","recede","interfere","intercede"],"strokes":3,"variants":[],"examples":["年","平","幹","幸","干","幵","并","幷"]},{"id":52,"character":"幺","name":"short thread","vietnameseNames":["Yêu"],"readings":["いとがしら","ようへん"],"characterReadings":["ヨウ","ちいさい"],"meanings":["short thread radical (no. 52)"],"strokes":3,"variants":[],"examples":["幼","幻","幾","幽","幺"]},{"id":53,"character":"广","name":"dotted cliff","vietnameseNames":["Nghiễm","Yểm"],"readings":["まだれ"],"characterReadings":["ゲン"],"meanings":["dotted cliff radical (no. 53)"],"strokes":3,"variants":[],"examples":["度","府","広","店","座","廃","康","庁"]},{"id":54,"character":"廴","name":"long stride","vietnameseNames":["Dẫn"],"readings":["いんにょう","えんにょう"],"characterReadings":["イン"],"meanings":["long stride or stretching radical (no. 54)"],"strokes":3,"variants":[],"examples":["建","延","廷","廴","廸","廹","廻","廼"]},{"id":55,"character":"廾","name":"two hands","vietnameseNames":["Củng"],"readings":["にじゅうあし"],"characterReadings":["キョウ","ク","にじゅう"],"meanings":["twenty","twenty or letter H radical (no. 55)"],"strokes":3,"variants":[],"examples":["弁","弊","廾","廿","开","异","弃","弄"]},{"id":56,"character":"弋","name":"shoot","vietnameseNames":["Dặc"],"readings":["しきがまえ"],"characterReadings":["ヨク","いぐるみ"],"meanings":["piling","ceremony radical (no. 56)"],"strokes":3,"variants":[],"examples":["式","弋","弌","弍","弎","弐","弑"]},{"id":57,"character":"弓","name":"bow","vietnameseNames":["Cung"],"readings":[],"characterReadings":["キュウ","ゆみ"],"meanings":["bow","bow (archery, violin)"],"strokes":3,"variants":[],"examples":["強","引","張","弾","弱","弘","弟","弥"]},{"id":58,"character":"彐","name":"snout","vietnameseNames":["Kế","Kệ","Kí","Ký","Tuyết","Kẹ"],"readings":["けいがしら"],"characterReadings":["ケイ"],"meanings":["snout","pig's head radical (no. 58)"],"strokes":3,"variants":[],"examples":["当","彗","彐","彑","彔","彖","彘","彙"]},{"id":59,"character":"彡","name":"bristle","vietnameseNames":["Sam","Tiệm"],"readings":["さんづくり","かみかざり"],"characterReadings":["サン","セン"],"meanings":["three","hair ornament","short hair or fur radical (no. 59)"],"strokes":3,"variants":[],"examples":["形","影","彦","彩","彰","彫","彬","彪"]},{"id":60,"character":"彳","name":"step","vietnameseNames":["Sách"],"readings":["ぎょうにんべん"],"characterReadings":["テキ","たたず.む"],"meanings":["stop","linger","loiter","going man radical (no. 60)"],"strokes":3,"variants":[],"examples":["後","得","役","待","復","従","彼","徒"]},{"id":61,"character":"心","name":"heart","vietnameseNames":["Tâm"],"readings":["りっしんべん"],"characterReadings":["シン","こころ","-ごころ"],"meanings":["heart","mind","spirit","heart radical (no. 61)"],"strokes":4,"variants":[{"character":"⺗","strokes":4,"sourceCharacter":"⺗"},{"character":"忄","strokes":3,"sourceCharacter":"忄"}],"examples":["意","性","思","心","感","情","必","応"]},{"id":62,"character":"戈","name":"halberd","vietnameseNames":["Qua"],"readings":["かのほこ"],"characterReadings":["カ","ほこ","ほこづくり"],"meanings":["halberd","arms","festival car","float","tasselled spear radical (no. 62)"],"strokes":4,"variants":[],"examples":["戦","成","我","戒","戯","戴","或","戈"]},{"id":63,"character":"戶","name":"door","vietnameseNames":[],"readings":[],"characterReadings":[],"meanings":[],"strokes":null,"variants":[],"examples":["所","戸","房","戻","扇","扉","戹","戽"]},{"id":64,"character":"手","name":"hand","vietnameseNames":["Thủ"],"readings":[],"characterReadings":["シュ","ズ","て","て-","-て","た-"],"meanings":["hand"],"strokes":4,"variants":[{"character":"扌","strokes":3,"sourceCharacter":"哲"}],"examples":["手","持","指","投","打","提","挙","援"]},{"id":65,"character":"支","name":"branch","vietnameseNames":["Chi"],"readings":["しんよう","じゅうまた"],"characterReadings":["シ","ささ.える","つか.える","か.う"],"meanings":["branch","support","sustain","branch radical (no. 65)"],"strokes":4,"variants":[],"examples":["支","攲"]},{"id":66,"character":"攴","name":"rap","vietnameseNames":["Phộc"],"readings":["ぼくづくり","ぼくにょう","とまた"],"characterReadings":["ホク"],"meanings":["strike","hit","folding chair radical (no. 66)"],"strokes":4,"variants":[{"character":"攵","strokes":4,"sourceCharacter":"倏"}],"examples":["政","改","数","教","放","整","敗","攻"]},{"id":67,"character":"文","name":"script","vietnameseNames":["Văn","Vấn"],"readings":["ぶんにょう"],"characterReadings":["ブン","モン","ふみ","あや"],"meanings":["sentence","literature","style","art","decoration","figures","plan","literary radical (no. 67)"],"strokes":4,"variants":[],"examples":["文","斎","斉","斐","斑","斈","斌","斒"]},{"id":68,"character":"斗","name":"dipper","vietnameseNames":["Đẩu"],"readings":["とます"],"characterReadings":["ト","トウ"],"meanings":["Big Dipper","ten sho (vol)","sake dipper","dots and cross radical (no. 68)"],"strokes":4,"variants":[],"examples":["料","斜","斗","斛","斝","斟","斠","斡"]},{"id":69,"character":"斤","name":"axe","vietnameseNames":["Cân","Cấn"],"readings":["おの"],"characterReadings":["キン"],"meanings":["axe","1.32 lb","catty","counter for loaves of bread","axe radical (no. 69)"],"strokes":4,"variants":[],"examples":["新","断","斬","斥","斤","斧","斫","斮"]},{"id":70,"character":"方","name":"square","vietnameseNames":["Phương"],"readings":[],"characterReadings":["ホウ","かた","-かた","-がた"],"meanings":["direction","person","alternative"],"strokes":4,"variants":[],"examples":["方","施","族","旅","旗","旋","於","旛"]},{"id":71,"character":"无","name":"not","vietnameseNames":["Vô"],"readings":["むにょう","む","なし"],"characterReadings":["ブ","ム","なし","ない"],"meanings":["nothing","not exist","crooked heaven radical (no.71)"],"strokes":4,"variants":[{"character":"旡","strokes":4,"sourceCharacter":"僭"}],"examples":["既","无","旡"]},{"id":72,"character":"日","name":"sun","vietnameseNames":["Nhật"],"readings":[],"characterReadings":["ニチ","ジツ","ひ","-び","-か"],"meanings":["day","sun","Japan","counter for days"],"strokes":4,"variants":[],"examples":["日","時","明","昨","早","映","景","旧"]},{"id":73,"character":"曰","name":"say","vietnameseNames":["Viết"],"readings":["ひらび"],"characterReadings":["エツ","いわ.く","のたま.う","のたま.わく","ここに"],"meanings":["say","reason","pretext","history","past","flat sun radical (no. 73)"],"strokes":4,"variants":[],"examples":["最","書","曲","更","替","曽","曹","曼"]},{"id":74,"character":"月","name":"moon","vietnameseNames":["Nguyệt"],"readings":[],"characterReadings":["ゲツ","ガツ","つき"],"meanings":["month","moon"],"strokes":4,"variants":[{"character":"円","strokes":4,"sourceCharacter":"倩"},{"character":"⺤","strokes":4,"sourceCharacter":"埓"}],"examples":["月","期","朝","有","望","服","朗","朋"]},{"id":75,"character":"木","name":"tree","vietnameseNames":["Mộc"],"readings":[],"characterReadings":["ボク","モク","き","こ-"],"meanings":["tree","wood"],"strokes":4,"variants":[],"examples":["本","東","業","来","機","権","査","案"]},{"id":76,"character":"欠","name":"lack","vietnameseNames":["Khiếm"],"readings":["あくび"],"characterReadings":["ケツ","ケン","か.ける","か.く"],"meanings":["lack","gap","fail","yawning radical (no. 76)"],"strokes":4,"variants":[],"examples":["次","欧","歌","欠","欲","歓","欺","款"]},{"id":77,"character":"止","name":"stop","vietnameseNames":["Chỉ"],"readings":[],"characterReadings":["シ","と.まる","-ど.まり","と.める","-と.める","-ど.め","とど.める","とど.め","とど.まる","や.める","や.む","-や.む","よ.す","-さ.す","-さ.し"],"meanings":["stop","halt"],"strokes":4,"variants":[],"examples":["正","歳","止","武","歩","歴","歯","此"]},{"id":78,"character":"歹","name":"death","vietnameseNames":["Ngạt","Đãi"],"readings":["がつへん","いちたへん","しにがまえ"],"characterReadings":["ガツ","ガチ","タイ"],"meanings":["bare bone","bad","wrong","death radical (n. 78)"],"strokes":4,"variants":[],"examples":["死","残","殊","殖","殉","歹","歺","歾"]},{"id":79,"character":"殳","name":"weapon","vietnameseNames":["Thù"],"readings":["ほこつくり","るまた"],"characterReadings":["シュ","また","ほこ"],"meanings":["pike","windy-again radical (no. 79)"],"strokes":4,"variants":[],"examples":["段","殺","殿","殴","毅","殻","殳","殷"]},{"id":80,"character":"毋","name":"do not","vietnameseNames":["Vô","Mưu"],"readings":["なかれ","かんのはは"],"characterReadings":["ブ","ム","はは","ぼ","ない","なか.れ"],"meanings":["do not","must not","be not","mother radical (no. 80)"],"strokes":4,"variants":[],"examples":["毎","母","毒","毋","毌","每","毓"]},{"id":81,"character":"比","name":"compare","vietnameseNames":["Bỉ","Bí","Bì","Tỉ"],"readings":[],"characterReadings":["ヒ","くら.べる"],"meanings":["compare","race","ratio","Philippines"],"strokes":4,"variants":[],"examples":["比","毖","毗","毘","毚"]},{"id":82,"character":"毛","name":"fur","vietnameseNames":["Mao","Mô"],"readings":[],"characterReadings":["モウ","け"],"meanings":["fur","hair","feather","down"],"strokes":4,"variants":[],"examples":["毛","毬","毟","毡","毧","毫","毮","毯"]},{"id":83,"character":"氏","name":"clan","vietnameseNames":["Thị","Chi"],"readings":[],"characterReadings":["シ","うじ","-うじ"],"meanings":["family name","surname","clan"],"strokes":4,"variants":[],"examples":["民","氏","氐","氓"]},{"id":84,"character":"气","name":"steam","vietnameseNames":["Khí","Khất"],"readings":["きがまえ"],"characterReadings":["キ","ケ","いき"],"meanings":["spirit","steam radical (no. 84)"],"strokes":4,"variants":[],"examples":["気","气","氛","氟","氣","氤","氦","氧"]},{"id":85,"character":"水","name":"water","vietnameseNames":["Thủy"],"readings":[],"characterReadings":["スイ","みず","みず-"],"meanings":["water"],"strokes":4,"variants":[{"character":"⺡","strokes":3,"sourceCharacter":"⺡"},{"character":"⺢","strokes":5,"sourceCharacter":"⺢"},{"character":"氺","strokes":5,"sourceCharacter":"函"},{"character":"氵","strokes":3,"sourceCharacter":"匯"}],"examples":["決","法","治","派","済","活","海","求"]},{"id":86,"character":"火","name":"fire","vietnameseNames":["Hỏa"],"readings":[],"characterReadings":["カ","ひ","-び","ほ-"],"meanings":["fire"],"strokes":4,"variants":[{"character":"灬","strokes":4,"sourceCharacter":"偽"}],"examples":["点","無","然","火","熱","爆","為","燃"]},{"id":87,"character":"爪","name":"claw","vietnameseNames":["Trảo"],"readings":[],"characterReadings":["ソウ","つめ","つま-"],"meanings":["claw","nail","talon"],"strokes":4,"variants":[{"character":"⺤","strokes":4,"sourceCharacter":"⺤"}],"examples":["爪","爫","爬","爭","爰","爲","爵"]},{"id":88,"character":"父","name":"father","vietnameseNames":["Phụ","Phủ"],"readings":[],"characterReadings":["フ","ちち"],"meanings":["father"],"strokes":4,"variants":[],"examples":["父","爸","爹","爺"]},{"id":89,"character":"爻","name":"double x","vietnameseNames":["Hào"],"readings":["めめ","まじわる"],"characterReadings":["コウ","ギョウ","まじ.わる"],"meanings":["to mix with","to associate with","to join","double X radical (no. 89)"],"strokes":4,"variants":[],"examples":["爽","爻","爼","爾"]},{"id":90,"character":"爿","name":"half tree trunk","vietnameseNames":["Tường"],"readings":["しょうへん"],"characterReadings":["ショウ","ソウ"],"meanings":["left-side kata radical (no. 90)"],"strokes":4,"variants":[{"character":"⺦","strokes":3,"sourceCharacter":"⺦"}],"examples":["丬","爿","牀","牁","牂","牆"]},{"id":91,"character":"片","name":"slice","vietnameseNames":["Phiến"],"readings":[],"characterReadings":["ヘン","かた-","かた"],"meanings":["one-sided","leaf","sheet","right-side kata radical (no. 91)"],"strokes":4,"variants":[],"examples":["版","片","牌","牋","牏","牐","牒","牓"]},{"id":92,"character":"牙","name":"fang","vietnameseNames":["Nha"],"readings":["きばへん"],"characterReadings":["ガ","ゲ","きば","は"],"meanings":["tusk","fang","tusk radical (no. 92)"],"strokes":5,"variants":[],"examples":["牙"]},{"id":93,"character":"牛","name":"cow","vietnameseNames":["Ngưu"],"readings":[],"characterReadings":["ギュウ","うし"],"meanings":["cow"],"strokes":4,"variants":[],"examples":["物","特","犠","牛","牲","牧","牟","牡"]},{"id":94,"character":"犬","name":"dog","vietnameseNames":["Khuyển"],"readings":[],"characterReadings":["ケン","いぬ","いぬ-"],"meanings":["dog"],"strokes":4,"variants":[{"character":"⺨","strokes":3,"sourceCharacter":"⺨"}],"examples":["状","独","献","狙","犯","獲","猛","犬"]},{"id":95,"character":"玄","name":"profound","vietnameseNames":["Huyền"],"readings":[],"characterReadings":["ゲン","くろ","くろ.い"],"meanings":["mysterious","occultness","black","deep","profound"],"strokes":5,"variants":[],"examples":["率","玄","玅","玆"]},{"id":96,"character":"玉","name":"jade","vietnameseNames":["Ngọc","Túc"],"readings":[],"characterReadings":["ギョク","たま","たま-","-だま"],"meanings":["jewel","ball"],"strokes":5,"variants":[{"character":"王","strokes":4,"sourceCharacter":"理"}],"examples":["現","理","球","環","王","玉","珍","琴"]},{"id":97,"character":"瓜","name":"melon","vietnameseNames":["Qua"],"readings":[],"characterReadings":["カ","ケ","うり"],"meanings":["melon"],"strokes":6,"variants":[],"examples":["瓜","瓞","瓟","瓠","瓢","瓣","瓤"]},{"id":98,"character":"瓦","name":"tile","vietnameseNames":["Ngõa"],"readings":[],"characterReadings":["ガ","かわら","ぐらむ"],"meanings":["tile","gram"],"strokes":5,"variants":[],"examples":["瓶","瓦","甕","瓧","瓩","瓮","瓯","瓰"]},{"id":99,"character":"甘","name":"sweet","vietnameseNames":["Cam"],"readings":[],"characterReadings":["カン","あま.い","あま.える","あま.やかす","うま.い"],"meanings":["sweet","coax","pamper","be content","sugary"],"strokes":5,"variants":[],"examples":["甘","甚","甜","甞"]},{"id":100,"character":"生","name":"life","vietnameseNames":["Sanh","Sinh"],"readings":[],"characterReadings":["セイ","ショウ","い.きる","い.かす","い.ける","う.まれる","うま.れる","う.まれ","うまれ","う.む","お.う","は.える","は.やす","き","なま","なま-","な.る","な.す","む.す","-う"],"meanings":["life","genuine","birth"],"strokes":5,"variants":[],"examples":["生","産","甦","甡","甤","甥"]},{"id":101,"character":"用","name":"use","vietnameseNames":["Dụng"],"readings":[],"characterReadings":["ヨウ","もち.いる"],"meanings":["utilize","business","service","use","employ"],"strokes":5,"variants":[],"examples":["用","甫","甩","甬","甯"]},{"id":102,"character":"田","name":"field","vietnameseNames":["Điền"],"readings":[],"characterReadings":["デン","た"],"meanings":["rice field","rice paddy"],"strokes":5,"variants":[],"examples":["田","界","画","男","町","由","番","申"]},{"id":103,"character":"疋","name":"bolt of cloth","vietnameseNames":["Sơ","Nhã","Thất"],"readings":[],"characterReadings":["ヒキ","ショ","ソ","ヒツ","あし"],"meanings":["head","counter for animals"],"strokes":5,"variants":[],"examples":["疑","疎","疋","疏","疐"]},{"id":104,"character":"疒","name":"sickness","vietnameseNames":["Nạch"],"readings":["やまいだれ"],"characterReadings":["ダク","ニャク","ソウ","ジョウ","シツ","や.む"],"meanings":["trailing sickness","sick radical (no. 104)"],"strokes":5,"variants":[],"examples":["病","療","痛","症","疲","疾","疫","痴"]},{"id":105,"character":"癶","name":"dotted tent","vietnameseNames":["Bát"],"readings":["はつがしら"],"characterReadings":["ハツ"],"meanings":["dotted tent radical (no. 105)"],"strokes":5,"variants":[],"examples":["発","登","癶","癸","發"]},{"id":106,"character":"白","name":"white","vietnameseNames":["Bạch"],"readings":[],"characterReadings":["ハク","ビャク","しろ","しら-","しろ.い"],"meanings":["white"],"strokes":5,"variants":[],"examples":["的","百","白","皇","皆","皐","皓","皀"]},{"id":107,"character":"皮","name":"skin","vietnameseNames":["Bì"],"readings":["けがわ"],"characterReadings":["ヒ","かわ"],"meanings":["pelt","skin","hide","leather","skin radical (no. 107)"],"strokes":5,"variants":[],"examples":["皮","皰","皴","皶","皷","皸","皹","皺"]},{"id":108,"character":"皿","name":"dish","vietnameseNames":["Mãnh"],"readings":[],"characterReadings":["ベイ","さら"],"meanings":["dish","a helping","plate"],"strokes":5,"variants":[],"examples":["監","盟","益","盛","盤","盗","盧","盆"]},{"id":109,"character":"目","name":"eye","vietnameseNames":["Mục"],"readings":[],"characterReadings":["モク","ボク","め","-め","ま-"],"meanings":["eye","class","look","insight","experience","care","favor"],"strokes":5,"variants":[],"examples":["相","目","県","直","真","着","督","省"]},{"id":110,"character":"矛","name":"spear","vietnameseNames":["Mâu"],"readings":[],"characterReadings":["ム","ボウ","ほこ"],"meanings":["halberd","arms","festival float"],"strokes":5,"variants":[],"examples":["矛","矜","矞","矟"]},{"id":111,"character":"矢","name":"arrow","vietnameseNames":["Thỉ"],"readings":[],"characterReadings":["シ","や"],"meanings":["dart","arrow"],"strokes":5,"variants":[],"examples":["知","短","矢","矯","矩","矣","矧","䂓"]},{"id":112,"character":"石","name":"stone","vietnameseNames":["Thạch"],"readings":[],"characterReadings":["セキ","シャク","コク","いし"],"meanings":["stone"],"strokes":5,"variants":[],"examples":["確","研","石","破","硬","砂","礎","砲"]},{"id":113,"character":"示","name":"spirit","vietnameseNames":["Kì","Thị"],"readings":[],"characterReadings":["ジ","シ","しめ.す"],"meanings":["show","indicate","point out","express","display"],"strokes":5,"variants":[{"character":"⺭","strokes":4,"sourceCharacter":"⺭"},{"character":"礻","strokes":4,"sourceCharacter":"礻"}],"examples":["社","示","神","福","票","禁","祉","祭"]},{"id":114,"character":"禸","name":"track","vietnameseNames":["Nhữu","Nhựu"],"readings":["ぐうのあし"],"characterReadings":["ジュウ","ニュ","あしあと"],"meanings":["rump","footprint radical (no. 114)"],"strokes":5,"variants":[],"examples":["禸","禹","禺","离","禽"]},{"id":115,"character":"禾","name":"grain","vietnameseNames":["Hòa"],"readings":["のぎ","のぎへん"],"characterReadings":["カ","いね"],"meanings":["two-branch tree radical (no. 115)"],"strokes":5,"variants":[],"examples":["私","税","移","種","程","科","積","秋"]},{"id":116,"character":"穴","name":"cave","vietnameseNames":["Huyệt"],"readings":[],"characterReadings":["ケツ","あな"],"meanings":["hole","aperture","slit","cave","den"],"strokes":5,"variants":[],"examples":["空","究","突","窓","穴","窮","窒","窪"]},{"id":117,"character":"立","name":"stand","vietnameseNames":["Lập"],"readings":[],"characterReadings":["リツ","リュウ","リットル","た.つ","-た.つ","た.ち-","た.てる","-た.てる","た.て-","たて-","-た.て","-だ.て","-だ.てる"],"meanings":["stand up","rise","set up","erect"],"strokes":5,"variants":[],"examples":["立","競","端","章","童","竜","竪","竍"]},{"id":118,"character":"竹","name":"bamboo","vietnameseNames":["Trúc"],"readings":[],"characterReadings":["チク","たけ"],"meanings":["bamboo"],"strokes":6,"variants":[],"examples":["第","策","算","答","管","竹","筋","等"]},{"id":119,"character":"米","name":"rice","vietnameseNames":["Mễ"],"readings":[],"characterReadings":["ベイ","マイ","メエトル","こめ","よね"],"meanings":["rice","USA","metre"],"strokes":6,"variants":[],"examples":["米","精","糧","粘","糖","粉","粧","粒"]},{"id":120,"character":"糸","name":"silk","vietnameseNames":["Mịch"],"readings":[],"characterReadings":["シ","いと"],"meanings":["thread"],"strokes":6,"variants":[],"examples":["経","約","統","総","続","結","組","終"]},{"id":121,"character":"缶","name":"jar","vietnameseNames":["Phữu","Phẫu","Phũ"],"readings":["ほとぎ"],"characterReadings":["カン","かま"],"meanings":["tin can","container","jar radical (no. 121)"],"strokes":6,"variants":[],"examples":["缶","缸","䍃","缺","缻","缽","缾","罃"]},{"id":122,"character":"网","name":"net","vietnameseNames":["Võng"],"readings":["あみがしら","よんかしら","よこめ"],"characterReadings":["モウ","ボウ","あみ"],"meanings":["net","net or net crown radical (no. 122)"],"strokes":6,"variants":[{"character":"罒","strokes":5,"sourceCharacter":"儚"},{"character":"四","strokes":5,"sourceCharacter":"黷"}],"examples":["置","署","罪","罰","羅","罷","罵","罓"]},{"id":123,"character":"羊","name":"sheep","vietnameseNames":["Dương"],"readings":[],"characterReadings":["ヨウ","ひつじ"],"meanings":["sheep"],"strokes":6,"variants":[{"character":"⺷","strokes":6,"sourceCharacter":"美"}],"examples":["義","美","群","羊","羌","羋","羐","羑"]},{"id":124,"character":"羽","name":"feather","vietnameseNames":["Vũ"],"readings":[],"characterReadings":["ウ","は","わ","はね"],"meanings":["feathers","counter for birds, rabbits"],"strokes":6,"variants":[],"examples":["習","羽","翌","翼","翻","翔","翁","翫"]},{"id":125,"character":"老","name":"old","vietnameseNames":["Lão"],"readings":[],"characterReadings":["ロウ","お.いる","ふ.ける"],"meanings":["old man","old age","grow old"],"strokes":6,"variants":[],"examples":["者","考","老","耂","耇","者","耄","耆"]},{"id":126,"character":"而","name":"and","vietnameseNames":["Nhi"],"readings":[],"characterReadings":["ジ","ニ","しこ.うして","しか.して","しか.も","しか.れども","すなわち","なんじ","しかるに"],"meanings":["and yet","and then","but","however","nevertheless"],"strokes":6,"variants":[],"examples":["耐","而","耍","耎","耏","耑"]},{"id":127,"character":"耒","name":"plow","vietnameseNames":["Lỗi"],"readings":["らいすき"],"characterReadings":["ライ","ルイ","き","く","すき"],"meanings":["come","plough","three-branch tree radical (no. 127)"],"strokes":6,"variants":[],"examples":["耕","耒","耔","耗","耘","耙","耜","耞"]},{"id":128,"character":"耳","name":"ear","vietnameseNames":["Nhĩ"],"readings":[],"characterReadings":["ジ","みみ"],"meanings":["ear"],"strokes":6,"variants":[],"examples":["職","聞","聴","聖","耳","聡","聯","耶"]},{"id":129,"character":"聿","name":"brush","vietnameseNames":["Duật"],"readings":["ふでづくり"],"characterReadings":["イチ","イツ","ふで","ここに"],"meanings":["brush","finally","self","relate","follow","here","fast","writing brush radical (no. 129)"],"strokes":6,"variants":[],"examples":["粛","肇","聿","肄","肅","肆","肈"]},{"id":130,"character":"肉","name":"meat","vietnameseNames":["Nhục","Nhụ","Nậu"],"readings":[],"characterReadings":["ニク","しし"],"meanings":["meat"],"strokes":6,"variants":[{"character":"月","strokes":4,"sourceCharacter":"冑"}],"examples":["能","育","脳","背","脱","肉","臓","肝"]},{"id":131,"character":"臣","name":"minister","vietnameseNames":["Thần"],"readings":[],"characterReadings":["シン","ジン"],"meanings":["retainer","subject"],"strokes":7,"variants":[],"examples":["臨","臣","臤","臥","臧"]},{"id":132,"character":"自","name":"self","vietnameseNames":["Tự"],"readings":[],"characterReadings":["ジ","シ","みずか.ら","おの.ずから","おの.ずと"],"meanings":["oneself"],"strokes":6,"variants":[],"examples":["自","臭","臬","臭","臲"]},{"id":133,"character":"至","name":"arrive","vietnameseNames":["Chí"],"readings":[],"characterReadings":["シ","いた.る"],"meanings":["climax","arrive","proceed","reach","attain","result in"],"strokes":6,"variants":[],"examples":["致","至","䑓","臺","臻"]},{"id":134,"character":"臼","name":"mortar","vietnameseNames":["Cữu"],"readings":[],"characterReadings":["キュウ","グ","うす","うすづ.く"],"meanings":["mortar"],"strokes":6,"variants":[{"character":"𦥑","strokes":7,"sourceCharacter":"叟"}],"examples":["興","臼","臽","臾","臿","舁","舀","舂"]},{"id":135,"character":"舌","name":"tongue","vietnameseNames":["Thiệt"],"readings":[],"characterReadings":["ゼツ","した"],"meanings":["tongue","reed","clapper"],"strokes":6,"variants":[],"examples":["舌","舘","舍","舐","䑛","舒","舓","舔"]},{"id":136,"character":"舛","name":"oppose","vietnameseNames":["Suyễn"],"readings":["まいあし"],"characterReadings":["ブ","セン","まい","そむ.く"],"meanings":["dancing radical (no. 136)"],"strokes":6,"variants":[],"examples":["舞","舜","舛","舝"]},{"id":137,"character":"舟","name":"boat","vietnameseNames":["Chu"],"readings":[],"characterReadings":["シュウ","ふね","ふな-","-ぶね"],"meanings":["boat","ship"],"strokes":6,"variants":[],"examples":["般","航","船","艦","艇","舶","舟","舵"]},{"id":138,"character":"艮","name":"stopping","vietnameseNames":["Cấn"],"readings":["ねづくり"],"characterReadings":["コン","ゴン","うしとら"],"meanings":["northeast (Oriental zodiac)","stopping","good radical (no. 138)"],"strokes":6,"variants":[],"examples":["良","艮","艱"]},{"id":139,"character":"色","name":"color","vietnameseNames":["Sắc"],"readings":[],"characterReadings":["ショク","シキ","いろ"],"meanings":["color"],"strokes":6,"variants":[],"examples":["色","艶","艴","艷"]},{"id":140,"character":"艸","name":"grass","vietnameseNames":["Thảo"],"readings":["くさかんむり","そうこう"],"characterReadings":["ソウ","くさ"],"meanings":["grass","plants","grass radical (no. 140)"],"strokes":6,"variants":[{"character":"艹","strokes":3,"sourceCharacter":"備"}],"examples":["藤","葉","落","英","若","蔵","花","苦"]},{"id":141,"character":"虍","name":"tiger","vietnameseNames":["Hô"],"readings":["とらかんむり","とらがしら"],"characterReadings":["コ"],"meanings":["tiger spots","mottled","tiger or tiger crown radical (no. 141)"],"strokes":6,"variants":[],"examples":["虚","虐","虎","虜","虍","虒","虓","虔"]},{"id":142,"character":"虫","name":"insect","vietnameseNames":["Trùng"],"readings":[],"characterReadings":["チュウ","キ","むし"],"meanings":["insect","bug","temper"],"strokes":6,"variants":[],"examples":["融","虫","蛇","蝶","蛍","虹","蚊","蜜"]},{"id":143,"character":"血","name":"blood","vietnameseNames":["Huyết"],"readings":[],"characterReadings":["ケツ","ち"],"meanings":["blood"],"strokes":6,"variants":[],"examples":["衆","血","䘏","衁","衂","衄","衅","衈"]},{"id":144,"character":"行","name":"walk enclosure","vietnameseNames":["Hành","Hạnh","Hàng","Hạng"],"readings":[],"characterReadings":["コウ","ギョウ","アン","い.く","ゆ.く","-ゆ.き","-ゆき","-い.き","-いき","おこな.う","おこ.なう"],"meanings":["going","journey","carry out","conduct","act","line","row","bank"],"strokes":6,"variants":[],"examples":["行","術","衛","街","衝","衡","衍","衎"]},{"id":145,"character":"衣","name":"clothes","vietnameseNames":["Y","Ý"],"readings":[],"characterReadings":["イ","エ","ころも","きぬ","-ぎ"],"meanings":["garment","clothes","dressing"],"strokes":6,"variants":[{"character":"衤","strokes":5,"sourceCharacter":"初"}],"examples":["表","裁","補","被","製","装","裏","複"]},{"id":146,"character":"襾","name":"west","vietnameseNames":["Á"],"readings":["にし"],"characterReadings":["ア","け"],"meanings":["cover","place on top of","west radical variant (no. 146)"],"strokes":6,"variants":[{"character":"西","strokes":6,"sourceCharacter":"⻃"},{"character":"覀","strokes":6,"sourceCharacter":"僊"}],"examples":["要","西","覇","覆","襾","覀","覃","覈"]},{"id":147,"character":"見","name":"see","vietnameseNames":["Kiến","Hiện"],"readings":[],"characterReadings":["ケン","み.る","み.える","み.せる"],"meanings":["see","hopes","chances","idea","opinion","look at","visible"],"strokes":7,"variants":[],"examples":["見","規","視","親","観","覚","覧","覐"]},{"id":148,"character":"角","name":"horn","vietnameseNames":["Giác","Giốc"],"readings":[],"characterReadings":["カク","かど","つの"],"meanings":["angle","corner","square","horn","antlers"],"strokes":7,"variants":[],"examples":["解","角","触","觔","觕","觖","觝","觚"]},{"id":149,"character":"言","name":"speech","vietnameseNames":["Ngôn","Ngân"],"readings":[],"characterReadings":["ゲン","ゴン","い.う","こと"],"meanings":["say","word"],"strokes":7,"variants":[{"character":"訁","strokes":null,"sourceCharacter":null}],"examples":["議","言","調","話","設","記","認","論"]},{"id":150,"character":"谷","name":"valley","vietnameseNames":["Cốc","Lộc","Dục"],"readings":[],"characterReadings":["コク","たに","きわ.まる"],"meanings":["valley"],"strokes":7,"variants":[],"examples":["谷","谺","谽","谿","豁"]},{"id":151,"character":"豆","name":"bean","vietnameseNames":["Đậu","Dấu"],"readings":[],"characterReadings":["トウ","ズ","まめ","まめ-"],"meanings":["beans","pea","midget"],"strokes":7,"variants":[],"examples":["豊","豆","豇","豈","豉","豋","豌","豎"]},{"id":152,"character":"豕","name":"pig","vietnameseNames":["Thỉ"],"readings":["いのこ"],"characterReadings":["シ"],"meanings":["pig","hog","pig radical (no. 152)"],"strokes":7,"variants":[],"examples":["象","豪","豚","豕","豗","豘","豝","豢"]},{"id":153,"character":"豸","name":"badger","vietnameseNames":["Trĩ","Trại"],"readings":["むじなへん"],"characterReadings":["タイ","チ"],"meanings":["snake","legless insect","badger or clawed dog radical (no. 153)"],"strokes":7,"variants":[],"examples":["豸","豹","豺","豻","豼","貂","貅","貆"]},{"id":154,"character":"貝","name":"shell","vietnameseNames":["Bối"],"readings":[],"characterReadings":["バイ","かい"],"meanings":["shellfish"],"strokes":7,"variants":[],"examples":["資","費","質","賞","負","財","買","責"]},{"id":155,"character":"赤","name":"red","vietnameseNames":["Xích","Thích"],"readings":[],"characterReadings":["セキ","シャク","あか","あか-","あか.い","あか.らむ","あか.らめる"],"meanings":["red"],"strokes":7,"variants":[],"examples":["赤","赦","赧","赫","赬","赭"]},{"id":156,"character":"走","name":"run","vietnameseNames":["Tẩu"],"readings":[],"characterReadings":["ソウ","はし.る"],"meanings":["run"],"strokes":7,"variants":[],"examples":["起","超","走","越","趣","趙","赴","赳"]},{"id":157,"character":"足","name":"foot","vietnameseNames":["Túc"],"readings":[],"characterReadings":["ソク","あし","た.りる","た.る","た.す"],"meanings":["leg","foot","be sufficient","counter for pairs of footwear"],"strokes":7,"variants":[],"examples":["足","路","踏","躍","跡","距","踊","践"]},{"id":158,"character":"身","name":"body","vietnameseNames":["Thân","Quyên"],"readings":[],"characterReadings":["シン","み"],"meanings":["somebody","person","one's station in life"],"strokes":7,"variants":[],"examples":["身","躬","躭","躯","躰","躳","躱","躶"]},{"id":159,"character":"車","name":"cart","vietnameseNames":["Xa"],"readings":[],"characterReadings":["シャ","くるま"],"meanings":["car"],"strokes":7,"variants":[],"examples":["軍","転","車","輸","輪","軽","載","較"]},{"id":160,"character":"辛","name":"bitter","vietnameseNames":["Tân"],"readings":[],"characterReadings":["シン","から.い","つら.い","-づら.い","かのと"],"meanings":["spicy","bitter","hot","acrid"],"strokes":7,"variants":[],"examples":["辞","辛","辜","辟","辠","辡","辣","辤"]},{"id":161,"character":"辰","name":"morning","vietnameseNames":["Thần","Thìn"],"readings":["しんのたつ"],"characterReadings":["シン","ジン","たつ"],"meanings":["sign of the dragon","7-9AM","fifth sign of Chinese zodiac","shin dragon radical (no. 161)"],"strokes":7,"variants":[],"examples":["農","辰","辱"]},{"id":162,"character":"辵","name":"walk","vietnameseNames":["Sước","Xước","Xích"],"readings":["しんにょう","しんにゅう"],"characterReadings":["チャク"],"meanings":["walk","walking","road radical (no. 162)"],"strokes":7,"variants":[],"examples":["連","選","通","進","近","道","運","過"]},{"id":163,"character":"邑","name":"city","vietnameseNames":["Ấp"],"readings":["おおざと"],"characterReadings":["ユウ","むら"],"meanings":["village","rural community","right village radical (no. 163)"],"strokes":7,"variants":[{"character":"⻏","strokes":3,"sourceCharacter":"⻏"}],"examples":["部","都","郎","邦","邸","郵","郡","郷"]},{"id":164,"character":"酉","name":"wine","vietnameseNames":["Dậu"],"readings":["ひよりのとり","とりへん"],"characterReadings":["ユウ","とり"],"meanings":["west","bird","sign of the bird","5-7PM","tenth sign of Chinese zodiac","sake radical (no. 164)"],"strokes":7,"variants":[],"examples":["配","酒","酸","酬","酷","酔","醸","酵"]},{"id":165,"character":"釆","name":"distinguish","vietnameseNames":["Biện"],"readings":["のごめ"],"characterReadings":["ハン","ベン","サイ","と.る","いろどり","のごめ"],"meanings":["separate","divide","topped rice radical (no. 165)"],"strokes":7,"variants":[],"examples":["釈","釆","采","釉","釋"]},{"id":166,"character":"里","name":"village","vietnameseNames":["Lý"],"readings":[],"characterReadings":["リ","さと"],"meanings":["ri","village","parent's home","league"],"strokes":7,"variants":[],"examples":["野","重","量","里","釐"]},{"id":167,"character":"金","name":"gold","vietnameseNames":["Kim"],"readings":[],"characterReadings":["キン","コン","ゴン","かね","かな-","-がね"],"meanings":["gold"],"strokes":8,"variants":[],"examples":["金","銀","針","録","鉄","鈴","銭","銃"]},{"id":168,"character":"長","name":"long","vietnameseNames":["Trường","Trưởng","Trướng"],"readings":[],"characterReadings":["チョウ","なが.い","おさ"],"meanings":["long","leader","superior","senior"],"strokes":8,"variants":[],"examples":["長","镸"]},{"id":169,"character":"門","name":"gate","vietnameseNames":["Môn"],"readings":[],"characterReadings":["モン","かど","と"],"meanings":["gate","counter for cannons"],"strokes":8,"variants":[],"examples":["間","開","関","閣","門","闘","閉","閥"]},{"id":170,"character":"阜","name":"mound","vietnameseNames":["Phụ"],"readings":["ぎふのふ"],"characterReadings":["フ","フウ"],"meanings":["hill","mound","left village radical (no. 170)"],"strokes":8,"variants":[{"character":"⻖","strokes":3,"sourceCharacter":"⻖"}],"examples":["院","際","防","限","阪","階","除","降"]},{"id":171,"character":"隶","name":"slave","vietnameseNames":["Đãi"],"readings":["れいづくり"],"characterReadings":["タイ"],"meanings":["extend","give","cast","slave radical (no. 171)"],"strokes":8,"variants":[],"examples":["隷","隶","隸"]},{"id":172,"character":"隹","name":"short tailed bird","vietnameseNames":["Chuy"],"readings":["ふるとり"],"characterReadings":["サイ","スイ","とり"],"meanings":["bird","old bird radical (no. 172)"],"strokes":8,"variants":[],"examples":["集","難","離","雄","雑","雇","雅","隻"]},{"id":173,"character":"雨","name":"rain","vietnameseNames":["Vũ","Vú"],"readings":[],"characterReadings":["ウ","あめ","あま-","-さめ"],"meanings":["rain"],"strokes":8,"variants":[],"examples":["電","震","露","需","雨","雪","零","雲"]},{"id":174,"character":"靑","name":"blue","vietnameseNames":[],"readings":[],"characterReadings":[],"meanings":[],"strokes":null,"variants":[],"examples":["青","静","靖","靚","靛","靜"]},{"id":175,"character":"非","name":"wrong","vietnameseNames":["Phi"],"readings":[],"characterReadings":["ヒ","あら.ず"],"meanings":["un-","mistake","negative","injustice","non-"],"strokes":8,"variants":[],"examples":["非","靠","靡"]},{"id":176,"character":"面","name":"face","vietnameseNames":["Diện"],"readings":[],"characterReadings":["メン","ベン","おも","おもて","つら"],"meanings":["mask","face","features","surface"],"strokes":9,"variants":[],"examples":["面","靤","靦","靧","靨"]},{"id":177,"character":"革","name":"leather","vietnameseNames":["Cách","Cức"],"readings":[],"characterReadings":["カク","かわ"],"meanings":["leather","skin","reform","become serious"],"strokes":9,"variants":[],"examples":["革","靴","鞍","靪","靫","靭","靮","靱"]},{"id":178,"character":"韋","name":"tanned leather","vietnameseNames":["Vi"],"readings":["なめしがわ"],"characterReadings":["イ","そむ.く"],"meanings":["tanned leather radical (no. 178)"],"strokes":10,"variants":[],"examples":["韓","韋","韌","韍","韎","韐","韔","韘"]},{"id":179,"character":"韭","name":"leek","vietnameseNames":["Cửu"],"readings":["にら"],"characterReadings":["キュウ","ク"],"meanings":["leek radical (no. 179)"],"strokes":9,"variants":[],"examples":["韮","韭","韯","韱","韲"]},{"id":180,"character":"音","name":"sound","vietnameseNames":["Âm"],"readings":[],"characterReadings":["オン","イン","-ノン","おと","ね"],"meanings":["sound","noise"],"strokes":9,"variants":[],"examples":["音","響","韻","韵","韶","韺","響"]},{"id":181,"character":"頁","name":"leaf","vietnameseNames":["Hiệt"],"readings":[],"characterReadings":["ケツ","ぺえじ","おおがい","かしら"],"meanings":["page","leaf"],"strokes":9,"variants":[],"examples":["題","領","額","頭","顔","類","頼","順"]},{"id":182,"character":"風","name":"wind","vietnameseNames":["Phong"],"readings":[],"characterReadings":["フウ","フ","かぜ","かざ-"],"meanings":["wind","air","style","manner"],"strokes":9,"variants":[],"examples":["風","颪","颫","颭","颮","颯","颱","颴"]},{"id":183,"character":"飛","name":"fly","vietnameseNames":["Phi"],"readings":[],"characterReadings":["ヒ","と.ぶ","と.ばす","-と.ばす"],"meanings":["fly","skip (pages)","scatter"],"strokes":9,"variants":[],"examples":["飛","飜"]},{"id":184,"character":"食","name":"eat","vietnameseNames":["Thực","Tự"],"readings":[],"characterReadings":["ショク","ジキ","く.う","く.らう","た.べる","は.む"],"meanings":["eat","food"],"strokes":9,"variants":[{"character":"⻞","strokes":9,"sourceCharacter":"飩"}],"examples":["食","館","養","飲","飯","飾","飼","飢"]},{"id":185,"character":"首","name":"head","vietnameseNames":["Thủ","Thú"],"readings":[],"characterReadings":["シュ","くび"],"meanings":["neck","counter for songs and poems"],"strokes":9,"variants":[],"examples":["首","馗","馘"]},{"id":186,"character":"香","name":"fragrant","vietnameseNames":["Hương"],"readings":[],"characterReadings":["コウ","キョウ","か","かお.り","かお.る"],"meanings":["incense","smell","perfume"],"strokes":9,"variants":[],"examples":["香","馨","馛","馝","馟","馥"]},{"id":187,"character":"馬","name":"horse","vietnameseNames":["Mã"],"readings":[],"characterReadings":["バ","メ","マ","ボ","モ","うま","ま"],"meanings":["horse"],"strokes":10,"variants":[],"examples":["験","馬","駅","駐","駆","騒","驚","騰"]},{"id":188,"character":"骨","name":"bone","vietnameseNames":["Cốt"],"readings":[],"characterReadings":["コツ","ほね"],"meanings":["skeleton","bone","remains","frame"],"strokes":10,"variants":[],"examples":["骨","髄","骪","骭","骯","骰","䯊","骴"]},{"id":189,"character":"高","name":"tall","vietnameseNames":["Cao"],"readings":[],"characterReadings":["コウ","たか.い","たか","-だか","たか.まる","たか.める"],"meanings":["tall","high","expensive"],"strokes":10,"variants":[],"examples":["高","䯨","髞"]},{"id":190,"character":"髟","name":"hair","vietnameseNames":["Tiêu","Bưu"],"readings":["かみがしら","かみかんむり"],"characterReadings":["ヒュウ","ヒョウ"],"meanings":["hair hanging long","mane","long hair radical (no.190)"],"strokes":10,"variants":[],"examples":["髪","髟","髠","髢","髣","髥","髦","髧"]},{"id":191,"character":"鬥","name":"fight","vietnameseNames":["Đấu"],"readings":["とうがまえ","たたかいがまえ"],"characterReadings":[],"meanings":["broken gate radical (no. 191)"],"strokes":10,"variants":[],"examples":["鬥","鬦","鬧","鬨","鬩","䰗","鬪","鬭"]},{"id":192,"character":"鬯","name":"sacrificial wine","vietnameseNames":["Sưởng"],"readings":[],"characterReadings":["チョウ","かおりぐさ"],"meanings":["fragrant herbs","spiced liqueur","grow","spread"],"strokes":10,"variants":[],"examples":["鬯","鬱"]},{"id":193,"character":"鬲","name":"cauldron","vietnameseNames":["Cách","Lịch"],"readings":[],"characterReadings":["カク","レキ","かなえ","へだ.てる"],"meanings":["tripod"],"strokes":10,"variants":[],"examples":["鬲","鬴","鬵","鬷","鬻"]},{"id":194,"character":"鬼","name":"ghost","vietnameseNames":["Quỷ"],"readings":[],"characterReadings":["キ","おに","おに-"],"meanings":["ghost","devil"],"strokes":10,"variants":[],"examples":["魅","魔","鬼","魂","魏","魁","魃","魄"]},{"id":195,"character":"魚","name":"fish","vietnameseNames":["Ngư"],"readings":[],"characterReadings":["ギョ","うお","さかな","-ざかな"],"meanings":["fish"],"strokes":11,"variants":[],"examples":["鮮","魚","鯨","魯","鮎","鮫","鯉","鯛"]},{"id":196,"character":"鳥","name":"bird","vietnameseNames":["Điểu"],"readings":[],"characterReadings":["チョウ","とり"],"meanings":["bird","chicken"],"strokes":11,"variants":[],"examples":["鳥","鳴","鶴","鳩","鷹","鵬","鴨","鶏"]},{"id":197,"character":"鹵","name":"salt","vietnameseNames":["Lỗ"],"readings":[],"characterReadings":["ロ","しお","しおち","たて"],"meanings":["salt"],"strokes":11,"variants":[],"examples":["鹵","鹸","鹹","鹺","鹻","鹼","鹽"]},{"id":198,"character":"鹿","name":"deer","vietnameseNames":["Lộc"],"readings":[],"characterReadings":["ロク","しか","か"],"meanings":["deer"],"strokes":11,"variants":[],"examples":["鹿","麗","麓","麀","麁","麂","麃","麄"]},{"id":199,"character":"麥","name":"wheat","vietnameseNames":["Mạch"],"readings":[],"characterReadings":["バク","むぎ"],"meanings":["wheat"],"strokes":11,"variants":[{"character":"麦","strokes":7,"sourceCharacter":"麦"}],"examples":["麦","麹","麺","麥","麸","麭","麩","麪"]},{"id":200,"character":"麻","name":"hemp","vietnameseNames":["Ma"],"readings":[],"characterReadings":["マ","マア","あさ"],"meanings":["hemp","flax","numb"],"strokes":11,"variants":[],"examples":["麻","麼","麽","麾","麿"]},{"id":201,"character":"黃","name":"yellow","vietnameseNames":[],"readings":[],"characterReadings":["コウ","オウ","き"],"meanings":["yellow","surname"],"strokes":12,"variants":[],"examples":["黄","黃","黈","黌"]},{"id":202,"character":"黍","name":"millet","vietnameseNames":["Thử"],"readings":[],"characterReadings":["ショ","きび"],"meanings":["millet"],"strokes":12,"variants":[],"examples":["黎","黍","黏","黐"]},{"id":203,"character":"黑","name":"black","vietnameseNames":[],"readings":[],"characterReadings":["コク","くろい","くろ"],"meanings":["black","dark","evil","sinister"],"strokes":12,"variants":[{"character":"黒","strokes":11,"sourceCharacter":"墨"}],"examples":["黒","黙","黛","黑","黔","黕","默","黜"]},{"id":204,"character":"黹","name":"embroidery","vietnameseNames":["Chỉ"],"readings":["ふつ"],"characterReadings":["チ","ぬう","ぬいとり"],"meanings":["sewing radical (no. 204)"],"strokes":12,"variants":[],"examples":["黹","黻","黼"]},{"id":205,"character":"黽","name":"frog","vietnameseNames":["Mãnh","Mẫn"],"readings":[],"characterReadings":["ボウ","ビン","ベン","ミン","メン","あおがえる","つと.める"],"meanings":["green frog","industry"],"strokes":13,"variants":[],"examples":["黽","黿","鼂","䵷","鼃","鼇","鼈","鼉"]},{"id":206,"character":"鼎","name":"tripod","vietnameseNames":["Đỉnh"],"readings":[],"characterReadings":["テイ","かなえ"],"meanings":["three legged kettle"],"strokes":13,"variants":[],"examples":["鼎","鼏","鼐","鼒"]},{"id":207,"character":"鼓","name":"drum","vietnameseNames":["Cổ"],"readings":[],"characterReadings":["コ","つづみ"],"meanings":["drum","beat","rouse","muster"],"strokes":13,"variants":[],"examples":["鼓","鼔","鼕","鼖","鼗","鼙","鼚","鼛"]},{"id":208,"character":"鼠","name":"rat","vietnameseNames":["Thử"],"readings":[],"characterReadings":["ソ","ショ","ねずみ","ねず"],"meanings":["rat","mouse","dark gray"],"strokes":13,"variants":[{"character":"鼡","strokes":8,"sourceCharacter":"猟"}],"examples":["鼡","鼠","鼢","鼪","鼫","鼬","鼯","鼴"]},{"id":209,"character":"鼻","name":"nose","vietnameseNames":["Tị"],"readings":[],"characterReadings":["ビ","はな"],"meanings":["nose","snout"],"strokes":14,"variants":[],"examples":["鼻","鼽","鼾","齁","齄","齅","齆"]},{"id":210,"character":"齊","name":"even","vietnameseNames":["Tề","Tư","Trai"],"readings":[],"characterReadings":["セイ","サイ","そろ.う","ひと.しい","ひと.しく","あたる","はやい"],"meanings":["alike","equal","similar","Saito"],"strokes":14,"variants":[{"character":"斉","strokes":8,"sourceCharacter":"剤"}],"examples":["齊","齋","齎","齏"]},{"id":211,"character":"齒","name":"tooth","vietnameseNames":["Xỉ"],"readings":[],"characterReadings":["シ","よわい","は","よわ.い","よわい.する"],"meanings":["tooth","cog"],"strokes":15,"variants":[{"character":"歯","strokes":12,"sourceCharacter":"噛"}],"examples":["齢","齒","齔","齕","齗","齚","齝","齞"]},{"id":212,"character":"龍","name":"dragon","vietnameseNames":["Long","Sủng"],"readings":[],"characterReadings":["リュウ","リョウ","ロウ","たつ"],"meanings":["dragon","imperial"],"strokes":16,"variants":[{"character":"竜","strokes":10,"sourceCharacter":"槞"}],"examples":["龍","龐","龑","龔","龕","龖"]},{"id":213,"character":"龜","name":"turtle","vietnameseNames":["Quy","Cưu","Quân"],"readings":[],"characterReadings":["キ","キュウ","キン","かめ"],"meanings":["turtle","tortoise"],"strokes":18,"variants":[{"character":"亀","strokes":11,"sourceCharacter":"亀"}],"examples":["龜","龞"]},{"id":214,"character":"龠","name":"flute","vietnameseNames":["Dược","Thược"],"readings":[],"characterReadings":["ヤク","ふえ"],"meanings":["flute"],"strokes":17,"variants":[],"examples":["龠","龡","龢","龥"]}]
+[
+  {
+    "id": 1,
+    "character": "一",
+    "name": "one",
+    "vietnameseNames": [
+      "Nhất"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "イチ",
+      "イツ",
+      "ひと-",
+      "ひと.つ"
+    ],
+    "meanings": [
+      "one",
+      "one radical (no.1)"
+    ],
+    "strokes": 1,
+    "variants": [],
+    "examples": [
+      "一",
+      "三",
+      "上",
+      "下",
+      "不",
+      "七",
+      "世",
+      "両"
+    ],
+    "vietnameseMeaning": "Một, số một",
+    "vietnameseMeanings": [
+      "một",
+      "toàn bộ",
+      "đồng nhất"
+    ]
+  },
+  {
+    "id": 2,
+    "character": "丨",
+    "name": "line",
+    "vietnameseNames": [
+      "Cổn",
+      "Thụ"
+    ],
+    "readings": [
+      "ぼう"
+    ],
+    "characterReadings": [
+      "コン",
+      "シ",
+      "ジョ",
+      "ニョ",
+      "すす.む",
+      "しりぞ.く"
+    ],
+    "meanings": [
+      "number one",
+      "line",
+      "rod radical (no. 2)"
+    ],
+    "strokes": 1,
+    "variants": [],
+    "examples": [
+      "中",
+      "串",
+      "丨",
+      "丩",
+      "个",
+      "丫",
+      "丮",
+      "丯"
+    ],
+    "vietnameseMeaning": "Nét sổ dọc",
+    "vietnameseMeanings": [
+      "nét sổ thẳng",
+      "xuyên suốt từ trên xuống dưới"
+    ]
+  },
+  {
+    "id": 3,
+    "character": "丶",
+    "name": "dot",
+    "vietnameseNames": [
+      "Chủ"
+    ],
+    "readings": [
+      "てん"
+    ],
+    "characterReadings": [
+      "チュ"
+    ],
+    "meanings": [
+      "dot",
+      "tick or dot radical (no. 3)"
+    ],
+    "strokes": 1,
+    "variants": [],
+    "examples": [
+      "主",
+      "丸",
+      "丹",
+      "丼",
+      "丶"
+    ],
+    "vietnameseMeaning": "Điểm, dấu chấm",
+    "vietnameseMeanings": [
+      "dấu chấm",
+      "điểm"
+    ]
+  },
+  {
+    "id": 4,
+    "character": "丿",
+    "name": "slash",
+    "vietnameseNames": [
+      "Phiệt",
+      "Triệt"
+    ],
+    "readings": [
+      "ノ",
+      "のかんむり"
+    ],
+    "characterReadings": [
+      "ヘツ",
+      "えい",
+      "よう"
+    ],
+    "meanings": [
+      "katakana no radical (no. 4)"
+    ],
+    "strokes": 1,
+    "variants": [],
+    "examples": [
+      "乗",
+      "久",
+      "之",
+      "乏",
+      "乃",
+      "丿",
+      "乀",
+      "乂"
+    ],
+    "vietnameseMeaning": "Nét phẩy, xiên trái",
+    "vietnameseMeanings": [
+      "nét phẩy nghiêng về bên trái"
+    ]
+  },
+  {
+    "id": 5,
+    "character": "乙",
+    "name": "second",
+    "vietnameseNames": [
+      "Ất"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "オツ",
+      "イツ",
+      "おと-",
+      "きのと"
+    ],
+    "meanings": [
+      "the latter",
+      "duplicate",
+      "strange",
+      "witty",
+      "fishhook radical (no. 5)"
+    ],
+    "strokes": 1,
+    "variants": [],
+    "examples": [
+      "九",
+      "乱",
+      "乳",
+      "亀",
+      "也",
+      "乾",
+      "乙",
+      "乞"
+    ],
+    "vietnameseMeaning": "Can Ất, cong gập",
+    "vietnameseMeanings": [
+      "can thứ 2 thiên can",
+      "uốn lượn",
+      "lưỡi câu"
+    ]
+  },
+  {
+    "id": 6,
+    "character": "亅",
+    "name": "hook",
+    "vietnameseNames": [
+      "Quyết"
+    ],
+    "readings": [
+      "はねぼう"
+    ],
+    "characterReadings": [
+      "ケツ",
+      "かぎ"
+    ],
+    "meanings": [
+      "feathered stick",
+      "barb radical (no. 6)"
+    ],
+    "strokes": 1,
+    "variants": [],
+    "examples": [
+      "事",
+      "予",
+      "争",
+      "了",
+      "亅",
+      "亊"
+    ],
+    "vietnameseMeaning": "Nét móc lên",
+    "vietnameseMeanings": [
+      "nét móc đứng hất lên",
+      "lưỡi câu"
+    ]
+  },
+  {
+    "id": 7,
+    "character": "二",
+    "name": "two",
+    "vietnameseNames": [
+      "Nhị"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ニ",
+      "ジ",
+      "ふた",
+      "ふた.つ",
+      "ふたたび"
+    ],
+    "meanings": [
+      "two",
+      "two radical (no. 7)"
+    ],
+    "strokes": 2,
+    "variants": [
+      {
+        "character": "冫",
+        "strokes": 2,
+        "sourceCharacter": "恣"
+      }
+    ],
+    "examples": [
+      "二",
+      "五",
+      "井",
+      "互",
+      "亜",
+      "亘",
+      "亍",
+      "于"
+    ],
+    "vietnameseMeaning": "Số hai",
+    "vietnameseMeanings": [
+      "hai",
+      "số hai",
+      "lần thứ hai"
+    ]
+  },
+  {
+    "id": 8,
+    "character": "亠",
+    "name": "lid",
+    "vietnameseNames": [
+      "Đầu"
+    ],
+    "readings": [
+      "なべぶた"
+    ],
+    "characterReadings": [
+      "トウ"
+    ],
+    "meanings": [
+      "kettle lid radical (no. 8)"
+    ],
+    "strokes": 2,
+    "variants": [],
+    "examples": [
+      "京",
+      "交",
+      "亡",
+      "亭",
+      "亮",
+      "享",
+      "亨",
+      "亠"
+    ],
+    "vietnameseMeaning": "Nắp đậy, đầu",
+    "vietnameseMeanings": [
+      "nắp đậy phía trên"
+    ]
+  },
+  {
+    "id": 9,
+    "character": "人",
+    "name": "man",
+    "vietnameseNames": [
+      "Nhân"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ジン",
+      "ニン",
+      "ひと",
+      "-り",
+      "-と"
+    ],
+    "meanings": [
+      "person"
+    ],
+    "strokes": 2,
+    "variants": [
+      {
+        "character": "亻",
+        "strokes": 2,
+        "sourceCharacter": "亻"
+      },
+      {
+        "character": "乂",
+        "strokes": 2,
+        "sourceCharacter": "鬣"
+      },
+      {
+        "character": "𠆢",
+        "strokes": 2,
+        "sourceCharacter": "𠆢"
+      }
+    ],
+    "examples": [
+      "会",
+      "人",
+      "今",
+      "代",
+      "体",
+      "作",
+      "以",
+      "保"
+    ],
+    "vietnameseMeaning": "Người",
+    "vietnameseMeanings": [
+      "con người",
+      "nhân loại",
+      "người"
+    ]
+  },
+  {
+    "id": 10,
+    "character": "儿",
+    "name": "legs",
+    "vietnameseNames": [
+      "Nhân"
+    ],
+    "readings": [
+      "にんにょう",
+      "ひとあし"
+    ],
+    "characterReadings": [
+      "ジン",
+      "ニン",
+      "がい"
+    ],
+    "meanings": [
+      "legs radical (no. 10)"
+    ],
+    "strokes": 2,
+    "variants": [],
+    "examples": [
+      "党",
+      "先",
+      "元",
+      "光",
+      "児",
+      "充",
+      "免",
+      "兆"
+    ],
+    "vietnameseMeaning": "Chân người, trẻ nhỏ",
+    "vietnameseMeanings": [
+      "chân người đang đi",
+      "trẻ con"
+    ]
+  },
+  {
+    "id": 11,
+    "character": "入",
+    "name": "enter",
+    "vietnameseNames": [
+      "Nhập"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ニュウ",
+      "ジュ",
+      "い.る",
+      "-い.る",
+      "-い.り",
+      "い.れる",
+      "-い.れ",
+      "はい.る"
+    ],
+    "meanings": [
+      "enter",
+      "insert"
+    ],
+    "strokes": 2,
+    "variants": [
+      {
+        "character": "人",
+        "strokes": 2,
+        "sourceCharacter": "痊"
+      }
+    ],
+    "examples": [
+      "入",
+      "全",
+      "兦",
+      "兩",
+      "兪"
+    ],
+    "vietnameseMeaning": "Vào, đi vào",
+    "vietnameseMeanings": [
+      "tiến vào",
+      "nhập vào",
+      "cho vào"
+    ]
+  },
+  {
+    "id": 12,
+    "character": "八",
+    "name": "eight",
+    "vietnameseNames": [
+      "Bát"
+    ],
+    "readings": [
+      "はちがしら"
+    ],
+    "characterReadings": [
+      "ハチ",
+      "ハツ",
+      "や",
+      "や.つ",
+      "やっ.つ",
+      "よう"
+    ],
+    "meanings": [
+      "eight",
+      "eight radical (no. 12)"
+    ],
+    "strokes": 2,
+    "variants": [
+      {
+        "character": "儿",
+        "strokes": 2,
+        "sourceCharacter": "亮"
+      }
+    ],
+    "examples": [
+      "八",
+      "六",
+      "公",
+      "共",
+      "兵",
+      "具",
+      "典",
+      "兼"
+    ],
+    "vietnameseMeaning": "Số tám, tách ra",
+    "vietnameseMeanings": [
+      "tám",
+      "số tám",
+      "chia rẽ",
+      "tách biệt"
+    ]
+  },
+  {
+    "id": 13,
+    "character": "冂",
+    "name": "down box",
+    "vietnameseNames": [
+      "Quynh"
+    ],
+    "readings": [
+      "まきがまえ",
+      "えながまえ",
+      "どうがまえ",
+      "けいがまえ"
+    ],
+    "characterReadings": [
+      "キョウ",
+      "ケイ"
+    ],
+    "meanings": [
+      "upside-down box radical (no. 13)"
+    ],
+    "strokes": 2,
+    "variants": [],
+    "examples": [
+      "内",
+      "円",
+      "再",
+      "冊",
+      "冒",
+      "冂",
+      "冄",
+      "冉"
+    ],
+    "vietnameseMeaning": "Vùng biên cương xa, khung mở đáy",
+    "vietnameseMeanings": [
+      "biên ải xa xôi",
+      "vùng hoang dã ngoại ô"
+    ]
+  },
+  {
+    "id": 14,
+    "character": "冖",
+    "name": "cover",
+    "vietnameseNames": [
+      "Mịch"
+    ],
+    "readings": [
+      "わかんむり",
+      "べきかんむり"
+    ],
+    "characterReadings": [
+      "ベキ"
+    ],
+    "meanings": [
+      "wa-shaped crown radical (no. 14)"
+    ],
+    "strokes": 2,
+    "variants": [],
+    "examples": [
+      "写",
+      "冠",
+      "冗",
+      "冨",
+      "冥",
+      "冤",
+      "冖",
+      "㓁"
+    ],
+    "vietnameseMeaning": "Khăn trùm, che phủ",
+    "vietnameseMeanings": [
+      "trùm lên",
+      "che phủ"
+    ]
+  },
+  {
+    "id": 15,
+    "character": "冫",
+    "name": "ice",
+    "vietnameseNames": [
+      "Băng"
+    ],
+    "readings": [
+      "にすい"
+    ],
+    "characterReadings": [
+      "ヒョウ",
+      "こおり"
+    ],
+    "meanings": [
+      "two-stroke water radical or ice radical (no. 15)"
+    ],
+    "strokes": 2,
+    "variants": [],
+    "examples": [
+      "冷",
+      "冬",
+      "凍",
+      "准",
+      "凝",
+      "凄",
+      "冴",
+      "凌"
+    ],
+    "vietnameseMeaning": "Băng tuyết, nước đá",
+    "vietnameseMeanings": [
+      "băng đá",
+      "giá lạnh",
+      "đông lạnh"
+    ]
+  },
+  {
+    "id": 16,
+    "character": "几",
+    "name": "table",
+    "vietnameseNames": [
+      "Kỷ"
+    ],
+    "readings": [
+      "つくえ"
+    ],
+    "characterReadings": [
+      "キ",
+      "きにょう"
+    ],
+    "meanings": [
+      "table",
+      "table enclosure",
+      "table or windy radical (no. 16)"
+    ],
+    "strokes": 2,
+    "variants": [],
+    "examples": [
+      "処",
+      "凡",
+      "凧",
+      "凱",
+      "几",
+      "凢",
+      "凥",
+      "凩"
+    ],
+    "vietnameseMeaning": "Bàn nhỏ, ghế dựa",
+    "vietnameseMeanings": [
+      "cái bàn con",
+      "ghế nhỏ"
+    ]
+  },
+  {
+    "id": 17,
+    "character": "凵",
+    "name": "open box",
+    "vietnameseNames": [
+      "Khảm"
+    ],
+    "readings": [
+      "うけばこ",
+      "かんにょう"
+    ],
+    "characterReadings": [
+      "カン"
+    ],
+    "meanings": [
+      "open box enclosure",
+      "open box radical (no. 17)"
+    ],
+    "strokes": 2,
+    "variants": [],
+    "examples": [
+      "出",
+      "凶",
+      "函",
+      "凸",
+      "凹",
+      "凵",
+      "凷",
+      "凾"
+    ],
+    "vietnameseMeaning": "Há miệng, hố lõm",
+    "vietnameseMeanings": [
+      "vùng trũng",
+      "cái hố sâu",
+      "đồ chứa mở miệng"
+    ]
+  },
+  {
+    "id": 18,
+    "character": "刀",
+    "name": "knife",
+    "vietnameseNames": [
+      "Đao"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "トウ",
+      "かたな",
+      "そり"
+    ],
+    "meanings": [
+      "sword",
+      "saber",
+      "knife"
+    ],
+    "strokes": 2,
+    "variants": [
+      {
+        "character": "⺉",
+        "strokes": 2,
+        "sourceCharacter": "⺉"
+      },
+      {
+        "character": "刂",
+        "strokes": 2,
+        "sourceCharacter": "例"
+      }
+    ],
+    "examples": [
+      "分",
+      "前",
+      "制",
+      "初",
+      "判",
+      "利",
+      "別",
+      "割"
+    ],
+    "vietnameseMeaning": "Con dao, thanh kiếm",
+    "vietnameseMeanings": [
+      "dao",
+      "gươm giáo",
+      "vũ khí sắc bén"
+    ]
+  },
+  {
+    "id": 19,
+    "character": "力",
+    "name": "power",
+    "vietnameseNames": [
+      "Lực"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "リョク",
+      "リキ",
+      "リイ",
+      "ちから"
+    ],
+    "meanings": [
+      "power",
+      "strength",
+      "strong",
+      "strain",
+      "bear up",
+      "exert"
+    ],
+    "strokes": 2,
+    "variants": [],
+    "examples": [
+      "力",
+      "動",
+      "務",
+      "加",
+      "勝",
+      "勢",
+      "助",
+      "労"
+    ],
+    "vietnameseMeaning": "Sức mạnh, sinh lực",
+    "vietnameseMeanings": [
+      "sức lực",
+      "sức mạnh",
+      "cố gắng",
+      "nỗ lực"
+    ]
+  },
+  {
+    "id": 20,
+    "character": "勹",
+    "name": "wrap",
+    "vietnameseNames": [
+      "Bao"
+    ],
+    "readings": [
+      "つつみがまえ"
+    ],
+    "characterReadings": [
+      "ホウ",
+      "つつ.む"
+    ],
+    "meanings": [
+      "wrapping enclosure",
+      "wrapping radical (no. 20)"
+    ],
+    "strokes": 2,
+    "variants": [
+      {
+        "character": "𠂊",
+        "strokes": 2,
+        "sourceCharacter": "久"
+      },
+      {
+        "character": "刀",
+        "strokes": 2,
+        "sourceCharacter": "冤"
+      }
+    ],
+    "examples": [
+      "包",
+      "匂",
+      "勹",
+      "勺",
+      "勻",
+      "勾",
+      "勿",
+      "匀"
+    ],
+    "vietnameseMeaning": "Bao bọc, ôm lấy",
+    "vietnameseMeanings": [
+      "gói ghém",
+      "bao quanh",
+      "ôm tròn"
+    ]
+  },
+  {
+    "id": 21,
+    "character": "匕",
+    "name": "spoon",
+    "vietnameseNames": [
+      "Chủy"
+    ],
+    "readings": [
+      "さじのひ"
+    ],
+    "characterReadings": [
+      "ヒ",
+      "さじ"
+    ],
+    "meanings": [
+      "spoon",
+      "spoon or katakana hi radical (no. 21)"
+    ],
+    "strokes": 2,
+    "variants": [],
+    "examples": [
+      "化",
+      "北",
+      "匕",
+      "匘",
+      "匙"
+    ],
+    "vietnameseMeaning": "Cái thìa, cái muỗng",
+    "vietnameseMeanings": [
+      "cái thìa nhỏ",
+      "con dao găm nhỏ"
+    ]
+  },
+  {
+    "id": 22,
+    "character": "匚",
+    "name": "right open box",
+    "vietnameseNames": [
+      "Phương"
+    ],
+    "readings": [
+      "はこがまえ"
+    ],
+    "characterReadings": [
+      "ホウ"
+    ],
+    "meanings": [
+      "box-on-side enclosure radical (no. 22)"
+    ],
+    "strokes": 2,
+    "variants": [
+      {
+        "character": "匸",
+        "strokes": 1,
+        "sourceCharacter": "亡"
+      }
+    ],
+    "examples": [
+      "匠",
+      "匡",
+      "匚",
+      "匛",
+      "匜",
+      "匝",
+      "匟",
+      "匣"
+    ],
+    "vietnameseMeaning": "Khung chứa đồ, tủ hộp",
+    "vietnameseMeanings": [
+      "đồ đựng đồ vật",
+      "hòm chứa"
+    ]
+  },
+  {
+    "id": 23,
+    "character": "匸",
+    "name": "hiding enclosure",
+    "vietnameseNames": [
+      "Hệ"
+    ],
+    "readings": [
+      "かくしがまえ"
+    ],
+    "characterReadings": [
+      "ケイ"
+    ],
+    "meanings": [
+      "hiding enclosure radical (no. 23)"
+    ],
+    "strokes": 2,
+    "variants": [],
+    "examples": [
+      "区",
+      "医",
+      "匹",
+      "匿",
+      "匸",
+      "匼",
+      "匽",
+      "匾"
+    ],
+    "vietnameseMeaning": "Che giấu, cất giấu",
+    "vietnameseMeanings": [
+      "nơi giấu đồ",
+      "che lấp",
+      "giấu kín"
+    ]
+  },
+  {
+    "id": 24,
+    "character": "十",
+    "name": "ten",
+    "vietnameseNames": [
+      "Thập"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ジュウ",
+      "ジッ",
+      "ジュッ",
+      "とお",
+      "と",
+      "そ"
+    ],
+    "meanings": [
+      "ten"
+    ],
+    "strokes": 2,
+    "variants": [],
+    "examples": [
+      "十",
+      "協",
+      "午",
+      "千",
+      "半",
+      "南",
+      "単",
+      "卒"
+    ],
+    "vietnameseMeaning": "Số mười, hoàn hảo",
+    "vietnameseMeanings": [
+      "mười",
+      "số mười",
+      "thập toàn thập mỹ"
+    ]
+  },
+  {
+    "id": 25,
+    "character": "卜",
+    "name": "divination",
+    "vietnameseNames": [
+      "Bốc"
+    ],
+    "readings": [
+      "ぼくのと"
+    ],
+    "characterReadings": [
+      "ボク",
+      "うらな.う",
+      "うらない"
+    ],
+    "meanings": [
+      "divining",
+      "fortune-telling",
+      "divination or katakana to radical (no. 25)"
+    ],
+    "strokes": 2,
+    "variants": [],
+    "examples": [
+      "占",
+      "卜",
+      "卞",
+      "卡",
+      "卣",
+      "卦",
+      "卧"
+    ],
+    "vietnameseMeaning": "Bói toán, xem bói",
+    "vietnameseMeanings": [
+      "bói điềm",
+      "dự đoán",
+      "xem quẻ"
+    ]
+  },
+  {
+    "id": 26,
+    "character": "卩",
+    "name": "seal",
+    "vietnameseNames": [
+      "Tiết"
+    ],
+    "readings": [
+      "ふしづくり"
+    ],
+    "characterReadings": [
+      "セツ",
+      "わりふ"
+    ],
+    "meanings": [
+      "seal radical (no. 26)"
+    ],
+    "strokes": 2,
+    "variants": [],
+    "examples": [
+      "危",
+      "印",
+      "却",
+      "即",
+      "卵",
+      "卸",
+      "卿",
+      "卯"
+    ],
+    "vietnameseMeaning": "Đốt tre, ngọc ấn tín",
+    "vietnameseMeanings": [
+      "khớp xương",
+      "đốt trúc",
+      "ấn tín làm tin"
+    ]
+  },
+  {
+    "id": 27,
+    "character": "厂",
+    "name": "cliff",
+    "vietnameseNames": [
+      "Hán"
+    ],
+    "readings": [
+      "がんだれ"
+    ],
+    "characterReadings": [
+      "カン",
+      "かりがね"
+    ],
+    "meanings": [
+      "wild goose",
+      "trailing cliff radical (no. 27)"
+    ],
+    "strokes": 2,
+    "variants": [],
+    "examples": [
+      "原",
+      "厳",
+      "厚",
+      "厘",
+      "厄",
+      "厦",
+      "厨",
+      "厂"
+    ],
+    "vietnameseMeaning": "Vách núi dựng đứng",
+    "vietnameseMeanings": [
+      "sườn núi hiểm trở",
+      "vách đá"
+    ]
+  },
+  {
+    "id": 28,
+    "character": "厶",
+    "name": "private",
+    "vietnameseNames": [
+      "Khư"
+    ],
+    "readings": [
+      "む"
+    ],
+    "characterReadings": [
+      "シ",
+      "ボウ",
+      "ム",
+      "わたくし",
+      "ござ.る"
+    ],
+    "meanings": [
+      "I",
+      "myself",
+      "katakana mu radical (no. 28)"
+    ],
+    "strokes": 2,
+    "variants": [],
+    "examples": [
+      "参",
+      "去",
+      "厶",
+      "厷",
+      "厺",
+      "叀",
+      "參",
+      "叅"
+    ],
+    "vietnameseMeaning": "Riêng tư, cá nhân",
+    "vietnameseMeanings": [
+      "tư riêng",
+      "bản thân",
+      "ích kỷ"
+    ]
+  },
+  {
+    "id": 29,
+    "character": "又",
+    "name": "again",
+    "vietnameseNames": [
+      "Hựu"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ユウ",
+      "また",
+      "また-",
+      "また.の-"
+    ],
+    "meanings": [
+      "or again",
+      "furthermore",
+      "on the other hand"
+    ],
+    "strokes": 2,
+    "variants": [],
+    "examples": [
+      "取",
+      "受",
+      "反",
+      "収",
+      "及",
+      "友",
+      "双",
+      "又"
+    ],
+    "vietnameseMeaning": "Lại, bàn tay phải",
+    "vietnameseMeanings": [
+      "lại một lần nữa",
+      "bàn tay",
+      "hơn nữa"
+    ]
+  },
+  {
+    "id": 30,
+    "character": "口",
+    "name": "mouth",
+    "vietnameseNames": [
+      "Khẩu"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "コウ",
+      "ク",
+      "くち"
+    ],
+    "meanings": [
+      "mouth"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "同",
+      "合",
+      "員",
+      "問",
+      "和",
+      "名",
+      "向",
+      "告"
+    ],
+    "vietnameseMeaning": "Miệng, cửa khẩu",
+    "vietnameseMeanings": [
+      "cái miệng",
+      "lỗ thủng",
+      "cửa vào"
+    ]
+  },
+  {
+    "id": 31,
+    "character": "囗",
+    "name": "enclosure",
+    "vietnameseNames": [
+      "Vi"
+    ],
+    "readings": [
+      "くにがまえ"
+    ],
+    "characterReadings": [
+      "イ",
+      "コク"
+    ],
+    "meanings": [
+      "box",
+      "box or enclosure radical (no. 31)"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "国",
+      "四",
+      "回",
+      "団",
+      "図",
+      "園",
+      "因",
+      "固"
+    ],
+    "vietnameseMeaning": "Vây quanh, bao quanh",
+    "vietnameseMeanings": [
+      "bao bọc",
+      "vây khép kín",
+      "ranh giới"
+    ]
+  },
+  {
+    "id": 32,
+    "character": "土",
+    "name": "earth",
+    "vietnameseNames": [
+      "Thổ",
+      "Độ",
+      "Đỗ"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ド",
+      "ト",
+      "つち"
+    ],
+    "meanings": [
+      "soil",
+      "earth",
+      "ground",
+      "Turkey"
+    ],
+    "strokes": 3,
+    "variants": [
+      {
+        "character": "士",
+        "strokes": 3,
+        "sourceCharacter": "吉"
+      }
+    ],
+    "examples": [
+      "地",
+      "場",
+      "報",
+      "在",
+      "増",
+      "基",
+      "土",
+      "境"
+    ],
+    "vietnameseMeaning": "Đất, thổ nhưỡng",
+    "vietnameseMeanings": [
+      "đất đai",
+      "thổ nhưỡng",
+      "mảnh đất"
+    ]
+  },
+  {
+    "id": 33,
+    "character": "士",
+    "name": "scholar",
+    "vietnameseNames": [
+      "Sĩ"
+    ],
+    "readings": [
+      "さむらい"
+    ],
+    "characterReadings": [
+      "シ",
+      "さむらい"
+    ],
+    "meanings": [
+      "gentleman",
+      "scholar",
+      "samurai",
+      "samurai radical (no. 33)"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "売",
+      "声",
+      "士",
+      "壮",
+      "壷",
+      "壱",
+      "壬",
+      "壯"
+    ],
+    "vietnameseMeaning": "Kẻ sĩ, người tài giỏi",
+    "vietnameseMeanings": [
+      "trí thức",
+      "quan lại",
+      "chiến sĩ",
+      "người có học"
+    ]
+  },
+  {
+    "id": 34,
+    "character": "夂",
+    "name": "go",
+    "vietnameseNames": [
+      "Tri"
+    ],
+    "readings": [
+      "ふゆがしら"
+    ],
+    "characterReadings": [
+      "チ",
+      "しゅう"
+    ],
+    "meanings": [
+      "late",
+      "delayed",
+      "winter radical (no. 34)"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "変",
+      "夂",
+      "夅",
+      "夆"
+    ],
+    "vietnameseMeaning": "Bước đi sau, chậm trễ",
+    "vietnameseMeanings": [
+      "đi từ từ phía sau",
+      "chậm rãi"
+    ]
+  },
+  {
+    "id": 35,
+    "character": "夊",
+    "name": "go slowly",
+    "vietnameseNames": [
+      "Tuy"
+    ],
+    "readings": [
+      "すいにょう"
+    ],
+    "characterReadings": [
+      "スイ",
+      "ゆき"
+    ],
+    "meanings": [
+      "winter variant radical (no. 34)"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "夏",
+      "夊",
+      "夌",
+      "复",
+      "夐",
+      "夔"
+    ],
+    "vietnameseMeaning": "Đi chậm rãi, kéo lê bước",
+    "vietnameseMeanings": [
+      "bước đi chậm chạp",
+      "lê gót"
+    ]
+  },
+  {
+    "id": 36,
+    "character": "夕",
+    "name": "evening",
+    "vietnameseNames": [
+      "Tịch"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "セキ",
+      "ゆう"
+    ],
+    "meanings": [
+      "evening"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "外",
+      "多",
+      "夜",
+      "夕",
+      "夢",
+      "夘",
+      "夙",
+      "夛"
+    ],
+    "vietnameseMeaning": "Buổi chiều tối, hoàng hôn",
+    "vietnameseMeanings": [
+      "chiều tối",
+      "hoàng hôn",
+      "đêm tối"
+    ]
+  },
+  {
+    "id": 37,
+    "character": "大",
+    "name": "big",
+    "vietnameseNames": [
+      "Đại",
+      "Thái"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ダイ",
+      "タイ",
+      "おお-",
+      "おお.きい",
+      "-おお.いに"
+    ],
+    "meanings": [
+      "large",
+      "big"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "大",
+      "夫",
+      "失",
+      "天",
+      "太",
+      "央",
+      "奈",
+      "契"
+    ],
+    "vietnameseMeaning": "To lớn, vĩ đại",
+    "vietnameseMeanings": [
+      "to lớn",
+      "rộng lớn",
+      "vĩ đại"
+    ]
+  },
+  {
+    "id": 38,
+    "character": "女",
+    "name": "woman",
+    "vietnameseNames": [
+      "Nữ",
+      "Nứ",
+      "Nhữ"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ジョ",
+      "ニョ",
+      "ニョウ",
+      "おんな",
+      "め"
+    ],
+    "meanings": [
+      "woman",
+      "female"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "女",
+      "委",
+      "始",
+      "好",
+      "姿",
+      "婦",
+      "妻",
+      "婚"
+    ],
+    "vietnameseMeaning": "Phụ nữ, con gái",
+    "vietnameseMeanings": [
+      "người nữ",
+      "phụ nữ",
+      "con gái"
+    ]
+  },
+  {
+    "id": 39,
+    "character": "子",
+    "name": "child",
+    "vietnameseNames": [
+      "Tử",
+      "Tý"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "シ",
+      "ス",
+      "ツ",
+      "こ",
+      "-こ",
+      "ね"
+    ],
+    "meanings": [
+      "child",
+      "sign of the rat",
+      "11PM-1AM",
+      "first sign of Chinese zodiac"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "学",
+      "子",
+      "字",
+      "存",
+      "季",
+      "孝",
+      "孤",
+      "孫"
+    ],
+    "vietnameseMeaning": "Con cái, trẻ nhỏ, giờ Tý",
+    "vietnameseMeanings": [
+      "đứa con",
+      "hạt mầm",
+      "chi Tý (chuột)",
+      "thầy (bậc tôn kính)"
+    ]
+  },
+  {
+    "id": 40,
+    "character": "宀",
+    "name": "roof",
+    "vietnameseNames": [
+      "Miên"
+    ],
+    "readings": [
+      "うかんむり"
+    ],
+    "characterReadings": [
+      "ベン",
+      "メン"
+    ],
+    "meanings": [
+      "shaped crown",
+      "katakana u radical (no. 40)"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "定",
+      "実",
+      "家",
+      "安",
+      "官",
+      "容",
+      "宅",
+      "害"
+    ],
+    "vietnameseMeaning": "Mái nhà, nóc nhà",
+    "vietnameseMeanings": [
+      "mái hiên",
+      "ngôi nhà",
+      "che phủ"
+    ]
+  },
+  {
+    "id": 41,
+    "character": "寸",
+    "name": "inch",
+    "vietnameseNames": [
+      "Thốn"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "スン"
+    ],
+    "meanings": [
+      "measurement",
+      "tenth of a shaku",
+      "a little",
+      "small"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "対",
+      "導",
+      "専",
+      "将",
+      "寺",
+      "射",
+      "封",
+      "尊"
+    ],
+    "vietnameseMeaning": "Tấc (đo lường), nhỏ bé",
+    "vietnameseMeanings": [
+      "đơn vị đo tấc",
+      "ngắn ngủi",
+      "nhỏ hẹp"
+    ]
+  },
+  {
+    "id": 42,
+    "character": "小",
+    "name": "small",
+    "vietnameseNames": [
+      "Tiểu"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ショウ",
+      "ちい.さい",
+      "こ-",
+      "お-",
+      "さ-"
+    ],
+    "meanings": [
+      "little",
+      "small"
+    ],
+    "strokes": 3,
+    "variants": [
+      {
+        "character": "⺌",
+        "strokes": 3,
+        "sourceCharacter": "⺌"
+      }
+    ],
+    "examples": [
+      "小",
+      "少",
+      "尚",
+      "尖",
+      "尒",
+      "尓",
+      "尗",
+      "尞"
+    ],
+    "vietnameseMeaning": "Nhỏ bé, ít ỏi",
+    "vietnameseMeanings": [
+      "nhỏ nhắn",
+      "bé bỏng",
+      "ít ỏi"
+    ]
+  },
+  {
+    "id": 43,
+    "character": "尢",
+    "name": "lame",
+    "vietnameseNames": [
+      "Uông"
+    ],
+    "readings": [
+      "だいのまげあし",
+      "もっとも"
+    ],
+    "characterReadings": [
+      "オウ"
+    ],
+    "meanings": [
+      "crooked-big radical (no. 43)"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "就",
+      "尢",
+      "尣",
+      "尤",
+      "尨",
+      "尫",
+      "尬",
+      "尩"
+    ],
+    "vietnameseMeaning": "Chân vòng kiềng, què quặt",
+    "vietnameseMeanings": [
+      "chân yếu",
+      "tàn tật",
+      "què"
+    ]
+  },
+  {
+    "id": 44,
+    "character": "尸",
+    "name": "corpse",
+    "vietnameseNames": [
+      "Thi"
+    ],
+    "readings": [
+      "しかばね",
+      "しかばねかんむり"
+    ],
+    "characterReadings": [
+      "シ",
+      "かたしろ"
+    ],
+    "meanings": [
+      "corpse",
+      "remains",
+      "flag radical (no. 44)"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "局",
+      "展",
+      "屋",
+      "層",
+      "居",
+      "尾",
+      "属",
+      "届"
+    ],
+    "vietnameseMeaning": "Thi thể, xác ướp",
+    "vietnameseMeanings": [
+      "xác người",
+      "thây ma",
+      "hình nhân"
+    ]
+  },
+  {
+    "id": 45,
+    "character": "屮",
+    "name": "sprout",
+    "vietnameseNames": [
+      "Triệt"
+    ],
+    "readings": [
+      "ふるくさ"
+    ],
+    "characterReadings": [
+      "テツ",
+      "サ",
+      "ひだりて"
+    ],
+    "meanings": [
+      "left hand",
+      "old grass radical (no. 45)"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "屯",
+      "屮",
+      "屰"
+    ],
+    "vietnameseMeaning": "Mầm non mới nhú",
+    "vietnameseMeanings": [
+      "cỏ non mới nhú mầm",
+      "chồi non"
+    ]
+  },
+  {
+    "id": 46,
+    "character": "山",
+    "name": "mountain",
+    "vietnameseNames": [
+      "San",
+      "Sơn"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "サン",
+      "セン",
+      "やま"
+    ],
+    "meanings": [
+      "mountain"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "山",
+      "島",
+      "岡",
+      "崎",
+      "岸",
+      "崩",
+      "岩",
+      "岳"
+    ],
+    "vietnameseMeaning": "Núi non, gò đất",
+    "vietnameseMeanings": [
+      "núi",
+      "dãy núi",
+      "non sông"
+    ]
+  },
+  {
+    "id": 47,
+    "character": "巛",
+    "name": "river",
+    "vietnameseNames": [
+      "Khôn",
+      "Xuyên",
+      "Sào"
+    ],
+    "readings": [
+      "まがりがわ"
+    ],
+    "characterReadings": [
+      "セン",
+      "かわ"
+    ],
+    "meanings": [
+      "curving river radical (no.47)"
+    ],
+    "strokes": 3,
+    "variants": [
+      {
+        "character": "川",
+        "strokes": 3,
+        "sourceCharacter": "㐬"
+      }
+    ],
+    "examples": [
+      "川",
+      "州",
+      "巡",
+      "巣",
+      "巛",
+      "巠",
+      "巢",
+      "巤"
+    ],
+    "vietnameseMeaning": "Sông ngòi, dòng chảy",
+    "vietnameseMeanings": [
+      "dòng sông",
+      "dòng nước uốn lượn"
+    ]
+  },
+  {
+    "id": 48,
+    "character": "工",
+    "name": "work",
+    "vietnameseNames": [
+      "Công"
+    ],
+    "readings": [
+      "たくみ"
+    ],
+    "characterReadings": [
+      "コウ",
+      "ク",
+      "グ"
+    ],
+    "meanings": [
+      "craft",
+      "construction",
+      "katakana e radical (no. 48)"
+    ],
+    "strokes": 3,
+    "variants": [
+      {
+        "character": "匚",
+        "strokes": 1,
+        "sourceCharacter": "巨"
+      }
+    ],
+    "examples": [
+      "工",
+      "差",
+      "左",
+      "巨",
+      "巧",
+      "巩",
+      "巫"
+    ],
+    "vietnameseMeaning": "Công thợ, việc làm, khéo léo",
+    "vietnameseMeanings": [
+      "thợ thủ công",
+      "công trình",
+      "khéo léo",
+      "lao động"
+    ]
+  },
+  {
+    "id": 49,
+    "character": "己",
+    "name": "oneself",
+    "vietnameseNames": [
+      "Kỷ"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "コ",
+      "キ",
+      "おのれ",
+      "つちのと",
+      "な"
+    ],
+    "meanings": [
+      "self"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "巻",
+      "己",
+      "巽",
+      "巴",
+      "已",
+      "巳",
+      "巷",
+      "巵"
+    ],
+    "vietnameseMeaning": "Bản thân mình, can Kỷ",
+    "vietnameseMeanings": [
+      "bản thân",
+      "chính mình",
+      "can thứ 6"
+    ]
+  },
+  {
+    "id": 50,
+    "character": "巾",
+    "name": "turban",
+    "vietnameseNames": [
+      "Cân"
+    ],
+    "readings": [
+      "はば"
+    ],
+    "characterReadings": [
+      "キン",
+      "フク",
+      "おお.い",
+      "ちきり",
+      "きれ"
+    ],
+    "meanings": [
+      "towel",
+      "hanging scroll",
+      "width",
+      "cloth radical (no. 50)"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "市",
+      "常",
+      "席",
+      "帰",
+      "師",
+      "幅",
+      "帯",
+      "幕"
+    ],
+    "vietnameseMeaning": "Khăn vải, dải lụa",
+    "vietnameseMeanings": [
+      "khăn lau",
+      "vải vóc",
+      "khăn đội đầu"
+    ]
+  },
+  {
+    "id": 51,
+    "character": "干",
+    "name": "dry",
+    "vietnameseNames": [
+      "Can"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "カン",
+      "ほ.す",
+      "ほ.し-",
+      "-ぼ.し",
+      "ひ.る"
+    ],
+    "meanings": [
+      "dry",
+      "parch",
+      "ebb",
+      "recede",
+      "interfere",
+      "intercede"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "年",
+      "平",
+      "幹",
+      "幸",
+      "干",
+      "幵",
+      "并",
+      "幷"
+    ],
+    "vietnameseMeaning": "Can dự, làm khô, bờ cõi",
+    "vietnameseMeanings": [
+      "can thiệp",
+      "khô ráo",
+      "khiên chắn",
+      "thiên can"
+    ]
+  },
+  {
+    "id": 52,
+    "character": "幺",
+    "name": "short thread",
+    "vietnameseNames": [
+      "Yêu"
+    ],
+    "readings": [
+      "いとがしら",
+      "ようへん"
+    ],
+    "characterReadings": [
+      "ヨウ",
+      "ちいさい"
+    ],
+    "meanings": [
+      "short thread radical (no. 52)"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "幼",
+      "幻",
+      "幾",
+      "幽",
+      "幺"
+    ],
+    "vietnameseMeaning": "Nhỏ nhắn, sợi chỉ mảnh",
+    "vietnameseMeanings": [
+      "nhỏ bé",
+      "sợi chỉ ngắn",
+      "mỏng manh"
+    ]
+  },
+  {
+    "id": 53,
+    "character": "广",
+    "name": "dotted cliff",
+    "vietnameseNames": [
+      "Nghiễm",
+      "Yểm"
+    ],
+    "readings": [
+      "まだれ"
+    ],
+    "characterReadings": [
+      "ゲン"
+    ],
+    "meanings": [
+      "dotted cliff radical (no. 53)"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "度",
+      "府",
+      "広",
+      "店",
+      "座",
+      "廃",
+      "康",
+      "庁"
+    ],
+    "vietnameseMeaning": "Mái nhà dựa vách đá",
+    "vietnameseMeanings": [
+      "mái che bên sườn đồi",
+      "ngôi nhà rộng"
+    ]
+  },
+  {
+    "id": 54,
+    "character": "廴",
+    "name": "long stride",
+    "vietnameseNames": [
+      "Dẫn"
+    ],
+    "readings": [
+      "いんにょう",
+      "えんにょう"
+    ],
+    "characterReadings": [
+      "イン"
+    ],
+    "meanings": [
+      "long stride or stretching radical (no. 54)"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "建",
+      "延",
+      "廷",
+      "廴",
+      "廸",
+      "廹",
+      "廻",
+      "廼"
+    ],
+    "vietnameseMeaning": "Bước dài, sải bước",
+    "vietnameseMeanings": [
+      "sải bước dài",
+      "kéo dài đường đi"
+    ]
+  },
+  {
+    "id": 55,
+    "character": "廾",
+    "name": "two hands",
+    "vietnameseNames": [
+      "Củng"
+    ],
+    "readings": [
+      "にじゅうあし"
+    ],
+    "characterReadings": [
+      "キョウ",
+      "ク",
+      "にじゅう"
+    ],
+    "meanings": [
+      "twenty",
+      "twenty or letter H radical (no. 55)"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "弁",
+      "弊",
+      "廾",
+      "廿",
+      "开",
+      "异",
+      "弃",
+      "弄"
+    ],
+    "vietnameseMeaning": "Chắp hai tay, nâng đỡ",
+    "vietnameseMeanings": [
+      "hai tay chắp lại",
+      "nâng đỡ cung kính"
+    ]
+  },
+  {
+    "id": 56,
+    "character": "弋",
+    "name": "shoot",
+    "vietnameseNames": [
+      "Dặc"
+    ],
+    "readings": [
+      "しきがまえ"
+    ],
+    "characterReadings": [
+      "ヨク",
+      "いぐるみ"
+    ],
+    "meanings": [
+      "piling",
+      "ceremony radical (no. 56)"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "式",
+      "弋",
+      "弌",
+      "弍",
+      "弎",
+      "弐",
+      "弑"
+    ],
+    "vietnameseMeaning": "Cọc gỗ, mũi tên có dây",
+    "vietnameseMeanings": [
+      "cọc buộc tên",
+      "bắn chim có dây buộc"
+    ]
+  },
+  {
+    "id": 57,
+    "character": "弓",
+    "name": "bow",
+    "vietnameseNames": [
+      "Cung"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "キュウ",
+      "ゆみ"
+    ],
+    "meanings": [
+      "bow",
+      "bow (archery, violin)"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "強",
+      "引",
+      "張",
+      "弾",
+      "弱",
+      "弘",
+      "弟",
+      "弥"
+    ],
+    "vietnameseMeaning": "Cái cung bắn tên",
+    "vietnameseMeanings": [
+      "cánh cung",
+      "uốn cong"
+    ]
+  },
+  {
+    "id": 58,
+    "character": "彐",
+    "name": "snout",
+    "vietnameseNames": [
+      "Kế",
+      "Kệ",
+      "Kí",
+      "Ký",
+      "Tuyết",
+      "Kẹ"
+    ],
+    "readings": [
+      "けいがしら"
+    ],
+    "characterReadings": [
+      "ケイ"
+    ],
+    "meanings": [
+      "snout",
+      "pig's head radical (no. 58)"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "当",
+      "彗",
+      "彐",
+      "彑",
+      "彔",
+      "彖",
+      "彘",
+      "彙"
+    ],
+    "vietnameseMeaning": "Đầu con heo (lợn)",
+    "vietnameseMeanings": [
+      "đầu lợn",
+      "mõm thú"
+    ]
+  },
+  {
+    "id": 59,
+    "character": "彡",
+    "name": "bristle",
+    "vietnameseNames": [
+      "Sam",
+      "Tiệm"
+    ],
+    "readings": [
+      "さんづくり",
+      "かみかざり"
+    ],
+    "characterReadings": [
+      "サン",
+      "セン"
+    ],
+    "meanings": [
+      "three",
+      "hair ornament",
+      "short hair or fur radical (no. 59)"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "形",
+      "影",
+      "彦",
+      "彩",
+      "彰",
+      "彫",
+      "彬",
+      "彪"
+    ],
+    "vietnameseMeaning": "Lông dài, hoa văn trang trí",
+    "vietnameseMeanings": [
+      "lông thú dài",
+      "vệt râu tóc óng ả",
+      "nét chạm trổ"
+    ]
+  },
+  {
+    "id": 60,
+    "character": "彳",
+    "name": "step",
+    "vietnameseNames": [
+      "Sách"
+    ],
+    "readings": [
+      "ぎょうにんべん"
+    ],
+    "characterReadings": [
+      "テキ",
+      "たたず.む"
+    ],
+    "meanings": [
+      "stop",
+      "linger",
+      "loiter",
+      "going man radical (no. 60)"
+    ],
+    "strokes": 3,
+    "variants": [],
+    "examples": [
+      "後",
+      "得",
+      "役",
+      "待",
+      "復",
+      "従",
+      "彼",
+      "徒"
+    ],
+    "vietnameseMeaning": "Bước chân trái, bước ngắn",
+    "vietnameseMeanings": [
+      "bước chân đi",
+      "chậm rãi trên đường"
+    ]
+  },
+  {
+    "id": 61,
+    "character": "心",
+    "name": "heart",
+    "vietnameseNames": [
+      "Tâm"
+    ],
+    "readings": [
+      "りっしんべん"
+    ],
+    "characterReadings": [
+      "シン",
+      "こころ",
+      "-ごころ"
+    ],
+    "meanings": [
+      "heart",
+      "mind",
+      "spirit",
+      "heart radical (no. 61)"
+    ],
+    "strokes": 4,
+    "variants": [
+      {
+        "character": "⺗",
+        "strokes": 4,
+        "sourceCharacter": "⺗"
+      },
+      {
+        "character": "忄",
+        "strokes": 3,
+        "sourceCharacter": "忄"
+      }
+    ],
+    "examples": [
+      "意",
+      "性",
+      "思",
+      "心",
+      "感",
+      "情",
+      "必",
+      "応"
+    ],
+    "vietnameseMeaning": "Trái tim, tấm lòng, suy nghĩ",
+    "vietnameseMeanings": [
+      "quả tim",
+      "tâm trí",
+      "tấm lòng",
+      "tình cảm"
+    ]
+  },
+  {
+    "id": 62,
+    "character": "戈",
+    "name": "halberd",
+    "vietnameseNames": [
+      "Qua"
+    ],
+    "readings": [
+      "かのほこ"
+    ],
+    "characterReadings": [
+      "カ",
+      "ほこ",
+      "ほこづくり"
+    ],
+    "meanings": [
+      "halberd",
+      "arms",
+      "festival car",
+      "float",
+      "tasselled spear radical (no. 62)"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "戦",
+      "成",
+      "我",
+      "戒",
+      "戯",
+      "戴",
+      "或",
+      "戈"
+    ],
+    "vietnameseMeaning": "Cây giáo, vũ khí cán dài",
+    "vietnameseMeanings": [
+      "ngọn giáo sắc bén",
+      "vũ khí chiến tranh"
+    ]
+  },
+  {
+    "id": 63,
+    "character": "戶",
+    "name": "door",
+    "vietnameseNames": [
+      "Hộ"
+    ],
+    "readings": [],
+    "characterReadings": [],
+    "meanings": [],
+    "strokes": null,
+    "variants": [],
+    "examples": [
+      "所",
+      "戸",
+      "房",
+      "戻",
+      "扇",
+      "扉",
+      "戹",
+      "戽"
+    ],
+    "vietnameseMeaning": "Cửa một cánh, nhà cửa",
+    "vietnameseMeanings": [
+      "cửa đơn",
+      "hộ gia đình",
+      "nhà ở"
+    ]
+  },
+  {
+    "id": 64,
+    "character": "手",
+    "name": "hand",
+    "vietnameseNames": [
+      "Thủ"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "シュ",
+      "ズ",
+      "て",
+      "て-",
+      "-て",
+      "た-"
+    ],
+    "meanings": [
+      "hand"
+    ],
+    "strokes": 4,
+    "variants": [
+      {
+        "character": "扌",
+        "strokes": 3,
+        "sourceCharacter": "哲"
+      }
+    ],
+    "examples": [
+      "手",
+      "持",
+      "指",
+      "投",
+      "打",
+      "提",
+      "挙",
+      "援"
+    ],
+    "vietnameseMeaning": "Bàn tay, nắm giữ",
+    "vietnameseMeanings": [
+      "tay",
+      "bàn tay",
+      "nắm giữ",
+      "thao tác"
+    ]
+  },
+  {
+    "id": 65,
+    "character": "支",
+    "name": "branch",
+    "vietnameseNames": [
+      "Chi"
+    ],
+    "readings": [
+      "しんよう",
+      "じゅうまた"
+    ],
+    "characterReadings": [
+      "シ",
+      "ささ.える",
+      "つか.える",
+      "か.う"
+    ],
+    "meanings": [
+      "branch",
+      "support",
+      "sustain",
+      "branch radical (no. 65)"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "支",
+      "攲"
+    ],
+    "vietnameseMeaning": "Cành cây, chống đỡ, chi nhánh",
+    "vietnameseMeanings": [
+      "cành nhánh",
+      "nâng đỡ",
+      "chi trả",
+      "phân nhánh"
+    ]
+  },
+  {
+    "id": 66,
+    "character": "攴",
+    "name": "rap",
+    "vietnameseNames": [
+      "Phộc"
+    ],
+    "readings": [
+      "ぼくづくり",
+      "ぼくにょう",
+      "とまた"
+    ],
+    "characterReadings": [
+      "ホク"
+    ],
+    "meanings": [
+      "strike",
+      "hit",
+      "folding chair radical (no. 66)"
+    ],
+    "strokes": 4,
+    "variants": [
+      {
+        "character": "攵",
+        "strokes": 4,
+        "sourceCharacter": "倏"
+      }
+    ],
+    "examples": [
+      "政",
+      "改",
+      "数",
+      "教",
+      "放",
+      "整",
+      "敗",
+      "攻"
+    ],
+    "vietnameseMeaning": "Đánh nhẹ, gõ khẽ",
+    "vietnameseMeanings": [
+      "gõ khẽ",
+      "đánh phạt nhẹ",
+      "thúc đẩy"
+    ]
+  },
+  {
+    "id": 67,
+    "character": "文",
+    "name": "script",
+    "vietnameseNames": [
+      "Văn",
+      "Vấn"
+    ],
+    "readings": [
+      "ぶんにょう"
+    ],
+    "characterReadings": [
+      "ブン",
+      "モン",
+      "ふみ",
+      "あや"
+    ],
+    "meanings": [
+      "sentence",
+      "literature",
+      "style",
+      "art",
+      "decoration",
+      "figures",
+      "plan",
+      "literary radical (no. 67)"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "文",
+      "斎",
+      "斉",
+      "斐",
+      "斑",
+      "斈",
+      "斌",
+      "斒"
+    ],
+    "vietnameseMeaning": "Văn chương, chữ viết, vẻ đẹp",
+    "vietnameseMeanings": [
+      "văn học",
+      "chữ nghĩa",
+      "hoa văn",
+      "văn minh"
+    ]
+  },
+  {
+    "id": 68,
+    "character": "斗",
+    "name": "dipper",
+    "vietnameseNames": [
+      "Đẩu"
+    ],
+    "readings": [
+      "とます"
+    ],
+    "characterReadings": [
+      "ト",
+      "トウ"
+    ],
+    "meanings": [
+      "Big Dipper",
+      "ten sho (vol)",
+      "sake dipper",
+      "dots and cross radical (no. 68)"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "料",
+      "斜",
+      "斗",
+      "斛",
+      "斝",
+      "斟",
+      "斠",
+      "斡"
+    ],
+    "vietnameseMeaning": "Cái đấu đong gạo, chòm sao Bắc Đẩu",
+    "vietnameseMeanings": [
+      "cái đấu (đo lường)",
+      "gáo múc rượu",
+      "sao Bắc Đẩu"
+    ]
+  },
+  {
+    "id": 69,
+    "character": "斤",
+    "name": "axe",
+    "vietnameseNames": [
+      "Cân",
+      "Cấn"
+    ],
+    "readings": [
+      "おの"
+    ],
+    "characterReadings": [
+      "キン"
+    ],
+    "meanings": [
+      "axe",
+      "1.32 lb",
+      "catty",
+      "counter for loaves of bread",
+      "axe radical (no. 69)"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "新",
+      "断",
+      "斬",
+      "斥",
+      "斤",
+      "斧",
+      "斫",
+      "斮"
+    ],
+    "vietnameseMeaning": "Cái rìu, đơn vị đo trọng lượng",
+    "vietnameseMeanings": [
+      "rìu chặt cây",
+      "cân (đơn vị đo lường)"
+    ]
+  },
+  {
+    "id": 70,
+    "character": "方",
+    "name": "square",
+    "vietnameseNames": [
+      "Phương"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ホウ",
+      "かた",
+      "-かた",
+      "-がた"
+    ],
+    "meanings": [
+      "direction",
+      "person",
+      "alternative"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "方",
+      "施",
+      "族",
+      "旅",
+      "旗",
+      "旋",
+      "於",
+      "旛"
+    ],
+    "vietnameseMeaning": "Vuông vắn, phương hướng",
+    "vietnameseMeanings": [
+      "phương hướng",
+      "hình vuông",
+      "phương pháp"
+    ]
+  },
+  {
+    "id": 71,
+    "character": "无",
+    "name": "not",
+    "vietnameseNames": [
+      "Vô"
+    ],
+    "readings": [
+      "むにょう",
+      "む",
+      "なし"
+    ],
+    "characterReadings": [
+      "ブ",
+      "ム",
+      "なし",
+      "ない"
+    ],
+    "meanings": [
+      "nothing",
+      "not exist",
+      "crooked heaven radical (no.71)"
+    ],
+    "strokes": 4,
+    "variants": [
+      {
+        "character": "旡",
+        "strokes": 4,
+        "sourceCharacter": "僭"
+      }
+    ],
+    "examples": [
+      "既",
+      "无",
+      "旡"
+    ],
+    "vietnameseMeaning": "Không, không có",
+    "vietnameseMeanings": [
+      "hư vô",
+      "không tồn tại"
+    ]
+  },
+  {
+    "id": 72,
+    "character": "日",
+    "name": "sun",
+    "vietnameseNames": [
+      "Nhật"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ニチ",
+      "ジツ",
+      "ひ",
+      "-び",
+      "-か"
+    ],
+    "meanings": [
+      "day",
+      "sun",
+      "Japan",
+      "counter for days"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "日",
+      "時",
+      "明",
+      "昨",
+      "早",
+      "映",
+      "景",
+      "旧"
+    ],
+    "vietnameseMeaning": "Mặt trời, ngày",
+    "vietnameseMeanings": [
+      "mặt trời",
+      "ban ngày",
+      "ngày tháng"
+    ]
+  },
+  {
+    "id": 73,
+    "character": "曰",
+    "name": "say",
+    "vietnameseNames": [
+      "Viết"
+    ],
+    "readings": [
+      "ひらび"
+    ],
+    "characterReadings": [
+      "エツ",
+      "いわ.く",
+      "のたま.う",
+      "のたま.わく",
+      "ここに"
+    ],
+    "meanings": [
+      "say",
+      "reason",
+      "pretext",
+      "history",
+      "past",
+      "flat sun radical (no. 73)"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "最",
+      "書",
+      "曲",
+      "更",
+      "替",
+      "曽",
+      "曹",
+      "曼"
+    ],
+    "vietnameseMeaning": "Nói rằng, rằng là",
+    "vietnameseMeanings": [
+      "nói rằng",
+      "thốt lên"
+    ]
+  },
+  {
+    "id": 74,
+    "character": "月",
+    "name": "moon",
+    "vietnameseNames": [
+      "Nguyệt"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ゲツ",
+      "ガツ",
+      "つき"
+    ],
+    "meanings": [
+      "month",
+      "moon"
+    ],
+    "strokes": 4,
+    "variants": [
+      {
+        "character": "円",
+        "strokes": 4,
+        "sourceCharacter": "倩"
+      },
+      {
+        "character": "⺤",
+        "strokes": 4,
+        "sourceCharacter": "埓"
+      }
+    ],
+    "examples": [
+      "月",
+      "期",
+      "朝",
+      "有",
+      "望",
+      "服",
+      "朗",
+      "朋"
+    ],
+    "vietnameseMeaning": "Mặt trăng, tháng",
+    "vietnameseMeanings": [
+      "mặt trăng",
+      "ánh trăng",
+      "tháng"
+    ]
+  },
+  {
+    "id": 75,
+    "character": "木",
+    "name": "tree",
+    "vietnameseNames": [
+      "Mộc"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ボク",
+      "モク",
+      "き",
+      "こ-"
+    ],
+    "meanings": [
+      "tree",
+      "wood"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "本",
+      "東",
+      "業",
+      "来",
+      "機",
+      "権",
+      "査",
+      "案"
+    ],
+    "vietnameseMeaning": "Cây cối, gỗ",
+    "vietnameseMeanings": [
+      "cây cỏ",
+      "gỗ",
+      "chất gỗ"
+    ]
+  },
+  {
+    "id": 76,
+    "character": "欠",
+    "name": "lack",
+    "vietnameseNames": [
+      "Khiếm"
+    ],
+    "readings": [
+      "あくび"
+    ],
+    "characterReadings": [
+      "ケツ",
+      "ケン",
+      "か.ける",
+      "か.く"
+    ],
+    "meanings": [
+      "lack",
+      "gap",
+      "fail",
+      "yawning radical (no. 76)"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "次",
+      "欧",
+      "歌",
+      "欠",
+      "欲",
+      "歓",
+      "欺",
+      "款"
+    ],
+    "vietnameseMeaning": "Ngáp, thiếu thốn",
+    "vietnameseMeanings": [
+      "ngáp dài",
+      "khiếm khuyết",
+      "thiếu hụt"
+    ]
+  },
+  {
+    "id": 77,
+    "character": "止",
+    "name": "stop",
+    "vietnameseNames": [
+      "Chỉ"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "シ",
+      "と.まる",
+      "-ど.まり",
+      "と.める",
+      "-と.める",
+      "-ど.め",
+      "とど.める",
+      "とど.め",
+      "とど.まる",
+      "や.める",
+      "や.む",
+      "-や.む",
+      "よ.す",
+      "-さ.す",
+      "-さ.し"
+    ],
+    "meanings": [
+      "stop",
+      "halt"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "正",
+      "歳",
+      "止",
+      "武",
+      "歩",
+      "歴",
+      "歯",
+      "此"
+    ],
+    "vietnameseMeaning": "Dừng lại, đứng yên",
+    "vietnameseMeanings": [
+      "ngừng lại",
+      "đình chỉ",
+      "ở yên"
+    ]
+  },
+  {
+    "id": 78,
+    "character": "歹",
+    "name": "death",
+    "vietnameseNames": [
+      "Ngạt",
+      "Đãi"
+    ],
+    "readings": [
+      "がつへん",
+      "いちたへん",
+      "しにがまえ"
+    ],
+    "characterReadings": [
+      "ガツ",
+      "ガチ",
+      "タイ"
+    ],
+    "meanings": [
+      "bare bone",
+      "bad",
+      "wrong",
+      "death radical (n. 78)"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "死",
+      "残",
+      "殊",
+      "殖",
+      "殉",
+      "歹",
+      "歺",
+      "歾"
+    ],
+    "vietnameseMeaning": "Xương tàn, chết chóc, xấu xa",
+    "vietnameseMeanings": [
+      "xương gãy",
+      "chết chóc",
+      "tai ương"
+    ]
+  },
+  {
+    "id": 79,
+    "character": "殳",
+    "name": "weapon",
+    "vietnameseNames": [
+      "Thù"
+    ],
+    "readings": [
+      "ほこつくり",
+      "るまた"
+    ],
+    "characterReadings": [
+      "シュ",
+      "また",
+      "ほこ"
+    ],
+    "meanings": [
+      "pike",
+      "windy-again radical (no. 79)"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "段",
+      "殺",
+      "殿",
+      "殴",
+      "毅",
+      "殻",
+      "殳",
+      "殷"
+    ],
+    "vietnameseMeaning": "Cây gậy gỗ, vũ khí đập",
+    "vietnameseMeanings": [
+      "binh khí không có lưỡi",
+      "cây thương nhọn"
+    ]
+  },
+  {
+    "id": 80,
+    "character": "毋",
+    "name": "do not",
+    "vietnameseNames": [
+      "Vô",
+      "Mưu"
+    ],
+    "readings": [
+      "なかれ",
+      "かんのはは"
+    ],
+    "characterReadings": [
+      "ブ",
+      "ム",
+      "はは",
+      "ぼ",
+      "ない",
+      "なか.れ"
+    ],
+    "meanings": [
+      "do not",
+      "must not",
+      "be not",
+      "mother radical (no. 80)"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "毎",
+      "母",
+      "毒",
+      "毋",
+      "毌",
+      "每",
+      "毓"
+    ],
+    "vietnameseMeaning": "Chớ, đừng, mẹ",
+    "vietnameseMeanings": [
+      "chớ làm",
+      "đừng",
+      "người mẹ"
+    ]
+  },
+  {
+    "id": 81,
+    "character": "比",
+    "name": "compare",
+    "vietnameseNames": [
+      "Bỉ",
+      "Bí",
+      "Bì",
+      "Tỉ"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ヒ",
+      "くら.べる"
+    ],
+    "meanings": [
+      "compare",
+      "race",
+      "ratio",
+      "Philippines"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "比",
+      "毖",
+      "毗",
+      "毘",
+      "毚"
+    ],
+    "vietnameseMeaning": "So sánh, kề cận",
+    "vietnameseMeanings": [
+      "so đo",
+      "đối chiếu",
+      "sánh đôi",
+      "gần gũi"
+    ]
+  },
+  {
+    "id": 82,
+    "character": "毛",
+    "name": "fur",
+    "vietnameseNames": [
+      "Mao",
+      "Mô"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "モウ",
+      "け"
+    ],
+    "meanings": [
+      "fur",
+      "hair",
+      "feather",
+      "down"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "毛",
+      "毬",
+      "毟",
+      "毡",
+      "毧",
+      "毫",
+      "毮",
+      "毯"
+    ],
+    "vietnameseMeaning": "Lông, tóc, sợi lông",
+    "vietnameseMeanings": [
+      "lông thú",
+      "râu tóc",
+      "lông vũ"
+    ]
+  },
+  {
+    "id": 83,
+    "character": "氏",
+    "name": "clan",
+    "vietnameseNames": [
+      "Thị",
+      "Chi"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "シ",
+      "うじ",
+      "-うじ"
+    ],
+    "meanings": [
+      "family name",
+      "surname",
+      "clan"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "民",
+      "氏",
+      "氐",
+      "氓"
+    ],
+    "vietnameseMeaning": "Dòng họ, thị tộc",
+    "vietnameseMeanings": [
+      "họ hàng",
+      "thị tộc",
+      "người phái nữ"
+    ]
+  },
+  {
+    "id": 84,
+    "character": "气",
+    "name": "steam",
+    "vietnameseNames": [
+      "Khí",
+      "Khất"
+    ],
+    "readings": [
+      "きがまえ"
+    ],
+    "characterReadings": [
+      "キ",
+      "ケ",
+      "いき"
+    ],
+    "meanings": [
+      "spirit",
+      "steam radical (no. 84)"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "気",
+      "气",
+      "氛",
+      "氟",
+      "氣",
+      "氤",
+      "氦",
+      "氧"
+    ],
+    "vietnameseMeaning": "Hơi thở, không khí, mây trời",
+    "vietnameseMeanings": [
+      "khí trời",
+      "hơi nước",
+      "sinh khí"
+    ]
+  },
+  {
+    "id": 85,
+    "character": "水",
+    "name": "water",
+    "vietnameseNames": [
+      "Thủy"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "スイ",
+      "みず",
+      "みず-"
+    ],
+    "meanings": [
+      "water"
+    ],
+    "strokes": 4,
+    "variants": [
+      {
+        "character": "⺡",
+        "strokes": 3,
+        "sourceCharacter": "⺡"
+      },
+      {
+        "character": "⺢",
+        "strokes": 5,
+        "sourceCharacter": "⺢"
+      },
+      {
+        "character": "氺",
+        "strokes": 5,
+        "sourceCharacter": "函"
+      },
+      {
+        "character": "氵",
+        "strokes": 3,
+        "sourceCharacter": "匯"
+      }
+    ],
+    "examples": [
+      "決",
+      "法",
+      "治",
+      "派",
+      "済",
+      "活",
+      "海",
+      "求"
+    ],
+    "vietnameseMeaning": "Nước, chất lỏng",
+    "vietnameseMeanings": [
+      "nước",
+      "dòng nước",
+      "sông suối"
+    ]
+  },
+  {
+    "id": 86,
+    "character": "火",
+    "name": "fire",
+    "vietnameseNames": [
+      "Hỏa"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "カ",
+      "ひ",
+      "-び",
+      "ほ-"
+    ],
+    "meanings": [
+      "fire"
+    ],
+    "strokes": 4,
+    "variants": [
+      {
+        "character": "灬",
+        "strokes": 4,
+        "sourceCharacter": "偽"
+      }
+    ],
+    "examples": [
+      "点",
+      "無",
+      "然",
+      "火",
+      "熱",
+      "爆",
+      "為",
+      "燃"
+    ],
+    "vietnameseMeaning": "Lửa, ánh sáng rực rỡ",
+    "vietnameseMeanings": [
+      "ngọn lửa",
+      "sức nóng",
+      "cháy sáng"
+    ]
+  },
+  {
+    "id": 87,
+    "character": "爪",
+    "name": "claw",
+    "vietnameseNames": [
+      "Trảo"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ソウ",
+      "つめ",
+      "つま-"
+    ],
+    "meanings": [
+      "claw",
+      "nail",
+      "talon"
+    ],
+    "strokes": 4,
+    "variants": [
+      {
+        "character": "⺤",
+        "strokes": 4,
+        "sourceCharacter": "⺤"
+      }
+    ],
+    "examples": [
+      "爪",
+      "爫",
+      "爬",
+      "爭",
+      "爰",
+      "爲",
+      "爵"
+    ],
+    "vietnameseMeaning": "Móng vuốt muông thú",
+    "vietnameseMeanings": [
+      "móng vuốt nhọn",
+      "cào cấu"
+    ]
+  },
+  {
+    "id": 88,
+    "character": "父",
+    "name": "father",
+    "vietnameseNames": [
+      "Phụ",
+      "Phủ"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "フ",
+      "ちち"
+    ],
+    "meanings": [
+      "father"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "父",
+      "爸",
+      "爹",
+      "爺"
+    ],
+    "vietnameseMeaning": "Cha, người cha",
+    "vietnameseMeanings": [
+      "người cha",
+      "thân phụ",
+      "bậc bề trên"
+    ]
+  },
+  {
+    "id": 89,
+    "character": "爻",
+    "name": "double x",
+    "vietnameseNames": [
+      "Hào"
+    ],
+    "readings": [
+      "めめ",
+      "まじわる"
+    ],
+    "characterReadings": [
+      "コウ",
+      "ギョウ",
+      "まじ.わる"
+    ],
+    "meanings": [
+      "to mix with",
+      "to associate with",
+      "to join",
+      "double X radical (no. 89)"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "爽",
+      "爻",
+      "爼",
+      "爾"
+    ],
+    "vietnameseMeaning": "Hào trong kinh Dịch, đan chéo",
+    "vietnameseMeanings": [
+      "hào quẻ Dịch",
+      "giao nhau",
+      "đan xen"
+    ]
+  },
+  {
+    "id": 90,
+    "character": "爿",
+    "name": "half tree trunk",
+    "vietnameseNames": [
+      "Tường"
+    ],
+    "readings": [
+      "しょうへん"
+    ],
+    "characterReadings": [
+      "ショウ",
+      "ソウ"
+    ],
+    "meanings": [
+      "left-side kata radical (no. 90)"
+    ],
+    "strokes": 4,
+    "variants": [
+      {
+        "character": "⺦",
+        "strokes": 3,
+        "sourceCharacter": "⺦"
+      }
+    ],
+    "examples": [
+      "丬",
+      "爿",
+      "牀",
+      "牁",
+      "牂",
+      "牆"
+    ],
+    "vietnameseMeaning": "Mảnh ván xẻ, giường nằm",
+    "vietnameseMeanings": [
+      "miếng gỗ chẻ đôi bên trái",
+      "giường"
+    ]
+  },
+  {
+    "id": 91,
+    "character": "片",
+    "name": "slice",
+    "vietnameseNames": [
+      "Phiến"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ヘン",
+      "かた-",
+      "かた"
+    ],
+    "meanings": [
+      "one-sided",
+      "leaf",
+      "sheet",
+      "right-side kata radical (no. 91)"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "版",
+      "片",
+      "牌",
+      "牋",
+      "牏",
+      "牐",
+      "牒",
+      "牓"
+    ],
+    "vietnameseMeaning": "Mảnh ván mỏng, lá mỏng",
+    "vietnameseMeanings": [
+      "miếng mỏng",
+      "tấm phiến",
+      "tờ giấy"
+    ]
+  },
+  {
+    "id": 92,
+    "character": "牙",
+    "name": "fang",
+    "vietnameseNames": [
+      "Nha"
+    ],
+    "readings": [
+      "きばへん"
+    ],
+    "characterReadings": [
+      "ガ",
+      "ゲ",
+      "きば",
+      "は"
+    ],
+    "meanings": [
+      "tusk",
+      "fang",
+      "tusk radical (no. 92)"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "牙"
+    ],
+    "vietnameseMeaning": "Răng nanh, ngà voi",
+    "vietnameseMeanings": [
+      "răng hàm",
+      "ngà thú",
+      "răng nhọn"
+    ]
+  },
+  {
+    "id": 93,
+    "character": "牛",
+    "name": "cow",
+    "vietnameseNames": [
+      "Ngưu"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ギュウ",
+      "うし"
+    ],
+    "meanings": [
+      "cow"
+    ],
+    "strokes": 4,
+    "variants": [],
+    "examples": [
+      "物",
+      "特",
+      "犠",
+      "牛",
+      "牲",
+      "牧",
+      "牟",
+      "牡"
+    ],
+    "vietnameseMeaning": "Con trâu, con bò",
+    "vietnameseMeanings": [
+      "trâu bò",
+      "gia súc kéo cày"
+    ]
+  },
+  {
+    "id": 94,
+    "character": "犬",
+    "name": "dog",
+    "vietnameseNames": [
+      "Khuyển"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ケン",
+      "いぬ",
+      "いぬ-"
+    ],
+    "meanings": [
+      "dog"
+    ],
+    "strokes": 4,
+    "variants": [
+      {
+        "character": "⺨",
+        "strokes": 3,
+        "sourceCharacter": "⺨"
+      }
+    ],
+    "examples": [
+      "状",
+      "独",
+      "献",
+      "狙",
+      "犯",
+      "獲",
+      "猛",
+      "犬"
+    ],
+    "vietnameseMeaning": "Con chó",
+    "vietnameseMeanings": [
+      "loài chó",
+      "chó săn"
+    ]
+  },
+  {
+    "id": 95,
+    "character": "玄",
+    "name": "profound",
+    "vietnameseNames": [
+      "Huyền"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ゲン",
+      "くろ",
+      "くろ.い"
+    ],
+    "meanings": [
+      "mysterious",
+      "occultness",
+      "black",
+      "deep",
+      "profound"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "率",
+      "玄",
+      "玅",
+      "玆"
+    ],
+    "vietnameseMeaning": "Màu đen huyền, sâu thẳm, huyền bí",
+    "vietnameseMeanings": [
+      "màu đen thẳm",
+      "huyền bí",
+      "sâu xa vi diệu"
+    ]
+  },
+  {
+    "id": 96,
+    "character": "玉",
+    "name": "jade",
+    "vietnameseNames": [
+      "Ngọc",
+      "Túc"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ギョク",
+      "たま",
+      "たま-",
+      "-だま"
+    ],
+    "meanings": [
+      "jewel",
+      "ball"
+    ],
+    "strokes": 5,
+    "variants": [
+      {
+        "character": "王",
+        "strokes": 4,
+        "sourceCharacter": "理"
+      }
+    ],
+    "examples": [
+      "現",
+      "理",
+      "球",
+      "環",
+      "王",
+      "玉",
+      "珍",
+      "琴"
+    ],
+    "vietnameseMeaning": "Ngọc quý, đá đẹp",
+    "vietnameseMeanings": [
+      "đá ngọc",
+      "vật báu",
+      "đẹp đẽ tinh khiết"
+    ]
+  },
+  {
+    "id": 97,
+    "character": "瓜",
+    "name": "melon",
+    "vietnameseNames": [
+      "Qua"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "カ",
+      "ケ",
+      "うり"
+    ],
+    "meanings": [
+      "melon"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "瓜",
+      "瓞",
+      "瓟",
+      "瓠",
+      "瓢",
+      "瓣",
+      "瓤"
+    ],
+    "vietnameseMeaning": "Quả dưa",
+    "vietnameseMeanings": [
+      "các loại dưa búp",
+      "dưa hấu",
+      "dưa gang"
+    ]
+  },
+  {
+    "id": 98,
+    "character": "瓦",
+    "name": "tile",
+    "vietnameseNames": [
+      "Ngõa"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ガ",
+      "かわら",
+      "ぐらむ"
+    ],
+    "meanings": [
+      "tile",
+      "gram"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "瓶",
+      "瓦",
+      "甕",
+      "瓧",
+      "瓩",
+      "瓮",
+      "瓯",
+      "瓰"
+    ],
+    "vietnameseMeaning": "Ngói lợp nhà, đồ gốm",
+    "vietnameseMeanings": [
+      "viên ngói đất nung",
+      "đồ gốm"
+    ]
+  },
+  {
+    "id": 99,
+    "character": "甘",
+    "name": "sweet",
+    "vietnameseNames": [
+      "Cam"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "カン",
+      "あま.い",
+      "あま.える",
+      "あま.やかす",
+      "うま.い"
+    ],
+    "meanings": [
+      "sweet",
+      "coax",
+      "pamper",
+      "be content",
+      "sugary"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "甘",
+      "甚",
+      "甜",
+      "甞"
+    ],
+    "vietnameseMeaning": "Ngọt ngào, ngon lành",
+    "vietnameseMeanings": [
+      "vị ngọt",
+      "vừa lòng",
+      "cam tâm"
+    ]
+  },
+  {
+    "id": 100,
+    "character": "生",
+    "name": "life",
+    "vietnameseNames": [
+      "Sanh",
+      "Sinh"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "セイ",
+      "ショウ",
+      "い.きる",
+      "い.かす",
+      "い.ける",
+      "う.まれる",
+      "うま.れる",
+      "う.まれ",
+      "うまれ",
+      "う.む",
+      "お.う",
+      "は.える",
+      "は.やす",
+      "き",
+      "なま",
+      "なま-",
+      "な.る",
+      "な.す",
+      "む.す",
+      "-う"
+    ],
+    "meanings": [
+      "life",
+      "genuine",
+      "birth"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "生",
+      "産",
+      "甦",
+      "甡",
+      "甤",
+      "甥"
+    ],
+    "vietnameseMeaning": "Sinh sôi, sinh sống, sống sót",
+    "vietnameseMeanings": [
+      "sinh đẻ",
+      "sống",
+      "sinh sôi",
+      "mới mẻ",
+      "học trò"
+    ]
+  },
+  {
+    "id": 101,
+    "character": "用",
+    "name": "use",
+    "vietnameseNames": [
+      "Dụng"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ヨウ",
+      "もち.いる"
+    ],
+    "meanings": [
+      "utilize",
+      "business",
+      "service",
+      "use",
+      "employ"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "用",
+      "甫",
+      "甩",
+      "甬",
+      "甯"
+    ],
+    "vietnameseMeaning": "Sử dụng, dùng đến",
+    "vietnameseMeanings": [
+      "dùng",
+      "áp dụng",
+      "công dụng"
+    ]
+  },
+  {
+    "id": 102,
+    "character": "田",
+    "name": "field",
+    "vietnameseNames": [
+      "Điền"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "デン",
+      "た"
+    ],
+    "meanings": [
+      "rice field",
+      "rice paddy"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "田",
+      "界",
+      "画",
+      "男",
+      "町",
+      "由",
+      "番",
+      "申"
+    ],
+    "vietnameseMeaning": "Ruộng đồng, thửa ruộng",
+    "vietnameseMeanings": [
+      "ruộng lúa",
+      "đồng ruộng"
+    ]
+  },
+  {
+    "id": 103,
+    "character": "疋",
+    "name": "bolt of cloth",
+    "vietnameseNames": [
+      "Sơ",
+      "Nhã",
+      "Thất"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ヒキ",
+      "ショ",
+      "ソ",
+      "ヒツ",
+      "あし"
+    ],
+    "meanings": [
+      "head",
+      "counter for animals"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "疑",
+      "疎",
+      "疋",
+      "疏",
+      "疐"
+    ],
+    "vietnameseMeaning": "Xấp vải, cuộn lụa, chân đi",
+    "vietnameseMeanings": [
+      "xấp vải (đơn vị)",
+      "bước chân",
+      "con vật (đếm)"
+    ]
+  },
+  {
+    "id": 104,
+    "character": "疒",
+    "name": "sickness",
+    "vietnameseNames": [
+      "Nạch"
+    ],
+    "readings": [
+      "やまいだれ"
+    ],
+    "characterReadings": [
+      "ダク",
+      "ニャク",
+      "ソウ",
+      "ジョウ",
+      "シツ",
+      "や.む"
+    ],
+    "meanings": [
+      "trailing sickness",
+      "sick radical (no. 104)"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "病",
+      "療",
+      "痛",
+      "症",
+      "疲",
+      "疾",
+      "疫",
+      "痴"
+    ],
+    "vietnameseMeaning": "Bệnh tật, đau ốm",
+    "vietnameseMeanings": [
+      "đau ốm",
+      "bệnh tật nằm trên giường"
+    ]
+  },
+  {
+    "id": 105,
+    "character": "癶",
+    "name": "dotted tent",
+    "vietnameseNames": [
+      "Bát"
+    ],
+    "readings": [
+      "はつがしら"
+    ],
+    "characterReadings": [
+      "ハツ"
+    ],
+    "meanings": [
+      "dotted tent radical (no. 105)"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "発",
+      "登",
+      "癶",
+      "癸",
+      "發"
+    ],
+    "vietnameseMeaning": "Hai chân gạt ngược, bước đi",
+    "vietnameseMeanings": [
+      "hai bàn chân quay lưng nhau",
+      "bước đi"
+    ]
+  },
+  {
+    "id": 106,
+    "character": "白",
+    "name": "white",
+    "vietnameseNames": [
+      "Bạch"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ハク",
+      "ビャク",
+      "しろ",
+      "しら-",
+      "しろ.い"
+    ],
+    "meanings": [
+      "white"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "的",
+      "百",
+      "白",
+      "皇",
+      "皆",
+      "皐",
+      "皓",
+      "皀"
+    ],
+    "vietnameseMeaning": "Màu trắng, sáng sủa, rõ ràng",
+    "vietnameseMeanings": [
+      "màu trắng",
+      "trong sáng",
+      "thanh khiết",
+      "bày tỏ"
+    ]
+  },
+  {
+    "id": 107,
+    "character": "皮",
+    "name": "skin",
+    "vietnameseNames": [
+      "Bì"
+    ],
+    "readings": [
+      "けがわ"
+    ],
+    "characterReadings": [
+      "ヒ",
+      "かわ"
+    ],
+    "meanings": [
+      "pelt",
+      "skin",
+      "hide",
+      "leather",
+      "skin radical (no. 107)"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "皮",
+      "皰",
+      "皴",
+      "皶",
+      "皷",
+      "皸",
+      "皹",
+      "皺"
+    ],
+    "vietnameseMeaning": "Da động vật, vỏ ngoài",
+    "vietnameseMeanings": [
+      "da thú",
+      "lớp vỏ ngoài"
+    ]
+  },
+  {
+    "id": 108,
+    "character": "皿",
+    "name": "dish",
+    "vietnameseNames": [
+      "Mãnh"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ベイ",
+      "さら"
+    ],
+    "meanings": [
+      "dish",
+      "a helping",
+      "plate"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "監",
+      "盟",
+      "益",
+      "盛",
+      "盤",
+      "盗",
+      "盧",
+      "盆"
+    ],
+    "vietnameseMeaning": "Bát đĩa, đồ đựng thức ăn",
+    "vietnameseMeanings": [
+      "đĩa",
+      "bát",
+      "chậu khay đựng đồ ăn"
+    ]
+  },
+  {
+    "id": 109,
+    "character": "目",
+    "name": "eye",
+    "vietnameseNames": [
+      "Mục"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "モク",
+      "ボク",
+      "め",
+      "-め",
+      "ま-"
+    ],
+    "meanings": [
+      "eye",
+      "class",
+      "look",
+      "insight",
+      "experience",
+      "care",
+      "favor"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "相",
+      "目",
+      "県",
+      "直",
+      "真",
+      "着",
+      "督",
+      "省"
+    ],
+    "vietnameseMeaning": "Mắt, nhìn, đề mục",
+    "vietnameseMeanings": [
+      "con mắt",
+      "ánh nhìn",
+      "mục lục",
+      "điều khoản"
+    ]
+  },
+  {
+    "id": 110,
+    "character": "矛",
+    "name": "spear",
+    "vietnameseNames": [
+      "Mâu"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ム",
+      "ボウ",
+      "ほこ"
+    ],
+    "meanings": [
+      "halberd",
+      "arms",
+      "festival float"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "矛",
+      "矜",
+      "矞",
+      "矟"
+    ],
+    "vietnameseMeaning": "Cây giáo đâm, mâu thuẫn",
+    "vietnameseMeanings": [
+      "ngọn mâu đâm",
+      "vũ khí mũi nhọn"
+    ]
+  },
+  {
+    "id": 111,
+    "character": "矢",
+    "name": "arrow",
+    "vietnameseNames": [
+      "Thỉ"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "シ",
+      "や"
+    ],
+    "meanings": [
+      "dart",
+      "arrow"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "知",
+      "短",
+      "矢",
+      "矯",
+      "矩",
+      "矣",
+      "矧",
+      "䂓"
+    ],
+    "vietnameseMeaning": "Mũi tên, bắn thẳng",
+    "vietnameseMeanings": [
+      "mũi tên bắn đi",
+      "thẳng thắn"
+    ]
+  },
+  {
+    "id": 112,
+    "character": "石",
+    "name": "stone",
+    "vietnameseNames": [
+      "Thạch"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "セキ",
+      "シャク",
+      "コク",
+      "いし"
+    ],
+    "meanings": [
+      "stone"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "確",
+      "研",
+      "石",
+      "破",
+      "硬",
+      "砂",
+      "礎",
+      "砲"
+    ],
+    "vietnameseMeaning": "Đá, tảng đá",
+    "vietnameseMeanings": [
+      "hòn đá",
+      "đá cứng",
+      "khoáng thạch"
+    ]
+  },
+  {
+    "id": 113,
+    "character": "示",
+    "name": "spirit",
+    "vietnameseNames": [
+      "Kì",
+      "Thị"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ジ",
+      "シ",
+      "しめ.す"
+    ],
+    "meanings": [
+      "show",
+      "indicate",
+      "point out",
+      "express",
+      "display"
+    ],
+    "strokes": 5,
+    "variants": [
+      {
+        "character": "⺭",
+        "strokes": 4,
+        "sourceCharacter": "⺭"
+      },
+      {
+        "character": "礻",
+        "strokes": 4,
+        "sourceCharacter": "礻"
+      }
+    ],
+    "examples": [
+      "社",
+      "示",
+      "神",
+      "福",
+      "票",
+      "禁",
+      "祉",
+      "祭"
+    ],
+    "vietnameseMeaning": "Chỉ dẫn, thần linh, mách bảo",
+    "vietnameseMeanings": [
+      "bày tỏ",
+      "hiển thị",
+      "thần đất",
+      "chỉ dẫn"
+    ]
+  },
+  {
+    "id": 114,
+    "character": "禸",
+    "name": "track",
+    "vietnameseNames": [
+      "Nhữu",
+      "Nhựu"
+    ],
+    "readings": [
+      "ぐうのあし"
+    ],
+    "characterReadings": [
+      "ジュウ",
+      "ニュ",
+      "あしあと"
+    ],
+    "meanings": [
+      "rump",
+      "footprint radical (no. 114)"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "禸",
+      "禹",
+      "禺",
+      "离",
+      "禽"
+    ],
+    "vietnameseMeaning": "Vết chân muông thú",
+    "vietnameseMeanings": [
+      "dấu chân thú giẫm trên đất"
+    ]
+  },
+  {
+    "id": 115,
+    "character": "禾",
+    "name": "grain",
+    "vietnameseNames": [
+      "Hòa"
+    ],
+    "readings": [
+      "のぎ",
+      "のぎへん"
+    ],
+    "characterReadings": [
+      "カ",
+      "いね"
+    ],
+    "meanings": [
+      "two-branch tree radical (no. 115)"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "私",
+      "税",
+      "移",
+      "種",
+      "程",
+      "科",
+      "積",
+      "秋"
+    ],
+    "vietnameseMeaning": "Cây lúa, hoa màu",
+    "vietnameseMeanings": [
+      "cây lúa trổ bông",
+      "ngũ cốc"
+    ]
+  },
+  {
+    "id": 116,
+    "character": "穴",
+    "name": "cave",
+    "vietnameseNames": [
+      "Huyệt"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ケツ",
+      "あな"
+    ],
+    "meanings": [
+      "hole",
+      "aperture",
+      "slit",
+      "cave",
+      "den"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "空",
+      "究",
+      "突",
+      "窓",
+      "穴",
+      "窮",
+      "窒",
+      "窪"
+    ],
+    "vietnameseMeaning": "Hang động, lỗ hổng",
+    "vietnameseMeanings": [
+      "hang đá",
+      "cửa hang",
+      "huyệt đạo"
+    ]
+  },
+  {
+    "id": 117,
+    "character": "立",
+    "name": "stand",
+    "vietnameseNames": [
+      "Lập"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "リツ",
+      "リュウ",
+      "リットル",
+      "た.つ",
+      "-た.つ",
+      "た.ち-",
+      "た.てる",
+      "-た.てる",
+      "た.て-",
+      "たて-",
+      "-た.て",
+      "-だ.て",
+      "-だ.てる"
+    ],
+    "meanings": [
+      "stand up",
+      "rise",
+      "set up",
+      "erect"
+    ],
+    "strokes": 5,
+    "variants": [],
+    "examples": [
+      "立",
+      "競",
+      "端",
+      "章",
+      "童",
+      "竜",
+      "竪",
+      "竍"
+    ],
+    "vietnameseMeaning": "Đứng thẳng, dựng nên",
+    "vietnameseMeanings": [
+      "đứng thẳng dậy",
+      "thiết lập",
+      "xây dựng"
+    ]
+  },
+  {
+    "id": 118,
+    "character": "竹",
+    "name": "bamboo",
+    "vietnameseNames": [
+      "Trúc"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "チク",
+      "たけ"
+    ],
+    "meanings": [
+      "bamboo"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "第",
+      "策",
+      "算",
+      "答",
+      "管",
+      "竹",
+      "筋",
+      "等"
+    ],
+    "vietnameseMeaning": "Cây tre, cây trúc",
+    "vietnameseMeanings": [
+      "tre trúc",
+      "óng trúc"
+    ]
+  },
+  {
+    "id": 119,
+    "character": "米",
+    "name": "rice",
+    "vietnameseNames": [
+      "Mễ"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ベイ",
+      "マイ",
+      "メエトル",
+      "こめ",
+      "よね"
+    ],
+    "meanings": [
+      "rice",
+      "USA",
+      "metre"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "米",
+      "精",
+      "糧",
+      "粘",
+      "糖",
+      "粉",
+      "粧",
+      "粒"
+    ],
+    "vietnameseMeaning": "Gạo, hạt lúa",
+    "vietnameseMeanings": [
+      "hạt gạo trắng",
+      "ngũ cốc"
+    ]
+  },
+  {
+    "id": 120,
+    "character": "糸",
+    "name": "silk",
+    "vietnameseNames": [
+      "Mịch"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "シ",
+      "いと"
+    ],
+    "meanings": [
+      "thread"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "経",
+      "約",
+      "統",
+      "総",
+      "続",
+      "結",
+      "組",
+      "終"
+    ],
+    "vietnameseMeaning": "Sợi tơ lụa, sợi chỉ",
+    "vietnameseMeanings": [
+      "sợi tơ mảnh",
+      "chỉ tơ tằm",
+      "dây liên kết"
+    ]
+  },
+  {
+    "id": 121,
+    "character": "缶",
+    "name": "jar",
+    "vietnameseNames": [
+      "Phữu",
+      "Phẫu",
+      "Phũ"
+    ],
+    "readings": [
+      "ほとぎ"
+    ],
+    "characterReadings": [
+      "カン",
+      "かま"
+    ],
+    "meanings": [
+      "tin can",
+      "container",
+      "jar radical (no. 121)"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "缶",
+      "缸",
+      "䍃",
+      "缺",
+      "缻",
+      "缽",
+      "缾",
+      "罃"
+    ],
+    "vietnameseMeaning": "Bình sành, chum vại",
+    "vietnameseMeanings": [
+      "bình bằng đất nung",
+      "chum vại đựng rượu"
+    ]
+  },
+  {
+    "id": 122,
+    "character": "网",
+    "name": "net",
+    "vietnameseNames": [
+      "Võng"
+    ],
+    "readings": [
+      "あみがしら",
+      "よんかしら",
+      "よこめ"
+    ],
+    "characterReadings": [
+      "モウ",
+      "ボウ",
+      "あみ"
+    ],
+    "meanings": [
+      "net",
+      "net or net crown radical (no. 122)"
+    ],
+    "strokes": 6,
+    "variants": [
+      {
+        "character": "罒",
+        "strokes": 5,
+        "sourceCharacter": "儚"
+      },
+      {
+        "character": "四",
+        "strokes": 5,
+        "sourceCharacter": "黷"
+      }
+    ],
+    "examples": [
+      "置",
+      "署",
+      "罪",
+      "罰",
+      "羅",
+      "罷",
+      "罵",
+      "罓"
+    ],
+    "vietnameseMeaning": "Lưới đánh cá, lưới bắt chim",
+    "vietnameseMeanings": [
+      "tấm lưới",
+      "mạng lưới vây bắt"
+    ]
+  },
+  {
+    "id": 123,
+    "character": "羊",
+    "name": "sheep",
+    "vietnameseNames": [
+      "Dương"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ヨウ",
+      "ひつじ"
+    ],
+    "meanings": [
+      "sheep"
+    ],
+    "strokes": 6,
+    "variants": [
+      {
+        "character": "⺷",
+        "strokes": 6,
+        "sourceCharacter": "美"
+      }
+    ],
+    "examples": [
+      "義",
+      "美",
+      "群",
+      "羊",
+      "羌",
+      "羋",
+      "羐",
+      "羑"
+    ],
+    "vietnameseMeaning": "Con dê, con cừu",
+    "vietnameseMeanings": [
+      "con cừu",
+      "con dê",
+      "hiền lành"
+    ]
+  },
+  {
+    "id": 124,
+    "character": "羽",
+    "name": "feather",
+    "vietnameseNames": [
+      "Vũ"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ウ",
+      "は",
+      "わ",
+      "はね"
+    ],
+    "meanings": [
+      "feathers",
+      "counter for birds, rabbits"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "習",
+      "羽",
+      "翌",
+      "翼",
+      "翻",
+      "翔",
+      "翁",
+      "翫"
+    ],
+    "vietnameseMeaning": "Lông vũ, đôi cánh chim",
+    "vietnameseMeanings": [
+      "lông cánh chim",
+      "cánh bay"
+    ]
+  },
+  {
+    "id": 125,
+    "character": "老",
+    "name": "old",
+    "vietnameseNames": [
+      "Lão"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ロウ",
+      "お.いる",
+      "ふ.ける"
+    ],
+    "meanings": [
+      "old man",
+      "old age",
+      "grow old"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "者",
+      "考",
+      "老",
+      "耂",
+      "耇",
+      "者",
+      "耄",
+      "耆"
+    ],
+    "vietnameseMeaning": "Già nua, người già",
+    "vietnameseMeanings": [
+      "người cao tuổi",
+      "già dặn",
+      "kính trọng"
+    ]
+  },
+  {
+    "id": 126,
+    "character": "而",
+    "name": "and",
+    "vietnameseNames": [
+      "Nhi"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ジ",
+      "ニ",
+      "しこ.うして",
+      "しか.して",
+      "しか.も",
+      "しか.れども",
+      "すなわち",
+      "なんじ",
+      "しかるに"
+    ],
+    "meanings": [
+      "and yet",
+      "and then",
+      "but",
+      "however",
+      "nevertheless"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "耐",
+      "而",
+      "耍",
+      "耎",
+      "耏",
+      "耑"
+    ],
+    "vietnameseMeaning": "Mà, nhưng mà, chòm râu dưới cằm",
+    "vietnameseMeanings": [
+      "mà lại",
+      "và rồi",
+      "râu cằm"
+    ]
+  },
+  {
+    "id": 127,
+    "character": "耒",
+    "name": "plow",
+    "vietnameseNames": [
+      "Lỗi"
+    ],
+    "readings": [
+      "らいすき"
+    ],
+    "characterReadings": [
+      "ライ",
+      "ルイ",
+      "き",
+      "く",
+      "すき"
+    ],
+    "meanings": [
+      "come",
+      "plough",
+      "three-branch tree radical (no. 127)"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "耕",
+      "耒",
+      "耔",
+      "耗",
+      "耘",
+      "耙",
+      "耜",
+      "耞"
+    ],
+    "vietnameseMeaning": "Cái cày ruộng",
+    "vietnameseMeanings": [
+      "cán cày gỗ",
+      "cày bừa làm ruộng"
+    ]
+  },
+  {
+    "id": 128,
+    "character": "耳",
+    "name": "ear",
+    "vietnameseNames": [
+      "Nhĩ"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ジ",
+      "みみ"
+    ],
+    "meanings": [
+      "ear"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "職",
+      "聞",
+      "聴",
+      "聖",
+      "耳",
+      "聡",
+      "聯",
+      "耶"
+    ],
+    "vietnameseMeaning": "Lỗ tai, lắng nghe",
+    "vietnameseMeanings": [
+      "cái tai",
+      "thính giác",
+      "nghe ngóng"
+    ]
+  },
+  {
+    "id": 129,
+    "character": "聿",
+    "name": "brush",
+    "vietnameseNames": [
+      "Duật"
+    ],
+    "readings": [
+      "ふでづくり"
+    ],
+    "characterReadings": [
+      "イチ",
+      "イツ",
+      "ふで",
+      "ここに"
+    ],
+    "meanings": [
+      "brush",
+      "finally",
+      "self",
+      "relate",
+      "follow",
+      "here",
+      "fast",
+      "writing brush radical (no. 129)"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "粛",
+      "肇",
+      "聿",
+      "肄",
+      "肅",
+      "肆",
+      "肈"
+    ],
+    "vietnameseMeaning": "Cây bút lông viết chữ",
+    "vietnameseMeanings": [
+      "bút lông",
+      "viết lách",
+      "thuật lại"
+    ]
+  },
+  {
+    "id": 130,
+    "character": "肉",
+    "name": "meat",
+    "vietnameseNames": [
+      "Nhục",
+      "Nhụ",
+      "Nậu"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ニク",
+      "しし"
+    ],
+    "meanings": [
+      "meat"
+    ],
+    "strokes": 6,
+    "variants": [
+      {
+        "character": "月",
+        "strokes": 4,
+        "sourceCharacter": "冑"
+      }
+    ],
+    "examples": [
+      "能",
+      "育",
+      "脳",
+      "背",
+      "脱",
+      "肉",
+      "臓",
+      "肝"
+    ],
+    "vietnameseMeaning": "Thịt, xác thịt",
+    "vietnameseMeanings": [
+      "thịt động vật",
+      "cơ bắp",
+      "thân thể"
+    ]
+  },
+  {
+    "id": 131,
+    "character": "臣",
+    "name": "minister",
+    "vietnameseNames": [
+      "Thần"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "シン",
+      "ジン"
+    ],
+    "meanings": [
+      "retainer",
+      "subject"
+    ],
+    "strokes": 7,
+    "variants": [],
+    "examples": [
+      "臨",
+      "臣",
+      "臤",
+      "臥",
+      "臧"
+    ],
+    "vietnameseMeaning": "Bầy tôi, quan lại triều đình",
+    "vietnameseMeanings": [
+      "quan chức bề tôi",
+      "thần dân kính cẩn"
+    ]
+  },
+  {
+    "id": 132,
+    "character": "自",
+    "name": "self",
+    "vietnameseNames": [
+      "Tự"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ジ",
+      "シ",
+      "みずか.ら",
+      "おの.ずから",
+      "おの.ずと"
+    ],
+    "meanings": [
+      "oneself"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "自",
+      "臭",
+      "臬",
+      "臭",
+      "臲"
+    ],
+    "vietnameseMeaning": "Tự mình, xuất phát từ",
+    "vietnameseMeanings": [
+      "chính mình",
+      "tự tại",
+      "bắt đầu từ"
+    ]
+  },
+  {
+    "id": 133,
+    "character": "至",
+    "name": "arrive",
+    "vietnameseNames": [
+      "Chí"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "シ",
+      "いた.る"
+    ],
+    "meanings": [
+      "climax",
+      "arrive",
+      "proceed",
+      "reach",
+      "attain",
+      "result in"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "致",
+      "至",
+      "䑓",
+      "臺",
+      "臻"
+    ],
+    "vietnameseMeaning": "Đến nơi, cực điểm",
+    "vietnameseMeanings": [
+      "đến nơi",
+      "tột cùng",
+      "cao nhất"
+    ]
+  },
+  {
+    "id": 134,
+    "character": "臼",
+    "name": "mortar",
+    "vietnameseNames": [
+      "Cữu"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "キュウ",
+      "グ",
+      "うす",
+      "うすづ.く"
+    ],
+    "meanings": [
+      "mortar"
+    ],
+    "strokes": 6,
+    "variants": [
+      {
+        "character": "𦥑",
+        "strokes": 7,
+        "sourceCharacter": "叟"
+      }
+    ],
+    "examples": [
+      "興",
+      "臼",
+      "臽",
+      "臾",
+      "臿",
+      "舁",
+      "舀",
+      "舂"
+    ],
+    "vietnameseMeaning": "Cái cối giã gạo",
+    "vietnameseMeanings": [
+      "cái cối",
+      "giã gạo",
+      "nghiền nát"
+    ]
+  },
+  {
+    "id": 135,
+    "character": "舌",
+    "name": "tongue",
+    "vietnameseNames": [
+      "Thiệt"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ゼツ",
+      "した"
+    ],
+    "meanings": [
+      "tongue",
+      "reed",
+      "clapper"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "舌",
+      "舘",
+      "舍",
+      "舐",
+      "䑛",
+      "舒",
+      "舓",
+      "舔"
+    ],
+    "vietnameseMeaning": "Cái lưỡi",
+    "vietnameseMeanings": [
+      "chiếc lưỡi",
+      "vị giác",
+      "ngôn từ"
+    ]
+  },
+  {
+    "id": 136,
+    "character": "舛",
+    "name": "oppose",
+    "vietnameseNames": [
+      "Suyễn"
+    ],
+    "readings": [
+      "まいあし"
+    ],
+    "characterReadings": [
+      "ブ",
+      "セン",
+      "まい",
+      "そむ.く"
+    ],
+    "meanings": [
+      "dancing radical (no. 136)"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "舞",
+      "舜",
+      "舛",
+      "舝"
+    ],
+    "vietnameseMeaning": "Sai lệch, trái ngược, múa chân",
+    "vietnameseMeanings": [
+      "nghịch chiều",
+      "lỗi lầm",
+      "bước múa chân"
+    ]
+  },
+  {
+    "id": 137,
+    "character": "舟",
+    "name": "boat",
+    "vietnameseNames": [
+      "Chu"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "シュウ",
+      "ふね",
+      "ふな-",
+      "-ぶね"
+    ],
+    "meanings": [
+      "boat",
+      "ship"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "般",
+      "航",
+      "船",
+      "艦",
+      "艇",
+      "舶",
+      "舟",
+      "舵"
+    ],
+    "vietnameseMeaning": "Con thuyền, chiếc đò",
+    "vietnameseMeanings": [
+      "thuyền bè",
+      "con đò chở khách qua sông"
+    ]
+  },
+  {
+    "id": 138,
+    "character": "艮",
+    "name": "stopping",
+    "vietnameseNames": [
+      "Cấn"
+    ],
+    "readings": [
+      "ねづくり"
+    ],
+    "characterReadings": [
+      "コン",
+      "ゴン",
+      "うしとら"
+    ],
+    "meanings": [
+      "northeast (Oriental zodiac)",
+      "stopping",
+      "good radical (no. 138)"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "良",
+      "艮",
+      "艱"
+    ],
+    "vietnameseMeaning": "Quẻ Cấn (núi dừng), kiên định",
+    "vietnameseMeanings": [
+      "quẻ Cấn trong bát quái",
+      "dừng lại vững vàng"
+    ]
+  },
+  {
+    "id": 139,
+    "character": "色",
+    "name": "color",
+    "vietnameseNames": [
+      "Sắc"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ショク",
+      "シキ",
+      "いろ"
+    ],
+    "meanings": [
+      "color"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "色",
+      "艶",
+      "艴",
+      "艷"
+    ],
+    "vietnameseMeaning": "Màu sắc, vẻ đẹp, diện mạo",
+    "vietnameseMeanings": [
+      "màu mè",
+      "sắc đẹp",
+      "nét mặt",
+      "vẻ bề ngoài"
+    ]
+  },
+  {
+    "id": 140,
+    "character": "艸",
+    "name": "grass",
+    "vietnameseNames": [
+      "Thảo"
+    ],
+    "readings": [
+      "くさかんむり",
+      "そうこう"
+    ],
+    "characterReadings": [
+      "ソウ",
+      "くさ"
+    ],
+    "meanings": [
+      "grass",
+      "plants",
+      "grass radical (no. 140)"
+    ],
+    "strokes": 6,
+    "variants": [
+      {
+        "character": "艹",
+        "strokes": 3,
+        "sourceCharacter": "備"
+      }
+    ],
+    "examples": [
+      "藤",
+      "葉",
+      "落",
+      "英",
+      "若",
+      "蔵",
+      "花",
+      "苦"
+    ],
+    "vietnameseMeaning": "Cỏ cây, thảo mộc",
+    "vietnameseMeanings": [
+      "cây cỏ hoang dại",
+      "thảo mộc"
+    ]
+  },
+  {
+    "id": 141,
+    "character": "虍",
+    "name": "tiger",
+    "vietnameseNames": [
+      "Hô"
+    ],
+    "readings": [
+      "とらかんむり",
+      "とらがしら"
+    ],
+    "characterReadings": [
+      "コ"
+    ],
+    "meanings": [
+      "tiger spots",
+      "mottled",
+      "tiger or tiger crown radical (no. 141)"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "虚",
+      "虐",
+      "虎",
+      "虜",
+      "虍",
+      "虒",
+      "虓",
+      "虔"
+    ],
+    "vietnameseMeaning": "Vằn da cọp, con hổ dữ",
+    "vietnameseMeanings": [
+      "hoa văn da hổ",
+      "chúa sơn lâm oai phong"
+    ]
+  },
+  {
+    "id": 142,
+    "character": "虫",
+    "name": "insect",
+    "vietnameseNames": [
+      "Trùng"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "チュウ",
+      "キ",
+      "むし"
+    ],
+    "meanings": [
+      "insect",
+      "bug",
+      "temper"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "融",
+      "虫",
+      "蛇",
+      "蝶",
+      "蛍",
+      "虹",
+      "蚊",
+      "蜜"
+    ],
+    "vietnameseMeaning": "Sâu bọ, côn trùng",
+    "vietnameseMeanings": [
+      "côn trùng",
+      "sâu bọ",
+      "loài bò sát"
+    ]
+  },
+  {
+    "id": 143,
+    "character": "血",
+    "name": "blood",
+    "vietnameseNames": [
+      "Huyết"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ケツ",
+      "ち"
+    ],
+    "meanings": [
+      "blood"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "衆",
+      "血",
+      "䘏",
+      "衁",
+      "衂",
+      "衄",
+      "衅",
+      "衈"
+    ],
+    "vietnameseMeaning": "Máu, huyết thống",
+    "vietnameseMeanings": [
+      "dòng máu",
+      "huyết quản",
+      "dòng giống ruột thịt"
+    ]
+  },
+  {
+    "id": 144,
+    "character": "行",
+    "name": "walk enclosure",
+    "vietnameseNames": [
+      "Hành",
+      "Hạnh",
+      "Hàng",
+      "Hạng"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "コウ",
+      "ギョウ",
+      "アン",
+      "い.く",
+      "ゆ.く",
+      "-ゆ.き",
+      "-ゆき",
+      "-い.き",
+      "-いき",
+      "おこな.う",
+      "おこ.なう"
+    ],
+    "meanings": [
+      "going",
+      "journey",
+      "carry out",
+      "conduct",
+      "act",
+      "line",
+      "row",
+      "bank"
+    ],
+    "strokes": 6,
+    "variants": [],
+    "examples": [
+      "行",
+      "術",
+      "衛",
+      "街",
+      "衝",
+      "衡",
+      "衍",
+      "衎"
+    ],
+    "vietnameseMeaning": "Đi lại, thi hành, hàng lối",
+    "vietnameseMeanings": [
+      "bước đi",
+      "hành động",
+      "thực hiện",
+      "hàng dãy"
+    ]
+  },
+  {
+    "id": 145,
+    "character": "衣",
+    "name": "clothes",
+    "vietnameseNames": [
+      "Y",
+      "Ý"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "イ",
+      "エ",
+      "ころも",
+      "きぬ",
+      "-ぎ"
+    ],
+    "meanings": [
+      "garment",
+      "clothes",
+      "dressing"
+    ],
+    "strokes": 6,
+    "variants": [
+      {
+        "character": "衤",
+        "strokes": 5,
+        "sourceCharacter": "初"
+      }
+    ],
+    "examples": [
+      "表",
+      "裁",
+      "補",
+      "被",
+      "製",
+      "装",
+      "裏",
+      "複"
+    ],
+    "vietnameseMeaning": "Áo quần, xiêm y",
+    "vietnameseMeanings": [
+      "áo mặc",
+      "trang phục",
+      "lớp vỏ bọc"
+    ]
+  },
+  {
+    "id": 146,
+    "character": "襾",
+    "name": "west",
+    "vietnameseNames": [
+      "Á"
+    ],
+    "readings": [
+      "にし"
+    ],
+    "characterReadings": [
+      "ア",
+      "け"
+    ],
+    "meanings": [
+      "cover",
+      "place on top of",
+      "west radical variant (no. 146)"
+    ],
+    "strokes": 6,
+    "variants": [
+      {
+        "character": "西",
+        "strokes": 6,
+        "sourceCharacter": "⻃"
+      },
+      {
+        "character": "覀",
+        "strokes": 6,
+        "sourceCharacter": "僊"
+      }
+    ],
+    "examples": [
+      "要",
+      "西",
+      "覇",
+      "覆",
+      "襾",
+      "覀",
+      "覃",
+      "覈"
+    ],
+    "vietnameseMeaning": "Nắp đậy úp lên, phương Tây",
+    "vietnameseMeanings": [
+      "úp nắp che kín",
+      "hướng Tây"
+    ]
+  },
+  {
+    "id": 147,
+    "character": "見",
+    "name": "see",
+    "vietnameseNames": [
+      "Kiến",
+      "Hiện"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ケン",
+      "み.る",
+      "み.える",
+      "み.せる"
+    ],
+    "meanings": [
+      "see",
+      "hopes",
+      "chances",
+      "idea",
+      "opinion",
+      "look at",
+      "visible"
+    ],
+    "strokes": 7,
+    "variants": [],
+    "examples": [
+      "見",
+      "規",
+      "視",
+      "親",
+      "観",
+      "覚",
+      "覧",
+      "覐"
+    ],
+    "vietnameseMeaning": "Nhìn thấy, trông thấy, kiến thức",
+    "vietnameseMeanings": [
+      "nhìn thấy",
+      "gặp gỡ",
+      "hiểu biết",
+      "quan điểm"
+    ]
+  },
+  {
+    "id": 148,
+    "character": "角",
+    "name": "horn",
+    "vietnameseNames": [
+      "Giác",
+      "Giốc"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "カク",
+      "かど",
+      "つの"
+    ],
+    "meanings": [
+      "angle",
+      "corner",
+      "square",
+      "horn",
+      "antlers"
+    ],
+    "strokes": 7,
+    "variants": [],
+    "examples": [
+      "解",
+      "角",
+      "触",
+      "觔",
+      "觕",
+      "觖",
+      "觝",
+      "觚"
+    ],
+    "vietnameseMeaning": "Sừng thú, góc cạnh, đấu tranh",
+    "vietnameseMeanings": [
+      "cái sừng nhọn",
+      "góc vuông",
+      "đọ sức"
+    ]
+  },
+  {
+    "id": 149,
+    "character": "言",
+    "name": "speech",
+    "vietnameseNames": [
+      "Ngôn",
+      "Ngân"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ゲン",
+      "ゴン",
+      "い.う",
+      "こと"
+    ],
+    "meanings": [
+      "say",
+      "word"
+    ],
+    "strokes": 7,
+    "variants": [
+      {
+        "character": "訁",
+        "strokes": null,
+        "sourceCharacter": null
+      }
+    ],
+    "examples": [
+      "議",
+      "言",
+      "調",
+      "話",
+      "設",
+      "記",
+      "認",
+      "論"
+    ],
+    "vietnameseMeaning": "Lời nói, ngôn ngữ",
+    "vietnameseMeanings": [
+      "lời ăn tiếng nói",
+      "ngôn từ",
+      "bày tỏ"
+    ]
+  },
+  {
+    "id": 150,
+    "character": "谷",
+    "name": "valley",
+    "vietnameseNames": [
+      "Cốc",
+      "Lộc",
+      "Dục"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "コク",
+      "たに",
+      "きわ.まる"
+    ],
+    "meanings": [
+      "valley"
+    ],
+    "strokes": 7,
+    "variants": [],
+    "examples": [
+      "谷",
+      "谺",
+      "谽",
+      "谿",
+      "豁"
+    ],
+    "vietnameseMeaning": "Thung lũng, khe núi",
+    "vietnameseMeanings": [
+      "khe núi sâu",
+      "hang suối giữa núi non"
+    ]
+  },
+  {
+    "id": 151,
+    "character": "豆",
+    "name": "bean",
+    "vietnameseNames": [
+      "Đậu",
+      "Dấu"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "トウ",
+      "ズ",
+      "まめ",
+      "まめ-"
+    ],
+    "meanings": [
+      "beans",
+      "pea",
+      "midget"
+    ],
+    "strokes": 7,
+    "variants": [],
+    "examples": [
+      "豊",
+      "豆",
+      "豇",
+      "豈",
+      "豉",
+      "豋",
+      "豌",
+      "豎"
+    ],
+    "vietnameseMeaning": "Hạt đậu, cái chén đựng thịt tế",
+    "vietnameseMeanings": [
+      "hạt đỗ hạt đậu",
+      "chiếc bát cổ chân cao"
+    ]
+  },
+  {
+    "id": 152,
+    "character": "豕",
+    "name": "pig",
+    "vietnameseNames": [
+      "Thỉ"
+    ],
+    "readings": [
+      "いのこ"
+    ],
+    "characterReadings": [
+      "シ"
+    ],
+    "meanings": [
+      "pig",
+      "hog",
+      "pig radical (no. 152)"
+    ],
+    "strokes": 7,
+    "variants": [],
+    "examples": [
+      "象",
+      "豪",
+      "豚",
+      "豕",
+      "豗",
+      "豘",
+      "豝",
+      "豢"
+    ],
+    "vietnameseMeaning": "Con heo, con lợn",
+    "vietnameseMeanings": [
+      "loài lợn",
+      "heo rừng"
+    ]
+  },
+  {
+    "id": 153,
+    "character": "豸",
+    "name": "badger",
+    "vietnameseNames": [
+      "Trĩ",
+      "Trại"
+    ],
+    "readings": [
+      "むじなへん"
+    ],
+    "characterReadings": [
+      "タイ",
+      "チ"
+    ],
+    "meanings": [
+      "snake",
+      "legless insect",
+      "badger or clawed dog radical (no. 153)"
+    ],
+    "strokes": 7,
+    "variants": [],
+    "examples": [
+      "豸",
+      "豹",
+      "豺",
+      "豻",
+      "豼",
+      "貂",
+      "貅",
+      "貆"
+    ],
+    "vietnameseMeaning": "Loài thú săn mồi không sừng",
+    "vietnameseMeanings": [
+      "thú hoang săn mồi",
+      "linh thú"
+    ]
+  },
+  {
+    "id": 154,
+    "character": "貝",
+    "name": "shell",
+    "vietnameseNames": [
+      "Bối"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "バイ",
+      "かい"
+    ],
+    "meanings": [
+      "shellfish"
+    ],
+    "strokes": 7,
+    "variants": [],
+    "examples": [
+      "資",
+      "費",
+      "質",
+      "賞",
+      "負",
+      "財",
+      "買",
+      "責"
+    ],
+    "vietnameseMeaning": "Vỏ sò, tiền của quý giá",
+    "vietnameseMeanings": [
+      "con sò",
+      "tiền tệ thời cổ",
+      "vật báu quý giá"
+    ]
+  },
+  {
+    "id": 155,
+    "character": "赤",
+    "name": "red",
+    "vietnameseNames": [
+      "Xích",
+      "Thích"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "セキ",
+      "シャク",
+      "あか",
+      "あか-",
+      "あか.い",
+      "あか.らむ",
+      "あか.らめる"
+    ],
+    "meanings": [
+      "red"
+    ],
+    "strokes": 7,
+    "variants": [],
+    "examples": [
+      "赤",
+      "赦",
+      "赧",
+      "赫",
+      "赬",
+      "赭"
+    ],
+    "vietnameseMeaning": "Màu đỏ thắm, trần trụi, chân thành",
+    "vietnameseMeanings": [
+      "màu đỏ thắm",
+      "trần như nhộng",
+      "chân thành"
+    ]
+  },
+  {
+    "id": 156,
+    "character": "走",
+    "name": "run",
+    "vietnameseNames": [
+      "Tẩu"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ソウ",
+      "はし.る"
+    ],
+    "meanings": [
+      "run"
+    ],
+    "strokes": 7,
+    "variants": [],
+    "examples": [
+      "起",
+      "超",
+      "走",
+      "越",
+      "趣",
+      "趙",
+      "赴",
+      "赳"
+    ],
+    "vietnameseMeaning": "Chạy nhanh, trốn chạy",
+    "vietnameseMeanings": [
+      "chạy mau",
+      "di chuyển gấp"
+    ]
+  },
+  {
+    "id": 157,
+    "character": "足",
+    "name": "foot",
+    "vietnameseNames": [
+      "Túc"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ソク",
+      "あし",
+      "た.りる",
+      "た.る",
+      "た.す"
+    ],
+    "meanings": [
+      "leg",
+      "foot",
+      "be sufficient",
+      "counter for pairs of footwear"
+    ],
+    "strokes": 7,
+    "variants": [],
+    "examples": [
+      "足",
+      "路",
+      "踏",
+      "躍",
+      "跡",
+      "距",
+      "踊",
+      "践"
+    ],
+    "vietnameseMeaning": "Bàn chân, đầy đủ",
+    "vietnameseMeanings": [
+      "chân đi",
+      "đầy đủ",
+      "sung túc"
+    ]
+  },
+  {
+    "id": 158,
+    "character": "身",
+    "name": "body",
+    "vietnameseNames": [
+      "Thân",
+      "Quyên"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "シン",
+      "み"
+    ],
+    "meanings": [
+      "somebody",
+      "person",
+      "one's station in life"
+    ],
+    "strokes": 7,
+    "variants": [],
+    "examples": [
+      "身",
+      "躬",
+      "躭",
+      "躯",
+      "躰",
+      "躳",
+      "躱",
+      "躶"
+    ],
+    "vietnameseMeaning": "Thân thể, mình mẩy",
+    "vietnameseMeanings": [
+      "thân mình",
+      "thể xác",
+      "bản thân người ta"
+    ]
+  },
+  {
+    "id": 159,
+    "character": "車",
+    "name": "cart",
+    "vietnameseNames": [
+      "Xa"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "シャ",
+      "くるま"
+    ],
+    "meanings": [
+      "car"
+    ],
+    "strokes": 7,
+    "variants": [],
+    "examples": [
+      "軍",
+      "転",
+      "車",
+      "輸",
+      "輪",
+      "軽",
+      "載",
+      "較"
+    ],
+    "vietnameseMeaning": "Xe cộ, bánh xe",
+    "vietnameseMeanings": [
+      "cỗ xe",
+      "xe cộ",
+      "phương tiện chở đồ"
+    ]
+  },
+  {
+    "id": 160,
+    "character": "辛",
+    "name": "bitter",
+    "vietnameseNames": [
+      "Tân"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "シン",
+      "から.い",
+      "つら.い",
+      "-づら.い",
+      "かのと"
+    ],
+    "meanings": [
+      "spicy",
+      "bitter",
+      "hot",
+      "acrid"
+    ],
+    "strokes": 7,
+    "variants": [],
+    "examples": [
+      "辞",
+      "辛",
+      "辜",
+      "辟",
+      "辠",
+      "辡",
+      "辣",
+      "辤"
+    ],
+    "vietnameseMeaning": "Vị cay, gian nan cay đắng",
+    "vietnameseMeanings": [
+      "vị cay xè",
+      "khổ sở",
+      "vất vả gian truân"
+    ]
+  },
+  {
+    "id": 161,
+    "character": "辰",
+    "name": "morning",
+    "vietnameseNames": [
+      "Thần",
+      "Thìn"
+    ],
+    "readings": [
+      "しんのたつ"
+    ],
+    "characterReadings": [
+      "シン",
+      "ジン",
+      "たつ"
+    ],
+    "meanings": [
+      "sign of the dragon",
+      "7-9AM",
+      "fifth sign of Chinese zodiac",
+      "shin dragon radical (no. 161)"
+    ],
+    "strokes": 7,
+    "variants": [],
+    "examples": [
+      "農",
+      "辰",
+      "辱"
+    ],
+    "vietnameseMeaning": "Chi Thìn (rồng), sáng sớm, thời giờ",
+    "vietnameseMeanings": [
+      "con rồng (chi Thìn)",
+      "sáng sớm 7-9 giờ",
+      "sao trời"
+    ]
+  },
+  {
+    "id": 162,
+    "character": "辵",
+    "name": "walk",
+    "vietnameseNames": [
+      "Sước",
+      "Xước",
+      "Xích"
+    ],
+    "readings": [
+      "しんにょう",
+      "しんにゅう"
+    ],
+    "characterReadings": [
+      "チャク"
+    ],
+    "meanings": [
+      "walk",
+      "walking",
+      "road radical (no. 162)"
+    ],
+    "strokes": 7,
+    "variants": [],
+    "examples": [
+      "連",
+      "選",
+      "通",
+      "進",
+      "近",
+      "道",
+      "運",
+      "過"
+    ],
+    "vietnameseMeaning": "Vừa đi vừa dừng, đường đi",
+    "vietnameseMeanings": [
+      "bước đi rồi dừng lại",
+      "hành trình trên đường"
+    ]
+  },
+  {
+    "id": 163,
+    "character": "邑",
+    "name": "city",
+    "vietnameseNames": [
+      "Ấp"
+    ],
+    "readings": [
+      "おおざと"
+    ],
+    "characterReadings": [
+      "ユウ",
+      "むら"
+    ],
+    "meanings": [
+      "village",
+      "rural community",
+      "right village radical (no. 163)"
+    ],
+    "strokes": 7,
+    "variants": [
+      {
+        "character": "⻏",
+        "strokes": 3,
+        "sourceCharacter": "⻏"
+      }
+    ],
+    "examples": [
+      "部",
+      "都",
+      "郎",
+      "邦",
+      "邸",
+      "郵",
+      "郡",
+      "郷"
+    ],
+    "vietnameseMeaning": "Vùng đất phong, làng xóm, kinh đô",
+    "vietnameseMeanings": [
+      "xóm làng",
+      "vùng đất vua ban",
+      "đô hội"
+    ]
+  },
+  {
+    "id": 164,
+    "character": "酉",
+    "name": "wine",
+    "vietnameseNames": [
+      "Dậu"
+    ],
+    "readings": [
+      "ひよりのとり",
+      "とりへん"
+    ],
+    "characterReadings": [
+      "ユウ",
+      "とり"
+    ],
+    "meanings": [
+      "west",
+      "bird",
+      "sign of the bird",
+      "5-7PM",
+      "tenth sign of Chinese zodiac",
+      "sake radical (no. 164)"
+    ],
+    "strokes": 7,
+    "variants": [],
+    "examples": [
+      "配",
+      "酒",
+      "酸",
+      "酬",
+      "酷",
+      "酔",
+      "醸",
+      "酵"
+    ],
+    "vietnameseMeaning": "Bình rượu, chi Dậu (gà), ủ men",
+    "vietnameseMeanings": [
+      "bình ủ rượu",
+      "chi Dậu (con gà)",
+      "men rượu chín"
+    ]
+  },
+  {
+    "id": 165,
+    "character": "釆",
+    "name": "distinguish",
+    "vietnameseNames": [
+      "Biện"
+    ],
+    "readings": [
+      "のごめ"
+    ],
+    "characterReadings": [
+      "ハン",
+      "ベン",
+      "サイ",
+      "と.る",
+      "いろどり",
+      "のごめ"
+    ],
+    "meanings": [
+      "separate",
+      "divide",
+      "topped rice radical (no. 165)"
+    ],
+    "strokes": 7,
+    "variants": [],
+    "examples": [
+      "釈",
+      "釆",
+      "采",
+      "釉",
+      "釋"
+    ],
+    "vietnameseMeaning": "Phân biệt, tách bạch",
+    "vietnameseMeanings": [
+      "chia tách",
+      "phân biệt rạch ròi"
+    ]
+  },
+  {
+    "id": 166,
+    "character": "里",
+    "name": "village",
+    "vietnameseNames": [
+      "Lý"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "リ",
+      "さと"
+    ],
+    "meanings": [
+      "ri",
+      "village",
+      "parent's home",
+      "league"
+    ],
+    "strokes": 7,
+    "variants": [],
+    "examples": [
+      "野",
+      "重",
+      "量",
+      "里",
+      "釐"
+    ],
+    "vietnameseMeaning": "Dặm đường, làng quê",
+    "vietnameseMeanings": [
+      "đơn vị dặm đường (lý)",
+      "làng xóm quê nhà"
+    ]
+  },
+  {
+    "id": 167,
+    "character": "金",
+    "name": "gold",
+    "vietnameseNames": [
+      "Kim"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "キン",
+      "コン",
+      "ゴン",
+      "かね",
+      "かな-",
+      "-がね"
+    ],
+    "meanings": [
+      "gold"
+    ],
+    "strokes": 8,
+    "variants": [],
+    "examples": [
+      "金",
+      "銀",
+      "針",
+      "録",
+      "鉄",
+      "鈴",
+      "銭",
+      "銃"
+    ],
+    "vietnameseMeaning": "Kim loại, vàng bạc",
+    "vietnameseMeanings": [
+      "vàng quý",
+      "kim loại cứng rắn",
+      "tiền tài"
+    ]
+  },
+  {
+    "id": 168,
+    "character": "長",
+    "name": "long",
+    "vietnameseNames": [
+      "Trường",
+      "Trưởng",
+      "Trướng"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "チョウ",
+      "なが.い",
+      "おさ"
+    ],
+    "meanings": [
+      "long",
+      "leader",
+      "superior",
+      "senior"
+    ],
+    "strokes": 8,
+    "variants": [],
+    "examples": [
+      "長",
+      "镸"
+    ],
+    "vietnameseMeaning": "Dài lâu, trưởng thượng, lớn lao",
+    "vietnameseMeanings": [
+      "dài xa",
+      "lớn tuổi",
+      "người đứng đầu"
+    ]
+  },
+  {
+    "id": 169,
+    "character": "門",
+    "name": "gate",
+    "vietnameseNames": [
+      "Môn"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "モン",
+      "かど",
+      "と"
+    ],
+    "meanings": [
+      "gate",
+      "counter for cannons"
+    ],
+    "strokes": 8,
+    "variants": [],
+    "examples": [
+      "間",
+      "開",
+      "関",
+      "閣",
+      "門",
+      "闘",
+      "閉",
+      "閥"
+    ],
+    "vietnameseMeaning": "Cổng lớn, cửa ngõ",
+    "vietnameseMeanings": [
+      "cánh cổng",
+      "cửa lớn nhà",
+      "môn phái",
+      "cửa quan"
+    ]
+  },
+  {
+    "id": 170,
+    "character": "阜",
+    "name": "mound",
+    "vietnameseNames": [
+      "Phụ"
+    ],
+    "readings": [
+      "ぎふのふ"
+    ],
+    "characterReadings": [
+      "フ",
+      "フウ"
+    ],
+    "meanings": [
+      "hill",
+      "mound",
+      "left village radical (no. 170)"
+    ],
+    "strokes": 8,
+    "variants": [
+      {
+        "character": "⻖",
+        "strokes": 3,
+        "sourceCharacter": "⻖"
+      }
+    ],
+    "examples": [
+      "院",
+      "際",
+      "防",
+      "限",
+      "阪",
+      "階",
+      "除",
+      "降"
+    ],
+    "vietnameseMeaning": "Gò đất lớn, đống đất cao",
+    "vietnameseMeanings": [
+      "gò đất cao",
+      "đồi núi thoai thoải"
+    ]
+  },
+  {
+    "id": 171,
+    "character": "隶",
+    "name": "slave",
+    "vietnameseNames": [
+      "Đãi"
+    ],
+    "readings": [
+      "れいづくり"
+    ],
+    "characterReadings": [
+      "タイ"
+    ],
+    "meanings": [
+      "extend",
+      "give",
+      "cast",
+      "slave radical (no. 171)"
+    ],
+    "strokes": 8,
+    "variants": [],
+    "examples": [
+      "隷",
+      "隶",
+      "隸"
+    ],
+    "vietnameseMeaning": "Đuổi bắt, bắt chước, người hầu",
+    "vietnameseMeanings": [
+      "bám theo bắt giữ",
+      "kẻ nô lệ phục dịch"
+    ]
+  },
+  {
+    "id": 172,
+    "character": "隹",
+    "name": "short tailed bird",
+    "vietnameseNames": [
+      "Chuy"
+    ],
+    "readings": [
+      "ふるとり"
+    ],
+    "characterReadings": [
+      "サイ",
+      "スイ",
+      "とり"
+    ],
+    "meanings": [
+      "bird",
+      "old bird radical (no. 172)"
+    ],
+    "strokes": 8,
+    "variants": [],
+    "examples": [
+      "集",
+      "難",
+      "離",
+      "雄",
+      "雑",
+      "雇",
+      "雅",
+      "隻"
+    ],
+    "vietnameseMeaning": "Chim đuôi ngắn",
+    "vietnameseMeanings": [
+      "loài chim đuôi ngắn (chim sẻ, bồ câu)"
+    ]
+  },
+  {
+    "id": 173,
+    "character": "雨",
+    "name": "rain",
+    "vietnameseNames": [
+      "Vũ",
+      "Vú"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ウ",
+      "あめ",
+      "あま-",
+      "-さめ"
+    ],
+    "meanings": [
+      "rain"
+    ],
+    "strokes": 8,
+    "variants": [],
+    "examples": [
+      "電",
+      "震",
+      "露",
+      "需",
+      "雨",
+      "雪",
+      "零",
+      "雲"
+    ],
+    "vietnameseMeaning": "Cơn mưa, mưa rơi",
+    "vietnameseMeanings": [
+      "hạt mưa",
+      "mưa rơi tưới mát",
+      "mưa gió"
+    ]
+  },
+  {
+    "id": 174,
+    "character": "靑",
+    "name": "blue",
+    "vietnameseNames": [
+      "Thanh"
+    ],
+    "readings": [],
+    "characterReadings": [],
+    "meanings": [],
+    "strokes": null,
+    "variants": [],
+    "examples": [
+      "青",
+      "静",
+      "靖",
+      "靚",
+      "靛",
+      "靜"
+    ],
+    "vietnameseMeaning": "Màu xanh biếc, tươi trẻ",
+    "vietnameseMeanings": [
+      "màu xanh lá non/xanh biếc trời",
+      "tuổi trẻ thanh xuân"
+    ]
+  },
+  {
+    "id": 175,
+    "character": "非",
+    "name": "wrong",
+    "vietnameseNames": [
+      "Phi"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ヒ",
+      "あら.ず"
+    ],
+    "meanings": [
+      "un-",
+      "mistake",
+      "negative",
+      "injustice",
+      "non-"
+    ],
+    "strokes": 8,
+    "variants": [],
+    "examples": [
+      "非",
+      "靠",
+      "靡"
+    ],
+    "vietnameseMeaning": "Sai trái, không phải",
+    "vietnameseMeanings": [
+      "không phải",
+      "trái ngược với đúng",
+      "lỗi lầm"
+    ]
+  },
+  {
+    "id": 176,
+    "character": "面",
+    "name": "face",
+    "vietnameseNames": [
+      "Diện"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "メン",
+      "ベン",
+      "おも",
+      "おもて",
+      "つら"
+    ],
+    "meanings": [
+      "mask",
+      "face",
+      "features",
+      "surface"
+    ],
+    "strokes": 9,
+    "variants": [],
+    "examples": [
+      "面",
+      "靤",
+      "靦",
+      "靧",
+      "靨"
+    ],
+    "vietnameseMeaning": "Khuôn mặt, bề mặt, diện mạo",
+    "vietnameseMeanings": [
+      "gương mặt",
+      "bề mặt phía trước",
+      "bộ mặt"
+    ]
+  },
+  {
+    "id": 177,
+    "character": "革",
+    "name": "leather",
+    "vietnameseNames": [
+      "Cách",
+      "Cức"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "カク",
+      "かわ"
+    ],
+    "meanings": [
+      "leather",
+      "skin",
+      "reform",
+      "become serious"
+    ],
+    "strokes": 9,
+    "variants": [],
+    "examples": [
+      "革",
+      "靴",
+      "鞍",
+      "靪",
+      "靫",
+      "靭",
+      "靮",
+      "靱"
+    ],
+    "vietnameseMeaning": "Da thuộc, thay đổi cải cách",
+    "vietnameseMeanings": [
+      "da thú đã lột",
+      "thay đổi triệt để",
+      "cải cách"
+    ]
+  },
+  {
+    "id": 178,
+    "character": "韋",
+    "name": "tanned leather",
+    "vietnameseNames": [
+      "Vi"
+    ],
+    "readings": [
+      "なめしがわ"
+    ],
+    "characterReadings": [
+      "イ",
+      "そむ.く"
+    ],
+    "meanings": [
+      "tanned leather radical (no. 178)"
+    ],
+    "strokes": 10,
+    "variants": [],
+    "examples": [
+      "韓",
+      "韋",
+      "韌",
+      "韍",
+      "韎",
+      "韐",
+      "韔",
+      "韘"
+    ],
+    "vietnameseMeaning": "Da thuộc mềm, vây quanh ngược",
+    "vietnameseMeanings": [
+      "loại da mềm uốn được",
+      "trái ngược"
+    ]
+  },
+  {
+    "id": 179,
+    "character": "韭",
+    "name": "leek",
+    "vietnameseNames": [
+      "Cửu"
+    ],
+    "readings": [
+      "にら"
+    ],
+    "characterReadings": [
+      "キュウ",
+      "ク"
+    ],
+    "meanings": [
+      "leek radical (no. 179)"
+    ],
+    "strokes": 9,
+    "variants": [],
+    "examples": [
+      "韮",
+      "韭",
+      "韯",
+      "韱",
+      "韲"
+    ],
+    "vietnameseMeaning": "Cây rau hẹ",
+    "vietnameseMeanings": [
+      "rau hẹ ăn",
+      "cây cỏ hẹ mọc lâu năm"
+    ]
+  },
+  {
+    "id": 180,
+    "character": "音",
+    "name": "sound",
+    "vietnameseNames": [
+      "Âm"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "オン",
+      "イン",
+      "-ノン",
+      "おと",
+      "ね"
+    ],
+    "meanings": [
+      "sound",
+      "noise"
+    ],
+    "strokes": 9,
+    "variants": [],
+    "examples": [
+      "音",
+      "響",
+      "韻",
+      "韵",
+      "韶",
+      "韺",
+      "響"
+    ],
+    "vietnameseMeaning": "Âm thanh, tiếng động, tin tức",
+    "vietnameseMeanings": [
+      "tiếng động",
+      "âm vang",
+      "âm nhạc",
+      "tin tức truyền lại"
+    ]
+  },
+  {
+    "id": 181,
+    "character": "頁",
+    "name": "leaf",
+    "vietnameseNames": [
+      "Hiệt"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ケツ",
+      "ぺえじ",
+      "おおがい",
+      "かしら"
+    ],
+    "meanings": [
+      "page",
+      "leaf"
+    ],
+    "strokes": 9,
+    "variants": [],
+    "examples": [
+      "題",
+      "領",
+      "額",
+      "頭",
+      "顔",
+      "類",
+      "頼",
+      "順"
+    ],
+    "vietnameseMeaning": "Trang sách, đầu người",
+    "vietnameseMeanings": [
+      "trang giấy cuốn sách",
+      "đầu người",
+      "mặt người"
+    ]
+  },
+  {
+    "id": 182,
+    "character": "風",
+    "name": "wind",
+    "vietnameseNames": [
+      "Phong"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "フウ",
+      "フ",
+      "かぜ",
+      "かざ-"
+    ],
+    "meanings": [
+      "wind",
+      "air",
+      "style",
+      "manner"
+    ],
+    "strokes": 9,
+    "variants": [],
+    "examples": [
+      "風",
+      "颪",
+      "颫",
+      "颭",
+      "颮",
+      "颯",
+      "颱",
+      "颴"
+    ],
+    "vietnameseMeaning": "Gió mát, phong tục, phong thái",
+    "vietnameseMeanings": [
+      "luồng gió thổi",
+      "phong tục tập quán",
+      "phong thái",
+      "phong vị"
+    ]
+  },
+  {
+    "id": 183,
+    "character": "飛",
+    "name": "fly",
+    "vietnameseNames": [
+      "Phi"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ヒ",
+      "と.ぶ",
+      "と.ばす",
+      "-と.ばす"
+    ],
+    "meanings": [
+      "fly",
+      "skip (pages)",
+      "scatter"
+    ],
+    "strokes": 9,
+    "variants": [],
+    "examples": [
+      "飛",
+      "飜"
+    ],
+    "vietnameseMeaning": "Bay lượn, phi hành",
+    "vietnameseMeanings": [
+      "chắp cánh bay lên",
+      "phi nhanh"
+    ]
+  },
+  {
+    "id": 184,
+    "character": "食",
+    "name": "eat",
+    "vietnameseNames": [
+      "Thực",
+      "Tự"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ショク",
+      "ジキ",
+      "く.う",
+      "く.らう",
+      "た.べる",
+      "は.む"
+    ],
+    "meanings": [
+      "eat",
+      "food"
+    ],
+    "strokes": 9,
+    "variants": [
+      {
+        "character": "⻞",
+        "strokes": 9,
+        "sourceCharacter": "飩"
+      }
+    ],
+    "examples": [
+      "食",
+      "館",
+      "養",
+      "飲",
+      "飯",
+      "飾",
+      "飼",
+      "飢"
+    ],
+    "vietnameseMeaning": "Ăn uống, thức ăn",
+    "vietnameseMeanings": [
+      "thức ăn đồ uống",
+      "ăn no",
+      "nuôi dưỡng"
+    ]
+  },
+  {
+    "id": 185,
+    "character": "首",
+    "name": "head",
+    "vietnameseNames": [
+      "Thủ",
+      "Thú"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "シュ",
+      "くび"
+    ],
+    "meanings": [
+      "neck",
+      "counter for songs and poems"
+    ],
+    "strokes": 9,
+    "variants": [],
+    "examples": [
+      "首",
+      "馗",
+      "馘"
+    ],
+    "vietnameseMeaning": "Cái đầu, thủ lĩnh, trước tiên",
+    "vietnameseMeanings": [
+      "đầu người",
+      "cổ áo",
+      "người đứng đầu",
+      "khởi đầu"
+    ]
+  },
+  {
+    "id": 186,
+    "character": "香",
+    "name": "fragrant",
+    "vietnameseNames": [
+      "Hương"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "コウ",
+      "キョウ",
+      "か",
+      "かお.り",
+      "かお.る"
+    ],
+    "meanings": [
+      "incense",
+      "smell",
+      "perfume"
+    ],
+    "strokes": 9,
+    "variants": [],
+    "examples": [
+      "香",
+      "馨",
+      "馛",
+      "馝",
+      "馟",
+      "馥"
+    ],
+    "vietnameseMeaning": "Mùi hương thơm, trầm hương",
+    "vietnameseMeanings": [
+      "hương thơm ngào ngạt",
+      "nhang khói trầm thơm"
+    ]
+  },
+  {
+    "id": 187,
+    "character": "馬",
+    "name": "horse",
+    "vietnameseNames": [
+      "Mã"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "バ",
+      "メ",
+      "マ",
+      "ボ",
+      "モ",
+      "うま",
+      "ま"
+    ],
+    "meanings": [
+      "horse"
+    ],
+    "strokes": 10,
+    "variants": [],
+    "examples": [
+      "験",
+      "馬",
+      "駅",
+      "駐",
+      "駆",
+      "騒",
+      "驚",
+      "騰"
+    ],
+    "vietnameseMeaning": "Con ngựa",
+    "vietnameseMeanings": [
+      "ngựa chiến",
+      "ngựa phi đường dài"
+    ]
+  },
+  {
+    "id": 188,
+    "character": "骨",
+    "name": "bone",
+    "vietnameseNames": [
+      "Cốt"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "コツ",
+      "ほね"
+    ],
+    "meanings": [
+      "skeleton",
+      "bone",
+      "remains",
+      "frame"
+    ],
+    "strokes": 10,
+    "variants": [],
+    "examples": [
+      "骨",
+      "髄",
+      "骪",
+      "骭",
+      "骯",
+      "骰",
+      "䯊",
+      "骴"
+    ],
+    "vietnameseMeaning": "Khung xương, cốt cách",
+    "vietnameseMeanings": [
+      "xương khớp cốt cách",
+      "khung sườn"
+    ]
+  },
+  {
+    "id": 189,
+    "character": "高",
+    "name": "tall",
+    "vietnameseNames": [
+      "Cao"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "コウ",
+      "たか.い",
+      "たか",
+      "-だか",
+      "たか.まる",
+      "たか.める"
+    ],
+    "meanings": [
+      "tall",
+      "high",
+      "expensive"
+    ],
+    "strokes": 10,
+    "variants": [],
+    "examples": [
+      "高",
+      "䯨",
+      "髞"
+    ],
+    "vietnameseMeaning": "Cao ráo, thanh cao, giá cao",
+    "vietnameseMeanings": [
+      "chiều cao vút",
+      "thanh cao",
+      "đắt giá"
+    ]
+  },
+  {
+    "id": 190,
+    "character": "髟",
+    "name": "hair",
+    "vietnameseNames": [
+      "Tiêu",
+      "Bưu"
+    ],
+    "readings": [
+      "かみがしら",
+      "かみかんむり"
+    ],
+    "characterReadings": [
+      "ヒュウ",
+      "ヒョウ"
+    ],
+    "meanings": [
+      "hair hanging long",
+      "mane",
+      "long hair radical (no.190)"
+    ],
+    "strokes": 10,
+    "variants": [],
+    "examples": [
+      "髪",
+      "髟",
+      "髠",
+      "髢",
+      "髣",
+      "髥",
+      "髦",
+      "髧"
+    ],
+    "vietnameseMeaning": "Tóc dài buông xõa",
+    "vietnameseMeanings": [
+      "mái tóc dài thướt tha",
+      "bờm ngựa"
+    ]
+  },
+  {
+    "id": 191,
+    "character": "鬥",
+    "name": "fight",
+    "vietnameseNames": [
+      "Đấu"
+    ],
+    "readings": [
+      "とうがまえ",
+      "たたかいがまえ"
+    ],
+    "characterReadings": [],
+    "meanings": [
+      "broken gate radical (no. 191)"
+    ],
+    "strokes": 10,
+    "variants": [],
+    "examples": [
+      "鬥",
+      "鬦",
+      "鬧",
+      "鬨",
+      "鬩",
+      "䰗",
+      "鬪",
+      "鬭"
+    ],
+    "vietnameseMeaning": "Đánh nhau, tranh đấu",
+    "vietnameseMeanings": [
+      "giao tranh",
+      "chiến đấu quyết liệt"
+    ]
+  },
+  {
+    "id": 192,
+    "character": "鬯",
+    "name": "sacrificial wine",
+    "vietnameseNames": [
+      "Sưởng"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "チョウ",
+      "かおりぐさ"
+    ],
+    "meanings": [
+      "fragrant herbs",
+      "spiced liqueur",
+      "grow",
+      "spread"
+    ],
+    "strokes": 10,
+    "variants": [],
+    "examples": [
+      "鬯",
+      "鬱"
+    ],
+    "vietnameseMeaning": "Rượu thơm cúng tế",
+    "vietnameseMeanings": [
+      "rượu nếp thơm dùng tế lễ thần linh"
+    ]
+  },
+  {
+    "id": 193,
+    "character": "鬲",
+    "name": "cauldron",
+    "vietnameseNames": [
+      "Cách",
+      "Lịch"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "カク",
+      "レキ",
+      "かなえ",
+      "へだ.てる"
+    ],
+    "meanings": [
+      "tripod"
+    ],
+    "strokes": 10,
+    "variants": [],
+    "examples": [
+      "鬲",
+      "鬴",
+      "鬵",
+      "鬷",
+      "鬻"
+    ],
+    "vietnameseMeaning": "Cái nồi ba chân rỗng đáy",
+    "vietnameseMeanings": [
+      "chiếc nồi đồng ba chân",
+      "đồ nấu cổ"
+    ]
+  },
+  {
+    "id": 194,
+    "character": "鬼",
+    "name": "ghost",
+    "vietnameseNames": [
+      "Quỷ"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "キ",
+      "おに",
+      "おに-"
+    ],
+    "meanings": [
+      "ghost",
+      "devil"
+    ],
+    "strokes": 10,
+    "variants": [],
+    "examples": [
+      "魅",
+      "魔",
+      "鬼",
+      "魂",
+      "魏",
+      "魁",
+      "魃",
+      "魄"
+    ],
+    "vietnameseMeaning": "Con quỷ, linh hồn người chết",
+    "vietnameseMeanings": [
+      "quỷ thần",
+      "hồn ma quỷ quái",
+      "tinh ranh"
+    ]
+  },
+  {
+    "id": 195,
+    "character": "魚",
+    "name": "fish",
+    "vietnameseNames": [
+      "Ngư"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ギョ",
+      "うお",
+      "さかな",
+      "-ざかな"
+    ],
+    "meanings": [
+      "fish"
+    ],
+    "strokes": 11,
+    "variants": [],
+    "examples": [
+      "鮮",
+      "魚",
+      "鯨",
+      "魯",
+      "鮎",
+      "鮫",
+      "鯉",
+      "鯛"
+    ],
+    "vietnameseMeaning": "Con cá dưới nước",
+    "vietnameseMeanings": [
+      "loài cá",
+      "thủy sản bơi lội"
+    ]
+  },
+  {
+    "id": 196,
+    "character": "鳥",
+    "name": "bird",
+    "vietnameseNames": [
+      "Điểu"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "チョウ",
+      "とり"
+    ],
+    "meanings": [
+      "bird",
+      "chicken"
+    ],
+    "strokes": 11,
+    "variants": [],
+    "examples": [
+      "鳥",
+      "鳴",
+      "鶴",
+      "鳩",
+      "鷹",
+      "鵬",
+      "鴨",
+      "鶏"
+    ],
+    "vietnameseMeaning": "Con chim đuôi dài",
+    "vietnameseMeanings": [
+      "loài chim đuôi dài",
+      "chim muông"
+    ]
+  },
+  {
+    "id": 197,
+    "character": "鹵",
+    "name": "salt",
+    "vietnameseNames": [
+      "Lỗ"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ロ",
+      "しお",
+      "しおち",
+      "たて"
+    ],
+    "meanings": [
+      "salt"
+    ],
+    "strokes": 11,
+    "variants": [],
+    "examples": [
+      "鹵",
+      "鹸",
+      "鹹",
+      "鹺",
+      "鹻",
+      "鹼",
+      "鹽"
+    ],
+    "vietnameseMeaning": "Đất mặn chứa muối",
+    "vietnameseMeanings": [
+      "đất phèn chua mặn",
+      "muối tự nhiên"
+    ]
+  },
+  {
+    "id": 198,
+    "character": "鹿",
+    "name": "deer",
+    "vietnameseNames": [
+      "Lộc"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ロク",
+      "しか",
+      "か"
+    ],
+    "meanings": [
+      "deer"
+    ],
+    "strokes": 11,
+    "variants": [],
+    "examples": [
+      "鹿",
+      "麗",
+      "麓",
+      "麀",
+      "麁",
+      "麂",
+      "麃",
+      "麄"
+    ],
+    "vietnameseMeaning": "Con hươu, con nai",
+    "vietnameseMeanings": [
+      "con hươu sao",
+      "con nai rừng"
+    ]
+  },
+  {
+    "id": 199,
+    "character": "麥",
+    "name": "wheat",
+    "vietnameseNames": [
+      "Mạch"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "バク",
+      "むぎ"
+    ],
+    "meanings": [
+      "wheat"
+    ],
+    "strokes": 11,
+    "variants": [
+      {
+        "character": "麦",
+        "strokes": 7,
+        "sourceCharacter": "麦"
+      }
+    ],
+    "examples": [
+      "麦",
+      "麹",
+      "麺",
+      "麥",
+      "麸",
+      "麭",
+      "麩",
+      "麪"
+    ],
+    "vietnameseMeaning": "Cây lúa mì, lúa mạch",
+    "vietnameseMeanings": [
+      "cây mạch lúa",
+      "lúa mì làm bột"
+    ]
+  },
+  {
+    "id": 200,
+    "character": "麻",
+    "name": "hemp",
+    "vietnameseNames": [
+      "Ma"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "マ",
+      "マア",
+      "あさ"
+    ],
+    "meanings": [
+      "hemp",
+      "flax",
+      "numb"
+    ],
+    "strokes": 11,
+    "variants": [],
+    "examples": [
+      "麻",
+      "麼",
+      "麽",
+      "麾",
+      "麿"
+    ],
+    "vietnameseMeaning": "Cây gai, cây đay, tê dại",
+    "vietnameseMeanings": [
+      "cây gai làm vải sợi",
+      "cây đay",
+      "tê mê"
+    ]
+  },
+  {
+    "id": 201,
+    "character": "黃",
+    "name": "yellow",
+    "vietnameseNames": [
+      "Hoàng",
+      "Huỳnh"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "コウ",
+      "オウ",
+      "き"
+    ],
+    "meanings": [
+      "yellow",
+      "surname"
+    ],
+    "strokes": 12,
+    "variants": [],
+    "examples": [
+      "黄",
+      "黃",
+      "黈",
+      "黌"
+    ],
+    "vietnameseMeaning": "Màu vàng óng",
+    "vietnameseMeanings": [
+      "màu vàng đất",
+      "vàng óng ả"
+    ]
+  },
+  {
+    "id": 202,
+    "character": "黍",
+    "name": "millet",
+    "vietnameseNames": [
+      "Thử"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ショ",
+      "きび"
+    ],
+    "meanings": [
+      "millet"
+    ],
+    "strokes": 12,
+    "variants": [],
+    "examples": [
+      "黎",
+      "黍",
+      "黏",
+      "黐"
+    ],
+    "vietnameseMeaning": "Cây kê, hạt kê dẻo",
+    "vietnameseMeanings": [
+      "cây lúa kê hạt tròn",
+      "nếp kê dẻo nấu rượu"
+    ]
+  },
+  {
+    "id": 203,
+    "character": "黑",
+    "name": "black",
+    "vietnameseNames": [
+      "Hắc"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "コク",
+      "くろい",
+      "くろ"
+    ],
+    "meanings": [
+      "black",
+      "dark",
+      "evil",
+      "sinister"
+    ],
+    "strokes": 12,
+    "variants": [
+      {
+        "character": "黒",
+        "strokes": 11,
+        "sourceCharacter": "墨"
+      }
+    ],
+    "examples": [
+      "黒",
+      "黙",
+      "黛",
+      "黑",
+      "黔",
+      "黕",
+      "默",
+      "黜"
+    ],
+    "vietnameseMeaning": "Màu đen kịt, tối tăm",
+    "vietnameseMeanings": [
+      "màu đen sẫm",
+      "u ám mờ mịt"
+    ]
+  },
+  {
+    "id": 204,
+    "character": "黹",
+    "name": "embroidery",
+    "vietnameseNames": [
+      "Chỉ"
+    ],
+    "readings": [
+      "ふつ"
+    ],
+    "characterReadings": [
+      "チ",
+      "ぬう",
+      "ぬいとり"
+    ],
+    "meanings": [
+      "sewing radical (no. 204)"
+    ],
+    "strokes": 12,
+    "variants": [],
+    "examples": [
+      "黹",
+      "黻",
+      "黼"
+    ],
+    "vietnameseMeaning": "May vá, thêu thùa hoa văn",
+    "vietnameseMeanings": [
+      "đường kim mũi chỉ",
+      "thêu may thêu gấm"
+    ]
+  },
+  {
+    "id": 205,
+    "character": "黽",
+    "name": "frog",
+    "vietnameseNames": [
+      "Mãnh",
+      "Mẫn"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ボウ",
+      "ビン",
+      "ベン",
+      "ミン",
+      "メン",
+      "あおがえる",
+      "つと.める"
+    ],
+    "meanings": [
+      "green frog",
+      "industry"
+    ],
+    "strokes": 13,
+    "variants": [],
+    "examples": [
+      "黽",
+      "黿",
+      "鼂",
+      "䵷",
+      "鼃",
+      "鼇",
+      "鼈",
+      "鼉"
+    ],
+    "vietnameseMeaning": "Con ếch nhái, rùa, nỗ lực",
+    "vietnameseMeanings": [
+      "con ếch xanh",
+      "con rùa",
+      "cố gắng chăm chỉ"
+    ]
+  },
+  {
+    "id": 206,
+    "character": "鼎",
+    "name": "tripod",
+    "vietnameseNames": [
+      "Đỉnh"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "テイ",
+      "かなえ"
+    ],
+    "meanings": [
+      "three legged kettle"
+    ],
+    "strokes": 13,
+    "variants": [],
+    "examples": [
+      "鼎",
+      "鼏",
+      "鼐",
+      "鼒"
+    ],
+    "vietnameseMeaning": "Cái vạc ba chân hai tai",
+    "vietnameseMeanings": [
+      "cái đỉnh đồng nấu tế",
+      "vững chãi như kiềng ba chân"
+    ]
+  },
+  {
+    "id": 207,
+    "character": "鼓",
+    "name": "drum",
+    "vietnameseNames": [
+      "Cổ"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "コ",
+      "つづみ"
+    ],
+    "meanings": [
+      "drum",
+      "beat",
+      "rouse",
+      "muster"
+    ],
+    "strokes": 13,
+    "variants": [],
+    "examples": [
+      "鼓",
+      "鼔",
+      "鼕",
+      "鼖",
+      "鼗",
+      "鼙",
+      "鼚",
+      "鼛"
+    ],
+    "vietnameseMeaning": "Cái trống, đánh trống cổ vũ",
+    "vietnameseMeanings": [
+      "chiếc trống da",
+      "gõ trống thúc giục",
+      "cổ vũ tinh thần"
+    ]
+  },
+  {
+    "id": 208,
+    "character": "鼠",
+    "name": "rat",
+    "vietnameseNames": [
+      "Thử"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ソ",
+      "ショ",
+      "ねずみ",
+      "ねず"
+    ],
+    "meanings": [
+      "rat",
+      "mouse",
+      "dark gray"
+    ],
+    "strokes": 13,
+    "variants": [
+      {
+        "character": "鼡",
+        "strokes": 8,
+        "sourceCharacter": "猟"
+      }
+    ],
+    "examples": [
+      "鼡",
+      "鼠",
+      "鼢",
+      "鼪",
+      "鼫",
+      "鼬",
+      "鼯",
+      "鼴"
+    ],
+    "vietnameseMeaning": "Con chuột",
+    "vietnameseMeanings": [
+      "loài chuột gặm nhấm"
+    ]
+  },
+  {
+    "id": 209,
+    "character": "鼻",
+    "name": "nose",
+    "vietnameseNames": [
+      "Tị"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ビ",
+      "はな"
+    ],
+    "meanings": [
+      "nose",
+      "snout"
+    ],
+    "strokes": 14,
+    "variants": [],
+    "examples": [
+      "鼻",
+      "鼽",
+      "鼾",
+      "齁",
+      "齄",
+      "齅",
+      "齆"
+    ],
+    "vietnameseMeaning": "Cái mũi, ngửi mùi",
+    "vietnameseMeanings": [
+      "chiếc mũi",
+      "khứu giác",
+      "bắt đầu"
+    ]
+  },
+  {
+    "id": 210,
+    "character": "齊",
+    "name": "even",
+    "vietnameseNames": [
+      "Tề",
+      "Tư",
+      "Trai"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "セイ",
+      "サイ",
+      "そろ.う",
+      "ひと.しい",
+      "ひと.しく",
+      "あたる",
+      "はやい"
+    ],
+    "meanings": [
+      "alike",
+      "equal",
+      "similar",
+      "Saito"
+    ],
+    "strokes": 14,
+    "variants": [
+      {
+        "character": "斉",
+        "strokes": 8,
+        "sourceCharacter": "剤"
+      }
+    ],
+    "examples": [
+      "齊",
+      "齋",
+      "齎",
+      "齏"
+    ],
+    "vietnameseMeaning": "Đều đặn, tề chỉnh, bằng phẳng",
+    "vietnameseMeanings": [
+      "ngang bằng nhau",
+      "ngăn nắp tề chỉnh",
+      "đồng đều"
+    ]
+  },
+  {
+    "id": 211,
+    "character": "齒",
+    "name": "tooth",
+    "vietnameseNames": [
+      "Xỉ"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "シ",
+      "よわい",
+      "は",
+      "よわ.い",
+      "よわい.する"
+    ],
+    "meanings": [
+      "tooth",
+      "cog"
+    ],
+    "strokes": 15,
+    "variants": [
+      {
+        "character": "歯",
+        "strokes": 12,
+        "sourceCharacter": "噛"
+      }
+    ],
+    "examples": [
+      "齢",
+      "齒",
+      "齔",
+      "齕",
+      "齗",
+      "齚",
+      "齝",
+      "齞"
+    ],
+    "vietnameseMeaning": "Răng, tuổi tác, răng cưa",
+    "vietnameseMeanings": [
+      "hàm răng",
+      "răng cưa",
+      "tuổi tác thứ bậc"
+    ]
+  },
+  {
+    "id": 212,
+    "character": "龍",
+    "name": "dragon",
+    "vietnameseNames": [
+      "Long",
+      "Sủng"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "リュウ",
+      "リョウ",
+      "ロウ",
+      "たつ"
+    ],
+    "meanings": [
+      "dragon",
+      "imperial"
+    ],
+    "strokes": 16,
+    "variants": [
+      {
+        "character": "竜",
+        "strokes": 10,
+        "sourceCharacter": "槞"
+      }
+    ],
+    "examples": [
+      "龍",
+      "龐",
+      "龑",
+      "龔",
+      "龕",
+      "龖"
+    ],
+    "vietnameseMeaning": "Con rồng, uy quyền vua chúa",
+    "vietnameseMeanings": [
+      "thần long linh thiêng",
+      "rồng uốn lượn",
+      "uy quyền hoàng gia"
+    ]
+  },
+  {
+    "id": 213,
+    "character": "龜",
+    "name": "turtle",
+    "vietnameseNames": [
+      "Quy",
+      "Cưu",
+      "Quân"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "キ",
+      "キュウ",
+      "キン",
+      "かめ"
+    ],
+    "meanings": [
+      "turtle",
+      "tortoise"
+    ],
+    "strokes": 18,
+    "variants": [
+      {
+        "character": "亀",
+        "strokes": 11,
+        "sourceCharacter": "亀"
+      }
+    ],
+    "examples": [
+      "龜",
+      "龞"
+    ],
+    "vietnameseMeaning": "Con rùa, trường thọ",
+    "vietnameseMeanings": [
+      "con rùa sống thọ",
+      "bói mu rùa"
+    ]
+  },
+  {
+    "id": 214,
+    "character": "龠",
+    "name": "flute",
+    "vietnameseNames": [
+      "Dược",
+      "Thược"
+    ],
+    "readings": [],
+    "characterReadings": [
+      "ヤク",
+      "ふえ"
+    ],
+    "meanings": [
+      "flute"
+    ],
+    "strokes": 17,
+    "variants": [],
+    "examples": [
+      "龠",
+      "龡",
+      "龢",
+      "龥"
+    ],
+    "vietnameseMeaning": "Ống sáo ba lỗ, ống đo nhạc",
+    "vietnameseMeanings": [
+      "chiếc sáo trúc cổ",
+      "ống thổi chuẩn âm luật"
+    ]
+  }
+]

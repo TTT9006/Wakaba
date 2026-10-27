@@ -2,6 +2,8 @@ export type Radical = {
   id: number;
   character: string;
   name: string;
+  vietnameseMeaning?: string;
+  vietnameseMeanings?: string[];
   vietnameseNames: string[];
   readings: string[];
   characterReadings: string[];
