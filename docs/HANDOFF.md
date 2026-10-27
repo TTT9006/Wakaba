@@ -1,3 +1,45 @@
+## LOẠI BỎ TRIỆT ĐỂ TIẾNG ANH TẠI PHÂN HỆ HỌC BỘ THỦ & LUYỆN VIẾT (/WRITING) — 28/10/2026
+
+- **Yêu cầu & Phản ánh từ Người dùng:**
+  - Người dùng phản ánh phần Học bộ thủ trong Luyện viết (`/writing?mode=radicals`) vẫn còn hiển thị tiếng Anh (ví dụ: bộ #44 `尸` hiển thị `Nghĩa của bộ thủ: corpse`, kèm theo dòng `Nghĩa tiếng Anh: corpse · corpse; remains; flag radical (no. 44)`).
+  - Yêu cầu loại bỏ triệt để tiếng Anh, đảm bảo hiển thị 100% nghĩa tiếng Việt cho toàn bộ 214 bộ thủ trên môi trường web.
+
+- **Nguyên nhân Cốt lõi:**
+  1. **Lệch pha triển khai giữa Vercel & Render:**
+     - Vercel phục vụ Static SPA Client và proxy `/api/*` về Render backend (`wakaba-mk61.onrender.com`).
+     - Khi backend Render chưa redeploy docker image mới, endpoint `/api/radicals` chỉ trả về `name: "corpse"` và thiếu `vietnameseMeaning`.
+     - Frontend trước đó dùng fallback `selected.vietnameseMeaning || selected.name`, dẫn tới việc rơi vào fallback `selected.name` tiếng Anh ("corpse").
+  2. **Dòng hiển thị tiếng Anh dư thừa:**
+     - Tại `apps/web/src/pages/radicals.tsx`, tồn tại thẻ hiển thị rõ ràng: `<p className="muted small-text">Nghĩa tiếng Anh: {selected.name}...</p>`.
+     - Ô tìm kiếm bộ thủ còn gợi ý placeholder tiếng Anh: `placeholder="水, Thủy, water, 85…"`.
+
+- **Giải pháp & Thực hiện Kỹ thuật:**
+  1. **Cơ chế Client-side Resilience Fallback (`packages/shared/radical-dictionary.ts`):**
+     - Đóng gói từ điển tĩnh nghĩa tiếng Việt chuẩn cho 214/214 bộ thủ trực tiếp vào Vite bundle phía máy khách.
+     - Hàm `enrichRadicalWithVietnamese<T>(radical: T): T` tự động bù đắp trường `vietnameseMeaning` và `vietnameseMeanings` ngay khi nhận dữ liệu từ API nếu backend chưa có hoặc chưa kịp redeploy.
+     - Bọc hàm enrich này cho cả hai điểm truy cập `/api/radicals` và `/api/kanji/:character` trong `radicals.tsx`.
+  2. **Dọn sạch 100% tiếng Anh trong giao diện Học bộ thủ (`apps/web/src/pages/radicals.tsx`):**
+     - Xóa bỏ hoàn toàn dòng hiển thị `Nghĩa tiếng Anh: ...`.
+     - Việt hóa placeholder tìm kiếm: chuyển `placeholder="水, Thủy, water, 85…"` thành `placeholder="水, Thủy, nước, 85…"`.
+     - Bổ sung hiển thị nghĩa tiếng Việt trong chi tiết Kanji tại mục Bộ thủ chính thức: `{data.radical.character} · #{data.radical.id} ({data.radical.vietnameseMeaning})`.
+
+- **Kiểm thử & Đo kiểm (Chrome CDP & Unit Test):**
+  - **Typecheck:** `npm run typecheck` đạt 0 lỗi.
+  - **Unit test suite:** 16/16 test files (152 tests) passed 100%.
+  - **Build:** `npx vite build` và `npm run build` thành công xuất sắc.
+  - **Chrome CDP Browser Test:**
+    - Khởi chạy Chrome headless giả lập backend Render chưa redeploy (chỉ trả về `name: "corpse"`, không có `vietnameseMeaning`).
+    - Kết quả DOM Evaluation:
+      - `hasVietnameseMeaning: true` ("Thi thể, xác ướp").
+      - `hasVietnameseExplanation: true` ("xác người; thây ma; hình nhân").
+      - `hasEnglishMeaning: false` (0 ký tự tiếng Anh trong phần nghĩa bộ thủ).
+      - `placeholder: "水, Thủy, nước, 85…"`.
+    - Đã chụp ảnh màn hình lưu tại:
+      - `desktop-radical-44-thi-no-english.png`
+      - `mobile-radical-44-thi-no-english.png`
+
+---
+
 ## DỊCH NGHĨA TOÀN BỘ 214 BỘ THỦ KANJI SANG TIẾNG VIỆT & NÂNG CẤP TÌM KIẾM — 27/10/2026
 
 - **Yêu cầu & Mục tiêu từ Người dùng:**

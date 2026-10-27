@@ -80,7 +80,7 @@ export function RadicalLearning({ userId }: { userId: string }) {
             <input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="水, Thủy, water, 85…"
+              placeholder="水, Thủy, nước, 85…"
             />
           </label>
           <label>
@@ -151,7 +151,7 @@ export function RadicalLearning({ userId }: { userId: string }) {
           {selected.vietnameseMeanings && selected.vietnameseMeanings.length > 0 && (
             <p>Ý nghĩa giải thích: {selected.vietnameseMeanings.join('; ')}</p>
           )}
-          <p className="muted small-text">Nghĩa tiếng Anh: {selected.name}{selected.meanings.length ? ' · ' + selected.meanings.join('; ') : ''}</p>
+
           <div className="inline-actions wrap" aria-label="Dạng bộ thủ">
             {forms.map((f) => (
               <Button
@@ -236,6 +236,7 @@ export function KanjiDetail() {
               Bộ thủ chính thức (KANJIDIC2):{' '}
               <Link className="tag" to={'/writing?mode=radicals&radical=' + data.radical.id}>
                 {data.radical.character} · #{data.radical.id}
+                {data.radical.vietnameseMeaning ? ' (' + data.radical.vietnameseMeaning + ')' : ''}
               </Link>
             </p>
           )}
