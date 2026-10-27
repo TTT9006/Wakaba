@@ -383,7 +383,10 @@ Từ ngày 15/10/2026, tự động tạo commit sau khi hoàn thành một thay
    - Khi có yêu cầu cập nhật hoặc thêm tính năng mới, BẮT BUỘC phải tạo một nhánh / worktree môi trường độc lập (hoặc sandbox tách biệt) để triển khai, chạy thử và kiểm thử toàn diện tính năng đó.
    - Chỉ khi tính năng đã hoàn thiện trọn vẹn và vượt qua kiểm thử trong môi trường độc lập mới được phép đồng bộ (merge/integrate) vào mã nguồn chính của trang web.
    - Mục đích tối thượng: Tuyệt đối tránh gây xung đột, lỗi lan sang các phân hệ khác hoặc làm mất dữ liệu người dùng (rút kinh nghiệm sâu sắc sau nhiều sự cố mất/ẩn dữ liệu trước đây).
-2. **Quy tắc Kiểm thử 3 lần & Tạm dừng khi gặp lỗi sau đồng bộ (Retry 3 Times & Pivot):**
+2. **Quy định dữ liệu kiểm thử thực tế (Production-like Data — BẮT BUỘC DÙNG DỮ LIỆU THẬT):**
+   - Trong quá trình kiểm thử, **ĐƯỢC PHÉP VÀ BẮT BUỘC sử dụng dữ liệu thật** (tệp PDF thật, đề thi thật, âm thanh thật, cấu trúc từ điển thật, các bản ghi database thực tế của hệ thống).
+   - **TUYỆT ĐỐI KHÔNG DÙNG DỮ LIỆU GIẢ (MOCK/FAKE DATA QUÁ ĐƠN GIẢN HOẶC LÝ TƯỞNG HÓA):** Tránh trường hợp kiểm thử tự động với dữ liệu giả thì vượt qua (pass), nhưng khi đưa vào vận hành thực tế hoặc deploy lên production thì gặp sự cố (như lỗi trích xuất PDF tiếng Việt bị phân rã glyph, lỗi câu dài TTS, lỗi audio 404 Vercel, v.v.).
+3. **Quy tắc Kiểm thử 3 lần & Tạm dừng khi gặp lỗi sau đồng bộ (Retry 3 Times & Pivot):**
    - Sau khi đồng bộ vào trang web, nếu quá trình kiểm thử phát hiện lỗi: Cho phép kiểm tra, rà soát và thử khắc phục tối đa **3 lần**.
    - Nếu sau **3 lần** sửa đổi và kiểm thử mà lỗi vẫn chưa được giải quyết triệt để: **DỪNG NGAY VIỆC KIỂM THỬ LẶP LẠI**, ghi chép chi tiết nguyên nhân, hiện tượng lỗi vào nhật ký/handoff và chuyển hướng tiếp cận khác.
    - **BẮT BUỘC:** Phải **tham vấn và hỏi ý kiến người dùng** về hướng tiếp cận mới trước khi bắt tay vào triển khai hướng mới đó.
