@@ -1,12 +1,11 @@
 import { AnnotationSettings } from '../components/japanese-annotated-text';
 import { SourceNote } from './radicals';
 import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useQueryClient } from '@tanstack/react-query';
-import { Check, Sun, Moon, Monitor, ArrowUpRight, Download, Trash2, ShieldCheck, AlertTriangle } from 'lucide-react';
-import * as Dialog from '@radix-ui/react-dialog';
+import { Check, Sun, Moon, Monitor, ArrowUpRight } from 'lucide-react';
 import { useUser } from '../app';
-import { patch, post, remove } from '../services/api';
+import { patch, post } from '../services/api';
 import type { User } from '../types';
 import { useUI } from '../stores/ui';
 import { Button, PageHeader } from '../components/ui';
@@ -118,16 +117,11 @@ export function SettingsPage() {
 }
 export function Profile() {
   const { data: user } = useUser();
-  const navigate = useNavigate();
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState('花');
   const [currentPassword, setCurrentPassword] = useState('');
   const [password, setPassword] = useState('');
   const [busy, setBusy] = useState(false);
-  const [exportBusy, setExportBusy] = useState(false);
-  const [deleteBusy, setDeleteBusy] = useState(false);
-  const [showDeleteModal, setShowDeleteModal] = useState(false);
-  const [deleteConfirmationText, setDeleteConfirmationText] = useState('');
   const notify = useUI((s) => s.notify);
   const client = useQueryClient();
 
@@ -138,40 +132,6 @@ export function Profile() {
     }
   }, [user?.id, user?.name, user?.avatar]);
 
-  const handleExport = async () => {
-    setExportBusy(true);
-    try {
-      const res = await fetch('/api/profile/export', { credentials: 'same-origin' });
-      if (!res.ok) throw new Error('Không thể xuất dữ liệu lúc này.');
-      const blob = await res.blob();
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `wakaba-user-data-${new Date().toISOString().slice(0, 10)}.json`;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
-      notify('Đã tải về bản sao dữ liệu cá nhân của bạn.');
-    } catch (err) {
-      notify((err as Error).message);
-    } finally {
-      setExportBusy(false);
-    }
-  };
-
-  const handleDeleteAccount = async () => {
-    setDeleteBusy(true);
-    try {
-      await remove('/profile');
-      client.clear();
-      notify('Tài khoản và dữ liệu đã được xóa vĩnh viễn theo Nghị định 13/2023/NĐ-CP.');
-      navigate('/login');
-    } catch (err) {
-      notify((err as Error).message);
-      setDeleteBusy(false);
-    }
-  };
   return (
     <>
       <PageHeader
@@ -270,85 +230,6 @@ export function Profile() {
           </Button>
         </form>
       </section>
-      <section className="panel settings-section spaced">
-        <div>
-          <h2>Quản lý Dữ liệu Học tập</h2>
-          <p>Quản lý và sao lưu dữ liệu tiến trình học tập của bạn.</p>
-        </div>
-        <div className="privacy-actions-list">
-          <div className="privacy-action-card">
-            <div>
-              <strong>Tải về bản sao dữ liệu cá nhân</strong>
-              <p>Trích xuất toàn bộ hồ sơ, thẻ từ vựng và lịch sử học tập dạng tệp JSON.</p>
-            </div>
-            <Button
-              variant="secondary"
-              disabled={busy || exportBusy}
-              onClick={() => void handleExport()}
-              type="button"
-            >
-              <Download size={16} />
-              {exportBusy ? 'Đang xuất tệp…' : 'Tải tệp .JSON'}
-            </Button>
-          </div>
-
-          <div className="privacy-action-card danger">
-            <div>
-              <strong>Xóa tài khoản & dữ liệu</strong>
-              <p>Xóa tài khoản, các bộ thẻ và kết quả học tập khỏi hệ thống.</p>
-            </div>
-            <Button
-              variant="secondary"
-              className="button-danger-outline"
-              disabled={busy || deleteBusy}
-              onClick={() => setShowDeleteModal(true)}
-              type="button"
-            >
-              <Trash2 size={16} />
-              Yêu cầu xóa tài khoản
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <Dialog.Root open={showDeleteModal} onOpenChange={setShowDeleteModal}>
-        <Dialog.Portal>
-          <Dialog.Overlay className="dialog-overlay" />
-          <Dialog.Content className="dialog-content delete-account-dialog">
-            <div className="dialog-danger-icon">
-              <AlertTriangle size={28} />
-            </div>
-            <Dialog.Title className="dialog-title">Xác nhận xóa vĩnh viễn tài khoản</Dialog.Title>
-            <p className="delete-dialog-desc">
-              Căn cứ <strong>Điều 16 Nghị định 13/2023/NĐ-CP</strong> về quyền xóa dữ liệu cá nhân: Toàn bộ hồ sơ cá nhân, các bộ thẻ từ vựng do bạn tạo, tiến độ ôn tập SRS, điểm thi thử JLPT và lịch sử tra từ sẽ bị xóa hoàn toàn khỏi cơ sở dữ liệu.
-            </p>
-            <p className="delete-dialog-alert">
-              <strong>Hành động này KHÔNG THỂ hoàn tác.</strong>
-            </p>
-            <label className="delete-confirm-label">
-              Để xác nhận, vui lòng nhập chữ <strong>XÓA TÀI KHOẢN</strong> vào ô bên dưới:
-              <input
-                value={deleteConfirmationText}
-                onChange={(e) => setDeleteConfirmationText(e.target.value)}
-                placeholder="XÓA TÀI KHOẢN"
-              />
-            </label>
-            <div className="dialog-actions">
-              <Button variant="ghost" onClick={() => setShowDeleteModal(false)} disabled={deleteBusy}>
-                Hủy bỏ
-              </Button>
-              <Button
-                variant="primary"
-                className="button-danger"
-                disabled={deleteConfirmationText.trim().toUpperCase() !== 'XÓA TÀI KHOẢN' || deleteBusy}
-                onClick={() => void handleDeleteAccount()}
-              >
-                {deleteBusy ? 'Đang xóa dữ liệu…' : 'Tôi hiểu, hãy xóa vĩnh viễn'}
-              </Button>
-            </div>
-          </Dialog.Content>
-        </Dialog.Portal>
-      </Dialog.Root>
       <AnnotationSettings />
     </>
   );
