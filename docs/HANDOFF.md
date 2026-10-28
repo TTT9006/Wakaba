@@ -1,3 +1,37 @@
+## XÓA BỎ CHÚ THÍCH CÁCH ĐỌC (FURIGANA / HIRAGANA) Ở PHÂN HỆ LUYỆN KỸ NĂNG (/SKILLS) — 28/10/2026
+
+- **Yêu cầu từ Người dùng:**
+  - Xóa phần chú thích Hiragana (Furigana / Ruby) ở phân hệ Luyện kỹ năng (`/skills`), giữ nguyên Kanji thuần túy để người học tự luyện phản xạ đọc.
+  - Tuyệt đối không xóa hay ảnh hưởng đến chú thích Furigana ở các phân hệ khác (Ngữ pháp `/grammar`, Flashcards `/flashcards`, Thi thử JLPT `/tests`, Ôn tập đăng nhập).
+
+- **Thực hiện Kỹ thuật:**
+  1. **Nhánh môi trường độc lập:** Thực hiện và kiểm thử trên nhánh `feature/remove-furigana-skills`.
+  2. **Giao diện Modal Luyện tập Kỹ năng (`apps/web/src/components/skill-practice-modal.tsx`):**
+     - Gỡ bỏ import `JapaneseAnnotatedText`.
+     - Thay thế toàn bộ thẻ `<JapaneseAnnotatedText text={...} />` bằng chuỗi văn bản gốc `{...}` cho:
+       - Đoạn văn bài đọc (`currentQ.passage` và `r.passage`)
+       - Tiêu đề câu hỏi (`currentQ.prompt` và `r.prompt`)
+       - Các đáp án lựa chọn (`opt`)
+       - Đáp án người dùng chọn (`r.given`) và đáp án đúng (`r.answer`)
+       - Bản chép lời bài nghe (`r.transcript`) và giải thích (`r.explanation`).
+  3. **Trang Lịch sử & Xem lại Kỹ năng (`apps/web/src/pages/skills.tsx`):**
+     - Gỡ bỏ import `JapaneseAnnotatedText`.
+     - Thay thế các component chú thích bằng chuỗi gốc `{r.prompt}`, `{r.passage}`, `{r.given}`, `{r.answer}`, `{r.explanation}`, `{r.transcript}` trong modal xem lại bài làm kỹ năng.
+  4. **Bảo toàn các phân hệ khác:**
+     - 100% chú thích Furigana tại `apps/web/src/pages/grammar.tsx`, `apps/web/src/pages/flashcards.tsx`, `apps/web/src/pages/tests.tsx`, `apps/web/src/components/review-card-interactive.tsx` được giữ nguyên vẹn không đổi.
+
+- **Kết quả Kiểm thử & Đo kiểm:**
+  - **Typecheck:** `npm run typecheck` đạt 0 lỗi.
+  - **Unit test suite:** 16/16 test files (152 tests) PASS 100%.
+  - **Build:** `npx vite build` và `npm run build` hoàn thành xuất sắc.
+  - **Chrome CDP Browser Test:**
+    - Khởi chạy Chrome thực tế kiểm tra modal luyện kỹ năng:
+      - `rubyCount: 0`, `rtCount: 0` (Hoàn toàn không còn thẻ ruby/hiragana chú thích nào).
+      - Nội dung hiển thị văn bản Kanji tự nhiên: `話を聞いて、これからすることを選んでください。`, lựa chọn: `A 何もしない`.
+      - Đã chụp ảnh màn hình bằng chứng: `skills-practice-no-furigana.png`.
+
+---
+
 ## LOẠI BỎ TRIỆT ĐỂ TIẾNG ANH TẠI PHÂN HỆ HỌC BỘ THỦ & LUYỆN VIẾT (/WRITING) — 28/10/2026
 
 - **Yêu cầu & Phản ánh từ Người dùng:**

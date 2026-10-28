@@ -17,7 +17,6 @@ import {
   Sparkles,
 } from 'lucide-react';
 import { Button, Modal } from './ui';
-import { JapaneseAnnotatedText } from './japanese-annotated-text';
 import { api, post } from '../services/api';
 import { useUI } from '../stores/ui';
 import {
@@ -438,21 +437,21 @@ export function SkillPracticeModal({
                       lang="ja"
                       style={{ marginBlock: '8px', fontSize: '13px' }}
                     >
-                      <JapaneseAnnotatedText text={r.passage} />
+                      {r.passage}
                     </div>
                   )}
 
                   <p lang="ja" style={{ fontWeight: 500, marginBlock: '4px' }}>
-                    <JapaneseAnnotatedText text={r.prompt} />
+                    {r.prompt}
                   </p>
 
                   <div style={{ fontSize: '13px', marginBlock: '4px' }}>
                     <span>
-                      Bạn chọn: <strong><JapaneseAnnotatedText text={r.given || '(Chưa làm)'} /></strong>
+                      Bạn chọn: <strong>{r.given || '(Chưa làm)'}</strong>
                     </span>
                     <span style={{ marginInline: '8px' }}>·</span>
                     <span>
-                      Đáp án: <strong style={{ color: 'var(--jade)' }}><JapaneseAnnotatedText text={r.answer} /></strong>
+                      Đáp án: <strong style={{ color: 'var(--jade)' }}>{r.answer}</strong>
                     </span>
                   </div>
 
@@ -475,13 +474,13 @@ export function SkillPracticeModal({
                         BẢN CHÉP LỜI (TRANSCRIPT)
                       </span>
                       <div lang="ja" style={{ whiteSpace: 'pre-line', margin: '4px 0 0 0' }}>
-                        <JapaneseAnnotatedText text={r.transcript} />
+                        {r.transcript}
                       </div>
                     </div>
                   )}
 
                   <p style={{ fontSize: '13px', color: 'var(--muted)', margin: '4px 0 0 0' }}>
-                    💡 <em><JapaneseAnnotatedText text={r.explanation} /></em>
+                    💡 <em>{r.explanation}</em>
                   </p>
                 </div>
               ))}
@@ -505,7 +504,7 @@ export function SkillPracticeModal({
                   lineHeight: '1.7',
                 }}
               >
-                <JapaneseAnnotatedText text={currentQ.passage} />
+                {currentQ.passage}
               </div>
             )}
 
@@ -587,7 +586,7 @@ export function SkillPracticeModal({
                 {currentQ.group} · CÂU {index + 1}/{questions.length}
               </span>
               <h2 lang="ja" style={{ fontSize: '18px', margin: 0 }}>
-                <JapaneseAnnotatedText text={currentQ.prompt} />
+                {currentQ.prompt}
               </h2>
             </div>
 
@@ -616,7 +615,7 @@ export function SkillPracticeModal({
                       {String.fromCharCode(65 + optIdx)}
                     </span>
                     <span lang="ja" style={{ flex: 1, fontSize: '15px' }}>
-                      <JapaneseAnnotatedText text={opt} />
+                      {opt}
                     </span>
                     {isSelected && <Check size={16} style={{ color: 'var(--jade)' }} />}
                   </button>

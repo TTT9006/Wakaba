@@ -3,7 +3,6 @@ import { useQuery } from '@tanstack/react-query';
 import { Headphones, BookOpen, Sparkles, FileText, ArrowRight, Target } from 'lucide-react';
 import { api } from '../services/api';
 import { Button, Empty, ErrorState, Loading, PageHeader, Modal } from '../components/ui';
-import { JapaneseAnnotatedText } from '../components/japanese-annotated-text';
 import { SkillPracticeModal } from '../components/skill-practice-modal';
 import type { JlptLevel, SkillType } from '../../../../packages/shared/jlpt-types';
 import { getSkillExercises, type SkillExerciseSet } from '../../../../packages/shared/jlpt-skills';
@@ -232,7 +231,7 @@ export function SkillsPage() {
           (JSON.parse(review.answers) as Result[]).map((r, i) => (
             <div key={r.id} className={'feedback ' + (r.correct ? 'correct' : 'incorrect')}>
               <strong>
-                {i + 1}. <JapaneseAnnotatedText text={r.prompt} />
+                {i + 1}. {r.prompt}
               </strong>
               {r.imageUrl && (
                 <div style={{ marginBlock: '8px' }}>
@@ -256,17 +255,17 @@ export function SkillsPage() {
               )}
               {r.passage && (
                 <div className="jlpt-passage" lang="ja">
-                  <JapaneseAnnotatedText text={r.passage} />
+                  {r.passage}
                 </div>
               )}
               <p>
-                Bạn chọn: <JapaneseAnnotatedText text={r.given || '(Chưa trả lời)'} />
+                Bạn chọn: {r.given || '(Chưa trả lời)'}
               </p>
               <p>
-                Đáp án: <JapaneseAnnotatedText text={r.answer} />
+                Đáp án: {r.answer}
               </p>
               <small>
-                <JapaneseAnnotatedText text={r.explanation} />
+                {r.explanation}
               </small>
               {r.transcript && (
                 <div
@@ -286,7 +285,7 @@ export function SkillsPage() {
                     BẢN CHÉP LỜI (TRANSCRIPT)
                   </span>
                   <div lang="ja" style={{ whiteSpace: 'pre-line', margin: '4px 0 0 0' }}>
-                    <JapaneseAnnotatedText text={r.transcript} />
+                    {r.transcript}
                   </div>
                 </div>
               )}
