@@ -372,15 +372,15 @@ export const midtermJan01Paper01: JlptPaper = {
           "type": "choice",
           "category": "grammar",
           "group": "Ngữ pháp · Sắp xếp câu (Dấu ★)",
-          "prompt": "Ａ：「あの _____ _____ ★ _____ ですか。」  \nＢ：「IMCの 社員です。」",
+          "prompt": "あの方は _____ _____ ★ _____ ですか。",
           "options": [
-            "かた",
-            "は",
-            "どなた",
-            "ひと"
+            "の",
+            "大学",
+            "先生",
+            "さくら"
           ],
-          "answer": "かた",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 1: 「かた」.",
+          "answer": "の",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 1: 「の」.",
           "annotationDisabled": true
         },
         {
@@ -391,12 +391,12 @@ export const midtermJan01Paper01: JlptPaper = {
           "prompt": "わたしは _____ _____ ★ _____ ありません。",
           "options": [
             "じゃ",
-            "がくせい",
-            "は",
-            "ぎんこういん"
+            "医者",
+            "病院の",
+            "神戸"
           ],
-          "answer": "じゃ",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 1: 「じゃ」.",
+          "answer": "医者",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 2: 「医者」.",
           "annotationDisabled": true
         },
         {
@@ -404,15 +404,15 @@ export const midtermJan01Paper01: JlptPaper = {
           "type": "choice",
           "category": "grammar",
           "group": "Ngữ pháp · Sắp xếp câu (Dấu ★)",
-          "prompt": "これ _____ _____ ★ _____ 本です。",
+          "prompt": "これ _____ _____ ★ _____ 辞書です。",
           "options": [
+            "わたし",
             "の",
             "は",
-            "わたし",
-            "にほんご"
+            "日本語の"
           ],
           "answer": "の",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 1: 「の」.",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 2: 「の」.",
           "annotationDisabled": true
         },
         {
@@ -424,11 +424,11 @@ export const midtermJan01Paper01: JlptPaper = {
           "options": [
             "の",
             "あそこ",
-            "２かい",
-            "きょうしつ"
+            "となり",
+            "事務所"
           ],
-          "answer": "の",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 1: 「の」.",
+          "answer": "事務所",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 4: 「事務所」.",
           "annotationDisabled": true
         },
         {
@@ -455,12 +455,12 @@ export const midtermJan01Paper01: JlptPaper = {
           "prompt": "あした _____ _____ ★ _____ 行きます。",
           "options": [
             "と",
-            "ともだち",
+            "友だち",
             "で",
-            "でんしゃ"
+            "電車"
           ],
-          "answer": "でんしゃ",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 4: 「でんしゃ」.",
+          "answer": "電車",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 4: 「電車」.",
           "annotationDisabled": true
         },
         {
@@ -468,15 +468,15 @@ export const midtermJan01Paper01: JlptPaper = {
           "type": "choice",
           "category": "grammar",
           "group": "Ngữ pháp · Sắp xếp câu (Dấu ★)",
-          "prompt": "ゆうびんきょくの _____ _____ ★ _____ ですか。",
+          "prompt": "郵便局は _____ _____ ★ _____ 休みです。",
           "options": [
-            "なんようび",
-            "は",
-            "やすみ",
-            "いつ"
+            "と",
+            "土曜日",
+            "日曜日",
+            "は"
           ],
-          "answer": "は",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 2: 「は」.",
+          "answer": "日曜日",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 3: 「日曜日」.",
           "annotationDisabled": true
         },
         {
@@ -484,9 +484,9 @@ export const midtermJan01Paper01: JlptPaper = {
           "type": "choice",
           "category": "grammar",
           "group": "Ngữ pháp · Sắp xếp câu (Dấu ★)",
-          "prompt": "わたしは _____ _____ ★ _____ かえります。",
+          "prompt": "わたしは _____ _____ ★ _____ 帰ります。",
           "options": [
-            "あるいて",
+            "歩いて",
             "へ",
             "うち",
             "ひとりで"
@@ -503,7 +503,7 @@ export const midtermJan01Paper01: JlptPaper = {
           "prompt": "その _____ _____ ★ _____ です。",
           "options": [
             "の",
-            "かさ",
+            "傘",
             "は",
             "ミラーさん"
           ],
@@ -516,15 +516,15 @@ export const midtermJan01Paper01: JlptPaper = {
           "type": "choice",
           "category": "grammar",
           "group": "Ngữ pháp · Sắp xếp câu (Dấu ★)",
-          "prompt": "佐藤さんの _____ _____ ★ _____ ですか。",
+          "prompt": "佐藤さんは _____ _____ ★ _____ 行きますか。",
           "options": [
-            "は",
-            "たんじょうび",
-            "いつ",
-            "なんにち"
+            "で",
+            "どこ",
+            "へ",
+            "何"
           ],
-          "answer": "は",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 1: 「は」.",
+          "answer": "どこ",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 2: 「どこ」.",
           "annotationDisabled": true
         },
         {
@@ -1478,13 +1478,13 @@ export const midtermJan01Paper02: JlptPaper = {
           "group": "Ngữ pháp · Sắp xếp câu (Dấu ★)",
           "prompt": "ワンさんは _____ _____ ★ _____ です。",
           "options": [
+            "留学生",
+            "大学",
             "の",
-            "神戸病院",
-            "いしゃ",
-            "は"
+            "さくら"
           ],
           "answer": "の",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 1: 「の」.",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 3: 「の」.",
           "annotationDisabled": true
         },
         {
@@ -1499,8 +1499,8 @@ export const midtermJan01Paper02: JlptPaper = {
             "は",
             "かさ"
           ],
-          "answer": "だれ",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 2: 「だれ」.",
+          "answer": "の",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 1: 「の」.",
           "annotationDisabled": true
         },
         {
@@ -1510,13 +1510,13 @@ export const midtermJan01Paper02: JlptPaper = {
           "group": "Ngữ pháp · Sắp xếp câu (Dấu ★)",
           "prompt": "教室は _____ _____ ★ _____ です。",
           "options": [
-            "の",
             "３かい",
-            "あそこ",
-            "となり"
+            "建物",
+            "の",
+            "あの"
           ],
-          "answer": "３かい",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 2: 「３かい」.",
+          "answer": "の",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 3: 「の」.",
           "annotationDisabled": true
         },
         {
@@ -1543,12 +1543,12 @@ export const midtermJan01Paper02: JlptPaper = {
           "prompt": "わたしは _____ _____ ★ _____ 行きました。",
           "options": [
             "と",
-            "ともだち",
-            "京都へ",
-            "ひとりで"
+            "友だち",
+            "へ",
+            "京都"
           ],
-          "answer": "京都へ",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 3: 「京都へ」.",
+          "answer": "京都",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 4: 「京都」.",
           "annotationDisabled": true
         },
         {
@@ -1563,8 +1563,8 @@ export const midtermJan01Paper02: JlptPaper = {
             "７じ",
             "うちで"
           ],
-          "answer": "日本語を",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 2: 「日本語を」.",
+          "answer": "に",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 1: 「に」.",
           "annotationDisabled": true
         },
         {
@@ -1575,7 +1575,7 @@ export const midtermJan01Paper02: JlptPaper = {
           "prompt": "この _____ _____ ★ _____ です。",
           "options": [
             "は",
-            "じどうしゃ",
+            "自動車",
             "の",
             "日本"
           ],
@@ -1588,15 +1588,15 @@ export const midtermJan01Paper02: JlptPaper = {
           "type": "choice",
           "category": "grammar",
           "group": "Ngữ pháp · Sắp xếp câu (Dấu ★)",
-          "prompt": "あした _____ _____ ★ _____ 行きます。",
+          "prompt": "あした _____ _____ ★ _____ 行きません。",
           "options": [
             "で",
-            "どこへも",
-            "じてんしゃ",
-            "行きません"
+            "自転車",
+            "どこへ",
+            "も"
           ],
-          "answer": "どこへも",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 2: 「どこへも」.",
+          "answer": "どこへ",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 3: 「どこへ」.",
           "annotationDisabled": true
         },
         {
@@ -1611,8 +1611,8 @@ export const midtermJan01Paper02: JlptPaper = {
             "どちら",
             "お"
           ],
-          "answer": "国",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 2: 「国」.",
+          "answer": "は",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 1: 「は」.",
           "annotationDisabled": true
         },
         {
@@ -1625,7 +1625,7 @@ export const midtermJan01Paper02: JlptPaper = {
             "６じ",
             "に",
             "まいにち",
-            "は"
+            "午後"
           ],
           "answer": "６じ",
           "explanation": "Vị trí dấu sao (★) cần điền phương án số 1: 「６じ」.",
@@ -2584,11 +2584,11 @@ export const midtermJan01Paper03: JlptPaper = {
           "options": [
             "の",
             "さくら大学",
-            "は",
+            "英語の",
             "先生"
           ],
-          "answer": "先生",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 4: 「先生」.",
+          "answer": "英語の",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 3: 「英語の」.",
           "annotationDisabled": true
         },
         {
@@ -2603,8 +2603,8 @@ export const midtermJan01Paper03: JlptPaper = {
             "は",
             "だれ"
           ],
-          "answer": "辞書",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 1: 「辞書」.",
+          "answer": "の",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 2: 「の」.",
           "annotationDisabled": true
         },
         {
@@ -2614,13 +2614,13 @@ export const midtermJan01Paper03: JlptPaper = {
           "group": "Ngữ pháp · Sắp xếp câu (Dấu ★)",
           "prompt": "会議室は _____ _____ ★ _____ です。",
           "options": [
-            "あそこ",
+            "あの",
+            "建物",
             "の",
-            "２かい",
-            "となり"
+            "２かい"
           ],
-          "answer": "２かい",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 3: 「２かい」.",
+          "answer": "の",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 3: 「の」.",
           "annotationDisabled": true
         },
         {
@@ -2665,10 +2665,10 @@ export const midtermJan01Paper03: JlptPaper = {
             "に",
             "うちで",
             "１１じ",
-            "勉強して"
+            "いつも"
           ],
-          "answer": "に",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 1: 「に」.",
+          "answer": "１１じ",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 3: 「１１じ」.",
           "annotationDisabled": true
         },
         {
@@ -2699,8 +2699,8 @@ export const midtermJan01Paper03: JlptPaper = {
             "家族",
             "バスで"
           ],
-          "answer": "家族",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 3: 「家族」.",
+          "answer": "バスで",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 4: 「バスで」.",
           "annotationDisabled": true
         },
         {
@@ -2708,15 +2708,15 @@ export const midtermJan01Paper03: JlptPaper = {
           "type": "choice",
           "category": "grammar",
           "group": "Ngữ pháp · Sắp xếp câu (Dấu ★)",
-          "prompt": "あなたの _____ _____ ★ _____ ですか。",
+          "prompt": "あなたの _____ _____ ★ _____ いつですか。",
           "options": [
-            "は",
+            "お父さん",
+            "の",
             "誕生日",
-            "いつ",
-            "月"
+            "は"
           ],
-          "answer": "いつ",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 3: 「いつ」.",
+          "answer": "誕生日",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 3: 「誕生日」.",
           "annotationDisabled": true
         },
         {
@@ -3684,15 +3684,15 @@ export const midtermJan01Paper04: JlptPaper = {
           "type": "choice",
           "category": "grammar",
           "group": "Ngữ pháp · Sắp xếp câu (Dấu ★)",
-          "prompt": "あの _____ _____ ★ _____ ですか。",
+          "prompt": "あの方は _____ _____ ★ _____ ですか。",
           "options": [
-            "かた",
-            "は",
-            "どなた",
-            "ひと"
+            "の",
+            "会社",
+            "社長",
+            "どこの"
           ],
-          "answer": "どなた",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 3: 「どなた」.",
+          "answer": "の",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 1: 「の」.",
           "annotationDisabled": true
         },
         {
@@ -3703,12 +3703,12 @@ export const midtermJan01Paper04: JlptPaper = {
           "prompt": "わたしは _____ _____ ★ _____ ありません。",
           "options": [
             "じゃ",
-            "がくせい",
-            "は",
-            "ぎんこういん"
+            "学生",
+            "さくら大学の",
+            "もう"
           ],
-          "answer": "じゃ",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 1: 「じゃ」.",
+          "answer": "学生",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 2: 「学生」.",
           "annotationDisabled": true
         },
         {
@@ -3721,7 +3721,7 @@ export const midtermJan01Paper04: JlptPaper = {
             "の",
             "は",
             "わたし",
-            "にほんご"
+            "日本語の"
           ],
           "answer": "の",
           "explanation": "Vị trí dấu sao (★) cần điền phương án số 1: 「の」.",
@@ -3734,13 +3734,13 @@ export const midtermJan01Paper04: JlptPaper = {
           "group": "Ngữ pháp · Sắp xếp câu (Dấu ★)",
           "prompt": "受付は _____ _____ ★ _____ です。",
           "options": [
+            "あの",
+            "建物",
             "の",
-            "あそこ",
-            "１かい",
-            "となり"
+            "１かい"
           ],
-          "answer": "１かい",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 3: 「１かい」.",
+          "answer": "の",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 3: 「の」.",
           "annotationDisabled": true
         },
         {
@@ -3780,15 +3780,15 @@ export const midtermJan01Paper04: JlptPaper = {
           "type": "choice",
           "category": "grammar",
           "group": "Ngữ pháp · Sắp xếp câu (Dấu ★)",
-          "prompt": "銀行の _____ _____ ★ _____ ですか。",
+          "prompt": "銀行は _____ _____ ★ _____ 休みです。",
           "options": [
-            "なんようび",
-            "は",
-            "やすみ",
-            "いつ"
+            "と",
+            "土曜日",
+            "日曜日",
+            "は"
           ],
-          "answer": "は",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 2: 「は」.",
+          "answer": "日曜日",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 3: 「日曜日」.",
           "annotationDisabled": true
         },
         {
@@ -3828,15 +3828,15 @@ export const midtermJan01Paper04: JlptPaper = {
           "type": "choice",
           "category": "grammar",
           "group": "Ngữ pháp · Sắp xếp câu (Dấu ★)",
-          "prompt": "佐藤さんの _____ _____ ★ _____ ですか。",
+          "prompt": "あなたの _____ _____ ★ _____ いつですか。",
           "options": [
-            "は",
+            "お母さん",
+            "の",
             "誕生日",
-            "いつ",
-            "何日"
+            "は"
           ],
-          "answer": "は",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 1: 「は」.",
+          "answer": "誕生日",
+          "explanation": "Vị trí dấu sao (★) cần điền phương án số 3: 「誕生日」.",
           "annotationDisabled": true
         },
         {
