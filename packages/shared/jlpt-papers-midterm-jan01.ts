@@ -938,7 +938,6 @@ export const midtermJan01Paper01: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Hành trình di chuyển (Chặng 1)",
-          "passage": "【Đoạn hội thoại mô tả hành trình di chuyển 4 chặng của Miller-san】\n*  \n   女「ミラーさん、来週 京都へ 行きますね。何で 行きますか。」  \n   男「朝 ７時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」  \n   女「東京駅から 京都駅までは？」  \n   男「新幹線で 行きます。はやいですよ。」  \n   女「京都駅から ホテルまでは 何で 行きますか。」  \n   男「京都駅前から バスで 行きます。」  \n   女「ホテルから 会社までは 遠いですか。」  \n   男「いいえ、とても 近いですから、歩いて 行きます。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Tokyo): **2. タクシー**  \n  - Câu 55 (Chặng 2: Ga Tokyo - Ga Kyoto): **1. しんかんせん**  \n  - Câu 56 (Chặng 3: Ga Kyoto - Khách sạn): **2. バス**  \n  - Câu 57 (Chặng 4: Khách sạn - Công ty): **3. あるいて**",
           "prompt": "ミラーさんは うちから とうきょうえきまで 何で 行きますか。",
           "options": [
             "でんしゃ",
@@ -949,7 +948,7 @@ export const midtermJan01Paper01: JlptPaper = {
           "answer": "タクシー",
           "explanation": "Hành trình Chặng 1: Theo đoạn hội thoại, phương tiện sử dụng là 「タクシー」.",
           "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "*  \n   女「ミラーさん、来週 京都へ 行きますね。何で 行きますか。」  \n   男「朝 ７時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」  \n   女「東京駅から 京都駅までは？」  \n   男「新幹線で 行きます。はやいですよ。」  \n   女「京都駅から ホテルまでは 何で 行きますか。」  \n   男「京都駅前から バスで 行きます。」  \n   女「ホテルから 会社までは 遠いですか。」  \n   男「いいえ、とても 近いですから、歩いて 行きます。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Tokyo): **2. タクシー**  \n  - Câu 55 (Chặng 2: Ga Tokyo - Ga Kyoto): **1. しんかんせん**  \n  - Câu 56 (Chặng 3: Ga Kyoto - Khách sạn): **2. バス**  \n  - Câu 57 (Chặng 4: Khách sạn - Công ty): **3. あるいて**",
+          "transcript": "女「ミラーさん、来週 京都へ 行きますね。何で 行きますか。」\n男「朝 ７時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」\n女「東京駅から 京都駅までは？」\n男「新幹線で 行きます。はやいですよ。」\n女「京都駅から ホテルまでは 何で 行きますか。」\n男「京都駅前から バスで 行きます。」\n女「ホテルから 会社までは 遠いですか。」\n男「いいえ、すぐ 近くですから、歩いて 行きますよ。」",
           "annotationDisabled": true
         },
         {
@@ -957,7 +956,6 @@ export const midtermJan01Paper01: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Hành trình di chuyển (Chặng 2)",
-          "passage": "【Đoạn hội thoại mô tả hành trình di chuyển 4 chặng của Miller-san】\n*  \n   女「ミラーさん、来週 京都へ 行きますね。何で 行きますか。」  \n   男「朝 ７時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」  \n   女「東京駅から 京都駅までは？」  \n   男「新幹線で 行きます。はやいですよ。」  \n   女「京都駅から ホテルまでは 何で 行きますか。」  \n   男「京都駅前から バスで 行きます。」  \n   女「ホテルから 会社までは 遠いですか。」  \n   男「いいえ、とても 近いですから、歩いて 行きます。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Tokyo): **2. タクシー**  \n  - Câu 55 (Chặng 2: Ga Tokyo - Ga Kyoto): **1. しんかんせん**  \n  - Câu 56 (Chặng 3: Ga Kyoto - Khách sạn): **2. バス**  \n  - Câu 57 (Chặng 4: Khách sạn - Công ty): **3. あるいて**",
           "prompt": "とうきょうえきから きょうとえきまで 何で 行きますか。",
           "options": [
             "しんかんせん",
@@ -968,7 +966,7 @@ export const midtermJan01Paper01: JlptPaper = {
           "answer": "しんかんせん",
           "explanation": "Hành trình Chặng 2: Theo đoạn hội thoại, phương tiện sử dụng là 「しんかんせん」.",
           "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "*  \n   女「ミラーさん、来週 京都へ 行きますね。何で 行きますか。」  \n   男「朝 ７時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」  \n   女「東京駅から 京都駅までは？」  \n   男「新幹線で 行きます。はやいですよ。」  \n   女「京都駅から ホテルまでは 何で 行きますか。」  \n   男「京都駅前から バスで 行きます。」  \n   女「ホテルから 会社までは 遠いですか。」  \n   男「いいえ、とても 近いですから、歩いて 行きます。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Tokyo): **2. タクシー**  \n  - Câu 55 (Chặng 2: Ga Tokyo - Ga Kyoto): **1. しんかんせん**  \n  - Câu 56 (Chặng 3: Ga Kyoto - Khách sạn): **2. バス**  \n  - Câu 57 (Chặng 4: Khách sạn - Công ty): **3. あるいて**",
+          "transcript": "女「ミラーさん、来週 京都へ 行きますね。何で 行きますか。」\n男「朝 ７時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」\n女「東京駅から 京都駅までは？」\n男「新幹線で 行きます。はやいですよ。」\n女「京都駅から ホテルまでは 何で 行きますか。」\n男「京都駅前から バスで 行きます。」\n女「ホテルから 会社までは 遠いですか。」\n男「いいえ、すぐ 近くですから、歩いて 行きますよ。」",
           "annotationDisabled": true
         },
         {
@@ -976,7 +974,6 @@ export const midtermJan01Paper01: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Hành trình di chuyển (Chặng 3)",
-          "passage": "【Đoạn hội thoại mô tả hành trình di chuyển 4 chặng của Miller-san】\n*  \n   女「ミラーさん、来週 京都へ 行きますね。何で 行きますか。」  \n   男「朝 ７時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」  \n   女「東京駅から 京都駅までは？」  \n   男「新幹線で 行きます。はやいですよ。」  \n   女「京都駅から ホテルまでは 何で 行きますか。」  \n   男「京都駅前から バスで 行きます。」  \n   女「ホテルから 会社までは 遠いですか。」  \n   男「いいえ、とても 近いですから、歩いて 行きます。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Tokyo): **2. タクシー**  \n  - Câu 55 (Chặng 2: Ga Tokyo - Ga Kyoto): **1. しんかんせん**  \n  - Câu 56 (Chặng 3: Ga Kyoto - Khách sạn): **2. バス**  \n  - Câu 57 (Chặng 4: Khách sạn - Công ty): **3. あるいて**",
           "prompt": "きょうとえきから ホテルまで 何で 行きますか。",
           "options": [
             "タクシー",
@@ -987,7 +984,7 @@ export const midtermJan01Paper01: JlptPaper = {
           "answer": "バス",
           "explanation": "Hành trình Chặng 3: Theo đoạn hội thoại, phương tiện sử dụng là 「バス」.",
           "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "*  \n   女「ミラーさん、来週 京都へ 行きますね。何で 行きますか。」  \n   男「朝 ７時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」  \n   女「東京駅から 京都駅までは？」  \n   男「新幹線で 行きます。はやいですよ。」  \n   女「京都駅から ホテルまでは 何で 行きますか。」  \n   男「京都駅前から バスで 行きます。」  \n   女「ホテルから 会社までは 遠いですか。」  \n   男「いいえ、とても 近いですから、歩いて 行きます。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Tokyo): **2. タクシー**  \n  - Câu 55 (Chặng 2: Ga Tokyo - Ga Kyoto): **1. しんかんせん**  \n  - Câu 56 (Chặng 3: Ga Kyoto - Khách sạn): **2. バス**  \n  - Câu 57 (Chặng 4: Khách sạn - Công ty): **3. あるいて**",
+          "transcript": "女「ミラーさん、来週 京都へ 行きますね。何で 行きますか。」\n男「朝 ７時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」\n女「東京駅から 京都駅までは？」\n男「新幹線で 行きます。はやいですよ。」\n女「京都駅から ホテルまでは 何で 行きますか。」\n男「京都駅前から バスで 行きます。」\n女「ホテルから 会社までは 遠いですか。」\n男「いいえ、すぐ 近くですから、歩いて 行きますよ。」",
           "annotationDisabled": true
         },
         {
@@ -995,7 +992,6 @@ export const midtermJan01Paper01: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Hành trình di chuyển (Chặng 4)",
-          "passage": "【Đoạn hội thoại mô tả hành trình di chuyển 4 chặng của Miller-san】\n*  \n   女「ミラーさん、来週 京都へ 行きますね。何で 行きますか。」  \n   男「朝 ７時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」  \n   女「東京駅から 京都駅までは？」  \n   男「新幹線で 行きます。はやいですよ。」  \n   女「京都駅から ホテルまでは 何で 行きますか。」  \n   男「京都駅前から バスで 行きます。」  \n   女「ホテルから 会社までは 遠いですか。」  \n   男「いいえ、とても 近いですから、歩いて 行きます。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Tokyo): **2. タクシー**  \n  - Câu 55 (Chặng 2: Ga Tokyo - Ga Kyoto): **1. しんかんせん**  \n  - Câu 56 (Chặng 3: Ga Kyoto - Khách sạn): **2. バス**  \n  - Câu 57 (Chặng 4: Khách sạn - Công ty): **3. あるいて**",
           "prompt": "ホテルから かいしゃまで 何で 行きますか。",
           "options": [
             "でんしゃ",
@@ -1006,7 +1002,7 @@ export const midtermJan01Paper01: JlptPaper = {
           "answer": "あるいて",
           "explanation": "Hành trình Chặng 4: Theo đoạn hội thoại, phương tiện sử dụng là 「あるいて」.",
           "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "*  \n   女「ミラーさん、来週 京都へ 行きますね。何で 行きますか。」  \n   男「朝 ７時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」  \n   女「東京駅から 京都駅までは？」  \n   男「新幹線で 行きます。はやいですよ。」  \n   女「京都駅から ホテルまでは 何で 行きますか。」  \n   男「京都駅前から バスで 行きます。」  \n   女「ホテルから 会社までは 遠いですか。」  \n   男「いいえ、とても 近いですから、歩いて 行きます。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Tokyo): **2. タクシー**  \n  - Câu 55 (Chặng 2: Ga Tokyo - Ga Kyoto): **1. しんかんせん**  \n  - Câu 56 (Chặng 3: Ga Kyoto - Khách sạn): **2. バス**  \n  - Câu 57 (Chặng 4: Khách sạn - Công ty): **3. あるいて**",
+          "transcript": "女「ミラーさん、来週 京都へ 行きますね。何で 行きますか。」\n男「朝 ７時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」\n女「東京駅から 京都駅までは？」\n男「新幹線で 行きます。はやいですよ。」\n女「京都駅から ホテルまでは 何で 行きますか。」\n男「京都駅前から バスで 行きます。」\n女「ホテルから 会社までは 遠いですか。」\n男「いいえ、すぐ 近くですから、歩いて 行きますよ。」",
           "annotationDisabled": true
         },
         {
@@ -2042,7 +2038,6 @@ export const midtermJan01Paper02: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Hành trình di chuyển (Chặng 1)",
-          "passage": "【Đoạn hội thoại mô tả hành trình di chuyển 4 chặng của Miller-san】\n*  \n   男「カリナさん、日曜日 奈良へ 行きますね。どうやって 行きますか。」  \n   女「まず、寮から 神戸駅まで 自転車で 行きます。」  \n   男「神戸駅から 大阪駅までは？」  \n   女「JRの 電車で 行きます。」  \n   男「大阪駅から 奈良駅までは 何で 行きますか。」  \n   女「大阪駅前から 直通の バスに 乗ります。」  \n   男「奈良駅から 奈良公園までは 近いですか。」  \n   女「はい、とても 近いですから、歩いて 行きますよ。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Ký túc xá - Ga Kobe): **1. じてんしゃ**  \n  - Câu 55 (Chặng 2: Ga Kobe - Ga Osaka): **2. でんしゃ**  \n  - Câu 56 (Chặng 3: Ga Osaka - Ga Nara): **1. バス**  \n  - Câu 57 (Chặng 4: Ga Nara - Công viên Nara): **2. あるいて**",
           "prompt": "カリナさんは りょうから こうべえきまで 何で 行きますか。",
           "options": [
             "じてんしゃ",
@@ -2053,7 +2048,7 @@ export const midtermJan01Paper02: JlptPaper = {
           "answer": "じてんしゃ",
           "explanation": "Hành trình Chặng 1: Theo đoạn hội thoại, phương tiện sử dụng là 「じてんしゃ」.",
           "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "*  \n   男「カリナさん、日曜日 奈良へ 行きますね。どうやって 行きますか。」  \n   女「まず、寮から 神戸駅まで 自転車で 行きます。」  \n   男「神戸駅から 大阪駅までは？」  \n   女「JRの 電車で 行きます。」  \n   男「大阪駅から 奈良駅までは 何で 行きますか。」  \n   女「大阪駅前から 直通の バスに 乗ります。」  \n   男「奈良駅から 奈良公園までは 近いですか。」  \n   女「はい、とても 近いですから、歩いて 行きますよ。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Ký túc xá - Ga Kobe): **1. じてんしゃ**  \n  - Câu 55 (Chặng 2: Ga Kobe - Ga Osaka): **2. でんしゃ**  \n  - Câu 56 (Chặng 3: Ga Osaka - Ga Nara): **1. バス**  \n  - Câu 57 (Chặng 4: Ga Nara - Công viên Nara): **2. あるいて**",
+          "transcript": "男「カリナさん、日曜日 奈良へ 行きますね。どうやって 行きますか。」\n女「まず、寮から 神戸駅まで 自転車で 行きます。」\n男「神戸駅から 大阪駅までは？」\n女「JRの 電車で 行きます。」\n男「大阪駅から 奈良駅までは 何で 行きますか。」\n女「大阪駅前から 直通の バスに 乗ります。」\n男「奈良駅から 奈良公園までは 近いですか。」\n女「はい、とても 近いですから、歩いて 行きますよ。」",
           "annotationDisabled": true
         },
         {
@@ -2061,7 +2056,6 @@ export const midtermJan01Paper02: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Hành trình di chuyển (Chặng 2)",
-          "passage": "【Đoạn hội thoại mô tả hành trình di chuyển 4 chặng của Miller-san】\n*  \n   男「カリナさん、日曜日 奈良へ 行きますね。どうやって 行きますか。」  \n   女「まず、寮から 神戸駅まで 自転車で 行きます。」  \n   男「神戸駅から 大阪駅までは？」  \n   女「JRの 電車で 行きます。」  \n   男「大阪駅から 奈良駅までは 何で 行きますか。」  \n   女「大阪駅前から 直通の バスに 乗ります。」  \n   男「奈良駅から 奈良公園までは 近いですか。」  \n   女「はい、とても 近いですから、歩いて 行きますよ。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Ký túc xá - Ga Kobe): **1. じてんしゃ**  \n  - Câu 55 (Chặng 2: Ga Kobe - Ga Osaka): **2. でんしゃ**  \n  - Câu 56 (Chặng 3: Ga Osaka - Ga Nara): **1. バス**  \n  - Câu 57 (Chặng 4: Ga Nara - Công viên Nara): **2. あるいて**",
           "prompt": "こうべえきから おおさかえきまで 何で 行きますか。",
           "options": [
             "しんかんせん",
@@ -2072,7 +2066,7 @@ export const midtermJan01Paper02: JlptPaper = {
           "answer": "でんしゃ",
           "explanation": "Hành trình Chặng 2: Theo đoạn hội thoại, phương tiện sử dụng là 「でんしゃ」.",
           "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "*  \n   男「カリナさん、日曜日 奈良へ 行きますね。どうやって 行きますか。」  \n   女「まず、寮から 神戸駅まで 自転車で 行きます。」  \n   男「神戸駅から 大阪駅までは？」  \n   女「JRの 電車で 行きます。」  \n   男「大阪駅から 奈良駅までは 何で 行きますか。」  \n   女「大阪駅前から 直通の バスに 乗ります。」  \n   男「奈良駅から 奈良公園までは 近いですか。」  \n   女「はい、とても 近いですから、歩いて 行きますよ。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Ký túc xá - Ga Kobe): **1. じてんしゃ**  \n  - Câu 55 (Chặng 2: Ga Kobe - Ga Osaka): **2. でんしゃ**  \n  - Câu 56 (Chặng 3: Ga Osaka - Ga Nara): **1. バス**  \n  - Câu 57 (Chặng 4: Ga Nara - Công viên Nara): **2. あるいて**",
+          "transcript": "男「カリナさん、日曜日 奈良へ 行きますね。どうやって 行きますか。」\n女「まず、寮から 神戸駅まで 自転車で 行きます。」\n男「神戸駅から 大阪駅までは？」\n女「JRの 電車で 行きます。」\n男「大阪駅から 奈良駅までは 何で 行きますか。」\n女「大阪駅前から 直通の バスに 乗ります。」\n男「奈良駅から 奈良公園までは 近いですか。」\n女「はい、とても 近いですから、歩いて 行きますよ。」",
           "annotationDisabled": true
         },
         {
@@ -2080,7 +2074,6 @@ export const midtermJan01Paper02: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Hành trình di chuyển (Chặng 3)",
-          "passage": "【Đoạn hội thoại mô tả hành trình di chuyển 4 chặng của Miller-san】\n*  \n   男「カリナさん、日曜日 奈良へ 行きますね。どうやって 行きますか。」  \n   女「まず、寮から 神戸駅まで 自転車で 行きます。」  \n   男「神戸駅から 大阪駅までは？」  \n   女「JRの 電車で 行きます。」  \n   男「大阪駅から 奈良駅までは 何で 行きますか。」  \n   女「大阪駅前から 直通の バスに 乗ります。」  \n   男「奈良駅から 奈良公園までは 近いですか。」  \n   女「はい、とても 近いですから、歩いて 行きますよ。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Ký túc xá - Ga Kobe): **1. じてんしゃ**  \n  - Câu 55 (Chặng 2: Ga Kobe - Ga Osaka): **2. でんしゃ**  \n  - Câu 56 (Chặng 3: Ga Osaka - Ga Nara): **1. バス**  \n  - Câu 57 (Chặng 4: Ga Nara - Công viên Nara): **2. あるいて**",
           "prompt": "おおさかえきから ならえきまで 何で 行きますか。",
           "options": [
             "バス",
@@ -2091,7 +2084,7 @@ export const midtermJan01Paper02: JlptPaper = {
           "answer": "バス",
           "explanation": "Hành trình Chặng 3: Theo đoạn hội thoại, phương tiện sử dụng là 「バス」.",
           "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "*  \n   男「カリナさん、日曜日 奈良へ 行きますね。どうやって 行きますか。」  \n   女「まず、寮から 神戸駅まで 自転車で 行きます。」  \n   男「神戸駅から 大阪駅までは？」  \n   女「JRの 電車で 行きます。」  \n   男「大阪駅から 奈良駅までは 何で 行きますか。」  \n   女「大阪駅前から 直通の バスに 乗ります。」  \n   男「奈良駅から 奈良公園までは 近いですか。」  \n   女「はい、とても 近いですから、歩いて 行きますよ。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Ký túc xá - Ga Kobe): **1. じてんしゃ**  \n  - Câu 55 (Chặng 2: Ga Kobe - Ga Osaka): **2. でんしゃ**  \n  - Câu 56 (Chặng 3: Ga Osaka - Ga Nara): **1. バス**  \n  - Câu 57 (Chặng 4: Ga Nara - Công viên Nara): **2. あるいて**",
+          "transcript": "男「カリナさん、日曜日 奈良へ 行きますね。どうやって 行きますか。」\n女「まず、寮から 神戸駅まで 自転車で 行きます。」\n男「神戸駅から 大阪駅までは？」\n女「JRの 電車で 行きます。」\n男「大阪駅から 奈良駅までは 何で 行きますか。」\n女「大阪駅前から 直通の バスに 乗ります。」\n男「奈良駅から 奈良公園までは 近いですか。」\n女「はい、とても 近いですから、歩いて 行きますよ。」",
           "annotationDisabled": true
         },
         {
@@ -2099,7 +2092,6 @@ export const midtermJan01Paper02: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Hành trình di chuyển (Chặng 4)",
-          "passage": "【Đoạn hội thoại mô tả hành trình di chuyển 4 chặng của Miller-san】\n*  \n   男「カリナさん、日曜日 奈良へ 行きますね。どうやって 行きますか。」  \n   女「まず、寮から 神戸駅まで 自転車で 行きます。」  \n   男「神戸駅から 大阪駅までは？」  \n   女「JRの 電車で 行きます。」  \n   男「大阪駅から 奈良駅までは 何で 行きますか。」  \n   女「大阪駅前から 直通の バスに 乗ります。」  \n   男「奈良駅から 奈良公園までは 近いですか。」  \n   女「はい、とても 近いですから、歩いて 行きますよ。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Ký túc xá - Ga Kobe): **1. じてんしゃ**  \n  - Câu 55 (Chặng 2: Ga Kobe - Ga Osaka): **2. でんしゃ**  \n  - Câu 56 (Chặng 3: Ga Osaka - Ga Nara): **1. バス**  \n  - Câu 57 (Chặng 4: Ga Nara - Công viên Nara): **2. あるいて**",
           "prompt": "ならえきから ならこうえんまで 何で 行きますか。",
           "options": [
             "バス",
@@ -2110,7 +2102,7 @@ export const midtermJan01Paper02: JlptPaper = {
           "answer": "あるいて",
           "explanation": "Hành trình Chặng 4: Theo đoạn hội thoại, phương tiện sử dụng là 「あるいて」.",
           "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "*  \n   男「カリナさん、日曜日 奈良へ 行きますね。どうやって 行きますか。」  \n   女「まず、寮から 神戸駅まで 自転車で 行きます。」  \n   男「神戸駅から 大阪駅までは？」  \n   女「JRの 電車で 行きます。」  \n   男「大阪駅から 奈良駅までは 何で 行きますか。」  \n   女「大阪駅前から 直通の バスに 乗ります。」  \n   男「奈良駅から 奈良公園までは 近いですか。」  \n   女「はい、とても 近いですから、歩いて 行きますよ。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Ký túc xá - Ga Kobe): **1. じてんしゃ**  \n  - Câu 55 (Chặng 2: Ga Kobe - Ga Osaka): **2. でんしゃ**  \n  - Câu 56 (Chặng 3: Ga Osaka - Ga Nara): **1. バス**  \n  - Câu 57 (Chặng 4: Ga Nara - Công viên Nara): **2. あるいて**",
+          "transcript": "男「カリナさん、日曜日 奈良へ 行きますね。どうやって 行きますか。」\n女「まず、寮から 神戸駅まで 自転車で 行きます。」\n男「神戸駅から 大阪駅までは？」\n女「JRの 電車で 行きます。」\n男「大阪駅から 奈良駅までは 何で 行きますか。」\n女「大阪駅前から 直通の バスに 乗ります。」\n男「奈良駅から 奈良公園までは 近いですか。」\n女「はい、とても 近いですから、歩いて 行きますよ。」",
           "annotationDisabled": true
         },
         {
@@ -3146,7 +3138,6 @@ export const midtermJan01Paper03: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Hành trình di chuyển (Chặng 1)",
-          "passage": "【Đoạn hội thoại mô tả hành trình di chuyển 4 chặng của Miller-san】\n*  \n   女「サントスさん、来週 ブラジルへ 帰りますね。どうやって 行きますか。」  \n   男「まず、家から 新宿駅まで 電車で 行きます。」  \n   女「新宿駅から 成田空港までは 何で 行きますか。」  \n   男「リムジンバスで 行きます。とても 便利ですよ。」  \n   女「成田空港から サンパウロまでは？」  \n   男「飛行機で 行きます。２６時間くらい かかります。」  \n   女「サンパウロ空港から ご両親の うちまでは？」  \n   男「荷物が 多いですから、空港から タクシーで 帰ります。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Shinjuku): **1. でんしゃ**  \n  - Câu 55 (Chặng 2: Ga Shinjuku - Sân bay Narita): **2. バス**  \n  - Câu 56 (Chặng 3: Sân bay Narita - Sân bay Sao Paulo): **2. ひこうき**  \n  - Câu 57 (Chặng 4: Sân bay - Nhà bố mẹ): **1. タクシー**",
           "prompt": "サントスさんは うちから しんじゅくえきまで 何で 行きますか。",
           "options": [
             "でんしゃ",
@@ -3157,7 +3148,7 @@ export const midtermJan01Paper03: JlptPaper = {
           "answer": "でんしゃ",
           "explanation": "Hành trình Chặng 1: Theo đoạn hội thoại, phương tiện sử dụng là 「でんしゃ」.",
           "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "*  \n   女「サントスさん、来週 ブラジルへ 帰りますね。どうやって 行きますか。」  \n   男「まず、家から 新宿駅まで 電車で 行きます。」  \n   女「新宿駅から 成田空港までは 何で 行きますか。」  \n   男「リムジンバスで 行きます。とても 便利ですよ。」  \n   女「成田空港から サンパウロまでは？」  \n   男「飛行機で 行きます。２６時間くらい かかります。」  \n   女「サンパウロ空港から ご両親の うちまでは？」  \n   男「荷物が 多いですから、空港から タクシーで 帰ります。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Shinjuku): **1. でんしゃ**  \n  - Câu 55 (Chặng 2: Ga Shinjuku - Sân bay Narita): **2. バス**  \n  - Câu 56 (Chặng 3: Sân bay Narita - Sân bay Sao Paulo): **2. ひこうき**  \n  - Câu 57 (Chặng 4: Sân bay - Nhà bố mẹ): **1. タクシー**",
+          "transcript": "女「サントスさん、来週 ブラジルへ 帰りますね。どうやって 行きますか。」\n男「まず、家から 新宿駅まで 電車で 行きます。」\n女「新宿駅から 成田空港までは 何で 行きますか。」\n男「リムジンバスで 行きます。とても 便利ですよ。」\n女「成田空港から サンパウロまでは？」\n男「飛行機で 行きます。２６時間くらい かかります。」\n女「サンパウロ空港から ご両親の うちまでは？」\n男「荷物が 多いですから、タクシーで 行きます。」",
           "annotationDisabled": true
         },
         {
@@ -3165,7 +3156,6 @@ export const midtermJan01Paper03: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Hành trình di chuyển (Chặng 2)",
-          "passage": "【Đoạn hội thoại mô tả hành trình di chuyển 4 chặng của Miller-san】\n*  \n   女「サントスさん、来週 ブラジルへ 帰りますね。どうやって 行きますか。」  \n   男「まず、家から 新宿駅まで 電車で 行きます。」  \n   女「新宿駅から 成田空港までは 何で 行きますか。」  \n   男「リムジンバスで 行きます。とても 便利ですよ。」  \n   女「成田空港から サンパウロまでは？」  \n   男「飛行機で 行きます。２６時間くらい かかります。」  \n   女「サンパウロ空港から ご両親の うちまでは？」  \n   男「荷物が 多いですから、空港から タクシーで 帰ります。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Shinjuku): **1. でんしゃ**  \n  - Câu 55 (Chặng 2: Ga Shinjuku - Sân bay Narita): **2. バス**  \n  - Câu 56 (Chặng 3: Sân bay Narita - Sân bay Sao Paulo): **2. ひこうき**  \n  - Câu 57 (Chặng 4: Sân bay - Nhà bố mẹ): **1. タクシー**",
           "prompt": "しんじゅくえきから なりたくうこうまで 何で 行きますか。",
           "options": [
             "しんかんせん",
@@ -3176,7 +3166,7 @@ export const midtermJan01Paper03: JlptPaper = {
           "answer": "バス",
           "explanation": "Hành trình Chặng 2: Theo đoạn hội thoại, phương tiện sử dụng là 「バス」.",
           "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "*  \n   女「サントスさん、来週 ブラジルへ 帰りますね。どうやって 行きますか。」  \n   男「まず、家から 新宿駅まで 電車で 行きます。」  \n   女「新宿駅から 成田空港までは 何で 行きますか。」  \n   男「リムジンバスで 行きます。とても 便利ですよ。」  \n   女「成田空港から サンパウロまでは？」  \n   男「飛行機で 行きます。２６時間くらい かかります。」  \n   女「サンパウロ空港から ご両親の うちまでは？」  \n   男「荷物が 多いですから、空港から タクシーで 帰ります。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Shinjuku): **1. でんしゃ**  \n  - Câu 55 (Chặng 2: Ga Shinjuku - Sân bay Narita): **2. バス**  \n  - Câu 56 (Chặng 3: Sân bay Narita - Sân bay Sao Paulo): **2. ひこうき**  \n  - Câu 57 (Chặng 4: Sân bay - Nhà bố mẹ): **1. タクシー**",
+          "transcript": "女「サントスさん、来週 ブラジルへ 帰りますね。どうやって 行きますか。」\n男「まず、家から 新宿駅まで 電車で 行きます。」\n女「新宿駅から 成田空港までは 何で 行きますか。」\n男「リムジンバスで 行きます。とても 便利ですよ。」\n女「成田空港から サンパウロまでは？」\n男「飛行機で 行きます。２６時間くらい かかります。」\n女「サンパウロ空港から ご両親の うちまでは？」\n男「荷物が 多いですから、タクシーで 行きます。」",
           "annotationDisabled": true
         },
         {
@@ -3184,7 +3174,6 @@ export const midtermJan01Paper03: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Hành trình di chuyển (Chặng 3)",
-          "passage": "【Đoạn hội thoại mô tả hành trình di chuyển 4 chặng của Miller-san】\n*  \n   女「サントスさん、来週 ブラジルへ 帰りますね。どうやって 行きますか。」  \n   男「まず、家から 新宿駅まで 電車で 行きます。」  \n   女「新宿駅から 成田空港までは 何で 行きますか。」  \n   男「リムジンバスで 行きます。とても 便利ですよ。」  \n   女「成田空港から サンパウロまでは？」  \n   男「飛行機で 行きます。２６時間くらい かかります。」  \n   女「サンパウロ空港から ご両親の うちまでは？」  \n   男「荷物が 多いですから、空港から タクシーで 帰ります。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Shinjuku): **1. でんしゃ**  \n  - Câu 55 (Chặng 2: Ga Shinjuku - Sân bay Narita): **2. バス**  \n  - Câu 56 (Chặng 3: Sân bay Narita - Sân bay Sao Paulo): **2. ひこうき**  \n  - Câu 57 (Chặng 4: Sân bay - Nhà bố mẹ): **1. タクシー**",
           "prompt": "なりたくうこうから サンパウロくうこうまで 何で 行きますか。",
           "options": [
             "ふね",
@@ -3195,7 +3184,7 @@ export const midtermJan01Paper03: JlptPaper = {
           "answer": "ひこうき",
           "explanation": "Hành trình Chặng 3: Theo đoạn hội thoại, phương tiện sử dụng là 「ひこうき」.",
           "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "*  \n   女「サントスさん、来週 ブラジルへ 帰りますね。どうやって 行きますか。」  \n   男「まず、家から 新宿駅まで 電車で 行きます。」  \n   女「新宿駅から 成田空港までは 何で 行きますか。」  \n   男「リムジンバスで 行きます。とても 便利ですよ。」  \n   女「成田空港から サンパウロまでは？」  \n   男「飛行機で 行きます。２６時間くらい かかります。」  \n   女「サンパウロ空港から ご両親の うちまでは？」  \n   男「荷物が 多いですから、空港から タクシーで 帰ります。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Shinjuku): **1. でんしゃ**  \n  - Câu 55 (Chặng 2: Ga Shinjuku - Sân bay Narita): **2. バス**  \n  - Câu 56 (Chặng 3: Sân bay Narita - Sân bay Sao Paulo): **2. ひこうき**  \n  - Câu 57 (Chặng 4: Sân bay - Nhà bố mẹ): **1. タクシー**",
+          "transcript": "女「サントスさん、来週 ブラジルへ 帰りますね。どうやって 行きますか。」\n男「まず、家から 新宿駅まで 電車で 行きます。」\n女「新宿駅から 成田空港までは 何で 行きますか。」\n男「リムジンバスで 行きます。とても 便利ですよ。」\n女「成田空港から サンパウロまでは？」\n男「飛行機で 行きます。２６時間くらい かかります。」\n女「サンパウロ空港から ご両親の うちまでは？」\n男「荷物が 多いですから、タクシーで 行きます。」",
           "annotationDisabled": true
         },
         {
@@ -3203,7 +3192,6 @@ export const midtermJan01Paper03: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Hành trình di chuyển (Chặng 4)",
-          "passage": "【Đoạn hội thoại mô tả hành trình di chuyển 4 chặng của Miller-san】\n*  \n   女「サントスさん、来週 ブラジルへ 帰りますね。どうやって 行きますか。」  \n   男「まず、家から 新宿駅まで 電車で 行きます。」  \n   女「新宿駅から 成田空港までは 何で 行きますか。」  \n   男「リムジンバスで 行きます。とても 便利ですよ。」  \n   女「成田空港から サンパウロまでは？」  \n   男「飛行機で 行きます。２６時間くらい かかります。」  \n   女「サンパウロ空港から ご両親の うちまでは？」  \n   男「荷物が 多いですから、空港から タクシーで 帰ります。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Shinjuku): **1. でんしゃ**  \n  - Câu 55 (Chặng 2: Ga Shinjuku - Sân bay Narita): **2. バス**  \n  - Câu 56 (Chặng 3: Sân bay Narita - Sân bay Sao Paulo): **2. ひこうき**  \n  - Câu 57 (Chặng 4: Sân bay - Nhà bố mẹ): **1. タクシー**",
           "prompt": "サンパウロくうこうから りょうしんの うちまで 何で 行きますか。",
           "options": [
             "タクシー",
@@ -3214,7 +3202,7 @@ export const midtermJan01Paper03: JlptPaper = {
           "answer": "タクシー",
           "explanation": "Hành trình Chặng 4: Theo đoạn hội thoại, phương tiện sử dụng là 「タクシー」.",
           "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "*  \n   女「サントスさん、来週 ブラジルへ 帰りますね。どうやって 行きますか。」  \n   男「まず、家から 新宿駅まで 電車で 行きます。」  \n   女「新宿駅から 成田空港までは 何で 行きますか。」  \n   男「リムジンバスで 行きます。とても 便利ですよ。」  \n   女「成田空港から サンパウロまでは？」  \n   男「飛行機で 行きます。２６時間くらい かかります。」  \n   女「サンパウロ空港から ご両親の うちまでは？」  \n   男「荷物が 多いですから、空港から タクシーで 帰ります。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Shinjuku): **1. でんしゃ**  \n  - Câu 55 (Chặng 2: Ga Shinjuku - Sân bay Narita): **2. バス**  \n  - Câu 56 (Chặng 3: Sân bay Narita - Sân bay Sao Paulo): **2. ひこうき**  \n  - Câu 57 (Chặng 4: Sân bay - Nhà bố mẹ): **1. タクシー**",
+          "transcript": "女「サントスさん、来週 ブラジルへ 帰りますね。どうやって 行きますか。」\n男「まず、家から 新宿駅まで 電車で 行きます。」\n女「新宿駅から 成田空港までは 何で 行きますか。」\n男「リムジンバスで 行きます。とても 便利ですよ。」\n女「成田空港から サンパウロまでは？」\n男「飛行機で 行きます。２６時間くらい かかります。」\n女「サンパウロ空港から ご両親の うちまでは？」\n男「荷物が 多いですから、タクシーで 行きます。」",
           "annotationDisabled": true
         },
         {
@@ -4250,7 +4238,6 @@ export const midtermJan01Paper04: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Hành trình di chuyển (Chặng 1)",
-          "passage": "【Đoạn hội thoại mô tả hành trình di chuyển 4 chặng của Miller-san】\n*  \n   女「田中さん、来週 広島へ 行きますね。何で 行きますか。」  \n   男「まず、朝 ６時半に うちを出て、品川駅まで バスで行きます。」  \n   女「品川駅から 広島駅までは？」  \n   男「新幹線で行きます。４時間くらいですね。」  \n   女「広島駅から ホテルまでは 何で行きますか。」  \n   男「路面電車（でんしゃ）で行きます。」  \n   女「ホテルから 広島支社までは 遠いですか。」  \n   男「いいえ、すぐ 近くですから、歩いて 行きます。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Shinagawa): **1. バス**  \n  - Câu 55 (Chặng 2: Ga Shinagawa - Ga Hiroshima): **2. しんかんせん**  \n  - Câu 56 (Chặng 3: Ga Hiroshima - Khách sạn): **3. でんしゃ**  \n  - Câu 57 (Chặng 4: Khách sạn - Chi nhánh): **1. あるいて**",
           "prompt": "田中さんは うちから 品川駅まで 何で 行きますか。",
           "options": [
             "バス",
@@ -4261,7 +4248,7 @@ export const midtermJan01Paper04: JlptPaper = {
           "answer": "バス",
           "explanation": "Hành trình Chặng 1: Theo đoạn hội thoại, phương tiện sử dụng là 「バス」.",
           "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "*  \n   女「田中さん、来週 広島へ 行きますね。何で 行きますか。」  \n   男「まず、朝 ６時半に うちを出て、品川駅まで バスで行きます。」  \n   女「品川駅から 広島駅までは？」  \n   男「新幹線で行きます。４時間くらいですね。」  \n   女「広島駅から ホテルまでは 何で行きますか。」  \n   男「路面電車（でんしゃ）で行きます。」  \n   女「ホテルから 広島支社までは 遠いですか。」  \n   男「いいえ、すぐ 近くですから、歩いて 行きます。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Shinagawa): **1. バス**  \n  - Câu 55 (Chặng 2: Ga Shinagawa - Ga Hiroshima): **2. しんかんせん**  \n  - Câu 56 (Chặng 3: Ga Hiroshima - Khách sạn): **3. でんしゃ**  \n  - Câu 57 (Chặng 4: Khách sạn - Chi nhánh): **1. あるいて**",
+          "transcript": "女「田中さん、来週 広島へ 行きますね。何で 行きますか。」\n男「まず、朝 ６時半に うちを出て、品川駅まで バスで行きます。」\n女「品川駅から 広島駅までは？」\n男「新幹線で行きます。４時間くらいですね。」\n女「広島駅から ホテルまでは 何で行きますか。」\n男「路面電車（でんしゃ）で行きます。」\n女「ホテルから 広島支社までは 遠いですか。」\n男「いいえ、すぐ 近くですから、歩いて 行きます。」",
           "annotationDisabled": true
         },
         {
@@ -4269,7 +4256,6 @@ export const midtermJan01Paper04: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Hành trình di chuyển (Chặng 2)",
-          "passage": "【Đoạn hội thoại mô tả hành trình di chuyển 4 chặng của Miller-san】\n*  \n   女「田中さん、来週 広島へ 行きますね。何で 行きますか。」  \n   男「まず、朝 ６時半に うちを出て、品川駅まで バスで行きます。」  \n   女「品川駅から 広島駅までは？」  \n   男「新幹線で行きます。４時間くらいですね。」  \n   女「広島駅から ホテルまでは 何で行きますか。」  \n   男「路面電車（でんしゃ）で行きます。」  \n   女「ホテルから 広島支社までは 遠いですか。」  \n   男「いいえ、すぐ 近くですから、歩いて 行きます。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Shinagawa): **1. バス**  \n  - Câu 55 (Chặng 2: Ga Shinagawa - Ga Hiroshima): **2. しんかんせん**  \n  - Câu 56 (Chặng 3: Ga Hiroshima - Khách sạn): **3. でんしゃ**  \n  - Câu 57 (Chặng 4: Khách sạn - Chi nhánh): **1. あるいて**",
           "prompt": "品川駅から 広島駅まで 何で 行きますか。",
           "options": [
             "ひこうき",
@@ -4280,7 +4266,7 @@ export const midtermJan01Paper04: JlptPaper = {
           "answer": "しんかんせん",
           "explanation": "Hành trình Chặng 2: Theo đoạn hội thoại, phương tiện sử dụng là 「しんかんせん」.",
           "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "*  \n   女「田中さん、来週 広島へ 行きますね。何で 行きますか。」  \n   男「まず、朝 ６時半に うちを出て、品川駅まで バスで行きます。」  \n   女「品川駅から 広島駅までは？」  \n   男「新幹線で行きます。４時間くらいですね。」  \n   女「広島駅から ホテルまでは 何で行きますか。」  \n   男「路面電車（でんしゃ）で行きます。」  \n   女「ホテルから 広島支社までは 遠いですか。」  \n   男「いいえ、すぐ 近くですから、歩いて 行きます。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Shinagawa): **1. バス**  \n  - Câu 55 (Chặng 2: Ga Shinagawa - Ga Hiroshima): **2. しんかんせん**  \n  - Câu 56 (Chặng 3: Ga Hiroshima - Khách sạn): **3. でんしゃ**  \n  - Câu 57 (Chặng 4: Khách sạn - Chi nhánh): **1. あるいて**",
+          "transcript": "女「田中さん、来週 広島へ 行きますね。何で 行きますか。」\n男「まず、朝 ６時半に うちを出て、品川駅まで バスで行きます。」\n女「品川駅から 広島駅までは？」\n男「新幹線で行きます。４時間くらいですね。」\n女「広島駅から ホテルまでは 何で行きますか。」\n男「路面電車（でんしゃ）で行きます。」\n女「ホテルから 広島支社までは 遠いですか。」\n男「いいえ、すぐ 近くですから、歩いて 行きます。」",
           "annotationDisabled": true
         },
         {
@@ -4288,7 +4274,6 @@ export const midtermJan01Paper04: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Hành trình di chuyển (Chặng 3)",
-          "passage": "【Đoạn hội thoại mô tả hành trình di chuyển 4 chặng của Miller-san】\n*  \n   女「田中さん、来週 広島へ 行きますね。何で 行きますか。」  \n   男「まず、朝 ６時半に うちを出て、品川駅まで バスで行きます。」  \n   女「品川駅から 広島駅までは？」  \n   男「新幹線で行きます。４時間くらいですね。」  \n   女「広島駅から ホテルまでは 何で行きますか。」  \n   男「路面電車（でんしゃ）で行きます。」  \n   女「ホテルから 広島支社までは 遠いですか。」  \n   男「いいえ、すぐ 近くですから、歩いて 行きます。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Shinagawa): **1. バス**  \n  - Câu 55 (Chặng 2: Ga Shinagawa - Ga Hiroshima): **2. しんかんせん**  \n  - Câu 56 (Chặng 3: Ga Hiroshima - Khách sạn): **3. でんしゃ**  \n  - Câu 57 (Chặng 4: Khách sạn - Chi nhánh): **1. あるいて**",
           "prompt": "広島駅から ホテルまで 何で 行きますか。",
           "options": [
             "タクシー",
@@ -4299,7 +4284,7 @@ export const midtermJan01Paper04: JlptPaper = {
           "answer": "でんしゃ",
           "explanation": "Hành trình Chặng 3: Theo đoạn hội thoại, phương tiện sử dụng là 「でんしゃ」.",
           "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "*  \n   女「田中さん、来週 広島へ 行きますね。何で 行きますか。」  \n   男「まず、朝 ６時半に うちを出て、品川駅まで バスで行きます。」  \n   女「品川駅から 広島駅までは？」  \n   男「新幹線で行きます。４時間くらいですね。」  \n   女「広島駅から ホテルまでは 何で行きますか。」  \n   男「路面電車（でんしゃ）で行きます。」  \n   女「ホテルから 広島支社までは 遠いですか。」  \n   男「いいえ、すぐ 近くですから、歩いて 行きます。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Shinagawa): **1. バス**  \n  - Câu 55 (Chặng 2: Ga Shinagawa - Ga Hiroshima): **2. しんかんせん**  \n  - Câu 56 (Chặng 3: Ga Hiroshima - Khách sạn): **3. でんしゃ**  \n  - Câu 57 (Chặng 4: Khách sạn - Chi nhánh): **1. あるいて**",
+          "transcript": "女「田中さん、来週 広島へ 行きますね。何で 行きますか。」\n男「まず、朝 ６時半に うちを出て、品川駅まで バスで行きます。」\n女「品川駅から 広島駅までは？」\n男「新幹線で行きます。４時間くらいですね。」\n女「広島駅から ホテルまでは 何で行きますか。」\n男「路面電車（でんしゃ）で行きます。」\n女「ホテルから 広島支社までは 遠いですか。」\n男「いいえ、すぐ 近くですから、歩いて 行きます。」",
           "annotationDisabled": true
         },
         {
@@ -4307,7 +4292,6 @@ export const midtermJan01Paper04: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Hành trình di chuyển (Chặng 4)",
-          "passage": "【Đoạn hội thoại mô tả hành trình di chuyển 4 chặng của Miller-san】\n*  \n   女「田中さん、来週 広島へ 行きますね。何で 行きますか。」  \n   男「まず、朝 ６時半に うちを出て、品川駅まで バスで行きます。」  \n   女「品川駅から 広島駅までは？」  \n   男「新幹線で行きます。４時間くらいですね。」  \n   女「広島駅から ホテルまでは 何で行きますか。」  \n   男「路面電車（でんしゃ）で行きます。」  \n   女「ホテルから 広島支社までは 遠いですか。」  \n   男「いいえ、すぐ 近くですから、歩いて 行きます。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Shinagawa): **1. バス**  \n  - Câu 55 (Chặng 2: Ga Shinagawa - Ga Hiroshima): **2. しんかんせん**  \n  - Câu 56 (Chặng 3: Ga Hiroshima - Khách sạn): **3. でんしゃ**  \n  - Câu 57 (Chặng 4: Khách sạn - Chi nhánh): **1. あるいて**",
           "prompt": "ホテルから 広島支社まで 何で 行きますか。",
           "options": [
             "あるいて",
@@ -4318,7 +4302,7 @@ export const midtermJan01Paper04: JlptPaper = {
           "answer": "あるいて",
           "explanation": "Hành trình Chặng 4: Theo đoạn hội thoại, phương tiện sử dụng là 「あるいて」.",
           "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "*  \n   女「田中さん、来週 広島へ 行きますね。何で 行きますか。」  \n   男「まず、朝 ６時半に うちを出て、品川駅まで バスで行きます。」  \n   女「品川駅から 広島駅までは？」  \n   男「新幹線で行きます。４時間くらいですね。」  \n   女「広島駅から ホテルまでは 何で行きますか。」  \n   男「路面電車（でんしゃ）で行きます。」  \n   女「ホテルから 広島支社までは 遠いですか。」  \n   男「いいえ、すぐ 近くですから、歩いて 行きます。」  \n- **Đáp án:**  \n  - Câu 54 (Chặng 1: Nhà - Ga Shinagawa): **1. バス**  \n  - Câu 55 (Chặng 2: Ga Shinagawa - Ga Hiroshima): **2. しんかんせん**  \n  - Câu 56 (Chặng 3: Ga Hiroshima - Khách sạn): **3. でんしゃ**  \n  - Câu 57 (Chặng 4: Khách sạn - Chi nhánh): **1. あるいて**",
+          "transcript": "女「田中さん、来週 広島へ 行きますね。何で 行きますか。」\n男「まず、朝 ６時半に うちを出て、品川駅まで バスで行きます。」\n女「品川駅から 広島駅までは？」\n男「新幹線で行きます。４時間くらいですね。」\n女「広島駅から ホテルまでは 何で行きますか。」\n男「路面電車（でんしゃ）で行きます。」\n女「ホテルから 広島支社までは 遠いですか。」\n男「いいえ、すぐ 近くですから、歩いて 行きます。」",
           "annotationDisabled": true
         },
         {
