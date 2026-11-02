@@ -4,7 +4,7 @@ import type { JlptSummary } from '../../../../packages/shared/jlpt-types';
 import { jlptPapers, paperSummary } from '../../../../packages/shared/jlpt-papers';
 import { getLocalHistoryAttempts } from '../../../../packages/shared/jlpt-client-runner';
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import {
   ArrowLeft,
@@ -20,6 +20,8 @@ import {
   Trophy,
   Target,
   GraduationCap,
+  BookOpen,
+  Sparkles,
 } from 'lucide-react';
 import { api, post } from '../services/api';
 import { useUI } from '../stores/ui';
@@ -141,6 +143,14 @@ export function QuestionInput({
 export function Tests() {
   const [review, setReview] = useState<Attempt | null>(null);
   const [selectedExamLevel, setSelectedExamLevel] = useState<string>('all');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const initialTab = searchParams.get('tab') === 'midterm' ? 'midterm' : 'jlpt';
+  const [activeTab, setActiveTab] = useState<'jlpt' | 'midterm'>(initialTab);
+
+  const handleTabChange = (tab: 'jlpt' | 'midterm') => {
+    setActiveTab(tab);
+    setSearchParams(tab === 'midterm' ? { tab: 'midterm' } : {});
+  };
 
   const { data, isLoading, error } = useQuery({
     queryKey: ['tests'],
@@ -173,207 +183,434 @@ export function Tests() {
     },
   });
 
-  const examLevels = ['N5', 'N4', 'N3', 'N2', 'N1'] as const;
   const allExams = data || [];
+  const jlptExams = allExams.filter((t) => !t.isMidterm);
+  const midtermExams = allExams.filter((t) => t.isMidterm);
+
+  const examLevels = ['N5', 'N4', 'N3', 'N2', 'N1'] as const;
   const examCounts = {
-    all: allExams.length,
-    N5: allExams.filter((t) => t.level === 'N5').length,
-    N4: allExams.filter((t) => t.level === 'N4').length,
-    N3: allExams.filter((t) => t.level === 'N3').length,
-    N2: allExams.filter((t) => t.level === 'N2').length,
-    N1: allExams.filter((t) => t.level === 'N1').length,
+    all: jlptExams.length,
+    N5: jlptExams.filter((t) => t.level === 'N5').length,
+    N4: jlptExams.filter((t) => t.level === 'N4').length,
+    N3: jlptExams.filter((t) => t.level === 'N3').length,
+    N2: jlptExams.filter((t) => t.level === 'N2').length,
+    N1: jlptExams.filter((t) => t.level === 'N1').length,
   };
 
   const filteredExams =
     selectedExamLevel === 'all'
-      ? allExams
-      : allExams.filter((t) => t.level === selectedExamLevel);
+      ? jlptExams
+      : jlptExams.filter((t) => t.level === selectedExamLevel);
 
   return (
     <>
-      <PageHeader
-        eyebrow="BIẾT MÌNH ĐÃ ĐI ĐƯỢC BAO XA"
-        title="Luyện đề thi JLPT (N1–N5)"
-        description="Đề thi đầy đủ thời gian theo cấu trúc chuẩn JLPT. Chấm điểm ở server, lưu bài đang làm và xem lại kết quả từng nhóm."
-      />
-
-      {/* Banner linking to Luyện kỹ năng */}
+      {/* Top Mode Selector: JLPT Exams vs Midterm Practice */}
       <div
+        className="tabs inline-actions"
+        role="tablist"
+        aria-label="Phân loại đề thi"
         style={{
           display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          padding: '14px 18px',
-          backgroundColor: 'var(--surface)',
-          borderRadius: '10px',
-          border: '1px solid var(--line)',
-          marginBlock: '16px 20px',
-          flexWrap: 'wrap',
           gap: '12px',
+          marginBottom: '20px',
+          borderBottom: '1px solid var(--line)',
+          paddingBottom: '14px',
+          flexWrap: 'wrap',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <Target size={20} style={{ color: 'var(--jade)', flexShrink: 0 }} />
-          <span style={{ fontSize: '14px', color: 'var(--ink)' }}>
-            Bạn muốn rèn luyện từng kỹ năng riêng biệt (Nghe, Đọc, Từ vựng, Ngữ pháp)?
-          </span>
-        </div>
-        <Link
-          to="/skills"
-          className="pill-btn active"
+        <button
+          role="tab"
+          aria-selected={activeTab === 'jlpt'}
+          className={activeTab === 'jlpt' ? 'active' : ''}
+          onClick={() => handleTabChange('jlpt')}
           style={{
             display: 'inline-flex',
             alignItems: 'center',
-            gap: '6px',
-            padding: '8px 16px',
-            borderRadius: '6px',
-            background: 'var(--jade)',
-            color: '#fff',
-            textDecoration: 'none',
-            fontSize: '13px',
+            gap: '8px',
+            fontSize: '15px',
             fontWeight: 600,
-            whiteSpace: 'nowrap',
+            padding: '10px 18px',
+            borderRadius: '8px',
           }}
         >
-          Sang mục Luyện kỹ năng <ArrowRight size={14} />
-        </Link>
-      </div>
-
-      {/* Level Filter Bar */}
-      <div className="tabs inline-actions spaced" role="tablist" aria-label="Lọc cấp độ đề thi" style={{ marginBlock: '16px', flexWrap: 'wrap' }}>
+          <GraduationCap size={18} />
+          <span>Luyện đề thi JLPT (N1–N5)</span>
+          <span className="tab-badge">{jlptExams.length}</span>
+        </button>
         <button
           role="tab"
-          aria-selected={selectedExamLevel === 'all'}
-          className={selectedExamLevel === 'all' ? 'active' : ''}
-          onClick={() => setSelectedExamLevel('all')}
+          aria-selected={activeTab === 'midterm'}
+          className={activeTab === 'midterm' ? 'active' : ''}
+          onClick={() => handleTabChange('midterm')}
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            fontSize: '15px',
+            fontWeight: 600,
+            padding: '10px 18px',
+            borderRadius: '8px',
+            borderColor: activeTab === 'midterm' ? 'var(--peach)' : undefined,
+          }}
         >
-          <span>Tất cả</span>
-          <span className="tab-badge">{examCounts.all}</span>
-        </button>
-        {examLevels.map((lvl) => (
-          <button
-            key={lvl}
-            role="tab"
-            aria-selected={selectedExamLevel === lvl}
-            className={selectedExamLevel === lvl ? 'active' : ''}
-            onClick={() => setSelectedExamLevel(lvl)}
+          <BookOpen size={18} />
+          <span>Ôn thi Giữa kỳ (JAN01)</span>
+          <span
+            className="tab-badge"
+            style={{
+              background: activeTab === 'midterm' ? 'var(--peach)' : 'var(--surface-sunken)',
+              color: activeTab === 'midterm' ? '#fff' : 'inherit',
+              fontWeight: 700,
+            }}
           >
-            <span>JLPT {lvl}</span>
-            <span className="tab-badge">{examCounts[lvl]}</span>
-          </button>
-        ))}
+            {midtermExams.length} đề mới
+          </span>
+        </button>
       </div>
 
-      {isLoading ? (
-        <Loading />
-      ) : error ? (
-        <ErrorState error={error} />
-      ) : filteredExams.length === 0 ? (
-        <div className="panel" style={{ textAlign: 'center', padding: '36px 20px', marginBlock: '20px' }}>
-          <GraduationCap size={36} style={{ color: 'var(--muted)', margin: '0 auto 12px auto' }} />
-          <h3 style={{ fontSize: '18px', marginBottom: '8px' }}>Chưa có đề thi trọn gói 3 phần cho JLPT {selectedExamLevel}</h3>
-          <p style={{ color: 'var(--muted)', maxWidth: '540px', margin: '0 auto 18px auto', fontSize: '14px' }}>
-            Tuyển tập đề thi JLPT {selectedExamLevel} hiện đã được đưa vào phần <strong>Luyện kỹ năng</strong> (Đọc hiểu, Ngữ pháp, Từ vựng) để bạn luyện tập từng cấu trúc chuyên sâu.
-          </p>
-          <Link
-            to="/skills"
-            className="button"
-            style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', textDecoration: 'none' }}
-          >
-            <Target size={16} /> Chuyển sang Luyện kỹ năng JLPT {selectedExamLevel}
-          </Link>
-        </div>
-      ) : (
-        <div className="test-grid">
-          {filteredExams.map((t, i) => (
-            <Link
-              className="test-card test-card-official"
-              to={'/tests/' + t.id}
-              key={t.id}
-            >
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  marginBottom: '8px',
-                  gap: '8px',
-                  flexWrap: 'wrap',
-                }}
-              >
-                <span className="eyebrow" style={{ margin: 0, color: 'var(--jade)', fontWeight: 700 }}>
-                  {t.level} · {t.isOfficial ? 'ĐỀ THI CHÍNH THỨC' : 'ĐỀ LUYỆN TẬP'}
-                </span>
-                <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
-                  <span
-                    className="tag"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '4px',
-                      color: t.keySource === 'Đáp án tham khảo' ? 'var(--peach)' : 'var(--jade)',
-                      borderColor: t.keySource === 'Đáp án tham khảo' ? 'var(--peach)' : 'var(--jade)',
-                      padding: '2px 8px',
-                      borderRadius: '4px',
-                      fontSize: '11px',
-                      fontWeight: 600,
-                    }}
-                  >
-                    {t.keySource || (t.isOfficial ? 'Đáp án gốc' : 'Đáp án chuẩn')}
-                  </span>
-                  <span
-                    className="tag"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '4px',
-                      color: t.isDuplicateAudio ? 'var(--peach)' : 'var(--ocean)',
-                      borderColor: t.isDuplicateAudio ? 'var(--peach)' : 'var(--ocean)',
-                      padding: '2px 8px',
-                      borderRadius: '4px',
-                      fontSize: '11px',
-                      fontWeight: 600,
-                    }}
-                  >
-                    <Headphones size={12} />
-                    {t.isDuplicateAudio ? (t.duplicateNote || 'Audio trùng 2010–2011') : 'Audio gốc · khớp tự động'}
-                  </span>
-                </div>
-              </div>
-              <span className="test-number">{String(i + 1).padStart(2, '0')}</span>
-              <h2>{t.title}</h2>
-              <p>
-                {t.total} câu · {t.minutes} phút · {t.sections.length} phần
-              </p>
-              <ul className="jlpt-card-sections">
-                {t.sections.map((s) => (
-                  <li key={s.id}>
-                    {s.title}: {s.minutes} phút ({s.count} câu)
-                  </li>
-                ))}
-              </ul>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 'auto' }}>
-                <span>Vào phòng thi & bấm giờ</span>
-                <ArrowRight size={19} />
-              </div>
-            </Link>
-          ))}
-        </div>
-      )}
+      {activeTab === 'jlpt' ? (
+        <>
+          <PageHeader
+            eyebrow="BIẾT MÌNH ĐÃ ĐI ĐƯỢC BAO XA"
+            title="Luyện đề thi JLPT (N1–N5)"
+            description="Đề thi đầy đủ thời gian theo cấu trúc chuẩn JLPT. Chấm điểm ở server, lưu bài đang làm và xem lại kết quả từng nhóm."
+          />
 
-      <p className="spaced">
-        Câu hỏi được tổng hợp bám sát JLPT và đề thi chính thức được cung cấp kèm âm thanh gốc đồng bộ theo từng
-        câu. Điểm hiển thị là tỷ lệ câu đúng, không phải thang 180 của JLPT.{' '}
-        <a
-          className="text-link"
-          href="https://www.jlpt.jp/e/guideline/testsections.html"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Cấu trúc JLPT chính thức
-        </a>
-        .
-      </p>
+          {/* Banner linking to Luyện kỹ năng */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              padding: '14px 18px',
+              backgroundColor: 'var(--surface)',
+              borderRadius: '10px',
+              border: '1px solid var(--line)',
+              marginBlock: '16px 20px',
+              flexWrap: 'wrap',
+              gap: '12px',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <Target size={20} style={{ color: 'var(--jade)', flexShrink: 0 }} />
+              <span style={{ fontSize: '14px', color: 'var(--ink)' }}>
+                Bạn muốn rèn luyện từng kỹ năng riêng biệt (Nghe, Đọc, Từ vựng, Ngữ pháp)?
+              </span>
+            </div>
+            <Link
+              to="/skills"
+              className="pill-btn active"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                padding: '8px 16px',
+                borderRadius: '6px',
+                background: 'var(--jade)',
+                color: '#fff',
+                textDecoration: 'none',
+                fontSize: '13px',
+                fontWeight: 600,
+                whiteSpace: 'nowrap',
+              }}
+            >
+              Sang mục Luyện kỹ năng <ArrowRight size={14} />
+            </Link>
+          </div>
+
+          {/* Level Filter Bar */}
+          <div className="tabs inline-actions spaced" role="tablist" aria-label="Lọc cấp độ đề thi" style={{ marginBlock: '16px', flexWrap: 'wrap' }}>
+            <button
+              role="tab"
+              aria-selected={selectedExamLevel === 'all'}
+              className={selectedExamLevel === 'all' ? 'active' : ''}
+              onClick={() => setSelectedExamLevel('all')}
+            >
+              <span>Tất cả</span>
+              <span className="tab-badge">{examCounts.all}</span>
+            </button>
+            {examLevels.map((lvl) => (
+              <button
+                key={lvl}
+                role="tab"
+                aria-selected={selectedExamLevel === lvl}
+                className={selectedExamLevel === lvl ? 'active' : ''}
+                onClick={() => setSelectedExamLevel(lvl)}
+              >
+                <span>JLPT {lvl}</span>
+                <span className="tab-badge">{examCounts[lvl]}</span>
+              </button>
+            ))}
+          </div>
+
+          {isLoading ? (
+            <Loading />
+          ) : error ? (
+            <ErrorState error={error} />
+          ) : filteredExams.length === 0 ? (
+            <div className="panel" style={{ textAlign: 'center', padding: '36px 20px', marginBlock: '20px' }}>
+              <GraduationCap size={36} style={{ color: 'var(--muted)', margin: '0 auto 12px auto' }} />
+              <h3 style={{ fontSize: '18px', marginBottom: '8px' }}>Chưa có đề thi trọn gói 3 phần cho JLPT {selectedExamLevel}</h3>
+              <p style={{ color: 'var(--muted)', maxWidth: '540px', margin: '0 auto 18px auto', fontSize: '14px' }}>
+                Tuyển tập đề thi JLPT {selectedExamLevel} hiện đã được đưa vào phần <strong>Luyện kỹ năng</strong> (Đọc hiểu, Ngữ pháp, Từ vựng) để bạn luyện tập từng cấu trúc chuyên sâu.
+              </p>
+              <Link
+                to="/skills"
+                className="button"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', textDecoration: 'none' }}
+              >
+                <Target size={16} /> Chuyển sang Luyện kỹ năng JLPT {selectedExamLevel}
+              </Link>
+            </div>
+          ) : (
+            <div className="test-grid">
+              {filteredExams.map((t, i) => (
+                <Link
+                  className="test-card test-card-official"
+                  to={'/tests/' + t.id}
+                  key={t.id}
+                >
+                  <div
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      marginBottom: '8px',
+                      gap: '8px',
+                      flexWrap: 'wrap',
+                    }}
+                  >
+                    <span className="eyebrow" style={{ margin: 0, color: 'var(--jade)', fontWeight: 700 }}>
+                      {t.level} · {t.isOfficial ? 'ĐỀ THI CHÍNH THỨC' : 'ĐỀ LUYỆN TẬP'}
+                    </span>
+                    <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
+                      <span
+                        className="tag"
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '4px',
+                          color: t.keySource === 'Đáp án tham khảo' ? 'var(--peach)' : 'var(--jade)',
+                          borderColor: t.keySource === 'Đáp án tham khảo' ? 'var(--peach)' : 'var(--jade)',
+                          padding: '2px 8px',
+                          borderRadius: '4px',
+                          fontSize: '11px',
+                          fontWeight: 600,
+                        }}
+                      >
+                        {t.keySource || (t.isOfficial ? 'Đáp án gốc' : 'Đáp án chuẩn')}
+                      </span>
+                      <span
+                        className="tag"
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '4px',
+                          color: t.isDuplicateAudio ? 'var(--peach)' : 'var(--ocean)',
+                          borderColor: t.isDuplicateAudio ? 'var(--peach)' : 'var(--ocean)',
+                          padding: '2px 8px',
+                          borderRadius: '4px',
+                          fontSize: '11px',
+                          fontWeight: 600,
+                        }}
+                      >
+                        <Headphones size={12} />
+                        {t.isDuplicateAudio ? (t.duplicateNote || 'Audio trùng 2010–2011') : 'Audio gốc · khớp tự động'}
+                      </span>
+                    </div>
+                  </div>
+                  <span className="test-number">{String(i + 1).padStart(2, '0')}</span>
+                  <h2>{t.title}</h2>
+                  <p>
+                    {t.total} câu · {t.minutes} phút · {t.sections.length} phần
+                  </p>
+                  <ul className="jlpt-card-sections">
+                    {t.sections.map((s) => (
+                      <li key={s.id}>
+                        {s.title}: {s.minutes} phút ({s.count} câu)
+                      </li>
+                    ))}
+                  </ul>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 'auto' }}>
+                    <span>Vào phòng thi & bấm giờ</span>
+                    <ArrowRight size={19} />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
+
+          <p className="spaced">
+            Câu hỏi được tổng hợp bám sát JLPT và đề thi chính thức được cung cấp kèm âm thanh gốc đồng bộ theo từng
+            câu. Điểm hiển thị là tỷ lệ câu đúng, không phải thang 180 của JLPT.{' '}
+            <a
+              className="text-link"
+              href="https://www.jlpt.jp/e/guideline/testsections.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Cấu trúc JLPT chính thức
+            </a>
+            .
+          </p>
+        </>
+      ) : (
+        <>
+          {/* Dedicated Midterm Practice Section */}
+          <PageHeader
+            eyebrow="CHUẨN HỌC PHẦN TIẾNG NHẬT 1 · KHÓA JAN01"
+            title="Ôn thi Giữa kỳ (JAN01)"
+            description="Bộ 4 đề thi thử giữa kỳ theo chuẩn cấu trúc 100 điểm (70 phút) bám sát 100% phạm vi Minna no Nihongo Bài 1 ～ 5 & Hán tự 1A, 1B, 2A, 2B. Gồm 2 phần: Kiến thức ngôn ngữ & Đọc hiểu (60 phút, 50 câu) và Nghe hiểu (10 phút, 15 câu với audio thi thật JLPT)."
+          />
+
+          {/* Midterm Syllabus & Format Specs Banner */}
+          <div
+            style={{
+              padding: '16px 20px',
+              backgroundColor: 'var(--surface)',
+              borderRadius: '10px',
+              border: '1px solid var(--line)',
+              marginBlock: '16px 24px',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
+              <Sparkles size={20} style={{ color: 'var(--peach)', flexShrink: 0 }} />
+              <strong style={{ fontSize: '15px', color: 'var(--ink)' }}>
+                Quy chuẩn đề thi giữa kỳ Khóa JAN01 (Đại học FPT)
+              </strong>
+            </div>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+                gap: '12px',
+                fontSize: '13px',
+                lineHeight: 1.5,
+                color: 'var(--muted)',
+              }}
+            >
+              <div style={{ background: 'var(--surface-sunken)', padding: '10px 14px', borderRadius: '8px' }}>
+                <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>
+                  📖 Phạm vi Ngữ pháp & Từ vựng
+                </strong>
+                Minna no Nihongo Bài 1 ～ 5 (Trợ từ は, も, の, か, へ, で, と, から, まで; Dấu sao ★; Nghi vấn từ).
+              </div>
+              <div style={{ background: 'var(--surface-sunken)', padding: '10px 14px', borderRadius: '8px' }}>
+                <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>
+                  ✍️ Phạm vi Hán tự (Kanji)
+                </strong>
+                4 bộ Hán tự 1A, 1B, 2A, 2B (Cách đọc chữ Hán, Cách viết chữ Hán, Số đếm & Số tiền Yên).
+              </div>
+              <div style={{ background: 'var(--surface-sunken)', padding: '10px 14px', borderRadius: '8px' }}>
+                <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>
+                  ⏱️ Thang điểm & Thời gian
+                </strong>
+                100 điểm / 70 phút: Phần I (60 phút, 50 câu = 80 điểm) + Phần II (10 phút, 15 câu = 20 điểm).
+              </div>
+              <div style={{ background: 'var(--surface-sunken)', padding: '10px 14px', borderRadius: '8px' }}>
+                <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>
+                  🎧 Âm thanh chuẩn thi thật
+                </strong>
+                100% file âm thanh trích xuất từ cơ sở dữ liệu JLPT N5 thi thật (không trùng đề mẫu giảng viên).
+              </div>
+            </div>
+          </div>
+
+          {isLoading ? (
+            <Loading />
+          ) : error ? (
+            <ErrorState error={error} />
+          ) : (
+            <div className="test-grid">
+              {midtermExams.map((t, i) => (
+                <Link
+                  className="test-card test-card-official"
+                  to={'/tests/' + t.id}
+                  key={t.id}
+                  style={{
+                    borderColor: 'var(--peach)',
+                    boxShadow: '0 2px 10px rgba(240, 100, 70, 0.08)',
+                  }}
+                >
+                  <div
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      marginBottom: '8px',
+                      gap: '8px',
+                      flexWrap: 'wrap',
+                    }}
+                  >
+                    <span className="eyebrow" style={{ margin: 0, color: 'var(--peach)', fontWeight: 700 }}>
+                      GIỮA KỲ JAN01 · ĐỀ SỐ 0{i + 1}
+                    </span>
+                    <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
+                      <span
+                        className="tag"
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '4px',
+                          color: 'var(--jade)',
+                          borderColor: 'var(--jade)',
+                          padding: '2px 8px',
+                          borderRadius: '4px',
+                          fontSize: '11px',
+                          fontWeight: 600,
+                        }}
+                      >
+                        <CheckCircle size={12} />
+                        Chuẩn 100 điểm
+                      </span>
+                      <span
+                        className="tag"
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '4px',
+                          color: 'var(--ocean)',
+                          borderColor: 'var(--ocean)',
+                          padding: '2px 8px',
+                          borderRadius: '4px',
+                          fontSize: '11px',
+                          fontWeight: 600,
+                        }}
+                      >
+                        <Headphones size={12} />
+                        Audio JLPT thật
+                      </span>
+                    </div>
+                  </div>
+                  <span className="test-number" style={{ color: 'var(--peach)' }}>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <h2>{t.title}</h2>
+                  <p>
+                    {t.total} câu · {t.minutes} phút · {t.sections.length} phần thi
+                  </p>
+                  <ul className="jlpt-card-sections">
+                    {t.sections.map((s) => (
+                      <li key={s.id}>
+                        {s.title}: {s.minutes} phút ({s.count} câu)
+                      </li>
+                    ))}
+                  </ul>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 'auto', color: 'var(--peach)', fontWeight: 600 }}>
+                    <span>Vào làm bài thi giữa kỳ</span>
+                    <ArrowRight size={19} />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
+
+          <p className="spaced">
+            Đề thi giữa kỳ khóa JAN01 được biên soạn chuẩn theo định dạng đề thi đại học với 100 điểm trong 70 phút.
+            Học viên làm bài thi theo đúng quy chế bấm giờ từng phần (Phần I: 60 phút, Phần II: 10 phút) và xem kết quả giải thích chi tiết ngay sau khi nộp bài.
+          </p>
+        </>
+      )}
 
       {/* Recent Attempts History */}
       <section className="panel spaced">
