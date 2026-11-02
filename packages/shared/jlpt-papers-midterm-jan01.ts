@@ -244,15 +244,15 @@ export const midtermJan01Paper01: JlptPaper = {
           "type": "choice",
           "category": "vocabulary",
           "group": "Từ vựng Minna 1～5",
-          "prompt": "ミラー：「これは（　　）の ざっしですか。」  \nサントス：「くるまの ざっしですよ。」",
+          "prompt": "いま（　　）ですか。…２時半です。",
           "options": [
-            "なん",
-            "どこ",
-            "だれ",
-            "いくら"
+            "なんじ",
+            "なんぷん",
+            "なんようび",
+            "なんにち"
           ],
-          "answer": "なん",
-          "explanation": "Từ vựng phù hợp với ngữ cảnh câu là 「なん」.",
+          "answer": "なんじ",
+          "explanation": "Câu trả lời nêu mốc thời gian cụ thể 「２時半」 (2 giờ rưỡi) nên từ để hỏi thích hợp nhất là 「なんじ」 (mấy giờ - Bài 4). Các từ khác: なんぷん (mấy phút), なんようび (thứ mấy), なんにち (ngày mấy).",
           "annotationDisabled": true
         },
         {
@@ -423,12 +423,12 @@ export const midtermJan01Paper01: JlptPaper = {
           "prompt": "トイレは _____ _____ ★ _____ です。",
           "options": [
             "の",
-            "あそこ",
-            "となり",
-            "事務所"
+            "あの",
+            "２かい",
+            "建物"
           ],
-          "answer": "事務所",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 4: 「事務所」.",
+          "answer": "の",
+          "explanation": "Cấu trúc chỉ vị trí tầng lầu (Bài 3): Địa điểm は あの + Danh từ chỉ tòa nhà + の + Số tầng + です. Trật tự sắp xếp đúng: トイレは [あの(2)] [建物(4)] ★[の(1)] [２かい(3)] です. Vị trí ngôi sao ★ ở vị trí thứ 3 là phương án 1: 「の」.",
           "annotationDisabled": true
         },
         {
@@ -830,17 +830,17 @@ export const midtermJan01Paper01: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Chọn hình ảnh",
-          "prompt": "男の人は何で会社に来ていますか。",
+          "prompt": "二人はどうやって駅まで行きますか。",
           "options": [
-            "じてんしゃ",
-            "バス",
-            "でんしゃ",
-            "あるいて"
+            "あるいて いく",
+            "タクシーで いく",
+            "バスで いく",
+            "じてんしゃで いく"
           ],
-          "answer": "あるいて",
-          "explanation": "Transcript: 「女「加藤さんのうちはどちらですか。」男「駅の近くですよ。」女「毎日電車で会社に来ますか。」男「いいえ、会社まで近いですから、毎朝歩いて来ます。」女「歩いてですか。いいですね。」」. Phương án đúng: あるいて.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「加藤さんのうちはどちらですか。」男「駅の近くですよ。」女「毎日電車で会社に来ますか。」男「いいえ、会社まで近いですから、毎朝歩いて来ます。」女「歩いてですか。いいですね。」",
+          "answer": "タクシーで いく",
+          "explanation": "Trời mưa to, đi bộ vất vả, xe buýt 30 phút nữa mới tới nên hai người quyết định gọi taxi đi (タクシーを呼ぼう / そうしましょう). Đáp án đúng là phương án 2 (タクシーで いく).",
+          "audioUrl": "/audio/jlpt/n5-2018/q06.mp3",
+          "transcript": "男の人と女の人が話しています。二人はどうやって駅まで行きますか。\n男「雨が降ってきたね。歩くのは大変だ。」\n女「バスは３０分来ないわよ。」\n男「じゃあ、タクシーを呼ぼうか。」\n女「そうね。そうしましょう。」\n質問：二人はどうやって駅まで行きますか。",
           "annotationDisabled": true
         },
         {
@@ -850,15 +850,15 @@ export const midtermJan01Paper01: JlptPaper = {
           "group": "Nghe hiểu · Chọn hình ảnh",
           "prompt": "学生の部屋は何階ですか。",
           "options": [
-            "１かい",
-            "２かい",
-            "３がい",
-            "４かい"
+            "1かい",
+            "2かい",
+            "8かい",
+            "10かい"
           ],
-          "answer": "３がい",
-          "explanation": "Transcript: 「男「すみません、留学生の部屋は何階ですか。」女「1階は事務所で、2階は教室です。留学生の部屋は3階ですよ。4階は会議室です。」男「3階ですね。ありがとうございます。」」. Phương án đúng: ３がい.",
+          "answer": "8かい",
+          "explanation": "Giáo viên dặn dò rõ: phòng của học sinh ở tầng 8 (みなさんの部屋は８階です). Đáp án đúng là 3 (8かい).",
           "audioUrl": "/audio/jlpt/n5-2013-07/q11.mp3",
-          "transcript": "男「すみません、留学生の部屋は何階ですか。」女「1階は事務所で、2階は教室です。留学生の部屋は3階ですよ。4階は会議室です。」男「3階ですね。ありがとうございます。」",
+          "transcript": "ホテルで先生が学生に話しています。学生の部屋は何階ですか。\n女「ええ、みなさん。このホテルは１階と２階にレストランがあります。お風呂は一番上の１０階にあります。みなさんの部屋は８階です。ええ、今から部屋に行って、自分の荷物を置いてください。それから、２階のレストランに来てください。」\n質問：学生の部屋は何階ですか。",
           "annotationDisabled": true
         },
         {
@@ -868,15 +868,15 @@ export const midtermJan01Paper01: JlptPaper = {
           "group": "Nghe hiểu · Chọn hình ảnh",
           "prompt": "女の人は、何曜日のクラスで勉強しますか。",
           "options": [
+            "月曜日",
             "火曜日",
-            "水曜日",
             "木曜日",
             "金曜日"
           ],
-          "answer": "水曜日",
-          "explanation": "Transcript: 「男「日本語のクラスは火曜日と水曜日と金曜日にありますよ。」女「そうですか。火曜日はアルバイトがあります。金曜日は仕事です。」男「じゃあ、水曜日のクラスですね。」女「はい、水曜日に勉強します。」」. Phương án đúng: 水曜日.",
-          "audioUrl": "/audio/jlpt/n5-2018/q06.mp3",
-          "transcript": "男「日本語のクラスは火曜日と水曜日と金曜日にありますよ。」女「そうですか。火曜日はアルバイトがあります。金曜日は仕事です。」男「じゃあ、水曜日のクラスですね。」女「はい、水曜日に勉強します。」",
+          "answer": "月曜日",
+          "explanation": "Các lớp học ban đêm đều bận việc hoặc đã hết chỗ, người phụ nữ quyết định chuyển sang lớp ban ngày vào thứ Hai (昼は月曜日のクラスがありますよ -> そのクラスで勉強します). Đáp án đúng là 1 (月曜日).",
+          "audioUrl": "/audio/jlpt/n5-2018/q04.mp3",
+          "transcript": "女の人が日本語学校の人と話しています。女の人は、何曜日のクラスで勉強しますか。\n女「すみません、夜のクラスで勉強したいです。」\n男「あ、夜のクラスですね。火曜日と木曜日と金曜日にありますよ。」\n女「そうですか。火曜日は仕事があります。金曜日は子供と出かけますから、木曜日のクラスがいいです。」\n男「あ、木曜日はもういっぱいですね。」\n女「じゃあ、昼のクラスはどうですか。」\n男「昼は月曜日のクラスがありますよ。」\n女「じゃあ、そのクラスで勉強します。」\n質問：女の人は、何曜日のクラスで勉強しますか。",
           "annotationDisabled": true
         },
         {
@@ -886,15 +886,15 @@ export const midtermJan01Paper01: JlptPaper = {
           "group": "Nghe hiểu · Chọn hình ảnh",
           "prompt": "学生は何で名前を書きますか。",
           "options": [
-            "えんぴつ",
-            "くろのボールペン",
-            "あかのボールペン",
-            "まじっく"
+            "くろい ボールペン",
+            "あかい ボールペン",
+            "くろい えんぴつ",
+            "あかい えんぴつ"
           ],
-          "answer": "くろのボールペン",
-          "explanation": "Transcript: 「先生「はい、ちょっと聞いてください。この紙に名前を書いてください。鉛筆じゃなくて、ボールペンですよ。黒のボールペンで書いてください。赤で書かないでくださいね。」学生「はい、わかりました。」」. Phương án đúng: くろのボールペン.",
-          "audioUrl": "/audio/jlpt/n5-2010-2011/q11.mp3",
-          "transcript": "先生「はい、ちょっと聞いてください。この紙に名前を書いてください。鉛筆じゃなくて、ボールペンですよ。黒のボールペンで書いてください。赤で書かないでくださいね。」学生「はい、わかりました。」",
+          "answer": "くろい ボールペン",
+          "explanation": "Giáo viên yêu cầu viết bằng bút bi chứ không phải bút chì (ボールペンで), mực đen chứ không phải mực đỏ (黒いので). Do đó đáp án là bút bi đen (くろい ボールペン).",
+          "audioUrl": "/audio/jlpt/n5-2010-2011/q12.mp3",
+          "transcript": "先生が学生に話しています。学生は何で名前を書きますか。\n女「じゃあ、この紙に名前を書いてください。鉛筆じゃなくて、ボールペンで書いてくださいね。赤じゃなくて、黒いので書いてください。」\n質問：学生は何で名前を書きますか。",
           "annotationDisabled": true
         },
         {
@@ -904,15 +904,15 @@ export const midtermJan01Paper01: JlptPaper = {
           "group": "Nghe hiểu · Chọn hình ảnh",
           "prompt": "学生は、次、何日に学校に来ますか。",
           "options": [
-            "8日",
-            "9日",
             "10日",
-            "11日"
+            "11日",
+            "12日",
+            "13日"
           ],
-          "answer": "10日",
-          "explanation": "Transcript: 「先生「皆さん、明日から休みですね。休みは8日と9日です。10日は月曜日ですから、朝9時に学校へ来てくださいね。」学生「はい、先生。」」. Phương án đúng: 10日.",
+          "answer": "12日",
+          "explanation": "Các ngày 8 (thứ 6), 9 (thứ 7), 10 (CN) nghỉ cuối tuần; ngày 11 (thứ 2) là ngày lễ nghỉ. Học sinh sẽ đến trường vào thứ Ba ngày 12 để làm bài thi (火曜日にテストをします -> 12日).",
           "audioUrl": "/audio/jlpt/n5-2018/q03.mp3",
-          "transcript": "先生「皆さん、明日から休みですね。休みは8日と9日です。10日は月曜日ですから、朝9時に学校へ来てくださいね。」学生「はい、先生。」",
+          "transcript": "先生が学生に話しています。学生は、次、何日に学校に来ますか。\n男「皆さん、明日から３日間休みです。金曜日、土曜日、日曜日です。月曜日は祝日ですから、学校はありません。火曜日にテストをしますから、遅れないで来てくださいね。」\n女「はい、わかりました。」\n質問：学生は、次、何日に学校に来ますか。",
           "annotationDisabled": true
         },
         {
@@ -928,9 +928,9 @@ export const midtermJan01Paper01: JlptPaper = {
             "10:00〜19:00"
           ],
           "answer": "9:00〜17:00",
-          "explanation": "Transcript: 「女「すみません、土曜日は図書館は何時までですか。」男「平日は朝9時から夜7時までですが、土曜日は朝9時から夕方5時までです。日曜日は休みですよ。」女「わかりました。土曜日は5時までですね。」」. Phương án đúng: 9:00〜17:00.",
+          "explanation": "Ngày thường mở từ 9:00 đến 19:00, riêng thứ Bảy mở từ 9:00 sáng đến 5:00 chiều (朝９時から夕方５時まで = 9:00〜17:00).",
           "audioUrl": "/audio/jlpt/n5-2012-12/q12.mp3",
-          "transcript": "女「すみません、土曜日は図書館は何時までですか。」男「平日は朝9時から夜7時までですが、土曜日は朝9時から夕方5時までです。日曜日は休みですよ。」女「わかりました。土曜日は5時までですね。」",
+          "transcript": "女の人と男の人が話しています。土曜日、図書館は何時から何時までですか。\n女「すみません、この図書館は土曜日も開いていますか。」\n男「ええ、開いていますよ。平日、月曜日から金曜日までは朝９時から夜７時までですが、土曜日は朝９時から夕方５時までです。」\n女「日曜日は？」\n男「日曜日は休みです。」\n質問：土曜日、図書館は何時から何時までですか。",
           "annotationDisabled": true
         },
         {
@@ -1555,12 +1555,12 @@ export const midtermJan01Paper02: JlptPaper = {
           "prompt": "毎朝 _____ _____ ★ _____ 勉強します。",
           "options": [
             "に",
-            "日本語を",
+            "うちで",
             "７じ",
-            "うちで"
+            "ひとりで"
           ],
-          "answer": "に",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 1: 「に」.",
+          "answer": "７じ",
+          "explanation": "Cụm mốc thời gian xác định có số đi với trợ từ に (７時に - Bài 4) đứng liền trước vị ngữ 勉強します. Thứ tự sắp xếp đúng: 毎朝 [ひとりで(4)] [うちで(2)] ★[７じ(3)] [に(1)] 勉強します. Vị trí dấu sao ★ là phương án 3: 「７じ」.",
           "annotationDisabled": true
         },
         {
@@ -1856,15 +1856,15 @@ export const midtermJan01Paper02: JlptPaper = {
           "type": "choice",
           "category": "grammar",
           "group": "Ngữ pháp · Chọn nghi vấn từ",
-          "prompt": "いつ 日本へ 来ましたか。…（　　）来ました。",
+          "prompt": "（　　）日本へ 来ましたか。…きょねん 来ました。",
           "options": [
-            "きょねん",
-            "じてんしゃで",
-            "ともだちと",
-            "ひとりで"
+            "いつ",
+            "なんにち",
+            "なんようび",
+            "なんがつ"
           ],
-          "answer": "きょねん",
-          "explanation": "Nghi vấn từ phù hợp là 「きょねん」.",
+          "answer": "いつ",
+          "explanation": "Câu trả lời nêu mốc thời gian quá khứ 「きょねん」 (năm ngoái) nên từ để hỏi thời điểm thích hợp nhất là 「いつ」 (khi nào - Bài 5).",
           "annotationDisabled": true
         },
         {
@@ -1932,15 +1932,15 @@ export const midtermJan01Paper02: JlptPaper = {
           "group": "Nghe hiểu · Chọn hình ảnh",
           "prompt": "男の人は、どの雑誌を女の人に渡しますか。",
           "options": [
-            "Tạp chí ô tô - Tháng 7",
-            "Tạp chí ô tô - Tháng 8",
-            "Tạp chí đồng hồ - Tháng 7",
-            "Tạp chí đồng hồ - Tháng 8"
+            "7がつの とけいの ざっし",
+            "8がつの とけいの ざっし",
+            "7がつの くるまの ざっし",
+            "8がつの くるまの ざっし"
           ],
-          "answer": "Tạp chí đồng hồ - Tháng 7",
-          "explanation": "Transcript: 「女「木村さん、すみません。後ろにある雑誌を取ってください。」男「時計の雑誌ですか？車の雑誌ですか？」女「時計の雑誌です。」男「一番新しい8月のですか？」女「いいえ、7月のお願いします。」男「はい。」」. Phương án đúng: Tạp chí đồng hồ - Tháng 7.",
+          "answer": "7がつの とけいの ざっし",
+          "explanation": "Người phụ nữ nhờ lấy quyển tạp chí đồng hồ (時計の雑誌) số tháng 7 (７月のです). Đáp án đúng là phương án 1 (7がつの とけいの ざっし).",
           "audioUrl": "/audio/jlpt/n5-2018/q02.mp3",
-          "transcript": "女「木村さん、すみません。後ろにある雑誌を取ってください。」男「時計の雑誌ですか？車の雑誌ですか？」女「時計の雑誌です。」男「一番新しい8月のですか？」女「いいえ、7月のお願いします。」男「はい。」",
+          "transcript": "会社で女の人と男の人が話しています。男の人はどの雑誌を女の人に渡しますか。\n女「木村さん、木村さんの後ろにある雑誌を取ってください。」\n男「時計の雑誌ですか、車の雑誌ですか。」\n女「時計の雑誌です。」\n男「８月のですか。」\n女「いいえ、７月のです。」\n男「はい、どうぞ。」\n質問：男の人はどの雑誌を女の人に渡しますか。",
           "annotationDisabled": true
         },
         {
@@ -1948,17 +1948,17 @@ export const midtermJan01Paper02: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Chọn hình ảnh",
-          "prompt": "男の人は何番のバスに乗りますか。",
+          "prompt": "女の人は、何番のバスに乗りますか。",
           "options": [
-            "Tuyến 1",
-            "Tuyến 3",
-            "Tuyến 5",
-            "Tuyến 7"
+            "1ばん",
+            "3ばん",
+            "5ばん",
+            "7ばん"
           ],
-          "answer": "Tuyến 7",
-          "explanation": "Transcript: 「女「すみません、このバスは市役所へ行きますか。」男「いいえ、行きませんよ。市役所へ行くバスは、3番と7番ですよ。」女「3番と7番ですね。今の時間はどちらですか。」男「今の時間は7番ですね。」女「わかりました。ありがとうございます。」」. Phương án đúng: Tuyến 7.",
+          "answer": "7ばん",
+          "explanation": "Cả tuyến 3 và 7 đều đi ga Midori nhưng tuyến số 7 chạy nhanh hơn (７番のほうが速いですよ) nên người phụ nữ quyết định đi tuyến số 7.",
           "audioUrl": "/audio/jlpt/n5-2010-2011/q07.mp3",
-          "transcript": "女「すみません、このバスは市役所へ行きますか。」男「いいえ、行きませんよ。市役所へ行くバスは、3番と7番ですよ。」女「3番と7番ですね。今の時間はどちらですか。」男「今の時間は7番ですね。」女「わかりました。ありがとうございます。」",
+          "transcript": "バス乗り場で女の人と男の人が話しています。女の人は何番のバスに乗りますか。\n女「すみません、緑駅へ行きたいです。何番のバスですか。」\n男「緑駅ですね。３番と７番ですが、７番のほうが速いですよ。」\n女「そうですか。じゃあ、それに乗ります。」\n質問：女の人は何番のバスに乗りますか。",
           "annotationDisabled": true
         },
         {
@@ -1973,10 +1973,10 @@ export const midtermJan01Paper02: JlptPaper = {
             "水曜日",
             "木曜日"
           ],
-          "answer": "火曜日",
-          "explanation": "Transcript: 「女「山田先生の日本語のクラスに入りたいですが、何曜日にありますか。」男「山田先生のクラスは月曜日と火曜日にあります。」女「月曜日はアルバイトがあります。」男「じゃあ、火曜日ですね。」女「はい、火曜日のクラスにします。」」. Phương án đúng: 火曜日.",
+          "answer": "月曜日",
+          "explanation": "Học viên lựa chọn đăng ký lớp sáng thứ Hai của cô Yamada (月曜日のクラスにします). Đáp án đúng là 1 (月曜日).",
           "audioUrl": "/audio/jlpt/n5-2013-07/q09.mp3",
-          "transcript": "女「山田先生の日本語のクラスに入りたいですが、何曜日にありますか。」男「山田先生のクラスは月曜日と火曜日にあります。」女「月曜日はアルバイトがあります。」男「じゃあ、火曜日ですね。」女「はい、火曜日のクラスにします。」",
+          "transcript": "日本語学校で男の人と女の人が話しています。山田先生のクラスは何曜日ですか。\n男「すみません、山田先生の会話のクラスに入りたいんですが、何曜日にありますか。」\n女「山田先生ですね。月曜日と水曜日にありますよ。」\n男「どちらも夜ですか。」\n女「水曜日は夜ですが、月曜日は午前中だけです。」\n男「じゃあ、月曜日の午前中のクラスにします。」\n質問：山田先生のクラスは何曜日ですか。",
           "annotationDisabled": true
         },
         {
@@ -1986,15 +1986,15 @@ export const midtermJan01Paper02: JlptPaper = {
           "group": "Nghe hiểu · Chọn hình ảnh",
           "prompt": "男の人は、どこへ行きますか。",
           "options": [
-            "Quán cà phê bên cạnh ngân hàng",
-            "Ngân hàng",
-            "Quán cà phê đối diện ngân hàng",
-            "Nhà ga"
+            "ぎんこうの となりの きっさてん",
+            "こうさてん",
+            "えきの まえの レストラン",
+            "ほんや"
           ],
-          "answer": "Quán cà phê bên cạnh ngân hàng",
-          "explanation": "Transcript: 「男「すみません、喫茶店みどりはどこですか。」女「あそこに交差点がありますね。あの交差点を左に曲がってください。道の左側に銀行があります。喫茶店みどりは銀行の隣ですよ。」男「わかりました。ありがとうございます。」」. Phương án đúng: Quán cà phê bên cạnh ngân hàng.",
+          "answer": "ぎんこうの となりの きっさてん",
+          "explanation": "Người phụ nữ hẹn gặp ở quán cà phê bên cạnh ngân hàng phía trước ga (その隣に喫茶店があります). Đáp án đúng là phương án 1.",
           "audioUrl": "/audio/jlpt/n5-2018/q01.mp3",
-          "transcript": "男「すみません、喫茶店みどりはどこですか。」女「あそこに交差点がありますね。あの交差点を左に曲がってください。道の左側に銀行があります。喫茶店みどりは銀行の隣ですよ。」男「わかりました。ありがとうございます。」",
+          "transcript": "電話で男の人と女の人が話しています。男の人は、どこへ行きますか。\n男「もしもし、今駅に着きました。どこへ行けばいいですか。」\n女「駅の前に銀行がありますね。」\n男「はい。」\n女「その隣に喫茶店があります。そこで待っています。」\n男「わかりました。すぐ行きます。」\n質問：男の人は、どこへ行きますか。",
           "annotationDisabled": true
         },
         {
@@ -2004,15 +2004,15 @@ export const midtermJan01Paper02: JlptPaper = {
           "group": "Nghe hiểu · Chọn hình ảnh",
           "prompt": "女の人の電話番号は何番ですか。",
           "options": [
+            "512-7733",
             "512-7734",
             "512-7743",
-            "521-7734",
-            "521-7743"
+            "512-7744"
           ],
           "answer": "512-7743",
-          "explanation": "Transcript: 「男「あの、山田さんの電話番号は512の7734ですね。」女「いいえ、7734じゃなくて、7743です。」男「512の7743ですね。わかりました。ありがとうございます。」」. Phương án đúng: 512-7743.",
+          "explanation": "Người phụ nữ đọc số 512-7743 và đính chính đuôi số là 43 chứ không phải 34 (３４じゃなくて、４３です). Đáp án đúng là 512-7743.",
           "audioUrl": "/audio/jlpt/n5-2010-2011/q09.mp3",
-          "transcript": "男「あの、山田さんの電話番号は512の7734ですね。」女「いいえ、7734じゃなくて、7743です。」男「512の7743ですね。わかりました。ありがとうございます。」",
+          "transcript": "男の人と女の人が電話で話しています。女の人の電話番号は何番ですか。\n男「じゃあ、電話番号を教えてください。」\n女「はい、５１２の７７４３です。」\n男「ええと、５１２の７７３４ですね。」\n女「いいえ、３４じゃなくて、４３です。」\n男「あ、４３ですね。わかりました。」\n質問：女の人の電話番号は何番ですか。",
           "annotationDisabled": true
         },
         {
@@ -2020,17 +2020,17 @@ export const midtermJan01Paper02: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Chọn hình ảnh",
-          "prompt": "学生は明日の朝、どこで先生に会いますか。",
+          "prompt": "学生はあしたの朝、どこで先生に会いますか。",
           "options": [
-            "学校",
-            "駅",
             "ホテル",
-            "公園"
+            "こうえん",
+            "がっこう",
+            "えき"
           ],
-          "answer": "駅",
-          "explanation": "Transcript: 「先生「皆さん、明日は古い町を見に行きます。9時の電車に乗りますよ。」学生「明日は学校に来てから行きますか。」先生「いいえ、駅に来てください。8時半に待っています。」」. Phương án đúng: 駅.",
+          "answer": "えき",
+          "explanation": "Giáo viên dặn điểm tập hợp là ở nhà ga chứ không phải trường học (学校じゃなくて、駅です). Đáp án đúng là 4 (えき).",
           "audioUrl": "/audio/jlpt/n5-2013-07/q01.mp3",
-          "transcript": "先生「皆さん、明日は古い町を見に行きます。9時の電車に乗りますよ。」学生「明日は学校に来てから行きますか。」先生「いいえ、駅に来てください。8時半に待っています。」",
+          "transcript": "先生と学生が話しています。学生はあしたの朝、どこで先生に会いますか。\n女「あしたはみんなで京都に行きますね。朝８時半に駅の改札口の前に集まってください。」\n男「学校じゃなくて、駅ですか。」\n女「ええ、そうです。遅れないでくださいね。」\n男「はい、わかりました。」\n質問：学生はあしたの朝、どこで先生に会いますか。",
           "annotationDisabled": true
         },
         {
@@ -2081,8 +2081,8 @@ export const midtermJan01Paper02: JlptPaper = {
             "でんしゃ",
             "タクシー"
           ],
-          "answer": "バス",
-          "explanation": "Hành trình Chặng 3: Theo đoạn hội thoại, phương tiện sử dụng là 「バス」.",
+          "answer": "でんしゃ",
+          "explanation": "Chặng 3: Theo đoạn hội thoại, Karina nói: 大阪駅からも 電車で 行きますよ nên phương tiện là でんしゃ.",
           "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
           "transcript": "男「カリナさん、日曜日 奈良へ 行きますね。どうやって 行きますか。」\n女「まず、寮から 神戸駅まで 自転車で 行きます。」\n男「神戸駅から 大阪駅までは？」\n女「JRの 電車で 行きます。」\n男「大阪駅から 奈良駅までは 何で 行きますか。」\n女「大阪駅前から 直通の バスに 乗ります。」\n男「奈良駅から 奈良公園までは 近いですか。」\n女「はい、とても 近いですから、歩いて 行きますよ。」",
           "annotationDisabled": true
@@ -2134,11 +2134,11 @@ export const midtermJan01Paper02: JlptPaper = {
             "b",
             "c"
           ],
-          "answer": "b",
-          "explanation": "Câu hỏi: 「明日、京都に行きますね。何時の飛行機に乗りますか。」. Phương án đúng: b (4時半の飛行機です。).",
+          "answer": "a",
+          "explanation": "Hỏi chủ sở hữu chiếc ô (この傘、どなたのですか - Bài 2/3), câu trả lời phù hợp là: 私のです (Của tôi ạ). Đáp án đúng là a.",
           "audioUrl": "/audio/jlpt/n5-2018/q22.mp3",
           "audioOptions": true,
-          "transcript": "Câu hỏi: 明日、京都に行きますね。何時の飛行機に乗りますか。\na. はい、飛行機で行きますよ。\nb. 4時半の飛行機です。\nc. 1時間ぐらい乗ります。",
+          "transcript": "Câu hỏi: この傘、どなたのですか。\na. 私のです。\nb. 駅のです。\nc. 車のです。",
           "annotationDisabled": true
         },
         {
@@ -2956,15 +2956,15 @@ export const midtermJan01Paper03: JlptPaper = {
           "type": "choice",
           "category": "grammar",
           "group": "Ngữ pháp · Chọn nghi vấn từ",
-          "prompt": "いつ 日本へ 来ましたか。…（　　）来ました。",
+          "prompt": "（　　）日本へ 来ましたか。…せんげつ 来ました。",
           "options": [
-            "せんげつ",
-            "バスで",
-            "ひとりで",
-            "ともだちと"
+            "いつ",
+            "なんにち",
+            "なんようび",
+            "なんがつ"
           ],
-          "answer": "せんげつ",
-          "explanation": "Nghi vấn từ phù hợp là 「せんげつ」.",
+          "answer": "いつ",
+          "explanation": "Câu trả lời nêu mốc thời gian quá khứ 「せんげつ」 (tháng trước) nên từ để hỏi thời điểm là 「いつ」 (khi nào - Bài 5).",
           "annotationDisabled": true
         },
         {
@@ -3030,17 +3030,17 @@ export const midtermJan01Paper03: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Chọn hình ảnh",
-          "prompt": "２人は何時に出口の前で会いますか。",
+          "prompt": "二人は何時に出口の前で会いますか。",
           "options": [
-            "2:00",
-            "2:30",
-            "3:00",
-            "3:30"
+            "7:50",
+            "7:55",
+            "8:00",
+            "8:05"
           ],
-          "answer": "3:00",
-          "explanation": "Transcript: 「女「映画は2時半に終わりますね。何時に出口の前で会いましょうか。」男「じゃあ、3時に会いましょう。」女「はい、3時ですね。」」. Phương án đúng: 3:00.",
-          "audioUrl": "/audio/jlpt/n5-2013-07/q12.mp3",
-          "transcript": "女「映画は2時半に終わりますね。何時に出口の前で会いましょうか。」男「じゃあ、3時に会いましょう。」女「はい、3時ですね。」",
+          "answer": "7:55",
+          "explanation": "Người phụ nữ hẹn gặp lúc 8 giờ kém 5 phút (８時５分前 = 7:55) vì phim chiếu lúc 8:10. Đáp án đúng là 2 (7:55).",
+          "audioUrl": "/audio/jlpt/n5-2013-07/q13.mp3",
+          "transcript": "デパートで女の人と男の人が話しています。二人は何時に出口の前で会いますか。\n女「じゃあ、買い物配りましょう。何時に会いますか。」\n男「今、７時半ですね。８時はどうですか。」\n女「８時５分前のほうがいいです。映画が８時１０分からですから。」\n男「じゃあ、そうしましょう。」\n質問：二人は何時に出口の前で会いますか。",
           "annotationDisabled": true
         },
         {
@@ -3048,17 +3048,17 @@ export const midtermJan01Paper03: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Chọn hình ảnh",
-          "prompt": "何番のバスに乗りますか。",
+          "prompt": "女の人は、何番のバスに乗りますか。",
           "options": [
-            "Tuyến số 1",
-            "Tuyến số 3",
-            "Tuyến số 5",
-            "Tuyến số 7"
+            "1ばん",
+            "3ばん",
+            "5ばん",
+            "7ばん"
           ],
-          "answer": "Tuyến số 3",
-          "explanation": "Transcript: 「女「すみません、このバスはさくら病院へ行きますか。」男「いいえ、病院へ行くバスは3番ですよ。」女「3番ですね。ありがとうございます。」」. Phương án đúng: Tuyến số 3.",
+          "answer": "7ばん",
+          "explanation": "Tuyến số 1 và 7 cùng đi viện nhưng tuyến 7 đi nhanh hơn (７番のほうが速いですよ) nên người phụ nữ chọn tuyến số 7.",
           "audioUrl": "/audio/jlpt/n5-2017-07/q07.mp3",
-          "transcript": "女「すみません、このバスはさくら病院へ行きますか。」男「いいえ、病院へ行くバスは3番ですよ。」女「3番ですね。ありがとうございます。」",
+          "transcript": "バス乗り場で女の人と男の人が話しています。女の人は何番のバスに乗りますか。\n女「すみません、南病院へ行きたいんですが、何番のバスですか。」\n男「南病院ですね。１番と７番ですよ。でも、７番のほうが速いですよ。」\n女「わかりました。じゃあ、７番に乗ります。」\n質問：女の人は何番のバスに乗りますか。",
           "annotationDisabled": true
         },
         {
@@ -3066,17 +3066,17 @@ export const midtermJan01Paper03: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Chọn hình ảnh",
-          "prompt": "男の人は、どこに行きますか。",
+          "prompt": "男の学生はこの後どこへ行きますか。",
           "options": [
-            "郵便局",
-            "銀行",
-            "駅",
+            "３階の教室",
+            "２階の教室",
+            "１階の事務所",
             "図書館"
           ],
-          "answer": "郵便局",
-          "explanation": "Transcript: 「男「すみません。郵便局に行きたいですが、どこですか。」女「郵便局ですか。駅の前の道を真っすぐ行ってください。銀行の隣にありますよ。」男「わかりました。ありがとうございます。」」. Phương án đúng: 郵便局.",
+          "answer": "３階の教室",
+          "explanation": "Phòng học ở tầng 2 không sử dụng được nên buổi học chuyển lên phòng 302 ở tầng 3 (３階の３０２教室). Đáp án đúng là 1 (３階の教室).",
           "audioUrl": "/audio/jlpt/n5-2012-12/q06.mp3",
-          "transcript": "男「すみません。郵便局に行きたいですが、どこですか。」女「郵便局ですか。駅の前の道を真っすぐ行ってください。銀行の隣にありますよ。」男「わかりました。ありがとうございます。」",
+          "transcript": "大学で男の学生と先生が話しています。男の学生はこの後どこへ行きますか。\n男「先生、今日の授業は２階の教室ですか。」\n女「あ、今日は２階の教室が使えませんから、３階の３０２教室に変更になりましたよ。」\n男「３階ですね。わかりました。すぐ行きます。」\n質問：男の学生はこの後どこへ行きますか。",
           "annotationDisabled": true
         },
         {
@@ -3084,17 +3084,17 @@ export const midtermJan01Paper03: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Chọn hình ảnh",
-          "prompt": "女の人は、来週いつ病院へ来ますか。",
+          "prompt": "女の人は来週いつ病院へ来ますか。",
           "options": [
-            "月曜日",
-            "水曜日",
-            "木曜日",
-            "金曜日"
+            "火曜日の３時",
+            "火曜日の３時半",
+            "水曜日の３時",
+            "水曜日の３時半"
           ],
-          "answer": "水曜日",
-          "explanation": "Transcript: 「医者「来週また来てくださいね。」女「何曜日がいいですか。」医者「月曜日と水曜日と金曜日が開いていますよ。」女「じゃあ、水曜日に来ます。」医者「はい、お待ちしています。」」. Phương án đúng: 水曜日.",
+          "answer": "火曜日の３時半",
+          "explanation": "Bệnh nhân lựa chọn đến viện vào lúc 3 giờ rưỡi chiều thứ Ba (火曜日の３時半にお願いします). Đáp án đúng là 2.",
           "audioUrl": "/audio/jlpt/n5-2012-12/q05.mp3",
-          "transcript": "医者「来週また来てくださいね。」女「何曜日がいいですか。」医者「月曜日と水曜日と金曜日が開いていますよ。」女「じゃあ、水曜日に来ます。」医者「はい、お待ちしています。」",
+          "transcript": "病院で医者と女の人が話しています。女の人は来週いつ病院へ来ますか。\n男「じゃあ、来週また来てください。火曜日と水曜日の午後が空いています。」\n女「火曜日がいいです。何時がいいですか。」\n男「３時と３時半がありますが、どちらがいいですか。」\n女「３時半にお願いします。」\n質問：女の人は来週いつ病院へ来ますか。",
           "annotationDisabled": true
         },
         {
@@ -3104,15 +3104,15 @@ export const midtermJan01Paper03: JlptPaper = {
           "group": "Nghe hiểu · Chọn hình ảnh",
           "prompt": "男の人はどれを取りますか。",
           "options": [
-            "辞書",
-            "雑誌",
-            "ノート",
-            "新聞"
+            "黒い小さいカップ",
+            "小さいカップの隣の白いカップ",
+            "大きいカップ",
+            "黒い大きいカップ"
           ],
-          "answer": "辞書",
-          "explanation": "Transcript: 「女「机の上にある辞書を取ってください。」男「この赤い辞書ですか？」女「はい、その日本語の辞書です。」男「はい、どうぞ。」」. Phương án đúng: 辞書.",
+          "answer": "小さいカップの隣の白いカップ",
+          "explanation": "Người đàn ông yêu cầu lấy chiếc cốc màu trắng bên cạnh chiếc cốc nhỏ (その隣の白いのです). Đáp án đúng là 2.",
           "audioUrl": "/audio/jlpt/n5-2012-12/q01.mp3",
-          "transcript": "女「机の上にある辞書を取ってください。」男「この赤い辞書ですか？」女「はい、その日本語の辞書です。」男「はい、どうぞ。」",
+          "transcript": "男の人と女の人が話しています。男の人はどれを取りますか。\n男「カップを取ってください。」\n女「どれですか。小さい黒いのですか。」\n男「いいえ、その隣の白いのです。」\n女「はい、どうぞ。」\n質問：男の人はどれを取りますか。",
           "annotationDisabled": true
         },
         {
@@ -3120,17 +3120,17 @@ export const midtermJan01Paper03: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Chọn hình ảnh",
-          "prompt": "電話番号は何番ですか。",
+          "prompt": "女の人の電話番号は何番ですか。",
           "options": [
-            "382-4519",
-            "382-4591",
-            "328-4519",
-            "328-4591"
+            "512-7734",
+            "512-7744",
+            "512-7743",
+            "521-7743"
           ],
-          "answer": "382-4591",
-          "explanation": "Transcript: 「男「すみません、電話番号は何番ですか。」女「382の4591です。」男「382の4591ですね。わかりました。」」. Phương án đúng: 382-4591.",
-          "audioUrl": "/audio/jlpt/n5-2017-07/q10.mp3",
-          "transcript": "男「すみません、電話番号は何番ですか。」女「382の4591です。」男「382の4591ですね。わかりました。」",
+          "answer": "512-7743",
+          "explanation": "Người phụ nữ nhấn mạnh số điện thoại của mình là 512-7743 (７７４３ですよ). Đáp án đúng là 3 (512-7743).",
+          "audioUrl": "/audio/jlpt/n5-2017-07/q09.mp3",
+          "transcript": "男の人と女の人が話しています。女の人の電話番号は何番ですか。\n男「すみません、電話番号は何番ですか。」\n女「５１２の７７４３です。」\n男「５１２の７７３４ですね。」\n女「いいえ、７７４３ですよ。」\n男「あ、すみません。７７４３ですね。」\n質問：女の人の電話番号は何番ですか。",
           "annotationDisabled": true
         },
         {
@@ -3288,11 +3288,11 @@ export const midtermJan01Paper03: JlptPaper = {
             "b",
             "c"
           ],
-          "answer": "b",
-          "explanation": "Câu hỏi: 「お国はどちらですか。」. Phương án đúng: b (アメリカです。).",
+          "answer": "a",
+          "explanation": "Hỏi ngày trong tháng 「今日は何日ですか」 (Bài 5), câu trả lời thích hợp là mốc ngày: 三日です (ngày mùng 3). Đáp án đúng là a.",
           "audioUrl": "/audio/jlpt/n5-2017-07/q19.mp3",
           "audioOptions": true,
-          "transcript": "Câu hỏi: お国はどちらですか。\na. あちらです。\nb. アメリカです。\nc. 部屋です。",
+          "transcript": "Câu hỏi: 今日は何日ですか。\na. 三日です。\nb. 3週間です。\nc. 三時です。",
           "annotationDisabled": true
         }
       ]
@@ -3432,15 +3432,15 @@ export const midtermJan01Paper04: JlptPaper = {
           "type": "choice",
           "category": "vocabulary",
           "group": "Hán tự · Cách viết chữ Hán",
-          "prompt": "（かわ）へ 行きます。",
+          "prompt": "つめたい（みず）が あります。",
           "options": [
-            "川",
-            "山",
-            "田",
-            "木"
+            "火",
+            "水",
+            "金",
+            "土"
           ],
-          "answer": "川",
-          "explanation": "Cách viết chữ Hán đúng là 「川」.",
+          "answer": "水",
+          "explanation": "Chữ Hán của 「みず」 (nước) là 「水」 (Thủy). 1 là 火 (lửa), 3 là 金 (vàng/tiền), 4 là 土 (đất).",
           "annotationDisabled": true
         },
         {
@@ -3693,10 +3693,10 @@ export const midtermJan01Paper04: JlptPaper = {
             "じゃ",
             "学生",
             "さくら大学の",
-            "もう"
+            "いま"
           ],
           "answer": "学生",
-          "explanation": "Vị trí dấu sao (★) cần điền phương án số 2: 「学生」.",
+          "explanation": "Cấu trúc phủ định danh từ (Bài 1): N じゃありません. Bổ ngữ thời gian いま đứng đầu câu: わたしは [いま(4)] [さくら大学の(3)] ★[学生(2)] [じゃ(1)] ありません. Ngôi sao ★ ở vị trí thứ 3 là phương án 2: 「学生」.",
           "annotationDisabled": true
         },
         {
@@ -4130,17 +4130,17 @@ export const midtermJan01Paper04: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Chọn hình ảnh",
-          "prompt": "男の人は何で会社に来ていますか。",
+          "prompt": "女の人はどのバスに乗りますか。",
           "options": [
-            "じてんしゃ",
-            "バス",
-            "でんしゃ",
-            "あるいて"
+            "1ばん",
+            "2ばん",
+            "3ばん",
+            "4ばん"
           ],
-          "answer": "あるいて",
-          "explanation": "Transcript: 「女「加藤さんのうちはどちらですか。」男「駅の近くですよ。」女「毎日電車で会社に来ますか。」男「いいえ、会社まで近いですから、毎朝歩いて来ます。」女「歩いてですか。いいですね。」」. Phương án đúng: あるいて.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「加藤さんのうちはどちらですか。」男「駅の近くですよ。」女「毎日電車で会社に来ますか。」男「いいえ、会社まで近いですから、毎朝歩いて来ます。」女「歩いてですか。いいですね。」",
+          "answer": "2ばん",
+          "explanation": "Cả hai tuyến 1 và 2 đều đến ga Yamakawa, nhưng tuyến số 2 chạy nhanh hơn (２番のほうが速いですよ) nên người phụ nữ quyết định lên tuyến số 2.",
+          "audioUrl": "/audio/jlpt/n5-2013-07/q07.mp3",
+          "transcript": "女の人がバス会社の人と話しています。女の人はどのバスに乗りますか。\n女「すみません、山川駅へ行きたいんですが、何番のバスですか。」\n男「山川駅ですね。１番と２番ですが、２番のほうが速いですよ。」\n女「じゃあ、２番に乗ります。」\n質問：女の人はどのバスに乗りますか。",
           "annotationDisabled": true
         },
         {
@@ -4148,17 +4148,17 @@ export const midtermJan01Paper04: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Chọn hình ảnh",
-          "prompt": "学生の部屋は何階ですか。",
+          "prompt": "男の人は何階に行きますか。",
           "options": [
-            "１かい",
-            "２かい",
-            "３がい",
-            "４かい"
+            "1かい",
+            "2かい",
+            "3がい",
+            "4かい"
           ],
-          "answer": "３がい",
-          "explanation": "Transcript: 「男「すみません、留学生の部屋は何階ですか。」女「1階は事務所で、2階は教室です。留学生の部屋は3階ですよ。4階は会議室です。」男「3階ですね。ありがとうございます。」」. Phương án đúng: ３がい.",
-          "audioUrl": "/audio/jlpt/n5-2013-07/q11.mp3",
-          "transcript": "男「すみません、留学生の部屋は何階ですか。」女「1階は事務所で、2階は教室です。留学生の部屋は3階ですよ。4階は会議室です。」男「3階ですね。ありがとうございます。」",
+          "answer": "3がい",
+          "explanation": "Quầy bán giày trẻ em nằm ở tầng 3 (子供のは３階でございます). Đáp án đúng là 3 (3がい).",
+          "audioUrl": "/audio/jlpt/n5-2024-07/q05.mp3",
+          "transcript": "デパートで男の人と女の人が話しています。男の人は何階に行きますか。\n男「すみません、子供の靴はどこにありますか。」\n女「子供の靴ですね。２階と３階に靴の売り場がありますが、子供のは３階でございます。」\n男「３階ですね。ありがとうございます。」\n質問：男の人は何階に行きますか。",
           "annotationDisabled": true
         },
         {
@@ -4166,17 +4166,17 @@ export const midtermJan01Paper04: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Chọn hình ảnh",
-          "prompt": "女の人は、何曜日のクラスで勉強しますか。",
+          "prompt": "２人は何曜日に勉強しますか。",
           "options": [
-            "火曜日",
-            "水曜日",
-            "木曜日",
-            "金曜日"
+            "かようび",
+            "すいようび",
+            "もくようび",
+            "きんようび"
           ],
-          "answer": "水曜日",
-          "explanation": "Transcript: 「男「日本語のクラスは火曜日と水曜日と金曜日にありますよ。」女「そうですか。火曜日はアルバイトがあります。金曜日は仕事です。」男「じゃあ、水曜日のクラスですね。」女「はい、水曜日に勉強します。」」. Phương án đúng: 水曜日.",
-          "audioUrl": "/audio/jlpt/n5-2018/q06.mp3",
-          "transcript": "男「日本語のクラスは火曜日と水曜日と金曜日にありますよ。」女「そうですか。火曜日はアルバイトがあります。金曜日は仕事です。」男「じゃあ、水曜日のクラスですね。」女「はい、水曜日に勉強します。」",
+          "answer": "すいようび",
+          "explanation": "Sau khi bàn bạc, cả hai người thống nhất học cùng nhau vào thứ Tư (じゃあ、水曜日にしよう -> 水曜日に). Đáp án đúng là 2 (すいようび).",
+          "audioUrl": "/audio/jlpt/n5-2024-07/q03.mp3",
+          "transcript": "男の学生と女の学生が話しています。２人は何曜日に勉強しますか。\n男「来週のテスト、一緒に勉強しない？」\n女「うん、いいね。何曜日がいい？」\n男「火曜日はどう？」\n女「火曜日はアルバイトがあるんだ。水曜日か木曜日は？」\n男「木曜日はちょっと用事があるから、水曜日にしよう。」\n女「うん、わかった。じゃあ、水曜日に。」\n質問：２人は何曜日に勉強しますか。",
           "annotationDisabled": true
         },
         {
@@ -4184,17 +4184,17 @@ export const midtermJan01Paper04: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Chọn hình ảnh",
-          "prompt": "男の人は、どの雑誌を女の人に渡しますか。",
+          "prompt": "学生はどこで新しい教科書を買いますか。",
           "options": [
-            "Tạp chí ô tô - Tháng 7",
-            "Tạp chí ô tô - Tháng 8",
-            "Tạp chí đồng hồ - Tháng 7",
-            "Tạp chí đồng hồ - Tháng 8"
+            "101 きょうしつ",
+            "102 きょうしつ",
+            "201 きょうしつ",
+            "202 きょうしつ"
           ],
-          "answer": "Tạp chí đồng hồ - Tháng 7",
-          "explanation": "Transcript: 「女「木村さん、すみません。後ろにある雑誌を取ってください。」男「時計の雑誌ですか？車の雑誌ですか？」女「時計の雑誌です。」男「一番新しい8月のですか？」女「いいえ、7月のお願いします。」男「はい。」」. Phương án đúng: Tạp chí đồng hồ - Tháng 7.",
-          "audioUrl": "/audio/jlpt/n5-2018/q02.mp3",
-          "transcript": "女「木村さん、すみません。後ろにある雑誌を取ってください。」男「時計の雑誌ですか？車の雑誌ですか？」女「時計の雑誌です。」男「一番新しい8月のですか？」女「いいえ、7月のお願いします。」男「はい。」",
+          "answer": "101 きょうしつ",
+          "explanation": "Giáo viên dặn mua giáo trình mới tại phòng 101 ở tầng 1 (１階の１０１教室で売っています). Đáp án đúng là 1 (101 きょうしつ).",
+          "audioUrl": "/audio/jlpt/n5-2021-12/q05.mp3",
+          "transcript": "学校で先生が話しています。学生はどこで新しい教科書を買いますか。\n女「ええ、明日から新しい教科書を使います。教科書は１階の１０１教室で売っていますから、今日の午後に買ってください。２階の事務所ではありませんよ。」\n質問：学生はどこで新しい教科書を買いますか。",
           "annotationDisabled": true
         },
         {
@@ -4202,17 +4202,17 @@ export const midtermJan01Paper04: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Chọn hình ảnh",
-          "prompt": "土曜日、図書館は何時から何時までですか。",
+          "prompt": "二人は何時に集まりますか。",
           "options": [
-            "9:00〜17:00",
-            "9:00〜19:00",
-            "10:00〜17:00",
-            "10:00〜19:00"
+            "9時",
+            "9時半",
+            "10時",
+            "10時半"
           ],
-          "answer": "9:00〜17:00",
-          "explanation": "Transcript: 「女「すみません、土曜日は図書館は何時までですか。」男「平日は朝9時から夜7時までですが、土曜日は朝9時から夕方5時までです。日曜日は休みですよ。」女「わかりました。土曜日は5時までですね。」」. Phương án đúng: 9:00〜17:00.",
-          "audioUrl": "/audio/jlpt/n5-2012-12/q12.mp3",
-          "transcript": "女「すみません、土曜日は図書館は何時までですか。」男「平日は朝9時から夜7時までですが、土曜日は朝9時から夕方5時までです。日曜日は休みですよ。」女「わかりました。土曜日は5時までですね。」",
+          "answer": "9時半",
+          "explanation": "Để tránh giờ cao điểm tàu đông, hai người hẹn tập hợp sớm hơn 30 phút so với giờ cũ (10:00 - 30 phút = 9:30). Đáp án đúng là 2 (9時半).",
+          "audioUrl": "/audio/jlpt/n5-2018/q13.mp3",
+          "transcript": "男の人と女の人が話しています。二人は何時に集まりますか。\n男「明日は１０時に駅集合ですね。」\n女「あ、明日は電車が混みますから、３０分早く集まりませんか。」\n男「そうですね。じゃあ、そうしましょう。」\n質問：二人は何時に集まりますか。",
           "annotationDisabled": true
         },
         {
@@ -4220,17 +4220,17 @@ export const midtermJan01Paper04: JlptPaper = {
           "type": "choice",
           "category": "listening",
           "group": "Nghe hiểu · Chọn hình ảnh",
-          "prompt": "学生は何で名前を書きますか。",
+          "prompt": "女の学生の誕生日は何月何日ですか。",
           "options": [
-            "えんぴつ",
-            "くろのボールペン",
-            "あかのボールペン",
-            "まじっく"
+            "4がつ 23にち",
+            "4がつ 30にち",
+            "5がつ 30にち",
+            "5がつ 31にち"
           ],
-          "answer": "くろのボールペン",
-          "explanation": "Transcript: 「先生「はい、ちょっと聞いてください。この紙に名前を書いてください。鉛筆じゃなくて、ボールペンですよ。黒のボールペンで書いてください。赤で書かないでくださいね。」学生「はい、わかりました。」」. Phương án đúng: くろのボールペン.",
-          "audioUrl": "/audio/jlpt/n5-2010-2011/q11.mp3",
-          "transcript": "先生「はい、ちょっと聞いてください。この紙に名前を書いてください。鉛筆じゃなくて、ボールペンですよ。黒のボールペンで書いてください。赤で書かないでくださいね。」学生「はい、わかりました。」",
+          "answer": "5がつ 30にち",
+          "explanation": "Nữ sinh trả lời ngày sinh của mình là ngày 30 tháng 5 (５月３０日です). Đáp án đúng là 3 (5がつ 30にち).",
+          "audioUrl": "/audio/jlpt/n5-2021-12/q12.mp3",
+          "transcript": "男の学生と女の学生が話しています。女の学生の誕生日は何月何日ですか。\n男「佐藤さん、誕生日はいつですか。」\n女「５月３０日です。」\n男「え、僕の姉と同じですね。姉は４月３０日ですけど。」\n女「あ、月が違いますね。」\n質問：女の学生の誕生日は何月何日ですか。",
           "annotationDisabled": true
         },
         {
@@ -4317,10 +4317,10 @@ export const midtermJan01Paper04: JlptPaper = {
             "c"
           ],
           "answer": "b",
-          "explanation": "Câu hỏi: 「明日何時に学校に来ますか。」. Phương án đúng: b (9時半です。).",
+          "explanation": "Từ để hỏi là 何時に (mấy giờ - Bài 4), câu phản hồi phù hợp nêu mốc giờ: 9時半です. Đáp án đúng là b.",
           "audioUrl": "/audio/jlpt/n5-2010-2011/q21.mp3",
           "audioOptions": true,
-          "transcript": "Câu hỏi: 明日何時に学校に来ますか。\na. バスで来ます。\nb. 9時半です。\nc. 6人です。",
+          "transcript": "Câu hỏi: 明日、何時に学校に来ますか。\na. 電車で来ます。\nb. 9時半です。\nc. 一人で来ます。",
           "annotationDisabled": true
         },
         {
@@ -4334,11 +4334,11 @@ export const midtermJan01Paper04: JlptPaper = {
             "b",
             "c"
           ],
-          "answer": "b",
-          "explanation": "Câu hỏi: 「夏休みはどこかへ出かけましたか。」. Phương án đúng: b (どこへも行きませんでした。).",
-          "audioUrl": "/audio/jlpt/n5-2018/q24.mp3",
+          "answer": "c",
+          "explanation": "Câu hỏi về thời lượng di chuyển どのくらいかかりますか (Bài 5), câu phản hồi phù hợp là: １０分か１５分です (10 hoặc 15 phút). Đáp án đúng là c.",
+          "audioUrl": "/audio/jlpt/n5-2021-12/q24.mp3",
           "audioOptions": true,
-          "transcript": "Câu hỏi: 夏休みはどこかへ出かけましたか。\na. 旅行しましょう。\nb. どこへも行きませんでした。\nc. 外国から来ました。",
+          "transcript": "Câu hỏi: すみません、この駅から山川駅まで、電車でどのくらいかかりますか。\na. 300円です。\nb. 2番線です。\nc. １０分か１５分です。",
           "annotationDisabled": true
         },
         {
@@ -4352,11 +4352,11 @@ export const midtermJan01Paper04: JlptPaper = {
             "b",
             "c"
           ],
-          "answer": "c",
-          "explanation": "Câu hỏi: 「すみません、この駅から山川駅まで電車でどのくらいかかりますか。」. Phương án đúng: c (10分か15分です。).",
-          "audioUrl": "/audio/jlpt/n5-2021-12/q24.mp3",
+          "answer": "b",
+          "explanation": "Câu hỏi quá khứ どこかへ行きましたか (Bài 5), phản hồi phủ định hoàn toàn là: いいえ、どこへも行きませんでした. Đáp án đúng là b.",
+          "audioUrl": "/audio/jlpt/n5-2024-07/q19.mp3",
           "audioOptions": true,
-          "transcript": "Câu hỏi: すみません、この駅から山川駅まで電車でどのくらいかかりますか。\na. 10時15分です。\nb. あの電車です。\nc. 10分か15分です。",
+          "transcript": "Câu hỏi: 日曜日、どこかへ行きましたか。\na. ええ、行きます。\nb. いいえ、どこへも行きませんでした。\nc. はい、だれもいません。",
           "annotationDisabled": true
         },
         {
@@ -4370,11 +4370,11 @@ export const midtermJan01Paper04: JlptPaper = {
             "b",
             "c"
           ],
-          "answer": "c",
-          "explanation": "Câu hỏi: 「何時のバスに乗りますか。」. Phương án đúng: c (3時のバスです。).",
-          "audioUrl": "/audio/jlpt/n5-2012-12/q22.mp3",
+          "answer": "a",
+          "explanation": "Câu hỏi vị trí địa điểm 図書館はどこですか (Bài 3), câu trả lời chỉ nơi chốn: あそこです. Đáp án đúng là a.",
+          "audioUrl": "/audio/jlpt/n5-2017-07/q20.mp3",
           "audioOptions": true,
-          "transcript": "Câu hỏi: 何時のバスに乗りますか。\na. 病院へ行きます。\nb. 100円です。\nc. 3時のバスです。",
+          "transcript": "Câu hỏi: すみません、図書館はどこですか。\na. あそこです。\nb. 本です。\nc. 9時からです。",
           "annotationDisabled": true
         },
         {
@@ -4389,10 +4389,10 @@ export const midtermJan01Paper04: JlptPaper = {
             "c"
           ],
           "answer": "a",
-          "explanation": "Câu hỏi: 「明日、何時に来ますか。」. Phương án đúng: a (10時です。).",
-          "audioUrl": "/audio/jlpt/n5-2017-07/q22.mp3",
+          "explanation": "Câu hỏi sở hữu この傘、どなたのですか (Bài 2/3), phản hồi tự nhiên là: 私のです. Đáp án đúng là a.",
+          "audioUrl": "/audio/jlpt/n5-2018/q22.mp3",
           "audioOptions": true,
-          "transcript": "Câu hỏi: 明日、何時に来ますか。\na. 10時です。\nb. 電車で来ます。\nc. 友だちと来ます。",
+          "transcript": "Câu hỏi: この傘、どなたのですか。\na. 私のです。\nb. 駅のです。\nc. 車のです。",
           "annotationDisabled": true
         }
       ]
