@@ -23,8 +23,22 @@ export type LocalAttempt = {
   duration: number;
   score: number;
   passed: boolean;
-  answers: Record<string, string>;
-  results: { id: string; prompt: string; given: string; correct: boolean; answer: string; explanation?: string }[];
+  answers: string | Record<string, string>;
+  results: {
+    id: string;
+    prompt: string;
+    given: string;
+    correct: boolean;
+    answer: string;
+    explanation?: string;
+    options?: string[];
+    audioUrl?: string;
+    imageUrl?: string;
+    passage?: string;
+    transcript?: string;
+    category?: string;
+    group?: string;
+  }[];
   createdAt: string;
 };
 
@@ -214,24 +228,27 @@ function saveLocalAttempt(paperId: string, state: LocalExamState) {
   const storage = getStorage();
   if (!storage || !state.report) return;
   const attempts = getLocalHistoryAttempts();
+  const now = Date.now();
+  const existingIdx = attempts.findIndex(
+    (a) => a.testId === paperId && Math.abs(now - new Date(a.createdAt).getTime()) < 15_000,
+  );
+
   const attempt: LocalAttempt = {
-    id: `local_att_${Date.now()}`,
+    id: existingIdx >= 0 ? attempts[existingIdx].id : `local_att_${now}`,
     testId: paperId,
     duration: state.report.duration,
     score: state.report.score,
     passed: state.report.score >= 60,
-    answers: state.answers,
-    results: state.report.results.map((r) => ({
-      id: r.id,
-      prompt: r.prompt,
-      given: r.given,
-      correct: r.correct,
-      answer: r.answer,
-      explanation: r.explanation,
-    })),
-    createdAt: new Date().toISOString(),
+    answers: JSON.stringify(state.report.results),
+    results: state.report.results,
+    createdAt: existingIdx >= 0 ? attempts[existingIdx].createdAt : new Date().toISOString(),
   };
-  attempts.unshift(attempt);
+
+  if (existingIdx >= 0) {
+    attempts[existingIdx] = attempt;
+  } else {
+    attempts.unshift(attempt);
+  }
   storage.setItem(ATTEMPTS_KEY, JSON.stringify(attempts.slice(0, 50)));
 }
 

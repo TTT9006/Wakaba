@@ -146,7 +146,8 @@ async function updateRun(
 ) {
   return db.$transaction(async (tx) => {
     const run = await tx.testRun.findFirst({ where: { id: runId, userId } });
-    if (!run || !run.testId.startsWith('jlpt-')) throw fail('Không tìm thấy bài làm.', 404);
+    const isJlpt = run && (run.testId.startsWith('jlpt-') || run.testId.startsWith('midterm-') || jlptPapers.some((p) => p.id === run.testId));
+    if (!run || !isJlpt) throw fail('Không tìm thấy bài làm.', 404);
     const state = JSON.parse(run.questions) as ExamState,
       now = Date.now();
     const changed = advanceExam(state, now, command?.action, command?.answers, command?.revision);

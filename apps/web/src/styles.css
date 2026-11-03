@@ -6429,3 +6429,10 @@ main :is(h1, h2, h3, p, label), .dialog-title { overflow-wrap: anywhere; }
 .deck-select-summary strong {
   color: var(--ink);
 }
+
+.dialog-content.review-attempt-modal {
+  width: 860px;
+  max-width: min(94vw, 860px);
+  max-height: 88vh;
+  padding: 24px 28px;
+}

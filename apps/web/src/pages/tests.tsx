@@ -3,7 +3,7 @@ import { JlptSession } from './jlpt';
 import type { JlptSummary } from '../../../../packages/shared/jlpt-types';
 import { jlptPapers, paperSummary } from '../../../../packages/shared/jlpt-papers';
 import { getLocalHistoryAttempts } from '../../../../packages/shared/jlpt-client-runner';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import {
@@ -140,8 +140,80 @@ export function QuestionInput({
     />
   );
 }
+function parseAttemptResults(attempt: Attempt | null): Result[] {
+  if (!attempt) return [];
+
+  const paper = jlptPapers.find((p) => p.id === attempt.testId);
+  const qMap = new Map(paper?.sections.flatMap((s) => s.questions).map((q) => [q.id, q]));
+
+  let rawList: any[] = [];
+
+  // Case 1: `results` property already exists as an Array on attempt
+  if (Array.isArray((attempt as any).results)) {
+    rawList = (attempt as any).results;
+  }
+  // Case 2: `answers` is a string
+  else if (typeof attempt.answers === 'string') {
+    try {
+      const parsed = JSON.parse(attempt.answers);
+      if (Array.isArray(parsed)) {
+        rawList = parsed;
+      } else if (parsed && typeof parsed === 'object') {
+        const answersMap = parsed as Record<string, string>;
+        if (paper) {
+          return paper.sections.flatMap((s) => s.questions).map((q) => ({
+            ...q,
+            given: answersMap[q.id] || '',
+            correct: answersMap[q.id] === q.answer,
+          }));
+        }
+      }
+    } catch {
+      // not valid JSON
+    }
+  }
+  // Case 3: `answers` is already an object/record (from legacy LocalAttempt)
+  else if (attempt.answers && typeof attempt.answers === 'object') {
+    if (Array.isArray(attempt.answers)) {
+      rawList = attempt.answers;
+    } else {
+      const answersMap = attempt.answers as Record<string, string>;
+      if (paper) {
+        return paper.sections.flatMap((s) => s.questions).map((q) => ({
+          ...q,
+          given: answersMap[q.id] || '',
+          correct: answersMap[q.id] === q.answer,
+        }));
+      }
+    }
+  }
+
+  // If we have rawList, enrich each item with full question data from paper if available
+  if (paper && rawList.length) {
+    return rawList.map((r) => {
+      const q = qMap.get(r.id);
+      return {
+        ...q,
+        ...r,
+        given: r.given ?? '',
+        correct: r.correct ?? (r.given === (q?.answer || r.answer)),
+        answer: r.answer || q?.answer || '',
+        explanation: r.explanation || q?.explanation || '',
+        audioUrl: r.audioUrl || q?.audioUrl,
+        imageUrl: r.imageUrl || q?.imageUrl,
+        passage: r.passage || q?.passage,
+        transcript: r.transcript || q?.transcript,
+        options: r.options || q?.options,
+      };
+    });
+  }
+
+  return rawList;
+}
+
 export function Tests() {
   const [review, setReview] = useState<Attempt | null>(null);
+  const [reviewFilter, setReviewFilter] = useState<'all' | 'wrong' | 'correct'>('all');
   const [selectedExamLevel, setSelectedExamLevel] = useState<string>('all');
   const [searchParams, setSearchParams] = useSearchParams();
   const initialTab = searchParams.get('tab') === 'midterm' ? 'midterm' : 'jlpt';
@@ -179,7 +251,19 @@ export function Tests() {
       const localAttempts = getLocalHistoryAttempts() as unknown as Attempt[];
       const combined = [...localAttempts, ...serverAttempts];
       combined.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
-      return combined;
+
+      // Deduplicate: merge attempts that have identical testId and createdAt within 5 seconds
+      const deduplicated: Attempt[] = [];
+      const seen = new Set<string>();
+      for (const a of combined) {
+        const timeKey = `${a.testId}_${new Date(a.createdAt).toISOString().slice(0, 16)}`;
+        if (!seen.has(a.id) && !seen.has(timeKey)) {
+          seen.add(a.id);
+          seen.add(timeKey);
+          deduplicated.push(a);
+        }
+      }
+      return deduplicated;
     },
   });
 
@@ -635,58 +719,287 @@ export function Tests() {
       {/* Review Modal for past attempts */}
       <Modal
         open={review !== null}
-        onOpenChange={(o) => !o && setReview(null)}
-        title="Xem lại bài làm"
+        onOpenChange={(o) => {
+          if (!o) {
+            setReview(null);
+            setReviewFilter('all');
+          }
+        }}
+        title="Xem lại bài làm chi tiết"
+        className="review-attempt-modal"
       >
-        {review &&
-          (JSON.parse(review.answers) as Result[]).map((r, i) => (
-            <div key={r.id} className={'feedback ' + (r.correct ? 'correct' : 'incorrect')}>
-              <strong>
-                {i + 1}. <JapaneseAnnotatedText text={r.prompt} />
-              </strong>
-              {r.imageUrl && (
-                <div style={{ marginBlock: '8px' }}>
-                  <img
-                    src={r.imageUrl}
-                    alt="Hình minh họa"
-                    className="jlpt-question-image"
-                    style={{ maxHeight: '240px', objectFit: 'contain' }}
-                  />
+        {review && (() => {
+          const reviewResults = parseAttemptResults(review);
+          const reviewPaper = jlptPapers.find((p) => p.id === review.testId);
+          const correctCount = reviewResults.filter((r) => r.correct).length;
+          const wrongCount = reviewResults.filter((r) => !r.correct).length;
+          const filteredResults =
+            reviewFilter === 'wrong'
+              ? reviewResults.filter((r) => !r.correct)
+              : reviewFilter === 'correct'
+              ? reviewResults.filter((r) => r.correct)
+              : reviewResults;
+
+          return (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              {/* Summary card */}
+              <div
+                style={{
+                  padding: '16px',
+                  borderRadius: '10px',
+                  background: 'var(--surface)',
+                  border: '1px solid var(--line)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '12px',
+                }}
+              >
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '8px' }}>
+                  <div>
+                    <h3 style={{ margin: '0 0 4px 0', fontSize: '17px', color: 'var(--ink)' }}>
+                      {data?.find((t) => t.id === review.testId)?.title || reviewPaper?.title || review.testId}
+                    </h3>
+                    <small style={{ color: 'var(--muted)', fontSize: '13px' }}>
+                      Nộp bài lúc: {new Date(review.createdAt).toLocaleString('vi')} · Thời gian: {review.duration} giây
+                    </small>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <span
+                      style={{
+                        fontSize: '18px',
+                        fontWeight: 700,
+                        color: review.score >= 70 ? 'var(--jade)' : 'var(--peach)',
+                        background: review.score >= 70 ? 'rgba(46,125,50,0.1)' : 'rgba(239,83,80,0.1)',
+                        padding: '4px 12px',
+                        borderRadius: '6px',
+                      }}
+                    >
+                      {review.score}% ({correctCount}/{reviewResults.length} câu)
+                    </span>
+                    <Link
+                      to={'/tests/' + review.testId}
+                      className="button button-small"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '4px',
+                        textDecoration: 'none',
+                        fontSize: '13px',
+                        padding: '6px 12px',
+                      }}
+                    >
+                      <RotateCcw size={14} /> Làm lại đề này
+                    </Link>
+                  </div>
                 </div>
-              )}
-              {r.audioUrl && (
-                <div className="jlpt-audio-player" style={{ marginBlock: '8px' }}>
-                  <audio controls preload="auto" src={r.audioUrl} className="jlpt-audio-element" />
+
+                {/* Quick filter tabs */}
+                <div style={{ display: 'flex', gap: '8px', borderTop: '1px solid var(--line)', paddingTop: '10px' }}>
+                  <button
+                    type="button"
+                    className={`pill-btn ${reviewFilter === 'all' ? 'active' : ''}`}
+                    onClick={() => setReviewFilter('all')}
+                    style={{ fontSize: '13px', padding: '4px 12px' }}
+                  >
+                    Tất cả ({reviewResults.length})
+                  </button>
+                  <button
+                    type="button"
+                    className={`pill-btn ${reviewFilter === 'wrong' ? 'active' : ''}`}
+                    onClick={() => setReviewFilter('wrong')}
+                    style={{
+                      fontSize: '13px',
+                      padding: '4px 12px',
+                      color: reviewFilter === 'wrong' ? '#fff' : 'var(--peach)',
+                      borderColor: 'var(--peach)',
+                      background: reviewFilter === 'wrong' ? 'var(--peach)' : 'transparent',
+                    }}
+                  >
+                    Câu sai ({wrongCount})
+                  </button>
+                  <button
+                    type="button"
+                    className={`pill-btn ${reviewFilter === 'correct' ? 'active' : ''}`}
+                    onClick={() => setReviewFilter('correct')}
+                    style={{
+                      fontSize: '13px',
+                      padding: '4px 12px',
+                      color: reviewFilter === 'correct' ? '#fff' : 'var(--jade)',
+                      borderColor: 'var(--jade)',
+                      background: reviewFilter === 'correct' ? 'var(--jade)' : 'transparent',
+                    }}
+                  >
+                    Câu đúng ({correctCount})
+                  </button>
                 </div>
-              )}
-              {r.passage && (
-                <p className="jlpt-passage" lang="ja">
-                  {r.passage}
+              </div>
+
+              {/* Questions list */}
+              {filteredResults.length === 0 ? (
+                <p className="muted" style={{ textAlign: 'center', padding: '20px 0' }}>
+                  Không có câu hỏi nào trong mục này.
                 </p>
-              )}
-              <p>
-                Bạn chọn: <JapaneseAnnotatedText text={r.given || '(Chưa trả lời)'} />
-              </p>
-              <p>
-                Đáp án: <JapaneseAnnotatedText text={r.answer} />
-              </p>
-              <small>
-                <JapaneseAnnotatedText text={r.explanation} />
-              </small>
-              {r.transcript && (
-                <p className="jlpt-passage" lang="ja">
-                  {r.transcript}
-                </p>
+              ) : (
+                filteredResults.map((r, i) => (
+                  <div
+                    key={r.id || i}
+                    className={'feedback ' + (r.correct ? 'correct' : 'incorrect')}
+                    style={{
+                      padding: '16px',
+                      borderRadius: '8px',
+                      borderLeft: `4px solid ${r.correct ? 'var(--jade)' : 'var(--peach)'}`,
+                    }}
+                  >
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+                      <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--muted)' }}>
+                        Câu {reviewResults.indexOf(r) + 1}
+                        {r.group ? ` · ${r.group}` : ''}
+                      </span>
+                      <span
+                        style={{
+                          fontSize: '12px',
+                          fontWeight: 700,
+                          color: r.correct ? 'var(--jade)' : 'var(--peach)',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '4px',
+                        }}
+                      >
+                        {r.correct ? <Check size={14} /> : <ShieldAlert size={14} />}
+                        {r.correct ? 'ĐÚNG' : 'SAI'}
+                      </span>
+                    </div>
+
+                    <strong style={{ fontSize: '15px', display: 'block', marginBottom: '8px' }}>
+                      <JapaneseAnnotatedText text={r.prompt} />
+                    </strong>
+
+                    {r.imageUrl && (
+                      <div style={{ marginBlock: '8px' }}>
+                        <img
+                          src={r.imageUrl}
+                          alt="Hình minh họa"
+                          className="jlpt-question-image"
+                          style={{ maxHeight: '240px', objectFit: 'contain' }}
+                        />
+                      </div>
+                    )}
+
+                    {r.audioUrl && (
+                      <div className="jlpt-audio-player" style={{ marginBlock: '8px' }}>
+                        <audio controls preload="auto" src={r.audioUrl} className="jlpt-audio-element" />
+                      </div>
+                    )}
+
+                    {r.passage && (
+                      <p className="jlpt-passage" lang="ja" style={{ whiteSpace: 'pre-wrap', marginBlock: '8px' }}>
+                        {r.passage}
+                      </p>
+                    )}
+
+                    {/* Options display */}
+                    {Array.isArray(r.options) && r.options.length > 0 && (
+                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '8px', marginBlock: '10px' }}>
+                        {r.options.map((opt, oIdx) => {
+                          const isAns = opt === r.answer;
+                          const isUserChoice = opt === r.given;
+                          let borderCol = 'var(--line)';
+                          let bgCol = 'var(--surface)';
+                          if (isAns) {
+                            borderCol = 'var(--jade)';
+                            bgCol = 'rgba(46, 125, 50, 0.08)';
+                          } else if (isUserChoice && !r.correct) {
+                            borderCol = 'var(--peach)';
+                            bgCol = 'rgba(239, 83, 80, 0.08)';
+                          }
+                          return (
+                            <div
+                              key={opt}
+                              style={{
+                                padding: '8px 12px',
+                                borderRadius: '6px',
+                                border: `1.5px solid ${borderCol}`,
+                                background: bgCol,
+                                fontSize: '13px',
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                              }}
+                            >
+                              <span>
+                                <span style={{ fontWeight: 600, marginRight: '6px', color: 'var(--muted)' }}>
+                                  {oIdx + 1}.
+                                </span>
+                                <JapaneseAnnotatedText text={opt} />
+                              </span>
+                              {isAns && (
+                                <span style={{ fontSize: '11px', color: 'var(--jade)', fontWeight: 700 }}>
+                                  ✓ Đáp án đúng
+                                </span>
+                              )}
+                              {isUserChoice && !isAns && (
+                                <span style={{ fontSize: '11px', color: 'var(--peach)', fontWeight: 700 }}>
+                                  ✗ Bạn chọn
+                                </span>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
+
+                    <div style={{ fontSize: '13px', marginTop: '8px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                      <p style={{ margin: 0 }}>
+                        <strong>Bạn đã chọn: </strong>
+                        <span style={{ color: r.correct ? 'var(--jade)' : 'var(--peach)', fontWeight: 600 }}>
+                          <JapaneseAnnotatedText text={r.given || '(Chưa trả lời)'} />
+                        </span>
+                      </p>
+                      <p style={{ margin: 0 }}>
+                        <strong>Đáp án đúng: </strong>
+                        <span style={{ color: 'var(--jade)', fontWeight: 600 }}>
+                          <JapaneseAnnotatedText text={r.answer} />
+                        </span>
+                      </p>
+                    </div>
+
+                    {r.explanation && (
+                      <div style={{ marginTop: '10px', padding: '10px', background: 'var(--surface-sunken)', borderRadius: '6px', fontSize: '13px' }}>
+                        <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>
+                          💡 Giải thích:
+                        </strong>
+                        <JapaneseAnnotatedText text={r.explanation} />
+                      </div>
+                    )}
+
+                    {r.transcript && (
+                      <details style={{ marginTop: '8px', fontSize: '13px' }}>
+                        <summary style={{ cursor: 'pointer', color: 'var(--ocean)', fontWeight: 600 }}>
+                          📜 Xem lời thoại bài nghe (Transcript)
+                        </summary>
+                        <p className="jlpt-passage" lang="ja" style={{ whiteSpace: 'pre-wrap', marginTop: '6px' }}>
+                          {r.transcript}
+                        </p>
+                      </details>
+                    )}
+                  </div>
+                ))
               )}
             </div>
-          ))}
+          );
+        })()}
       </Modal>
     </>
   );
 }
 export function TestSession() {
   const { id } = useParams();
-  return id?.startsWith('jlpt-') ? <JlptSession key={id} /> : <LegacyTestSession key={id} />;
+  const isJlpt = Boolean(
+    id?.startsWith('jlpt-') ||
+    id?.startsWith('midterm-') ||
+    jlptPapers.some((p) => p.id === id)
+  );
+  return isJlpt ? <JlptSession key={id} /> : <LegacyTestSession key={id} />;
 }
 function LegacyTestSession() {
   const { id } = useParams();

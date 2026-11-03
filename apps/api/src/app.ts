@@ -972,7 +972,7 @@ app.post('/api/tests/:id/start', async (req, res) => {
   });
 });
 app.post('/api/tests/:id/submit', async (req, res) => {
-  if (String(req.params.id).startsWith('jlpt-')) {
+  if (String(req.params.id).startsWith('jlpt-') || String(req.params.id).startsWith('midterm-')) {
     res.status(400).json({ error: 'Đề JLPT phải nộp theo từng phần trong phiên thi.' });
     return;
   }
