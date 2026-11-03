@@ -933,76 +933,76 @@ export const midtermJan01Paper01: JlptPaper = {
           "transcript": "女の人と男の人が話しています。土曜日、図書館は何時から何時までですか。\n女「すみません、この図書館は土曜日も開いていますか。」\n男「ええ、開いていますよ。平日、月曜日から金曜日までは朝９時から夜７時までですが、土曜日は朝９時から夕方５時までです。」\n女「日曜日は？」\n男「日曜日は休みです。」\n質問：土曜日、図書館は何時から何時までですか。",
           "annotationDisabled": true
         },
-        {
+                {
           "id": "midterm-jan01-01-q57",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 1)",
-          "prompt": "ミラーさんは うちから とうきょうえきまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "女の人は、一日に何回薬を飲みますか。",
           "options": [
-            "でんしゃ",
-            "タクシー",
-            "バス",
-            "あるいて"
+            "1かい",
+            "2かい",
+            "3かい",
+            "4かい"
           ],
-          "answer": "タクシー",
-          "explanation": "Hành trình Chặng 1: Theo đoạn hội thoại, phương tiện sử dụng là 「タクシー」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「ミラーさん、来週 京都へ 行きますね。何で 行きますか。」\n男「朝 ７時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」\n女「東京駅から 京都駅までは？」\n男「新幹線で 行きます。はやいですよ。」\n女「京都駅から ホテルまでは 何で 行きますか。」\n男「京都駅前から バスで 行きます。」\n女「ホテルから 会社までは 遠いですか。」\n男「いいえ、すぐ 近くですから、歩いて 行きますよ。」",
+          "answer": "2かい",
+          "explanation": "Bác sĩ hướng dẫn uống thuốc vào buổi sáng (朝) và buổi tối (夜), tức 1 ngày uống 2 lần (2かい). Con số 4 là số ngày uống thuốc (4日間), không phải số lần uống mỗi ngày. Đáp án đúng là 2 (2かい).",
+          "audioUrl": "/audio/jlpt/n5-2010-2011/q02.mp3",
+          "transcript": "病院で、医者と女の人が話しています。女の人は、一日に何回薬を飲みますか。\n医者「この薬は、朝と夜、ご飯を食べたあとで飲んでください。」\n女「昼ご飯のあとは？」\n医者「昼は飲まないでください。」\n女「はい。」\n医者「４日間飲んでくださいね。」\n女「分かりました。」\n質問：女の人は、一日に何回薬を飲みますか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-01-q58",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 2)",
-          "prompt": "とうきょうえきから きょうとえきまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "学生は、始めに何をしますか。",
           "options": [
-            "しんかんせん",
-            "ひこうき",
-            "ふね",
-            "バス"
+            "レストランで晩ご飯を食べる",
+            "にもつを部屋に持っていく",
+            "テレビを見る",
+            "買い物をする"
           ],
-          "answer": "しんかんせん",
-          "explanation": "Hành trình Chặng 2: Theo đoạn hội thoại, phương tiện sử dụng là 「しんかんせん」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「ミラーさん、来週 京都へ 行きますね。何で 行きますか。」\n男「朝 ７時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」\n女「東京駅から 京都駅までは？」\n男「新幹線で 行きます。はやいですよ。」\n女「京都駅から ホテルまでは 何で 行きますか。」\n男「京都駅前から バスで 行きます。」\n女「ホテルから 会社までは 遠いですか。」\n男「いいえ、すぐ 近くですから、歩いて 行きますよ。」",
+          "answer": "レストランで晩ご飯を食べる",
+          "explanation": "Hướng dẫn viên yêu cầu học sinh làm ngay trước tiên (始めに) là đi ăn tối ở nhà hàng tầng 1 (今６時50分ですから、すぐに行ってください). Hành lý do nhân viên mang giúp, còn xem tivi và mua sắm diễn ra sau bữa ăn. Đáp án đúng là 1 (レストランで晩ご飯を食べる).",
+          "audioUrl": "/audio/jlpt/n5-2010-2011/q05.mp3",
+          "transcript": "バスの中で、旅行会社の人が学生に話しています。学生は、始めに何をしますか。\n旅行会社「皆さん、ホテルに着きました。今から１階のレストランで晩ご飯を食べます。晩ご飯は７時からです。今６時50分ですから、すぐに行ってください。皆さんの荷物は、ホテルの人が部屋に持っていきます。晩ご飯のあとは、テレビを見たり、買い物をしたりしてください。」\n質問：学生は、始めに何をしますか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-01-q59",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 3)",
-          "prompt": "きょうとえきから ホテルまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "男の人は、何を持っていきますか。",
           "options": [
-            "タクシー",
-            "バス",
-            "じてんしゃ",
-            "ちかてつ"
+            "おにぎり",
+            "のみものとおにぎり",
+            "のみものとお菓子",
+            "お菓子"
           ],
-          "answer": "バス",
-          "explanation": "Hành trình Chặng 3: Theo đoạn hội thoại, phương tiện sử dụng là 「バス」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「ミラーさん、来週 京都へ 行きますね。何で 行きますか。」\n男「朝 ７時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」\n女「東京駅から 京都駅までは？」\n男「新幹線で 行きます。はやいですよ。」\n女「京都駅から ホテルまでは 何で 行きますか。」\n男「京都駅前から バスで 行きます。」\n女「ホテルから 会社までは 遠いですか。」\n男「いいえ、すぐ 近くですから、歩いて 行きますよ。」",
+          "answer": "お菓子",
+          "explanation": "Người nữ tự chuẩn bị cơm nắm, còn nước uống vì nặng nên đến nơi mới mua. Do đó, người nam chỉ mang bánh kẹo (お菓子) từ nhà đi. Đáp án đúng là 4 (お菓子).",
+          "audioUrl": "/audio/jlpt/n5-2010-2011/q06.mp3",
+          "transcript": "男の人と女の人が話しています。男の人は、何を持っていきますか。\n男「来週の日曜日、海へ行きますね。何を持っていきましょうか。」\n女「私はおにぎりを持っていきます。」\n男「じゃあ僕は。」\n女「飲み物とお菓子をお願いします。」\n男「はい。飲み物とお菓子ですね。」\n女「あ、飲み物は重いですね。海に着いてから買いましょう。」\n男「そうですね。」\n質問：男の人は、何を持っていきますか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-01-q60",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 4)",
-          "prompt": "ホテルから かいしゃまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "二人はどこで昼ご飯を食べますか。",
           "options": [
-            "でんしゃ",
-            "タクシー",
-            "あるいて",
-            "バス"
+            "しょくどう",
+            "きっさてん",
+            "パンや",
+            "きょうしつ"
           ],
-          "answer": "あるいて",
-          "explanation": "Hành trình Chặng 4: Theo đoạn hội thoại, phương tiện sử dụng là 「あるいて」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「ミラーさん、来週 京都へ 行きますね。何で 行きますか。」\n男「朝 ７時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」\n女「東京駅から 京都駅までは？」\n男「新幹線で 行きます。はやいですよ。」\n女「京都駅から ホテルまでは 何で 行きますか。」\n男「京都駅前から バスで 行きます。」\n女「ホテルから 会社までは 遠いですか。」\n男「いいえ、すぐ 近くですから、歩いて 行きますよ。」",
+          "answer": "きょうしつ",
+          "explanation": "Bánh mì được mua ở tiệm bánh (パン屋), nhưng nơi hai người ngồi ăn trưa là trong phòng học (教室). Đáp án đúng là 4 (きょうしつ).",
+          "audioUrl": "/audio/jlpt/n5-2010-2011/q11.mp3",
+          "transcript": "学校で男の学生と女の学生が話しています。二人はどこで昼ご飯を食べますか。\n男「もう１時ですね。何か食べませんか。」\n女「そうですね。でも今日は土曜日だから、学校の食堂や喫茶店は休みですよ。」\n男「じゃ、パン屋でパンを買って、教室で食べましょうか。」\n女「そうですね。」\n質問：二人はどこで昼ご飯を食べますか。",
           "annotationDisabled": true
         },
         {
@@ -2033,76 +2033,76 @@ export const midtermJan01Paper02: JlptPaper = {
           "transcript": "先生と学生が話しています。学生はあしたの朝、どこで先生に会いますか。\n女「あしたはみんなで京都に行きますね。朝８時半に駅の改札口の前に集まってください。」\n男「学校じゃなくて、駅ですか。」\n女「ええ、そうです。遅れないでくださいね。」\n男「はい、わかりました。」\n質問：学生はあしたの朝、どこで先生に会いますか。",
           "annotationDisabled": true
         },
-        {
+                {
           "id": "midterm-jan01-02-q57",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 1)",
-          "prompt": "カリナさんは りょうから こうべえきまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "男の人はこれから何をしますか。",
           "options": [
-            "じてんしゃ",
-            "バス",
-            "タクシー",
-            "あるいて"
+            "肉を切る",
+            "野菜を切る",
+            "カレーを食べる",
+            "買い物に行く"
           ],
-          "answer": "じてんしゃ",
-          "explanation": "Hành trình Chặng 1: Theo đoạn hội thoại, phương tiện sử dụng là 「じてんしゃ」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "男「カリナさん、日曜日 奈良へ 行きますね。どうやって 行きますか。」\n女「まず、寮から 神戸駅まで 自転車で 行きます。」\n男「神戸駅から 大阪駅までは？」\n女「JRの 電車で 行きます。」\n男「大阪駅から 奈良駅までは 何で 行きますか。」\n女「大阪駅前から 直通の バスに 乗ります。」\n男「奈良駅から 奈良公園までは 近いですか。」\n女「はい、とても 近いですから、歩いて 行きますよ。」",
+          "answer": "肉を切る",
+          "explanation": "Giáo viên yêu cầu học viên nam cắt thịt (野菜じゃなくて、肉を切ってください). Do đó việc người nam làm tiếp theo là cắt thịt. Đáp án đúng là 1 (肉を切る).",
+          "audioUrl": "/audio/jlpt/n5-2012-12/q03.mp3",
+          "transcript": "料理教室で先生と男の人が話しています。男の人はこれから何をしますか。\n先生「では、これからカレーを作りましょう。」\n男「先生、私は野菜を切りましょうか。」\n先生「いいえ、野菜じゃなくて、肉を切ってください。」\n男「はい。」\n質問：男の人はこれから何をしますか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-02-q58",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 2)",
-          "prompt": "こうべえきから おおさかえきまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "女の人はどの靴下を買いますか。",
           "options": [
-            "しんかんせん",
-            "でんしゃ",
-            "バス",
-            "タクシー"
+            "長い動物の絵の靴下",
+            "短い動物の絵の靴下",
+            "長い果物の絵の靴下",
+            "短い果物の絵の靴下"
           ],
-          "answer": "でんしゃ",
-          "explanation": "Hành trình Chặng 2: Theo đoạn hội thoại, phương tiện sử dụng là 「でんしゃ」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "男「カリナさん、日曜日 奈良へ 行きますね。どうやって 行きますか。」\n女「まず、寮から 神戸駅まで 自転車で 行きます。」\n男「神戸駅から 大阪駅までは？」\n女「JRの 電車で 行きます。」\n男「大阪駅から 奈良駅までは 何で 行きますか。」\n女「大阪駅前から 直通の バスに 乗ります。」\n男「奈良駅から 奈良公園までは 近いですか。」\n女「はい、とても 近いですから、歩いて 行きますよ。」",
+          "answer": "長い動物の絵の靴下",
+          "explanation": "Khách hàng chọn đôi tất dài (長いの) và có hình vẽ động vật (動物の絵). Đáp án đúng là 1 (長い動物の絵の靴下).",
+          "audioUrl": "/audio/jlpt/n5-2012-12/q04.mp3",
+          "transcript": "靴下の店で女の人が話しています。女の人はどの靴下を買いますか。\n女「子供の靴下、ありますか。」\n店員「はい。長いのですか、短いのですか。」\n女「長いのをください。動物の絵のをください。」\n店員「はい、どうぞ。」\n質問：女の人はどの靴下を買いますか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-02-q59",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 3)",
-          "prompt": "おおさかえきから ならえきまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "二人はどの果物を使いますか。",
           "options": [
-            "バス",
-            "ちかてつ",
-            "でんしゃ",
-            "タクシー"
+            "リンゴとミカン",
+            "リンゴとバナナ",
+            "ミカンとバナナ",
+            "リンゴだけ"
           ],
-          "answer": "でんしゃ",
-          "explanation": "Chặng 3: Theo đoạn hội thoại, Karina nói: 大阪駅からも 電車で 行きますよ nên phương tiện là でんしゃ.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "男「カリナさん、日曜日 奈良へ 行きますね。どうやって 行きますか。」\n女「まず、寮から 神戸駅まで 自転車で 行きます。」\n男「神戸駅から 大阪駅までは？」\n女「JRの 電車で 行きます。」\n男「大阪駅から 奈良駅までは 何で 行きますか。」\n女「大阪駅前から 直通の バスに 乗ります。」\n男「奈良駅から 奈良公園までは 近いですか。」\n女「はい、とても 近いですから、歩いて 行きますよ。」",
+          "answer": "リンゴとミカン",
+          "explanation": "Hai người đồng ý cho táo (リンゴ) và quýt (ミカン), loại bỏ chuối (バナナは入れないで). Đáp án đúng là 1 (リンゴとミカン).",
+          "audioUrl": "/audio/jlpt/n5-2012-12/q07.mp3",
+          "transcript": "男の人と女の人がジュースを作っています。二人はどの果物を使いますか。\n男「リンゴとミカンとバナナがあるね。どれにする？」\n女「リンゴを入れましょう。」\n男「それから、バナナは？」\n女「バナナは入れないで、ミカンにしましょう。」\n男「わかった。」\n質問：二人はどの果物を使いますか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-02-q60",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 4)",
-          "prompt": "ならえきから ならこうえんまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "男の人は何を飲みますか。",
           "options": [
-            "バス",
-            "あるいて",
-            "タクシー",
-            "じてんしゃ"
+            "冷たいお茶",
+            "熱いお茶",
+            "冷たいジュース",
+            "熱いコーヒー"
           ],
-          "answer": "あるいて",
-          "explanation": "Hành trình Chặng 4: Theo đoạn hội thoại, phương tiện sử dụng là 「あるいて」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "男「カリナさん、日曜日 奈良へ 行きますね。どうやって 行きますか。」\n女「まず、寮から 神戸駅まで 自転車で 行きます。」\n男「神戸駅から 大阪駅までは？」\n女「JRの 電車で 行きます。」\n男「大阪駅から 奈良駅までは 何で 行きますか。」\n女「大阪駅前から 直通の バスに 乗ります。」\n男「奈良駅から 奈良公園までは 近いですか。」\n女「はい、とても 近いですから、歩いて 行きますよ。」",
+          "answer": "冷たいお茶",
+          "explanation": "Người nam từ chối nước trái cây và chọn gọi trà lạnh (冷たいお茶). Đáp án đúng là 1 (冷たいお茶).",
+          "audioUrl": "/audio/jlpt/n5-2012-12/q08.mp3",
+          "transcript": "喫茶店で男の人と女の人が話しています。男の人は何を飲みますか。\n女「暑いですね。冷たいジュースはどうですか。」\n男「ジュースはちょっと…。冷たいお茶はありますか。」\n女「はい、ありますよ。」\n男「じゃ、それをください。」\n質問：男の人は何を飲みますか。",
           "annotationDisabled": true
         },
         {
@@ -3133,76 +3133,76 @@ export const midtermJan01Paper03: JlptPaper = {
           "transcript": "男の人と女の人が話しています。女の人の電話番号は何番ですか。\n男「すみません、電話番号は何番ですか。」\n女「５１２の７７４３です。」\n男「５１２の７７３４ですね。」\n女「いいえ、７７４３ですよ。」\n男「あ、すみません。７７４３ですね。」\n質問：女の人の電話番号は何番ですか。",
           "annotationDisabled": true
         },
-        {
+                {
           "id": "midterm-jan01-03-q57",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 1)",
-          "prompt": "サントスさんは うちから しんじゅくえきまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "男の人はどうして遅れましたか。",
           "options": [
-            "でんしゃ",
-            "バス",
-            "タクシー",
-            "じてんしゃ"
+            "電車が止まったから",
+            "道に迷ったから",
+            "朝寝坊したから",
+            "バスが来なかったから"
           ],
-          "answer": "でんしゃ",
-          "explanation": "Hành trình Chặng 1: Theo đoạn hội thoại, phương tiện sử dụng là 「でんしゃ」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「サントスさん、来週 ブラジルへ 帰りますね。どうやって 行きますか。」\n男「まず、家から 新宿駅まで 電車で 行きます。」\n女「新宿駅から 成田空港までは 何で 行きますか。」\n男「リムジンバスで 行きます。とても 便利ですよ。」\n女「成田空港から サンパウロまでは？」\n男「飛行機で 行きます。２６時間くらい かかります。」\n女「サンパウロ空港から ご両親の うちまでは？」\n男「荷物が 多いですから、タクシーで 行きます。」",
+          "answer": "電車が止まったから",
+          "explanation": "Người nam giải thích nguyên nhân đến muộn là do tàu điện bị dừng hoạt động (電車が止まってしまったんです). Đáp án đúng là 1 (電車が止まったから).",
+          "audioUrl": "/audio/jlpt/n5-2012-12/q11.mp3",
+          "transcript": "男の人と女の人が話しています。男の人はどうして遅れましたか。\n女「遅かったですね。」\n男「すみません。電車が止まってしまったんです。」\n女「事故ですか。大変でしたね。」\n男「ええ。」\n質問：男の人はどうして遅れましたか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-03-q58",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 2)",
-          "prompt": "しんじゅくえきから なりたくうこうまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "店の人は花をどうしますか。",
           "options": [
-            "しんかんせん",
-            "バス",
-            "タクシー",
-            "でんしゃ"
+            "花を3本包む",
+            "花にリボンをつける",
+            "花を2本紙で包む",
+            "花をそのまま渡す"
           ],
-          "answer": "バス",
-          "explanation": "Hành trình Chặng 2: Theo đoạn hội thoại, phương tiện sử dụng là 「バス」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「サントスさん、来週 ブラジルへ 帰りますね。どうやって 行きますか。」\n男「まず、家から 新宿駅まで 電車で 行きます。」\n女「新宿駅から 成田空港までは 何で 行きますか。」\n男「リムジンバスで 行きます。とても 便利ですよ。」\n女「成田空港から サンパウロまでは？」\n男「飛行機で 行きます。２６時間くらい かかります。」\n女「サンパウロ空港から ご両親の うちまでは？」\n男「荷物が 多いですから、タクシーで 行きます。」",
+          "answer": "花を2本紙で包む",
+          "explanation": "Nhân viên gói 2 bông hoa lại bằng giấy và không thắt ruy băng (花を2本紙で包む). Đáp án đúng là 3.",
+          "audioUrl": "/audio/jlpt/n5-2013-07/q05.mp3",
+          "transcript": "花屋で男の人と店の人が話しています。店の人は花をどうしますか。\n男「すみません、この花を２本ください。」\n店員「はい、ありがとうございます。」\n男「友達のプレゼントですから、綺麗に包んでください。」\n店員「わかりました。リボンはどうしますか。」\n男「リボンはいいです。紙だけでお願いします。」\n店員「はい。」\n質問：店の人は花をどうしますか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-03-q59",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 3)",
-          "prompt": "なりたくうこうから サンパウロくうこうまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "女の人は何を持っていきますか。",
           "options": [
-            "ふね",
-            "ひこうき",
-            "でんしゃ",
-            "バス"
+            "ほうきとカップ",
+            "ゴミ袋とカップ",
+            "お茶とカップ",
+            "ほうきとゴミ袋とお茶"
           ],
-          "answer": "ひこうき",
-          "explanation": "Hành trình Chặng 3: Theo đoạn hội thoại, phương tiện sử dụng là 「ひこうき」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「サントスさん、来週 ブラジルへ 帰りますね。どうやって 行きますか。」\n男「まず、家から 新宿駅まで 電車で 行きます。」\n女「新宿駅から 成田空港までは 何で 行きますか。」\n男「リムジンバスで 行きます。とても 便利ですよ。」\n女「成田空港から サンパウロまでは？」\n男「飛行機で 行きます。２６時間くらい かかります。」\n女「サンパウロ空港から ご両親の うちまでは？」\n男「荷物が 多いですから、タクシーで 行きます。」",
+          "answer": "ほうきとゴミ袋とお茶",
+          "explanation": "Người nữ mang 3 thứ: chổi, túi rác và trà (ほうきとゴミ袋とお茶). Cốc uống nước do người nam mang. Đáp án đúng là 4.",
+          "audioUrl": "/audio/jlpt/n5-2013-07/q06.mp3",
+          "transcript": "男の人と女の人が話しています。女の人は何を持っていきますか。\n男「明日は公園の掃除ですね。何を持って行きますか。」\n女「私はほうきを持っていきます。」\n男「ゴミ袋はありますか。」\n女「あ、ゴミ袋は私が持っていきますね。」\n男「じゃ、お茶とカップはどうしますか。」\n女「お茶は私が持って行きます。カップはお願いします。」\n男「はい、わかりました。」\n質問：女の人は何を持っていきますか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-03-q60",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 4)",
-          "prompt": "サンパウロくうこうから りょうしんの うちまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "男の人はどこを掃除しますか。",
           "options": [
-            "タクシー",
-            "あるいて",
-            "バス",
-            "じてんしゃ"
+            "げんかん",
+            "おふろ",
+            "だいどころ",
+            "にわ"
           ],
-          "answer": "タクシー",
-          "explanation": "Hành trình Chặng 4: Theo đoạn hội thoại, phương tiện sử dụng là 「タクシー」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「サントスさん、来週 ブラジルへ 帰りますね。どうやって 行きますか。」\n男「まず、家から 新宿駅まで 電車で 行きます。」\n女「新宿駅から 成田空港までは 何で 行きますか。」\n男「リムジンバスで 行きます。とても 便利ですよ。」\n女「成田空港から サンパウロまでは？」\n男「飛行機で 行きます。２６時間くらい かかります。」\n女「サンパウロ空港から ご両親の うちまでは？」\n男「荷物が 多いですから、タクシーで 行きます。」",
+          "answer": "にわ",
+          "explanation": "Huyền quan và phòng tắm đã dọn xong trước đó. Khu vực người nam dọn là sân vườn (にわ). Đáp án đúng là 4 (にわ).",
+          "audioUrl": "/audio/jlpt/n5-2013-07/q10.mp3",
+          "transcript": "男の人と女の人が話しています。男の人はどこを掃除しますか。\n女「これから買い物に行きますが、その前に掃除をお願いできますか。」\n男「いいですよ。玄関とお風呂ですね。」\n女「玄関とお風呂はさっきやりました。庭をお願いします。」\n男「わかりました。」\n質問：男の人はどこを掃除しますか。",
           "annotationDisabled": true
         },
         {
@@ -4233,76 +4233,76 @@ export const midtermJan01Paper04: JlptPaper = {
           "transcript": "男の学生と女の学生が話しています。女の学生の誕生日は何月何日ですか。\n男「佐藤さん、誕生日はいつですか。」\n女「５月３０日です。」\n男「え、僕の姉と同じですね。姉は４月３０日ですけど。」\n女「あ、月が違いますね。」\n質問：女の学生の誕生日は何月何日ですか。",
           "annotationDisabled": true
         },
-        {
+                {
           "id": "midterm-jan01-04-q57",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 1)",
-          "prompt": "田中さんは うちから 品川駅まで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "男の人は昨日何をしましたか。",
           "options": [
-            "バス",
-            "でんしゃ",
-            "タクシー",
-            "あるいて"
+            "海へ行った",
+            "うちで本を読んだ",
+            "映画を見に行った",
+            "買い物に行った"
           ],
-          "answer": "バス",
-          "explanation": "Hành trình Chặng 1: Theo đoạn hội thoại, phương tiện sử dụng là 「バス」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「田中さん、来週 広島へ 行きますね。何で 行きますか。」\n男「まず、朝 ６時半に うちを出て、品川駅まで バスで行きます。」\n女「品川駅から 広島駅までは？」\n男「新幹線で行きます。４時間くらいですね。」\n女「広島駅から ホテルまでは 何で行きますか。」\n男「路面電車（でんしゃ）で行きます。」\n女「ホテルから 広島支社までは 遠いですか。」\n男「いいえ、すぐ 近くですから、歩いて 行きます。」",
+          "answer": "うちで本を読んだ",
+          "explanation": "Người nam không đi đâu cả (どこへも行きませんでした) mà ở nhà đọc sách (家でずっと本を読んでいました). Đáp án đúng là 2 (うちで本を読んだ).",
+          "audioUrl": "/audio/jlpt/n5-2013-07/q12.mp3",
+          "transcript": "男の人と女の人が話しています。男の人は昨日何をしましたか。\n女「昨日は天気が良かったですね。どこかへ行きましたか。」\n男「いいえ、昨日はどこへも行きませんでした。家でずっと本を読んでいました。」\n女「そうでしたか。」\n男「ええ、とても面白かったです。」\n質問：男の人は昨日何をしましたか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-04-q58",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 2)",
-          "prompt": "品川駅から 広島駅まで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "店の人は、どのかばんを取りますか。",
           "options": [
-            "ひこうき",
-            "しんかんせん",
-            "バス",
-            "ふね"
+            "下の小さいかばん",
+            "下のかばん",
+            "上の大きい黒いかばん",
+            "上の小さいかばん"
           ],
-          "answer": "しんかんせん",
-          "explanation": "Hành trình Chặng 2: Theo đoạn hội thoại, phương tiện sử dụng là 「しんかんせん」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「田中さん、来週 広島へ 行きますね。何で 行きますか。」\n男「まず、朝 ６時半に うちを出て、品川駅まで バスで行きます。」\n女「品川駅から 広島駅までは？」\n男「新幹線で行きます。４時間くらいですね。」\n女「広島駅から ホテルまでは 何で行きますか。」\n男「路面電車（でんしゃ）で行きます。」\n女「ホテルから 広島支社までは 遠いですか。」\n男「いいえ、すぐ 近くですから、歩いて 行きます。」",
+          "answer": "上の大きい黒いかばん",
+          "explanation": "Khách hàng yêu cầu lấy chiếc cặp màu đen ở hàng trên và là chiếc to (上の大きい黒いかばん). Đáp án đúng là 3.",
+          "audioUrl": "/audio/jlpt/n5-2017-07/q03.mp3",
+          "transcript": "デパートで、女の人と店の人が話しています。店の人は、どのかばんを取りますか。\n女「すみません、その上の黒いかばんを取ってください。」\n店員「どちらですか。この小さいのですか。」\n女「いいえ。大きいのです。」\n店員「はい。」\n質問：店の人は、どのかばんを取りますか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-04-q59",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 3)",
-          "prompt": "広島駅から ホテルまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "学生は、机の上に何を置きますか。",
           "options": [
-            "タクシー",
-            "バス",
-            "でんしゃ",
-            "じてんしゃ"
+            "鉛筆と消しゴムと時計",
+            "辞書とノート",
+            "辞書と鉛筆と消しゴム",
+            "鉛筆と消しゴムとノート"
           ],
-          "answer": "でんしゃ",
-          "explanation": "Hành trình Chặng 3: Theo đoạn hội thoại, phương tiện sử dụng là 「でんしゃ」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「田中さん、来週 広島へ 行きますね。何で 行きますか。」\n男「まず、朝 ６時半に うちを出て、品川駅まで バスで行きます。」\n女「品川駅から 広島駅までは？」\n男「新幹線で行きます。４時間くらいですね。」\n女「広島駅から ホテルまでは 何で行きますか。」\n男「路面電車（でんしゃ）で行きます。」\n女「ホテルから 広島支社までは 遠いですか。」\n男「いいえ、すぐ 近くですから、歩いて 行きます。」",
+          "answer": "辞書と鉛筆と消しゴム",
+          "explanation": "Đồ vật được phép đặt lên mặt bàn thi là: từ điển, bút chì và tẩy (辞書と鉛筆と消しゴム). Đồng hồ và vở phải cất vào trong cặp. Đáp án đúng là 3.",
+          "audioUrl": "/audio/jlpt/n5-2017-07/q04.mp3",
+          "transcript": "教室で、先生が話しています。学生は、机の上に何を置きますか。\n先生「今からテストをします。このテストでは、辞書を使う問題がありますから、机の上に辞書を出してください。鉛筆と消しゴムも出してください。時計は、かばんの中に入れてください。」\n学生「先生、ノートはどうしますか。」\n先生「ノートもかばんの中に入れてください。」\n質問：学生は、机の上に何を置きますか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-04-q60",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 4)",
-          "prompt": "ホテルから 広島支社まで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "女の学生は、今日、何時間勉強しますか。",
           "options": [
-            "あるいて",
-            "タクシー",
-            "バス",
-            "でんしゃ"
+            "1時間",
+            "2時間",
+            "3時間",
+            "4時間"
           ],
-          "answer": "あるいて",
-          "explanation": "Hành trình Chặng 4: Theo đoạn hội thoại, phương tiện sử dụng là 「あるいて」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「田中さん、来週 広島へ 行きますね。何で 行きますか。」\n男「まず、朝 ６時半に うちを出て、品川駅まで バスで行きます。」\n女「品川駅から 広島駅までは？」\n男「新幹線で行きます。４時間くらいですね。」\n女「広島駅から ホテルまでは 何で行きますか。」\n男「路面電車（でんしゃ）で行きます。」\n女「ホテルから 広島支社までは 遠いですか。」\n男「いいえ、すぐ 近くですから、歩いて 行きます。」",
+          "answer": "4時間",
+          "explanation": "Câu hỏi hỏi thời gian học bài của bạn nữ ngày HÔM NAY (今日). Dù bình thường học 3 tiếng, nhưng hôm nay ôn thi nên học 4 tiếng (今日は４時間勉強します). Đáp án đúng là 4 (4時間).",
+          "audioUrl": "/audio/jlpt/n5-2017-07/q08.mp3",
+          "transcript": "大学で、男の学生と女の学生が話しています。女の学生は、今日、何時間勉強しますか。\n男「山田さんはいつも何時間ぐらい勉強しますか。」\n女「うーん、毎日３時間ぐらいです。」\n男「えっ、私は毎日１時間です。」\n女「あ、でも、明日はテストがありますから、今日は４時間勉強します。」\n男「そうですか。」\n質問：女の学生は、今日、何時間勉強しますか。",
           "annotationDisabled": true
         },
         {
@@ -5333,76 +5333,76 @@ export const midtermJan01Paper05: JlptPaper = {
           "transcript": "女の学生と男の学生が話しています。二人は明日どこで会いますか。  \n    女「明日の夜、一緒にサッカーを見に行きませんか。」  \n    男「いいですね。どこで会いましょうか。」  \n    女「５時に駅で会いませんか。」  \n    男「駅は人が多いですよ。」  \n    女「そうですね。じゃあ、駅の前の喫茶店はどうですか。」  \n    男「ええ、そうしましょう。」  \n    質問：二人は明日どこで会いますか。",
           "annotationDisabled": true
         },
-        {
+                {
           "id": "midterm-jan01-05-q57",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 1)",
-          "prompt": "ケンさんは うちから しんおおさかえきまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "男の学生は、だれと住んでいますか。",
           "options": [
-            "でんしゃ",
-            "タクシー",
-            "バス",
-            "あるいて"
+            "りょうしん",
+            "あね",
+            "いもうと",
+            "おとうと"
           ],
-          "answer": "でんしゃ",
-          "explanation": "Hành trình Chặng 1: Theo đoạn hội thoại, phương tiện sử dụng là 「でんしゃ」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「ケンさん、来週 東京へ 行きますね。何で 行きますか。」  \n   男「朝 ６時半に うちを 出ます。まず うちから 新大阪駅まで 電車で 行きます。」  \n   女「新大阪駅から 東京駅までは？」  \n   男「新幹線で 行きます。２時間半ですから、とても はやいですよ。」  \n   女「東京駅から ホテルまでは？」  \n   男「駅の前から バスで 行きます。」  \n   女「ホテルから 東京タワーまでは 何で 行きますか。」  \n   男「とても 近いですから、歩いて 行きます。」",
+          "answer": "あね",
+          "explanation": "Yamada đang sống cùng chị gái của mình (姉と一緒に住んでいます). Bố mẹ và em gái ở nơi khác. Đáp án đúng là 2 (あね).",
+          "audioUrl": "/audio/jlpt/n5-2017-07/q10.mp3",
+          "transcript": "大学で、男の学生と女の学生が話しています。男の学生は、だれと住んでいますか。\n女「山田さんは、ご両親と一緒に住んでいますか。」\n男「いいえ、両親は遠くに住んでいます。」\n女「一人ですか。」\n男「いいえ、姉と一緒に住んでいます。妹も一緒に住みたかったんですが、妹は高校生ですから、両親と一緒です。」\n女「そうですか。」\n質問：男の学生は、だれと住んでいますか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-05-q58",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 2)",
-          "prompt": "しんおおさかえきから とうきょうえきまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "二人は明日どこで会いますか。",
           "options": [
-            "バス",
-            "しんかんせん",
-            "ひこうき",
-            "ふね"
+            "こうえん",
+            "えき",
+            "きっさてん",
+            "レストラン"
           ],
-          "answer": "しんかんせん",
-          "explanation": "Hành trình Chặng 2: Theo đoạn hội thoại, phương tiện sử dụng là 「しんかんせん」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「ケンさん、来週 東京へ 行きますね。何で 行きますか。」  \n   男「朝 ６時半に うちを 出ます。まず うちから 新大阪駅まで 電車で 行きます。」  \n   女「新大阪駅から 東京駅までは？」  \n   男「新幹線で 行きます。２時間半ですから、とても はやいですよ。」  \n   女「東京駅から ホテルまでは？」  \n   男「駅の前から バスで 行きます。」  \n   女「ホテルから 東京タワーまでは 何で 行きますか。」  \n   男「とても 近いですから、歩いて 行きます。」",
+          "answer": "きっさてん",
+          "explanation": "Hai người thống nhất điểm gặp nhau lúc 5 giờ là quán giải khát trước ga (駅の前の喫茶店). Đáp án đúng là 3 (きっさてん).",
+          "audioUrl": "/audio/jlpt/n5-2017-07/q13.mp3",
+          "transcript": "女の学生と男の学生が話しています。二人は明日どこで会いますか。\n女「明日の夜、一緒にサッカーを見に行きませんか。」\n男「いいですね。どこで会いましょうか。」\n女「５時に駅で会いませんか。」\n男「駅は人が多いですよ。」\n女「そうですね。じゃあ、駅の前の喫茶店はどうですか。」\n男「はい、そうしましょう。あ、サッカーを見てから近くのレストランで晩ご飯を食べませんか。」\n女「ええ。じゃ、明日５時に会いましょう。」\n質問：二人は明日どこで会いますか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-05-q59",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 3)",
-          "prompt": "とうきょうえきから ホテルまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "男の人はこれから何をしますか。",
           "options": [
-            "じてんしゃ",
-            "ちかてつ",
-            "バス",
-            "タクシー"
+            "バスケットボールをする",
+            "映画を見る",
+            "図書館へ行く",
+            "宿題をする"
           ],
-          "answer": "バス",
-          "explanation": "Hành trình Chặng 3: Theo đoạn hội thoại, phương tiện sử dụng là 「バス」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「ケンさん、来週 東京へ 行きますね。何で 行きますか。」  \n   男「朝 ６時半に うちを 出ます。まず うちから 新大阪駅まで 電車で 行きます。」  \n   女「新大阪駅から 東京駅までは？」  \n   男「新幹線で 行きます。２時間半ですから、とても はやいですよ。」  \n   女「東京駅から ホテルまでは？」  \n   男「駅の前から バスで 行きます。」  \n   女「ホテルから 東京タワーまでは 何で 行きますか。」  \n   男「とても 近いですから、歩いて 行きます。」",
+          "answer": "バスケットボールをする",
+          "explanation": "Người nam chuẩn bị đến nhà thi đấu để chơi bóng rổ cùng bạn (友達とバスケットボールをします). Bài tập đã làm xong trước đó. Đáp án đúng là 1 (バスケットボールをする).",
+          "audioUrl": "/audio/jlpt/n5-2018/q05.mp3",
+          "transcript": "男の人と女の人が話しています。男の人はこれから何をしますか。\n女「これからどこへ行きますか。」\n男「体育館へ行きます。友達とバスケットボールをします。」\n女「いいですね。宿題はもう終わりましたか。」\n男「はい、図書館で全部終わりました。」\n女「そうですか。じゃ、いってらっしゃい。」\n男「いってきます。」\n質問：男の人はこれから何をしますか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-05-q60",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 4)",
-          "prompt": "ホテルから とうきょうタワーまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "女の人はどの皿を洗いますか。",
           "options": [
-            "タクシー",
-            "でんしゃ",
-            "バス",
-            "あるいて"
+            "大きい皿",
+            "小さい皿",
+            "コップ",
+            "スプーン"
           ],
-          "answer": "あるいて",
-          "explanation": "Hành trình Chặng 4: Theo đoạn hội thoại, phương tiện sử dụng là 「あるいて」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「ケンさん、来週 東京へ 行きますね。何で 行きますか。」  \n   男「朝 ６時半に うちを 出ます。まず うちから 新大阪駅まで 電車で 行きます。」  \n   女「新大阪駅から 東京駅までは？」  \n   男「新幹線で 行きます。２時間半ですから、とても はやいですよ。」  \n   女「東京駅から ホテルまでは？」  \n   男「駅の前から バスで 行きます。」  \n   女「ホテルから 東京タワーまでは 何で 行きますか。」  \n   男「とても 近いですから、歩いて 行きます。」",
+          "answer": "大きい皿",
+          "explanation": "Người phụ nữ tự nhận phần rửa những chiếc đĩa to (大きいお皿は私が洗います), còn đĩa nhỏ giao cho người nam. Đáp án đúng là 1 (大きい皿).",
+          "audioUrl": "/audio/jlpt/n5-2018/q07.mp3",
+          "transcript": "男の人と女の人が話しています。女の人はどの皿を洗いますか。\n男「お皿を洗いましょうか。」\n女「ありがとう。じゃあ、この小さいお皿を洗ってください。」\n男「はい。大きいお皿は？」\n女「大きいお皿は私が洗います。」\n男「わかりました。」\n質問：女の人はどの皿を洗いますか。",
           "annotationDisabled": true
         },
         {
@@ -6433,76 +6433,76 @@ export const midtermJan01Paper06: JlptPaper = {
           "transcript": "女の人と男の人が話しています。女の人の部屋には何がありますか。  \n    男「新しい部屋はどう？テレビは買った？」  \n    女「テレビはまだ買ってないの。今はベッドと机だけあるよ。」  \n    質問：女の人の部屋には何がありますか。",
           "annotationDisabled": true
         },
-        {
+                {
           "id": "midterm-jan01-06-q57",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 1)",
-          "prompt": "アンさんは りょうから バスのりばまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "男の人はどうして昨日学校を休みましたか。",
           "options": [
-            "あるいて",
-            "じてんしゃ",
-            "タクシー",
-            "でんしゃ"
+            "熱があったから",
+            "おなかが痛かったから",
+            "頭が痛かったから",
+            "寝坊したから"
           ],
-          "answer": "あるいて",
-          "explanation": "Hành trình Chặng 1: Theo đoạn hội thoại, phương tiện sử dụng là 「あるいて」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "男「アンさん、明日 成田空港へ 行きますね。何で 行きますか。」  \n   女「はい。朝 ８時に 寮を 出ます。まず 寮から バスのりばまで 歩いて 行きます。」  \n   男「バスのりばから 上野駅までは？」  \n   女「バスで 行きます。１５分ぐらいです。」  \n   男「上野駅から 成田空港までは 何で 行きますか。」  \n   女「スカイライナー、電車で 行きます。とても はやいですよ。」  \n   男「空港から ホテルまでは？」  \n   女「スーツケースが 重いですから、空港から ホテルまで タクシーで 行きます。」",
+          "answer": "熱があったから",
+          "explanation": "Lý do người nam nghỉ học hôm qua là vì bị sốt (熱があったから). Đáp án đúng là 1 (熱があったから).",
+          "audioUrl": "/audio/jlpt/n5-2018/q08.mp3",
+          "transcript": "男の人と女の人が話しています。男の人はどうして昨日学校を休みましたか。\n女「昨日学校を休みましたね。どうしたんですか。」\n男「昨日の朝、熱があったんです。」\n女「病院へ行きましたか。」\n男「はい。薬をもらって、家で寝ていました。今日はもう大丈夫です。」\n女「よかったです。」\n質問：男の人はどうして昨日学校を休みましたか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-06-q58",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 2)",
-          "prompt": "バスのりばから うえのえきまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "二人はいつ旅行に行きますか。",
           "options": [
-            "でんしゃ",
-            "バス",
-            "タクシー",
-            "あるいて"
+            "来週の土曜日",
+            "来週の日曜日",
+            "再来週の土曜日",
+            "再来週の日曜日"
           ],
-          "answer": "バス",
-          "explanation": "Hành trình Chặng 2: Theo đoạn hội thoại, phương tiện sử dụng là 「バス」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "男「アンさん、明日 成田空港へ 行きますね。何で 行きますか。」  \n   女「はい。朝 ８時に 寮を 出ます。まず 寮から バスのりばまで 歩いて 行きます。」  \n   男「バスのりばから 上野駅までは？」  \n   女「バスで 行きます。１５分ぐらいです。」  \n   男「上野駅から 成田空港までは 何で 行きますか。」  \n   女「スカイライナー、電車で 行きます。とても はやいですよ。」  \n   男「空港から ホテルまでは？」  \n   女「スーツケースが 重いですから、空港から ホテルまで タクシーで 行きます。」",
+          "answer": "再来週の土曜日",
+          "explanation": "Thứ Bảy tuần sau người nữ bận việc, nên cả hai chốt lịch đi du lịch vào thứ Bảy tuần sau nữa (再来週の土曜日). Đáp án đúng là 3 (再来週の土曜日).",
+          "audioUrl": "/audio/jlpt/n5-2018/q09.mp3",
+          "transcript": "男の人と女の人が旅行について話しています。二人はいつ旅行に行きますか。\n男「旅行は来週の土曜日にしますか。」\n女「来週の土曜日は仕事があるんです。再来週の土曜日はどうですか。」\n男「再来週の土曜日ですね。いいですよ。じゃ、その日にしましょう。」\n質問：二人はいつ旅行に行きますか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-06-q59",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 3)",
-          "prompt": "うえのえきから なりたくうこうまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "女の人は何を買いましたか。",
           "options": [
-            "バス",
-            "タクシー",
-            "でんしゃ",
-            "ひこうき"
+            "白い靴",
+            "黒い靴",
+            "赤い靴",
+            "青い靴"
           ],
-          "answer": "でんしゃ",
-          "explanation": "Hành trình Chặng 3: Theo đoạn hội thoại, phương tiện sử dụng là 「でんしゃ」.",
+          "answer": "白い靴",
+          "explanation": "Khách hàng đã có giày màu đen rồi nên quyết định mua đôi giày màu trắng (白い靴). Đáp án đúng là 1 (白い靴).",
           "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "男「アンさん、明日 成田空港へ 行きますね。何で 行きますか。」  \n   女「はい。朝 ８時に 寮を 出ます。まず 寮から バスのりばまで 歩いて 行きます。」  \n   男「バスのりばから 上野駅までは？」  \n   女「バスで 行きます。１５分ぐらいです。」  \n   男「上野駅から 成田空港までは 何で 行きますか。」  \n   女「スカイライナー、電車で 行きます。とても はやいですよ。」  \n   男「空港から ホテルまでは？」  \n   女「スーツケースが 重いですから、空港から ホテルまで タクシーで 行きます。」",
+          "transcript": "デパートで女の人と店員が話しています。女の人は何を買いましたか。\n女「すみません、この黒い靴を見せてください。」\n店員「はい、どうぞ。こちらの白い靴も人気がありますよ。」\n女「あ、白い靴も可愛いですね。黒い靴は持っていますから、この白い靴をください。」\n店員「ありがとうございます。」\n質問：女の人は何を買いましたか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-06-q60",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 4)",
-          "prompt": "なりたくうこうから ホテルまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "男の学生はこの後すぐ何をしますか。",
           "options": [
-            "あるいて",
-            "でんしゃ",
-            "バス",
-            "タクシー"
+            "野菜を洗う",
+            "野菜を切る",
+            "肉を切る",
+            "鍋を洗う"
           ],
-          "answer": "タクシー",
-          "explanation": "Hành trình Chặng 4: Theo đoạn hội thoại, phương tiện sử dụng là 「タクシー」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "男「アンさん、明日 成田空港へ 行きますね。何で 行きますか。」  \n   女「はい。朝 ８時に 寮を 出ます。まず 寮から バスのりばまで 歩いて 行きます。」  \n   男「バスのりばから 上野駅までは？」  \n   女「バスで 行きます。１５分ぐらいです。」  \n   男「上野駅から 成田空港までは 何で 行きますか。」  \n   女「スカイライナー、電車で 行きます。とても はやいですよ。」  \n   男「空港から ホテルまでは？」  \n   女「スーツケースが 重いですから、空港から ホテルまで タクシーで 行きます。」",
+          "answer": "肉を切る",
+          "explanation": "Rau củ đã có bạn Yamada cắt, thầy giáo chỉ định bạn nam cắt thịt (あなたは肉を切ってください). Do đó hành động ngay sau đó của bạn nam là cắt thịt. Đáp án đúng là 3 (肉を切る).",
+          "audioUrl": "/audio/jlpt/n5-2021-12/q01.mp3",
+          "transcript": "先生「これからカレーを作りましょう。野菜とお肉を切ってください。」\n男の学生「先生、私は野菜を切りましょうか。」\n先生「あ、野菜は山田さんが今洗って切っていますから、あなたは肉を切ってください。」\n男の学生「はい、わかりました。」\n質問：男の学生はこの後すぐ何をしますか。",
           "annotationDisabled": true
         },
         {
@@ -7533,76 +7533,76 @@ export const midtermJan01Paper07: JlptPaper = {
           "transcript": "女「日本はどうですか。」  \n    男「はい、とても楽しいです。」  \n    女「毎日大学に行きますか。」  \n    男「いいえ、月曜日から木曜日まで大学に行って、金曜日は近くの図書館で勉強します。」  \n    女「土曜日や日曜日は？」  \n    男「友達と遊びます。」  \n    質問：男の留学生は金曜日何をしていますか。",
           "annotationDisabled": true
         },
-        {
+                {
           "id": "midterm-jan01-07-q57",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 1)",
-          "prompt": "ランさんは うちから えきまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "店の男の人は誰に手袋を渡しますか。",
           "options": [
-            "じてんしゃ",
-            "バス",
-            "タクシー",
-            "あるいて"
+            "髪が長くてメガネの人",
+            "髪が長くて帽子をかぶった人",
+            "髪が短くて帽子をかぶった人",
+            "髪が短くてメガネの人"
           ],
-          "answer": "じてんしゃ",
-          "explanation": "Hành trình Chặng 1: Theo đoạn hội thoại, phương tiện sử dụng là 「じてんしゃ」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "男「ランさん、日曜日に 横浜へ 行きましたね。何で 行きましたか。」  \n   女「朝 ８時半に うちを 出ました。まず うちから 最寄りの駅まで 自転車で 行きました。」  \n   男「駅から 横浜駅までは？」  \n   女「電車で 行きました。３０分ぐらいでした。」  \n   男「横浜駅から 中華街までは 何で 行きましたか。」  \n   女「地下鉄、みなとみらい線で 行きました。」  \n   男「中華街から 港までは？」  \n   女「景色が きれいでしたから、歩いて 行きましたよ。」",
+          "answer": "髪が短くてメガネの人",
+          "explanation": "Người để quên găng tay là người có mái tóc ngắn và đang đeo kính (髪が短くて、メガネをかけている人). Đáp án đúng là 4 (髪が短くてメガネの人).",
+          "audioUrl": "/audio/jlpt/n5-2021-12/q02.mp3",
+          "transcript": "店で女の人と男の人が話しています。店の男の人は誰に手袋を渡しますか。\n女「あ、この手袋は今店を出た女の人のですね。」\n男「ああ、四人のグループですね。あそこにいますよ。」\n女「すぐ持って行って、渡してください。あの髪が短くて、メガネをかけている人のです。」\n男「分かりました。」\n質問：店の男の人は誰に手袋を渡しますか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-07-q58",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 2)",
-          "prompt": "えきから よこはまえきまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "男の子は荷物をどこに置きますか。",
           "options": [
-            "バス",
-            "でんしゃ",
-            "しんかんせん",
-            "タクシー"
+            "冷蔵庫の横の椅子",
+            "テーブルの上",
+            "冷蔵庫の中",
+            "玄関の棚"
           ],
-          "answer": "でんしゃ",
-          "explanation": "Hành trình Chặng 2: Theo đoạn hội thoại, phương tiện sử dụng là 「でんしゃ」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "男「ランさん、日曜日に 横浜へ 行きましたね。何で 行きましたか。」  \n   女「朝 ８時半に うちを 出ました。まず うちから 最寄りの駅まで 自転車で 行きました。」  \n   男「駅から 横浜駅までは？」  \n   女「電車で 行きました。３０分ぐらいでした。」  \n   男「横浜駅から 中華街までは 何で 行きましたか。」  \n   女「地下鉄、みなとみらい線で 行きました。」  \n   男「中華街から 港までは？」  \n   女「景色が きれいでしたから、歩いて 行きましたよ。」",
+          "answer": "冷蔵庫の横の椅子",
+          "explanation": "Vì tủ lạnh đã đầy nên người mẹ bảo con đặt kiện hàng lên chiếc ghế bên cạnh tủ lạnh (冷蔵庫の横の椅子に置いて). Đáp án đúng là 1 (冷蔵庫の横の椅子).",
+          "audioUrl": "/audio/jlpt/n5-2021-12/q03.mp3",
+          "transcript": "男の子「お母さん、荷物来たよ、どこに置く？テーブルの上でいい？」\n母「それ食べ物よ。テーブルの上じゃなくて、冷蔵庫に入れて。」\n男の子「お母さん、冷蔵庫、いっぱいだよ。」\n母「じゃ、冷蔵庫の横の椅子に置いて。」\n男の子「はーい。」\n質問：男の子は荷物をどこに置きますか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-07-q59",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 3)",
-          "prompt": "よこはまえきから ちゅうかがいまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "学生は山に何を持って行きますか。",
           "options": [
-            "タクシー",
-            "バス",
-            "ちかてつ",
-            "じてんしゃ"
+            "千円と上着",
+            "千円と地図",
+            "上着と地図",
+            "千円と上着と地図"
           ],
-          "answer": "ちかてつ",
-          "explanation": "Hành trình Chặng 3: Theo đoạn hội thoại, phương tiện sử dụng là 「ちかてつ」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "男「ランさん、日曜日に 横浜へ 行きましたね。何で 行きましたか。」  \n   女「朝 ８時半に うちを 出ました。まず うちから 最寄りの駅まで 自転車で 行きました。」  \n   男「駅から 横浜駅までは？」  \n   女「電車で 行きました。３０分ぐらいでした。」  \n   男「横浜駅から 中華街までは 何で 行きましたか。」  \n   女「地下鉄、みなとみらい線で 行きました。」  \n   男「中華街から 港までは？」  \n   女「景色が きれいでしたから、歩いて 行きましたよ。」",
+          "answer": "千円と上着",
+          "explanation": "Học sinh cần mang theo 1.000 yên tiền xe buýt khứ hồi và áo khoác ấm (千円と上着). Bản đồ núi do thầy giáo mang giúp. Đáp án đúng là 1 (千円と上着).",
+          "audioUrl": "/audio/jlpt/n5-2021-12/q07.mp3",
+          "transcript": "先生「明日は東山に行きます。学校の前のバス停から山までバスで行きます。バスの切符は５００円ですが、山に登って、またバスで帰りますから、千円持ってきてください。山の上は少し寒いですから、上着も忘れないでくださいね。皆一緒に歩きますから、山の地図は私が持って行きます。」\n質問：学生は山に何を持って行きますか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-07-q60",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 4)",
-          "prompt": "ちゅうかがいから みなとまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "女の人は今から何をしますか。",
           "options": [
-            "でんしゃ",
-            "タクシー",
-            "バス",
-            "あるいて"
+            "レストランへ行く",
+            "仕事を続ける",
+            "病院へ行く",
+            "家に帰る"
           ],
-          "answer": "あるいて",
-          "explanation": "Hành trình Chặng 4: Theo đoạn hội thoại, phương tiện sử dụng là 「あるいて」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "男「ランさん、日曜日に 横浜へ 行きましたね。何で 行きましたか。」  \n   女「朝 ８時半に うちを 出ました。まず うちから 最寄りの駅まで 自転車で 行きました。」  \n   男「駅から 横浜駅までは？」  \n   女「電車で 行きました。３０分ぐらいでした。」  \n   男「横浜駅から 中華街までは 何で 行きましたか。」  \n   女「地下鉄、みなとみらい線で 行きました。」  \n   男「中華街から 港までは？」  \n   女「景色が きれいでしたから、歩いて 行きましたよ。」",
+          "answer": "家に帰る",
+          "explanation": "Bạn nữ từ chối đi ăn tối và quyết định đi thẳng về nhà vì đau đầu (今日はもう家に帰ります). Đáp án đúng là 4 (家に帰る).",
+          "audioUrl": "/audio/jlpt/n5-2021-12/q09.mp3",
+          "transcript": "男「仕事は終わりましたか。」\n女「はい。」\n男「じゃあ、一緒に晩ご飯を食べに行きませんか。」\n女「あ、ごめんなさい。ちょっと頭が痛いですから、今日はもう家に帰ります。」\n男「そう、じゃ、また。」\n質問：女の人は今から何をしますか。",
           "annotationDisabled": true
         },
         {
@@ -8633,76 +8633,76 @@ export const midtermJan01Paper08: JlptPaper = {
           "transcript": "女「林さん、いつ国へ帰りますか。」  \n    男「今日は三月四日ですから、ちょうど二週間後です。」  \n    女「そうですか。再来週の金曜ですね。」  \n    男「はい。」  \n    質問：男の留学生はいつ国へ帰りますか。",
           "annotationDisabled": true
         },
-        {
+                {
           "id": "midterm-jan01-08-q57",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 1)",
-          "prompt": "山田さんは うちから とうきょうえきまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "二人はどのはがきを選びましたか。",
           "options": [
-            "タクシー",
-            "バス",
-            "でんしゃ",
-            "あるいて"
+            "花の絵のはがき",
+            "海の絵のはがき",
+            "山のはがき",
+            "橋の絵のはがき"
           ],
-          "answer": "タクシー",
-          "explanation": "Hành trình Chặng 1: Theo đoạn hội thoại, phương tiện sử dụng là 「タクシー」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「山田さん、来週 北海道へ 旅行に 行きますね。何で 行きますか。」  \n   男「朝 ６時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」  \n   女「東京駅から 羽田空港までは？」  \n   男「モノレール、電車で 行きます。はやいですよ。」  \n   女「羽田空港から 新千歳空港までは 何で 行きますか。」  \n   男「飛行機で 行きます。１時間半ぐらいです。」  \n   女「千歳空港から ホテルまでは？」  \n   男「空港の前から リゾートバスで 行きます。」",
+          "answer": "橋の絵のはがき",
+          "explanation": "Bưu thiếp ngọn núi bị từ chối vì nhà bạn Hayashi đã gần núi và biển. Cả hai thống nhất chọn tấm bưu thiếp vẽ hình cây cầu (橋の絵のはがき). Đáp án đúng là 4 (橋の絵のはがき).",
+          "audioUrl": "/audio/jlpt/n5-2021-12/q11.mp3",
+          "transcript": "女「綺麗な葉書がたくさんありますね。一つ選んで、一緒に林さんに出しましょうか。」\n男「いいですね。花の絵、海の絵、色々ありますね。この山のはがきはどうですか。」\n女「林さんの家は山と海は近いから、毎日見ていますよ。この橋の絵のはがきはどうですか。綺麗ですよ。」\n男「いいですね。それを出しましょう。」\n質問：二人はどのはがきを選びましたか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-08-q58",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 2)",
-          "prompt": "とうきょうえきから はねだくうこうまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "男の留学生が毎日しているスポーツは何ですか。",
           "options": [
-            "バス",
-            "でんしゃ",
-            "タクシー",
-            "じてんしゃ"
+            "バスケットボール",
+            "テニス",
+            "すいえい",
+            "サッカー"
           ],
-          "answer": "でんしゃ",
-          "explanation": "Hành trình Chặng 2: Theo đoạn hội thoại, phương tiện sử dụng là 「でんしゃ」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「山田さん、来週 北海道へ 旅行に 行きますね。何で 行きますか。」  \n   男「朝 ６時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」  \n   女「東京駅から 羽田空港までは？」  \n   男「モノレール、電車で 行きます。はやいですよ。」  \n   女「羽田空港から 新千歳空港までは 何で 行きますか。」  \n   男「飛行機で 行きます。１時間半ぐらいです。」  \n   女「千歳空港から ホテルまでは？」  \n   男「空港の前から リゾートバスで 行きます。」",
+          "answer": "バスケットボール",
+          "explanation": "Môn thể thao bạn nam du học sinh tập luyện mỗi buổi sáng hàng ngày (毎日している) là bóng rổ (バスケットボール). Bơi và tennis chỉ thỉnh thoảng chơi, bóng đá thì chỉ xem chứ không chơi. Đáp án đúng là 1 (バスケットボール).",
+          "audioUrl": "/audio/jlpt/n5-2021-12/q13.mp3",
+          "transcript": "留学生の男の人が話しています。男の留学生が毎日しているスポーツは何ですか。\n男「僕はスポーツが大好きです。授業の前に毎朝友達とバスケットボールの練習をしています。時々大学のプールで泳いだり、テニスをしたりしています。サッカーはあまりしませんが、毎日見ています。」\n質問：男の留学生が毎日しているスポーツは何ですか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-08-q59",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 3)",
-          "prompt": "はねだくうこうから ちとせくうこうまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "男の人はコップをどこに置きますか。",
           "options": [
-            "しんかんせん",
-            "ふね",
-            "ひこうき",
-            "バス"
+            "お皿の右側",
+            "棚の上の段",
+            "棚の下の段",
+            "テーブルの上"
           ],
-          "answer": "ひこうき",
-          "explanation": "Hành trình Chặng 3: Theo đoạn hội thoại, phương tiện sử dụng là 「ひこうき」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「山田さん、来週 北海道へ 旅行に 行きますね。何で 行きますか。」  \n   男「朝 ６時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」  \n   女「東京駅から 羽田空港までは？」  \n   男「モノレール、電車で 行きます。はやいですよ。」  \n   女「羽田空港から 新千歳空港までは 何で 行きますか。」  \n   男「飛行機で 行きます。１時間半ぐらいです。」  \n   女「千歳空港から ホテルまでは？」  \n   男「空港の前から リゾートバスで 行きます。」",
+          "answer": "棚の上の段",
+          "explanation": "Vị trí đặt cốc là ngăn phía trên của kệ tủ (棚の上の段), không phải bên phải đĩa. Đáp án đúng là 2 (棚の上の段).",
+          "audioUrl": "/audio/jlpt/n5-2024-07/q01.mp3",
+          "transcript": "女の人と男の人が話しています。男の人はコップをどこに置きますか。\n女「あ、田中さん。そのコップ、洗ってくれたんですね。ありがとう。」\n男「どこに置きましょうか。お皿の隣ですか。」\n女「うーん、お皿の右側じゃなくて、お皿の上、そうそう、その棚の上の段に並べて。」\n男「わかりました。」\n質問：男の人はコップをどこに置きますか。",
           "annotationDisabled": true
         },
         {
           "id": "midterm-jan01-08-q60",
           "type": "choice",
           "category": "listening",
-          "group": "Nghe hiểu · Hành trình di chuyển (Chặng 4)",
-          "prompt": "ちとせくうこうから ホテルまで 何で 行きますか。",
+          "group": "Nghe hiểu · Chọn đáp án phù hợp",
+          "prompt": "２人は部屋に入るとき、どのボタンを押しますか。",
           "options": [
-            "でんしゃ",
-            "タクシー",
-            "あるいて",
-            "バス"
+            "＊ 2 5 8 0",
+            "2 5 8 0 ＃",
+            "＃ 2 5 8 0 ＊",
+            "＊ 2 5 8 0 ＃"
           ],
-          "answer": "バス",
-          "explanation": "Hành trình Chặng 4: Theo đoạn hội thoại, phương tiện sử dụng là 「バス」.",
-          "audioUrl": "/audio/jlpt/n5-2018/q10.mp3",
-          "transcript": "女「山田さん、来週 北海道へ 旅行に 行きますね。何で 行きますか。」  \n   男「朝 ６時に うちを 出ます。荷物が 多いですから、まず うちから 東京駅まで タクシーで 行きます。」  \n   女「東京駅から 羽田空港までは？」  \n   男「モノレール、電車で 行きます。はやいですよ。」  \n   女「羽田空港から 新千歳空港までは 何で 行きますか。」  \n   男「飛行機で 行きます。１時間半ぐらいです。」  \n   女「千歳空港から ホテルまでは？」  \n   男「空港の前から リゾートバスで 行きます。」",
+          "answer": "＊ 2 5 8 0 ＃",
+          "explanation": "Trình tự bấm các nút để mở phòng là: bắt đầu bằng phím sao 「＊」, tiếp theo là 4 số 「２・５・８・０」, và kết thúc bằng phím thăng 「＃」 (＊ 2 5 8 0 ＃). Đáp án đúng là 4 (＊ 2 5 8 0 ＃).",
+          "audioUrl": "/audio/jlpt/n5-2024-07/q07.mp3",
+          "transcript": "男の人と女の人が話しています。２人は部屋に入るとき、どのボタンを押しますか。\n女「暗証番号、何番だったっけ？」\n男「まず、右下の「＊」を押して、それから「２・５・８・０」を押して、最後に右下の「＃」を押すんだよ。」\n女「わかった。「＊」を押して、「２・５・８・０」を押して、「＃」ね。」\n質問：２人は部屋に入るとき、どのボタンを押しますか。",
           "annotationDisabled": true
         },
         {

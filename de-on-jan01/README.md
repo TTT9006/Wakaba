@@ -37,7 +37,7 @@
      - C51: Dụng cụ viết / Bút bi đen (Bài 2 & 5) — `/audio/jlpt/n5-2010-2011/q12.mp3` *(Bút bi đen)*
      - C52: Ngày tháng / Tiết học tiếp theo ngày 12 (Bài 5) — `/audio/jlpt/n5-2018/q03.mp3` *(Ngày 12)*
      - C53: Giờ mở cửa thư viện Thứ Bảy 9:00〜17:00 (Bài 4) — `/audio/jlpt/n5-2012-12/q12.mp3` *(9:00〜17:00)*
-   - **Câu 2 (Hành trình 4 chặng):** Chuyến công tác Tokyo - Kyoto của Miller-san (Taxi -> Shinkansen -> Xe buýt -> Đi bộ).
+   - **Câu 2 (Hội thoại ngắn JLPT N5 - 4 audio độc lập):** Số lần uống thuốc (2回) -> Việc làm khi tới khách sạn (レストランで晩ご飯) -> Đồ mang đi biển (お菓子) -> Nơi ăn trưa thứ Bảy (教室).
    - **Câu 3 (Phản xạ nhanh - 5 câu):**
      - C58: `日曜日、どこかへ行きましたか。` — `/audio/jlpt/n5-2024-07/q19.mp3` *(Đáp án: b - いいえ、どこへも行きませんでした)*
      - C59: `それはどこのカメラですか。` — `/audio/jlpt/n5-2021-12/q20.mp3` *(Đáp án: b - 日本のです)*
@@ -53,7 +53,7 @@
      - C51: Vị trí quán cà phê cạnh ngân hàng (Bài 3) — `/audio/jlpt/n5-2018/q01.mp3` *(Cạnh ngân hàng)*
      - C52: Số điện thoại 512-7743 (Bài 4) — `/audio/jlpt/n5-2010-2011/q09.mp3` *(512-7743)*
      - C53: Hẹn gặp trước nhà ga lúc 8:30 (Bài 3 & 5) — `/audio/jlpt/n5-2013-07/q01.mp3` *(Nhà ga)*
-   - **Câu 2 (Hành trình 4 chặng):** Chuyến đi tham quan Nara của Karina (Xe đạp -> Tàu điện -> Tàu điện -> Đi bộ).
+   - **Câu 2 (Hội thoại ngắn JLPT N5 - 4 audio độc lập):** Lớp nấu ăn (肉を切る) -> Mua tất trẻ em (長い動物の絵の靴下) -> Quả làm nước ép (リンゴとミカン) -> Gọi nước uống (冷たいお茶).
    - **Câu 3 (Phản xạ nhanh - 5 câu):**
      - C58: `この雑誌、誰のですか。` — `/audio/jlpt/n5-2013-07/q20.mp3` *(Đáp án: c - 私のです)*
      - C59: `この傘、どなたのですか。` — `/audio/jlpt/n5-2018/q22.mp3` *(Đáp án: a - 私のです)*
@@ -69,7 +69,7 @@
      - C51: Lịch hẹn đến bệnh viện lúc 3:30 Thứ Ba (Bài 4 & 5) — `/audio/jlpt/n5-2012-12/q05.mp3` *(3:30 Thứ Ba)*
      - C52: Đồ vật cốc trắng bên cạnh cốc nhỏ (Bài 2 & 3) — `/audio/jlpt/n5-2012-12/q01.mp3` *(Cốc trắng cạnh cốc nhỏ)*
      - C53: Số điện thoại 512-7743 (Bài 4) — `/audio/jlpt/n5-2017-07/q09.mp3` *(512-7743)*
-   - **Câu 2 (Hành trình 4 chặng):** Chuyến về thăm nhà ở Brazil của Santos (Tàu điện -> Xe buýt -> Máy bay -> Taxi).
+   - **Câu 2 (Hội thoại ngắn JLPT N5 - 4 audio độc lập):** Lý do đến trễ (電車が止まったから) -> Gói hoa tặng bạn (花を2本紙で包む) -> Đồ dọn công viên (ほうきとゴミ袋とお茶) -> Dọn sân vườn (にわ).
    - **Câu 3 (Phản xạ nhanh - 5 câu):**
      - C58: `週末はどこかへ行きましたか。` — `/audio/jlpt/n5-2018/q23.mp3` *(Đáp án: a - どこへも行きませんでした)*
      - C59: `来週の日曜日、どこかへ行きますか。` — `/audio/jlpt/n5-2013-07/q23.mp3` *(Đáp án: b - 山に登ります)*
@@ -85,7 +85,7 @@
      - C51: Địa điểm mua giáo trình mới tại phòng 101 tầng 1 (Bài 3) — `/audio/jlpt/n5-2021-12/q05.mp3` *(Phòng 101)*
      - C52: Thời gian tập hợp sớm hơn 30 phút lúc 9:30 (Bài 4) — `/audio/jlpt/n5-2018/q13.mp3` *(9 giờ rưỡi)*
      - C53: Ngày sinh nhật ngày 30 tháng 5 (Bài 5) — `/audio/jlpt/n5-2021-12/q12.mp3` *(30 tháng 5)*
-   - **Câu 2 (Hành trình 4 chặng):** Chuyến công tác Hiroshima của Tanaka-san (Xe buýt -> Shinkansen -> Tàu điện -> Đi bộ).
+   - **Câu 2 (Hội thoại ngắn JLPT N5 - 4 audio độc lập):** Hoạt động hôm qua (うちで本を読んだ) -> Mua túi xách (上の大きい黒いかばん) -> Đồ thi để trên bàn (辞書と鉛筆と消しゴム) -> Giờ ôn thi (4時間).
    - **Câu 3 (Phản xạ nhanh - 5 câu):**
      - C58: `明日、何時に学校に来ますか。` — `/audio/jlpt/n5-2010-2011/q21.mp3` *(Đáp án: b - 9時半です)*
      - C59: `すみません、この駅から山川駅まで、電車でどのくらいかかりますか。` — `/audio/jlpt/n5-2021-12/q24.mp3` *(Đáp án: c - １０分か１５分です)*
@@ -101,7 +101,7 @@
      - C51: Nữ sinh hôm nay học 4 tiếng vì mai có bài thi (Bài 4) — `/audio/jlpt/n5-2010-2011/q08.mp3` *(4 tiếng)*
      - C52: Nam sinh đang sống cùng chị gái (Bài 1 & 4) — `/audio/jlpt/n5-2010-2011/q10.mp3` *(Sống cùng chị gái)*
      - C53: Hẹn gặp nhau ở quán cà phê trước ga lúc 5 giờ (Bài 3 & 4) — `/audio/jlpt/n5-2010-2011/q13.mp3` *(Quán cà phê)*
-   - **Câu 2 (Hành trình 4 chặng):** Chuyến du lịch Tokyo của Ken (Tàu điện -> Shinkansen -> Xe buýt -> Đi bộ).
+   - **Câu 2 (Hội thoại ngắn JLPT N5 - 4 audio độc lập):** Sống cùng ai (あね) -> Nơi hẹn gặp (駅の前の喫茶店) -> Đi chơi thể thao (バスケットボールをする) -> Rửa bát đĩa (大きい皿).
    - **Câu 3 (Phản xạ nhanh - 5 câu):**
      - C58: `今日はお疲れさまでした。` — `/audio/jlpt/n5-2018/q21.mp3` *(Đáp án: a - お疲れさまでした)*
      - C59: `交番で道を聞きます。何と言いますか。` — `/audio/jlpt/n5-2024-07/q18.mp3` *(Đáp án: a - すみません、駅はどこですか)*
@@ -117,7 +117,7 @@
      - C51: Nữ sinh hôm qua đi xem phim cùng anh trai (Bài 1 & 5) — `/audio/jlpt/n5-2012-12/q13.mp3` *(Đi xem cùng anh trai)*
      - C52: Ngày thi tiếng Nhật được đổi sang thứ Sáu (Bài 4) — `/audio/jlpt/n5-2018/q11.mp3` *(Thứ Sáu)*
      - C53: Trong phòng mới chỉ có giường và bàn học (Bài 2 & 3) — `/audio/jlpt/n5-2018/q12.mp3` *(Giường và bàn học)*
-   - **Câu 2 (Hành trình 4 chặng):** Chuyến đi sân bay Narita của An (Đi bộ -> Xe buýt -> Tàu điện -> Taxi).
+   - **Câu 2 (Hội thoại ngắn JLPT N5 - 4 audio độc lập):** Nghỉ học vì ốm (熱があったから) -> Lịch du lịch (再来週の土曜日) -> Chọn mua giày (白い靴) -> Chuẩn bị nấu ăn (肉を切る).
    - **Câu 3 (Phản xạ nhanh - 5 câu):**
      - C58: `ちょっと休みませんか。` — `/audio/jlpt/n5-2010-2011/q23.mp3` *(Đáp án: c - そうしましょう)*
      - C59: `バスで京都に行きます、切符を買います、何と言いますか。` — `/audio/jlpt/n5-2021-12/q17.mp3` *(Đáp án: c - 京都まで一枚ください)*
@@ -133,7 +133,7 @@
      - C51: Chiếc mũ sinh nhật do bố tặng (Bài 1 & 2) — `/audio/jlpt/n5-2013-07/q08.mp3` *(Bố tặng)*
      - C52: Hẹn gặp ở quán cà phê trước trường đại học (Bài 3) — `/audio/jlpt/n5-2021-12/q04.mp3` *(Quán cà phê trước trường)*
      - C53: Thứ Sáu nam du học sinh học bài tại thư viện (Bài 4) — `/audio/jlpt/n5-2021-12/q08.mp3` *(Học tại thư viện)*
-   - **Câu 2 (Hành trình 4 chặng):** Chuyến đi tham quan Yokohama của Lan (Xe đạp -> Tàu điện -> Tàu điện ngầm -> Đi bộ).
+   - **Câu 2 (Hội thoại ngắn JLPT N5 - 4 audio độc lập):** Trả găng tay để quên (髪が短くてメガネの人) -> Vị trí để hàng (冷蔵庫の横の椅子) -> Mang đồ leo núi (千円と上着) -> Tan làm về nhà (家に帰る).
    - **Câu 3 (Phản xạ nhanh - 5 câu):**
      - C58: `鈴木先生、机はいくつ並べますか。` — `/audio/jlpt/n5-2013-07/q21.mp3` *(Đáp án: a - 三つです)*
      - C59: `郵便局で切手を買います。何と言いますか。` — `/audio/jlpt/n5-2010-2011/q17.mp3` *(Đáp án: c - 切手を下さい)*
@@ -149,7 +149,7 @@
      - C51: Ngày mai đi kiến tập mang bút mực và đồ uống (Bài 2) — `/audio/jlpt/n5-2024-07/q06.mp3` *(Bút mực và đồ uống)*
      - C52: Hẹn gặp nhau ở cửa vào tiệm sách trước nhà ga (Bài 3) — `/audio/jlpt/n5-2024-07/q12.mp3` *(Cửa vào tiệm sách)*
      - C53: Nam du học sinh về nước vào thứ Sáu tuần sau nữa (Bài 4 & 5) — `/audio/jlpt/n5-2021-12/q10.mp3` *(Thứ Sáu tuần sau nữa)*
-   - **Câu 2 (Hành trình 4 chặng):** Chuyến đi nghỉ mát Hokkaido của Yamada (Taxi -> Tàu điện -> Máy bay -> Xe buýt).
+   - **Câu 2 (Hội thoại ngắn JLPT N5 - 4 audio độc lập):** Chọn bưu thiếp (橋の絵のはがき) -> Thể thao mỗi sáng (バスケットボール) -> Sắp xếp cốc chén (棚の上の段) -> Mã số mở phòng (＊ 2 5 8 0 ＃).
    - **Câu 3 (Phản xạ nhanh - 5 câu):**
      - C58: `寒くないですか。窓を閉めましょうか。` — `/audio/jlpt/n5-2018/q20.mp3` *(Đáp án: a - はい、お願いします)*
      - C59: `お菓子をあげたいです。何と言いますか。` — `/audio/jlpt/n5-2013-07/q17.mp3` *(Đáp án: b - これ、いかがですか)*
