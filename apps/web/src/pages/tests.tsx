@@ -268,8 +268,8 @@ export function Tests() {
   });
 
   const allExams = data || [];
-  const jlptExams = allExams.filter((t) => !t.isMidterm);
-  const midtermExams = allExams.filter((t) => t.isMidterm);
+  const jlptExams = allExams.filter((t) => !t.isMidterm && !t.isHidden);
+  const midtermExams = allExams.filter((t) => t.isMidterm && !t.isHidden);
 
   const examLevels = ['N5', 'N4', 'N3', 'N2', 'N1'] as const;
   const examCounts = {

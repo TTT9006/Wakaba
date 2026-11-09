@@ -9,6 +9,7 @@ export const jlptN5Paper201707: JlptPaper = {
   "isPracticeExam": false,
   "isDuplicateAudio": true,
   "duplicateNote": "Nội dung nghe trùng với đề 2010–2011 (~97.35%) — Không tính đề nghe độc lập",
+  "isHidden": true,
   "sections": [
     {
       "id": "vocabulary",

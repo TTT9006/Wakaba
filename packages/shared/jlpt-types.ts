@@ -50,6 +50,7 @@ export type JlptPaper = {
   isMidterm?: boolean;
   isDuplicateAudio?: boolean;
   duplicateNote?: string;
+  isHidden?: boolean;
 };
 
 export type PublicJlptQuestion = Omit<JlptQuestion, 'answer' | 'explanation' | 'transcript'>;
@@ -66,6 +67,7 @@ export type JlptSummary = {
   isMidterm?: boolean;
   isDuplicateAudio?: boolean;
   duplicateNote?: string;
+  isHidden?: boolean;
   total: number;
   minutes: number;
   sections: { id: string; title: string; minutes: number; count: number }[];

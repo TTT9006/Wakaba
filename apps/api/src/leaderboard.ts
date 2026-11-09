@@ -76,39 +76,122 @@ export function getTodayDateString(d = new Date()): string {
   return `${year}-${month}-${day}`;
 }
 
+export function getWeekBounds(d = new Date()) {
+  const current = new Date(d);
+  const day = current.getDay(); // 0 is Sunday, 1 is Monday...
+  const diffToMonday = day === 0 ? -6 : 1 - day;
+
+  const monday = new Date(current);
+  monday.setDate(current.getDate() + diffToMonday);
+  monday.setHours(0, 0, 0, 0);
+
+  const sunday = new Date(monday);
+  sunday.setDate(monday.getDate() + 6);
+  sunday.setHours(23, 59, 59, 999);
+
+  const monStr = `${String(monday.getDate()).padStart(2, '0')}/${String(monday.getMonth() + 1).padStart(2, '0')}`;
+  const sunStr = `${String(sunday.getDate()).padStart(2, '0')}/${String(sunday.getMonth() + 1).padStart(2, '0')}/${sunday.getFullYear()}`;
+
+  const seasonId = `week-${monday.getFullYear()}-${String(monday.getMonth() + 1).padStart(2, '0')}-${String(monday.getDate()).padStart(2, '0')}`;
+  const title = `Tuần ${monStr} - ${sunStr}`;
+
+  return { seasonId, title, year: monday.getFullYear(), month: monday.getMonth() + 1, startedAt: monday, endedAt: sunday };
+}
+
 export function getSeasonId(d = new Date()): string {
-  const year = d.getFullYear();
-  const month = String(d.getMonth() + 1).padStart(2, '0');
-  return `${year}-${month}`;
+  return getWeekBounds(d).seasonId;
+}
+
+let backfilled = false;
+export async function backfillHistoricalData(seasonStartDateStr: string) {
+  if (backfilled || process.env.NODE_ENV === 'test' || process.env.VITEST) return;
+  try {
+    const existingCount = await db.dailyExp.count({
+      where: { date: seasonStartDateStr },
+    });
+    if (existingCount > 0) {
+      backfilled = true;
+      return;
+    }
+
+    const allUsers = await db.user.findMany({
+      select: {
+        id: true,
+        reviews: { select: { rating: true } },
+        attempts: { select: { score: true } },
+        progress: { where: { completed: true }, select: { id: true } },
+        writings: { select: { id: true } },
+      },
+    });
+
+    for (const u of allUsers) {
+      const revExp = u.reviews.reduce(
+        (sum, r) => sum + (r.rating === 3 ? 10 : r.rating === 2 ? 8 : r.rating === 1 ? 4 : 2),
+        0
+      );
+      const attExp = u.attempts.reduce(
+        (sum, a) => sum + Math.min(50, Math.round(a.score * 0.5)),
+        0
+      );
+      const gramExp = u.progress.length * 20;
+      const writExp = u.writings.length * 5;
+      const total = revExp + attExp + gramExp + writExp;
+
+      if (total > 0) {
+        await db.dailyExp.upsert({
+          where: { userId_date: { userId: u.id, date: seasonStartDateStr } },
+          create: {
+            userId: u.id,
+            date: seasonStartDateStr,
+            testExp: attExp,
+            reviewExp: revExp,
+            grammarExp: gramExp,
+            writingExp: writExp,
+            streakExp: 0,
+            totalExp: total,
+          },
+          update: {
+            testExp: attExp,
+            reviewExp: revExp,
+            grammarExp: gramExp,
+            writingExp: writExp,
+            totalExp: total,
+          },
+        });
+      }
+    }
+    backfilled = true;
+    console.log('Successfully backfilled historical learning data for current weekly season');
+  } catch (err) {
+    console.warn('Backfill notice:', (err as Error).message);
+  }
 }
 
 export async function getOrCreateCurrentSeason(now = new Date()) {
   await ensureLeaderboardTables();
-  const seasonId = getSeasonId(now);
-  const year = now.getFullYear();
-  const month = now.getMonth() + 1;
-  const title = `Mùa Tháng ${month}/${year}`;
+  const bounds = getWeekBounds(now);
 
-  const startedAt = new Date(year, month - 1, 1, 0, 0, 0, 0);
-  const endedAt = new Date(year, month, 0, 23, 59, 59, 999);
-
-  let season = await db.season.findUnique({ where: { id: seasonId } });
+  let season = await db.season.findUnique({ where: { id: bounds.seasonId } });
   if (!season) {
     season = await db.season.create({
       data: {
-        id: seasonId,
-        year,
-        month,
-        title,
-        startedAt,
-        endedAt,
+        id: bounds.seasonId,
+        year: bounds.year,
+        month: bounds.month,
+        title: bounds.title,
+        startedAt: bounds.startedAt,
+        endedAt: bounds.endedAt,
         settled: false,
       },
     });
   }
 
-  // Auto-settle any past unsettled seasons
+  // Auto-settle any past unsettled weeks
   await settlePastSeasons(now);
+
+  // Backfill existing user learning history for the kickoff week
+  const startStr = getTodayDateString(bounds.startedAt);
+  await backfillHistoricalData(startStr);
 
   return season;
 }
@@ -123,9 +206,8 @@ export async function settlePastSeasons(now = new Date()) {
 
   for (const s of pastUnsettled) {
     // Settle season
-    const startStr = `${s.year}-${String(s.month).padStart(2, '0')}-01`;
-    const lastDay = new Date(s.year, s.month, 0).getDate();
-    const endStr = `${s.year}-${String(s.month).padStart(2, '0')}-${String(lastDay).padStart(2, '0')}`;
+    const startStr = getTodayDateString(s.startedAt);
+    const endStr = getTodayDateString(s.endedAt);
 
     const dailyRows = await db.dailyExp.findMany({
       where: {
@@ -269,9 +351,8 @@ export async function getCurrentLeaderboard(currentUserId: string) {
   const now = new Date();
   const season = await getOrCreateCurrentSeason(now);
 
-  const startStr = `${season.year}-${String(season.month).padStart(2, '0')}-01`;
-  const lastDay = new Date(season.year, season.month, 0).getDate();
-  const endStr = `${season.year}-${String(season.month).padStart(2, '0')}-${String(lastDay).padStart(2, '0')}`;
+  const startStr = getTodayDateString(season.startedAt);
+  const endStr = getTodayDateString(season.endedAt);
 
   // Fetch all users with DailyExp in this season
   const dailyRows = await db.dailyExp.findMany({

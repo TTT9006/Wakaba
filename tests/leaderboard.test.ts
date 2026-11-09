@@ -61,19 +61,8 @@ describe('Leaderboard and Daily EXP System', () => {
       update: {},
     });
 
-    const todayStr = getTodayDateString();
-    await db.dailyExp.deleteMany({
-      where: {
-        userId: { in: [testUser1.id, testUser2.id, testUser3.id, testUser4.id] },
-        date: todayStr,
-      },
-    });
-
-    await db.userExpLog.deleteMany({
-      where: {
-        userId: { in: [testUser1.id, testUser2.id, testUser3.id, testUser4.id] },
-      },
-    });
+    await db.dailyExp.deleteMany();
+    await db.userExpLog.deleteMany();
   });
 
   it('enforces 500 Daily EXP cap strictly', async () => {
@@ -112,7 +101,7 @@ describe('Leaderboard and Daily EXP System', () => {
     await recordExp(testUser4.id, 'review', 100); // 100
 
     const lb = await getCurrentLeaderboard(testUser1.id);
-    expect(lb.season.title).toMatch(/Mùa Tháng \d+\/\d+/);
+    expect(lb.season.title).toMatch(/Tuần \d+\/\d+ - \d+\/\d+\/\d+/);
 
     const r1 = lb.rankings.find((r) => r.userId === testUser1.id);
     const r2 = lb.rankings.find((r) => r.userId === testUser2.id);

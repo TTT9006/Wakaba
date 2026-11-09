@@ -278,6 +278,7 @@ export function paperSummary(p: JlptPaper): JlptSummary {
     isMidterm: p.isMidterm || p.id.includes('midterm'),
     isDuplicateAudio: p.isDuplicateAudio,
     duplicateNote: p.duplicateNote,
+    isHidden: p.isHidden,
     description:
       p.description ?? 'Đề tự biên soạn, đủ phần và thời gian thi; không phải đề JLPT chính thức.',
     total: p.sections.reduce((n, s) => n + s.questions.length, 0),
