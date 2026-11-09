@@ -182,3 +182,55 @@ export type ConsolidatedReviewQueue = {
   grammarDue: number;
   dueCount: number;
 };
+
+
+export type KamonType = 'kiku' | 'ume' | 'sakura' | 'wakaba';
+
+export type LeaderboardUser = {
+  rank: number;
+  userId: string;
+  name: string;
+  avatar: string;
+  level: string;
+  exp: number;
+  kamonType: KamonType;
+  isCurrentUser: boolean;
+};
+
+export type LeaderboardData = {
+  season: {
+    id: string;
+    title: string;
+    startedAt: string;
+    endedAt: string;
+    daysRemaining: number;
+  };
+  today: {
+    totalExp: number;
+    cap: number;
+  };
+  rankings: LeaderboardUser[];
+  currentUser: LeaderboardUser;
+  totalLearners: number;
+};
+
+export type CelebrationData = {
+  celebration: {
+    seasonId: string;
+    seasonTitle: string;
+    rank: number;
+    exp: number;
+    kamonType: KamonType;
+    totalLearners: number;
+  } | null;
+};
+
+export type SeasonHistoryItem = {
+  id: string;
+  seasonId: string;
+  seasonTitle: string;
+  rank: number;
+  exp: number;
+  kamonType: KamonType;
+  awardedAt: string;
+};

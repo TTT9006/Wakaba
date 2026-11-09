@@ -1,3 +1,4 @@
+import { leaderboardRouter, recordExp, getTodayDateString } from './leaderboard';
 import { jlptRouter } from './jlpt';
 import { loginReviewRouter } from './login-review';
 import { consolidatedReviewRouter, getConsolidatedOverview } from './consolidated-review';
@@ -459,6 +460,9 @@ app.get('/api/dashboard', async (_req, res) => {
     streak++;
     cursor = new Date(cursor.getTime() - 86400000);
   }
+  if (streak > 0 && activity.some((a) => localDay(a.date) === localDay(now))) {
+    await recordExp(userId, 'streak', 20, getTodayDateString(now));
+  }
   const weekly = Array.from({ length: 7 }, (_, i) => {
     const date = new Date(now.getTime() - (6 - i) * 86400000);
     const key = localDay(date);
@@ -714,7 +718,9 @@ app.post('/api/flashcards/review', async (req, res) => {
       data: { userId: res.locals.user.id, cardId, rating, interval: next.interval },
     }),
   ]);
-  res.json(next);
+  const expAmount = rating === 3 ? 10 : rating === 2 ? 8 : rating === 1 ? 4 : 2;
+  const expResult = await recordExp(res.locals.user.id, 'review', expAmount, cardId);
+  res.json({ ...next, expAwarded: expResult.awarded, dailyTotal: expResult.dailyTotal });
 });
 const upload = multer({
   storage: multer.memoryStorage(),
@@ -879,6 +885,7 @@ app.post('/api/flashcards/import/commit', async (req, res) => {
 app.use('/api/grammar', grammarRouter);
 const normalizeAnswer = normalizeGrammarAnswer;
 app.use('/api/jlpt', jlptRouter);
+app.use('/api/leaderboard', auth, leaderboardRouter);
 app.get('/api/tests', (_req, res) => res.json(jlptPapers.map(paperSummary)));
 app.get('/api/tests/history', async (_req, res) =>
   res.json(
@@ -1014,7 +1021,9 @@ app.post('/api/tests/:id/submit', async (req, res) => {
       },
     });
   });
-  res.json({ ...attempt, results });
+  const testExpAmount = Math.min(50, Math.round(score * 0.5));
+  const expResult = await recordExp(res.locals.user.id, 'test', testExpAmount, run.testId);
+  res.json({ ...attempt, results, expAwarded: expResult.awarded, dailyTotal: expResult.dailyTotal });
 });
 app.get('/api/writing', async (_req, res) =>
   res.json(
@@ -1040,15 +1049,15 @@ app.post('/api/writing', async (req, res) => {
         .max(100),
     })
     .parse(req.body);
-  res.status(201).json(
-    await db.writing.create({
-      data: {
-        userId: res.locals.user.id,
-        character: data.character,
-        strokes: JSON.stringify(data.strokes),
-      },
-    }),
-  );
+  const createdWriting = await db.writing.create({
+    data: {
+      userId: res.locals.user.id,
+      character: data.character,
+      strokes: JSON.stringify(data.strokes),
+    },
+  });
+  await recordExp(res.locals.user.id, 'writing', 5, data.character);
+  res.status(201).json(createdWriting);
 });
 app.use('/api/admin', (_req, res, next) => {
   if (res.locals.user.role !== 'admin') {

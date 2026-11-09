@@ -1,3 +1,4 @@
+import { LeaderboardWidget } from '../components/leaderboard-widget';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { ArrowUpRight, ArrowRight, Flame, Layers, PenLine, Check, Clock3, Sparkles, RotateCcw } from 'lucide-react';
@@ -114,6 +115,9 @@ export function Dashboard() {
           </svg>
         </div>
       </section>
+      <div className="my-5">
+        <LeaderboardWidget />
+      </div>
       <div className="stat-strip">
         {[
           {

@@ -1,4 +1,7 @@
+import { motion, AnimatePresence } from 'motion/react';
 import { KanjiDetail } from './pages/radicals';
+import { LeaderboardPage } from './pages/leaderboard';
+import { CelebrationModal } from './components/celebration-modal';
 import { Brand } from './components/brand';
 import { LoginReview } from './pages/login-review';
 import type { LoginReviewView } from '../../../packages/shared/login-review';
@@ -30,6 +33,7 @@ import {
   Leaf,
   X,
   Target,
+  Award,
 } from 'lucide-react';
 import * as Dropdown from '@radix-ui/react-dropdown-menu';
 import * as Dialog from '@radix-ui/react-dialog';
@@ -55,6 +59,7 @@ const navigation = [
   { to: '/writing', label: 'Luyện viết', icon: PenLine },
   { to: '/skills', label: 'Luyện kỹ năng', icon: Target },
   { to: '/tests', label: 'Luyện đề', icon: ClipboardCheck },
+  { to: '/leaderboard', label: 'Bảng xếp hạng', icon: Award },
   { to: '/progress', label: 'Tiến độ học tập', icon: ChartNoAxesCombined },
 ];
 export function useUser() {
@@ -203,7 +208,17 @@ function Layout() {
           </Link>
         </header>}
         <main>
-          <Outlet />
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              key={location.pathname}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -6 }}
+              transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <Outlet />
+            </motion.div>
+          </AnimatePresence>
         </main>
         {!examMode && <footer className="footer">
           <div className="footer-left">
@@ -220,6 +235,7 @@ function Layout() {
         <Dialog.Trigger className="mobile-more"><Menu size={21} /><span>Thêm</span></Dialog.Trigger>
       </nav>}
     </div>
+      <CelebrationModal />
     </Dialog.Root>
   );
 }
@@ -255,6 +271,7 @@ export function App() {
           <Route path="kanji/:character" element={<KanjiDetail/>}/>
           <Route path="writing" element={<Writing />} />
           <Route path="skills" element={<SkillsPage />} />
+          <Route path="leaderboard" element={<LeaderboardPage />} />
           <Route path="tests" element={<Tests />} />
           <Route path="tests/:id" element={<TestSession />} />
           <Route path="progress" element={<Progress />} />

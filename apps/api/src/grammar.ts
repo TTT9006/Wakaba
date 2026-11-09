@@ -1,3 +1,4 @@
+import { recordExp } from './leaderboard';
 import { Router } from 'express';
 import { createHash, randomUUID } from 'node:crypto';
 import { z } from 'zod';
@@ -210,11 +211,17 @@ grammarRouter.post('/:id/progress', async (req, res) => {
     return;
   }
   res.json(
-    await db.grammarProgress.upsert({
-      where: { userId_grammarId: { userId, grammarId } },
-      create: { userId, grammarId, ...data },
-      update: data,
-    }),
+    await (async () => {
+      const resProg = await db.grammarProgress.upsert({
+        where: { userId_grammarId: { userId, grammarId } },
+        create: { userId, grammarId, ...data },
+        update: data,
+      });
+      if (data.completed) {
+        await recordExp(userId, 'grammar', 20, grammarId);
+      }
+      return resProg;
+    })(),
   );
 });
 
@@ -241,6 +248,9 @@ grammarRouter.post('/:id/exercise', async (req, res) => {
   const id = createHash('sha256')
     .update(userId + ':' + (attemptId || randomUUID()))
     .digest('hex');
+  if (correct) {
+    await recordExp(userId, 'grammar', 5, exerciseId);
+  }
   const reply = { correct, answer: exercise.answer, explanation: exercise.explanation };
   const prior = await db.grammarAnswer.findUnique({ where: { id } });
   if (prior) {

@@ -1,11 +1,13 @@
+import { KikuKamon, UmeKamon, SakuraKamon, WakabaKamon } from '../components/kamon';
+import type { SeasonHistoryItem } from '../types';
 import { AnnotationSettings } from '../components/japanese-annotated-text';
 import { SourceNote } from './radicals';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useQueryClient } from '@tanstack/react-query';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { Check, Sun, Moon, Monitor, ArrowUpRight } from 'lucide-react';
 import { useUser } from '../app';
-import { patch, post } from '../services/api';
+import { api, patch, post } from '../services/api';
 import type { User } from '../types';
 import { useUI } from '../stores/ui';
 import { Button, PageHeader } from '../components/ui';
@@ -115,6 +117,61 @@ export function SettingsPage() {
     </>
   );
 }
+
+function SeasonHistorySection() {
+  const { data: history, isLoading } = useQuery<SeasonHistoryItem[]>({
+    queryKey: ['leaderboard-history'],
+    queryFn: () => api<SeasonHistoryItem[]>('/leaderboard/history'),
+  });
+
+  if (isLoading) return <p className="text-xs text-[#5e6660]">Đang tải lịch sử...</p>;
+
+  if (!history || history.length === 0) {
+    return (
+      <div className="p-4 bg-[#faf8f5] rounded-2xl border border-[#e6dfd5] text-center text-xs text-[#5e6660]">
+        Chưa có mùa giải nào kết thúc. Hãy tích cực học tập tháng này để nhận Gia huy vinh danh đầu tháng sau nhé!
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-3">
+      {history.map((h: SeasonHistoryItem) => (
+        <div
+          key={h.id}
+          className="flex items-center justify-between p-3.5 bg-[#faf8f5] rounded-2xl border border-[#e6dfd5]"
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-white border border-[#c2dacb] flex items-center justify-center text-[#2c5e43] shadow-xs">
+              {h.kamonType === 'kiku' && <KikuKamon className="w-6 h-6 text-[#966c18]" />}
+              {h.kamonType === 'ume' && <UmeKamon className="w-6 h-6 text-[#475569]" />}
+              {h.kamonType === 'sakura' && <SakuraKamon className="w-6 h-6 text-[#8c4a32]" />}
+              {h.kamonType === 'wakaba' && <WakabaKamon className="w-6 h-6 text-[#2c5e43]" />}
+            </div>
+            <div>
+              <p className="text-xs font-bold text-[#1f2421]">
+                {h.seasonTitle} · Hạng #{h.rank}
+              </p>
+              <p className="text-[11px] text-[#5e6660]">
+                {h.kamonType === 'kiku'
+                  ? 'Gia huy Cúc Hoàng Gia (Quán Quân)'
+                  : h.kamonType === 'ume'
+                  ? 'Gia huy Mai Tri Thức (Á Quân)'
+                  : h.kamonType === 'sakura'
+                  ? 'Gia huy Anh Đào (Quý Quân)'
+                  : 'Gia huy Chồi Non Wakaba'}
+              </p>
+            </div>
+          </div>
+          <span className="text-xs font-bold text-[#2c5e43]">
+            {h.exp.toLocaleString('vi-VN')} EXP
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function Profile() {
   const { data: user } = useUser();
   const [name, setName] = useState('');
@@ -229,6 +286,13 @@ export function Profile() {
             Cập nhật mật khẩu
           </Button>
         </form>
+      </section>
+      <section className="panel settings-section spaced">
+        <div>
+          <h2>Lịch sử Xếp hạng & Bộ sưu tập Gia huy</h2>
+          <p>Thành tích và danh hiệu đạt được qua các mùa giải thi đua hàng tháng.</p>
+        </div>
+        <SeasonHistorySection />
       </section>
       <AnnotationSettings />
     </>
