@@ -378,6 +378,14 @@ export async function getCurrentLeaderboard(currentUserId: string) {
       avatar: true,
       level: true,
       createdAt: true,
+      _count: {
+        select: {
+          reviews: true,
+          attempts: true,
+          progress: true,
+          writings: true,
+        },
+      },
     },
   });
 
@@ -415,18 +423,27 @@ export async function getCurrentLeaderboard(currentUserId: string) {
       exp: item.exp,
       kamonType,
       isCurrentUser: item.user.id === currentUserId,
+      cardsLearned: item.user._count?.reviews || 0,
+      testsCompleted: item.user._count?.attempts || 0,
+      grammarCompleted: item.user._count?.progress || 0,
+      writingCount: item.user._count?.writings || 0,
     };
   });
 
+  const currentUserLookup = userLookup.get(currentUserId);
   const currentUserRank = rankings.find((r) => r.userId === currentUserId) || {
     rank: rankings.length,
     userId: currentUserId,
-    name: 'Bạn',
-    avatar: '花',
-    level: 'N5',
+    name: currentUserLookup?.name || 'Bạn',
+    avatar: currentUserLookup?.avatar || '花',
+    level: currentUserLookup?.level || 'N5',
     exp: 0,
     kamonType: 'wakaba' as const,
     isCurrentUser: true,
+    cardsLearned: currentUserLookup?._count?.reviews || 0,
+    testsCompleted: currentUserLookup?._count?.attempts || 0,
+    grammarCompleted: currentUserLookup?._count?.progress || 0,
+    writingCount: currentUserLookup?._count?.writings || 0,
   };
 
   const todayStr = getTodayDateString(now);

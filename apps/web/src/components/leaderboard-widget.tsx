@@ -60,8 +60,13 @@ export function LeaderboardWidget() {
               <span className="text-[10px] text-[#5e6660]">/ {totalLearners} học viên</span>
             </div>
             <p className="text-[11px] text-[#2c5e43] font-semibold">
-              {currentUser.exp.toLocaleString('vi-VN')} EXP tháng này
+              {currentUser.exp.toLocaleString('vi-VN')} EXP tuần này
             </p>
+            <div className="flex items-center gap-1.5 mt-0.5 text-[10px] text-[#5e6660]">
+              <span>{currentUser.cardsLearned ?? 0} thẻ đã học</span>
+              <span>·</span>
+              <span>{currentUser.testsCompleted ?? 0} đề</span>
+            </div>
           </div>
         </div>
         <Link

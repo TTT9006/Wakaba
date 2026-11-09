@@ -1,4 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
+import { Layers, ClipboardCheck, BookOpen, PenTool } from 'lucide-react';
 import { api } from '../services/api';
 import type { LeaderboardData, User } from '../types';
 import { KikuKamon, UmeKamon, SakuraKamon, WakabaKamon } from '../components/kamon';
@@ -87,6 +88,24 @@ export function LeaderboardPage() {
               {top1.exp.toLocaleString('vi-VN')} EXP
             </p>
             <span className="text-[11px] text-[#5e6660] mt-1">Gia huy: Cúc Hoàng Gia (菊紋)</span>
+
+            {/* Chi tiết học tập */}
+            <div className="flex flex-wrap justify-center items-center gap-1.5 mt-3 pt-3 border-t border-[#ecd9b2]/60 w-full">
+              <span className="inline-flex items-center gap-1 text-[10px] font-medium text-[#785b19] bg-[#fbf5e8] px-2 py-0.5 rounded-md border border-[#eddab3]">
+                <Layers size={11} className="text-[#966c18]" />
+                {top1.cardsLearned ?? 0} thẻ đã học
+              </span>
+              <span className="inline-flex items-center gap-1 text-[10px] font-medium text-[#785b19] bg-[#fbf5e8] px-2 py-0.5 rounded-md border border-[#eddab3]">
+                <ClipboardCheck size={11} className="text-[#966c18]" />
+                {top1.testsCompleted ?? 0} đề đã làm
+              </span>
+              {(top1.grammarCompleted ?? 0) > 0 && (
+                <span className="inline-flex items-center gap-1 text-[10px] font-medium text-[#785b19] bg-[#fbf5e8] px-2 py-0.5 rounded-md border border-[#eddab3]">
+                  <BookOpen size={11} className="text-[#966c18]" />
+                  {top1.grammarCompleted} ngữ pháp
+                </span>
+              )}
+            </div>
           </div>
         )}
 
@@ -106,6 +125,24 @@ export function LeaderboardPage() {
               {top2.exp.toLocaleString('vi-VN')} EXP
             </p>
             <span className="text-[10px] text-[#5e6660] mt-1">Gia huy: Mai Tri Thức (梅紋)</span>
+
+            {/* Chi tiết học tập */}
+            <div className="flex flex-wrap justify-center items-center gap-1.5 mt-3 pt-3 border-t border-[#d9dfe4]/60 w-full">
+              <span className="inline-flex items-center gap-1 text-[10px] font-medium text-[#475569] bg-white px-2 py-0.5 rounded-md border border-[#cbd5e1]">
+                <Layers size={11} className="text-[#64748b]" />
+                {top2.cardsLearned ?? 0} thẻ
+              </span>
+              <span className="inline-flex items-center gap-1 text-[10px] font-medium text-[#475569] bg-white px-2 py-0.5 rounded-md border border-[#cbd5e1]">
+                <ClipboardCheck size={11} className="text-[#64748b]" />
+                {top2.testsCompleted ?? 0} đề
+              </span>
+              {(top2.grammarCompleted ?? 0) > 0 && (
+                <span className="inline-flex items-center gap-1 text-[10px] font-medium text-[#475569] bg-white px-2 py-0.5 rounded-md border border-[#cbd5e1]">
+                  <BookOpen size={11} className="text-[#64748b]" />
+                  {top2.grammarCompleted} ngữ pháp
+                </span>
+              )}
+            </div>
           </div>
         )}
 
@@ -125,15 +162,33 @@ export function LeaderboardPage() {
               {top3.exp.toLocaleString('vi-VN')} EXP
             </p>
             <span className="text-[10px] text-[#5e6660] mt-1">Gia huy: Anh Đào Đồng Bộ (桜紋)</span>
+
+            {/* Chi tiết học tập */}
+            <div className="flex flex-wrap justify-center items-center gap-1.5 mt-3 pt-3 border-t border-[#e7d3cb]/60 w-full">
+              <span className="inline-flex items-center gap-1 text-[10px] font-medium text-[#8c4a32] bg-white px-2 py-0.5 rounded-md border border-[#dec2b7]">
+                <Layers size={11} className="text-[#b8806c]" />
+                {top3.cardsLearned ?? 0} thẻ
+              </span>
+              <span className="inline-flex items-center gap-1 text-[10px] font-medium text-[#8c4a32] bg-white px-2 py-0.5 rounded-md border border-[#dec2b7]">
+                <ClipboardCheck size={11} className="text-[#b8806c]" />
+                {top3.testsCompleted ?? 0} đề
+              </span>
+              {(top3.grammarCompleted ?? 0) > 0 && (
+                <span className="inline-flex items-center gap-1 text-[10px] font-medium text-[#8c4a32] bg-white px-2 py-0.5 rounded-md border border-[#dec2b7]">
+                  <BookOpen size={11} className="text-[#b8806c]" />
+                  {top3.grammarCompleted} ngữ pháp
+                </span>
+              )}
+            </div>
           </div>
         )}
       </div>
 
       {/* Current User Fixed Card (if not top 3) */}
       {currentUser && currentUser.rank > 3 && (
-        <div className="p-4 rounded-2xl bg-[#e9f2ec] border-2 border-[#2c5e43] shadow-xs flex items-center justify-between">
+        <div className="p-4 rounded-2xl bg-[#e9f2ec] border-2 border-[#2c5e43] shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-full bg-white border border-[#2c5e43] flex items-center justify-center text-[#2c5e43] shadow-xs">
+            <div className="w-11 h-11 rounded-full bg-white border border-[#2c5e43] flex items-center justify-center text-[#2c5e43] shadow-xs shrink-0">
               <WakabaKamon className="w-7 h-7" />
             </div>
             <div>
@@ -145,10 +200,31 @@ export function LeaderboardPage() {
                   Vị trí của bạn
                 </span>
               </div>
-              <p className="text-[11px] text-[#5e6660]">Gia huy: Chồi Non Tinh Tiến (若葉紋)</p>
+              <div className="flex flex-wrap items-center gap-1.5 mt-1.5">
+                <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-[#2c5e43] bg-white px-2 py-0.5 rounded-md border border-[#bcdbc7]">
+                  <Layers size={10} />
+                  {currentUser.cardsLearned ?? 0} flashcard đã học
+                </span>
+                <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-[#2c5e43] bg-white px-2 py-0.5 rounded-md border border-[#bcdbc7]">
+                  <ClipboardCheck size={10} />
+                  {currentUser.testsCompleted ?? 0} đề đã làm
+                </span>
+                {(currentUser.grammarCompleted ?? 0) > 0 && (
+                  <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-[#2c5e43] bg-white px-2 py-0.5 rounded-md border border-[#bcdbc7]">
+                    <BookOpen size={10} />
+                    {currentUser.grammarCompleted} bài ngữ pháp
+                  </span>
+                )}
+                {(currentUser.writingCount ?? 0) > 0 && (
+                  <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-[#2c5e43] bg-white px-2 py-0.5 rounded-md border border-[#bcdbc7]">
+                    <PenTool size={10} />
+                    {currentUser.writingCount} chữ viết
+                  </span>
+                )}
+              </div>
             </div>
           </div>
-          <span className="text-base font-bold text-[#2c5e43]">
+          <span className="text-base font-bold text-[#2c5e43] sm:text-right shrink-0">
             {currentUser.exp.toLocaleString('vi-VN')} EXP
           </span>
         </div>
@@ -169,14 +245,14 @@ export function LeaderboardPage() {
             return (
               <div
                 key={item.userId}
-                className={`flex items-center justify-between p-3.5 rounded-2xl border transition-all duration-200 hover:-translate-y-0.5 ${
+                className={`flex flex-col sm:flex-row sm:items-center justify-between p-3.5 rounded-2xl border transition-all duration-200 hover:-translate-y-0.5 gap-2.5 ${
                   isMe
                     ? 'bg-[#e9f2ec] border-[#c2dacb]'
                     : 'bg-[#faf8f5] border-[#e6dfd5] hover:bg-white'
                 }`}
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-white border border-[#ded7cc] flex items-center justify-center text-[#5e6660] shadow-xs">
+                  <div className="w-10 h-10 rounded-full bg-white border border-[#ded7cc] flex items-center justify-center text-[#5e6660] shadow-xs shrink-0">
                     <WakabaKamon className="w-6 h-6" />
                   </div>
                   <div>
@@ -193,11 +269,33 @@ export function LeaderboardPage() {
                         </span>
                       )}
                     </div>
-                    <p className="text-[11px] text-[#5e6660]">Gia huy: Chồi Non Cần Mẫn (若葉)</p>
+                    {/* Dữ liệu học tập: flashcard, đề, ngữ pháp */}
+                    <div className="flex flex-wrap items-center gap-1.5 mt-1">
+                      <span className="inline-flex items-center gap-1 text-[10px] text-[#5e6660] bg-white px-1.5 py-0.5 rounded border border-[#e6dfd5]">
+                        <Layers size={10} className="text-[#2c5e43]" />
+                        {item.cardsLearned ?? 0} thẻ
+                      </span>
+                      <span className="inline-flex items-center gap-1 text-[10px] text-[#5e6660] bg-white px-1.5 py-0.5 rounded border border-[#e6dfd5]">
+                        <ClipboardCheck size={10} className="text-[#2c5e43]" />
+                        {item.testsCompleted ?? 0} đề
+                      </span>
+                      {(item.grammarCompleted ?? 0) > 0 && (
+                        <span className="inline-flex items-center gap-1 text-[10px] text-[#5e6660] bg-white px-1.5 py-0.5 rounded border border-[#e6dfd5]">
+                          <BookOpen size={10} className="text-[#2c5e43]" />
+                          {item.grammarCompleted} ngữ pháp
+                        </span>
+                      )}
+                      {(item.writingCount ?? 0) > 0 && (
+                        <span className="inline-flex items-center gap-1 text-[10px] text-[#5e6660] bg-white px-1.5 py-0.5 rounded border border-[#e6dfd5]">
+                          <PenTool size={10} className="text-[#2c5e43]" />
+                          {item.writingCount} chữ
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </div>
                 <span
-                  className={`text-sm font-bold ${isMe ? 'text-[#2c5e43]' : 'text-[#1f2421]'}`}
+                  className={`text-sm font-bold sm:text-right shrink-0 ${isMe ? 'text-[#2c5e43]' : 'text-[#1f2421]'}`}
                 >
                   {item.exp.toLocaleString('vi-VN')} EXP
                 </span>

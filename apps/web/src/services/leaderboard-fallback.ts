@@ -32,6 +32,10 @@ export function getFallbackLeaderboard(currentUser?: { id?: string; name?: strin
     avatar: string;
     level: string;
     exp: number;
+    cardsLearned: number;
+    testsCompleted: number;
+    grammarCompleted: number;
+    writingCount: number;
   }> = [
     {
       userId: 'cmv50t5ox005ev7h0p1tuqg6b',
@@ -39,6 +43,10 @@ export function getFallbackLeaderboard(currentUser?: { id?: string; name?: strin
       avatar: '花',
       level: 'N5',
       exp: 200,
+      cardsLearned: 169,
+      testsCompleted: 11,
+      grammarCompleted: 15,
+      writingCount: 8,
     },
     {
       userId: 'cmv50ywtz0000v7g8yu17f150',
@@ -46,6 +54,10 @@ export function getFallbackLeaderboard(currentUser?: { id?: string; name?: strin
       avatar: '風',
       level: 'N1',
       exp: 145,
+      cardsLearned: 120,
+      testsCompleted: 3,
+      grammarCompleted: 24,
+      writingCount: 16,
     },
     {
       userId: 'cmv6al89t0002v7ao7mvsiuwn',
@@ -53,6 +65,10 @@ export function getFallbackLeaderboard(currentUser?: { id?: string; name?: strin
       avatar: '月',
       level: 'N5',
       exp: 110,
+      cardsLearned: 85,
+      testsCompleted: 2,
+      grammarCompleted: 10,
+      writingCount: 5,
     },
     {
       userId: 'cmv_user_hyen',
@@ -60,6 +76,10 @@ export function getFallbackLeaderboard(currentUser?: { id?: string; name?: strin
       avatar: '鳥',
       level: 'N4',
       exp: 85,
+      cardsLearned: 64,
+      testsCompleted: 2,
+      grammarCompleted: 8,
+      writingCount: 12,
     },
     {
       userId: 'cmv_user_mquang',
@@ -67,6 +87,10 @@ export function getFallbackLeaderboard(currentUser?: { id?: string; name?: strin
       avatar: '山',
       level: 'N5',
       exp: 70,
+      cardsLearned: 52,
+      testsCompleted: 1,
+      grammarCompleted: 6,
+      writingCount: 4,
     },
     {
       userId: 'cmv_user_ttrang',
@@ -74,6 +98,10 @@ export function getFallbackLeaderboard(currentUser?: { id?: string; name?: strin
       avatar: '海',
       level: 'N3',
       exp: 60,
+      cardsLearned: 45,
+      testsCompleted: 1,
+      grammarCompleted: 5,
+      writingCount: 6,
     },
     {
       userId: 'cmv_user_ttung',
@@ -81,6 +109,10 @@ export function getFallbackLeaderboard(currentUser?: { id?: string; name?: strin
       avatar: '川',
       level: 'N4',
       exp: 50,
+      cardsLearned: 38,
+      testsCompleted: 1,
+      grammarCompleted: 4,
+      writingCount: 3,
     },
   ];
 
@@ -94,6 +126,10 @@ export function getFallbackLeaderboard(currentUser?: { id?: string; name?: strin
       avatar: currentUser.avatar || '花',
       level: currentUser.level || 'N5',
       exp: 45,
+      cardsLearned: 30,
+      testsCompleted: 1,
+      grammarCompleted: 3,
+      writingCount: 2,
     };
     baseLearners.push(userInPool);
   }
@@ -118,6 +154,10 @@ export function getFallbackLeaderboard(currentUser?: { id?: string; name?: strin
       exp: u.exp,
       kamonType,
       isCurrentUser: !!isCurrentUser,
+      cardsLearned: u.cardsLearned,
+      testsCompleted: u.testsCompleted,
+      grammarCompleted: u.grammarCompleted,
+      writingCount: u.writingCount,
     };
   });
 
@@ -130,6 +170,10 @@ export function getFallbackLeaderboard(currentUser?: { id?: string; name?: strin
     exp: 45,
     kamonType: 'wakaba',
     isCurrentUser: true,
+    cardsLearned: 30,
+    testsCompleted: 1,
+    grammarCompleted: 3,
+    writingCount: 2,
   };
 
   const daysRemaining = Math.max(

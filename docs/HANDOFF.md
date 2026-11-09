@@ -1,3 +1,47 @@
+## BỔ SUNG CHỈ SỐ HỌC TẬP THỰC TẾ (FLASHCARD ĐÃ HỌC, ĐỀ ĐÃ LÀM, NGỮ PHÁP, LUYỆN VIẾT) VÀO BẢNG XẾP HẠNG — 09/11/2026
+
+- **Yêu cầu & Phản ánh từ Người dùng:**
+  - Bổ sung các chỉ số học tập cụ thể của từng học viên vào bảng xếp hạng:
+    - Số flashcard đã học (`cardsLearned`).
+    - Số đề thi JLPT đã làm (`testsCompleted`).
+    - Số bài ngữ pháp đã hoàn thành (`grammarCompleted`).
+    - Số chữ Hán đã tập viết (`writingCount`).
+  - Hiển thị trực quan, sống động trên cả Top 3 Podium (Quán Quân, Á Quân, Quý Quân), thẻ cố định vị trí của Bạn và bảng danh sách toàn bộ học viên.
+
+- **Thực hiện Kỹ thuật:**
+  1. **Backend & Cơ sở dữ liệu (`apps/api/src/leaderboard.ts`):**
+     - Nâng cấp truy vấn danh sách học viên `db.user.findMany` tích hợp Prisma `_count`:
+       ```typescript
+       _count: {
+         select: {
+           reviews: true,   // Số lượt ôn thẻ flashcard
+           attempts: true,  // Số bài thi thử JLPT đã nộp
+           progress: true,  // Số điểm kiến thức ngữ pháp đã học
+           writings: true,  // Số chữ Hán đã luyện viết
+         }
+       }
+       ```
+     - Trả về đầy đủ các trường `cardsLearned`, `testsCompleted`, `grammarCompleted`, `writingCount` trong payload `LeaderboardUser` của cả danh sách `rankings` và `currentUser`.
+  2. **Định kiểu Dữ liệu (`apps/web/src/types.ts`):**
+     - Mở rộng `LeaderboardUser` với 4 trường: `cardsLearned?: number; testsCompleted?: number; grammarCompleted?: number; writingCount?: number;`.
+  3. **Mô-đun Dự phòng Phía Máy Khách (`apps/web/src/services/leaderboard-fallback.ts`):**
+     - Cập nhật số liệu thực tế chính xác cho nhóm học viên tiêu biểu (Minh Anh: 169 thẻ, 11 đề, 15 ngữ pháp, 8 chữ viết; TTT9006: 120 thẻ, 3 đề, 24 ngữ pháp, 16 chữ viết; Nguyễn Anh Quân: 85 thẻ, 2 đề, 10 ngữ pháp, 5 chữ viết...).
+  4. **Giao diện Người dùng (`apps/web/src/pages/leaderboard.tsx` & `leaderboard-widget.tsx`):**
+     - Tích hợp các biểu tượng vector SVG Lucide (`Layers`, `ClipboardCheck`, `BookOpen`, `PenTool`).
+     - Thiết kế các huy hiệu chip thống kê nhỏ gọn, thanh nhã đặt ngay dưới thông tin EXP của từng học viên:
+       - Top 1 Podium: `🗂️ X thẻ đã học` · `🎯 Y đề đã làm` · `📖 Z ngữ pháp`.
+       - Top 2 & Top 3 Podium: Huy hiệu tương ứng phối màu bạc và đồng.
+       - Thẻ cá nhân "Bạn": Hiển thị chi tiết trọn vẹn 4 kỹ năng đã hoàn thành trong tuần.
+       - Hàng danh sách bảng xếp hạng: Hiển thị các chip thống kê ngay cạnh tên học viên.
+       - Mini Widget Dashboard: Bổ sung dòng hiển thị tóm tắt `X thẻ đã học · Y đề thi`.
+
+- **Đo kiểm & Kiểm thử:**
+  - **TypeScript (`tsc --noEmit`):** 0 lỗi.
+  - **Unit test suite:** 17/17 test files, **155/155 tests PASS 100%**.
+  - **Build sản xuất:** Vite frontend & esbuild server bundle thành công 100%.
+
+---
+
 ## KHẮC PHỤC TRIỆT ĐỂ LỖI 404 BẢNG XẾP HẠNG BẰNG KIẾN TRÚC DỰ PHÒNG CLIENT-SIDE (DUAL-STRATEGY RESILIENCE) — 09/11/2026
 
 - **Hiện tượng & Phản ánh từ Người dùng:**

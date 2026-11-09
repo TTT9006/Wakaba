@@ -195,6 +195,10 @@ export type LeaderboardUser = {
   exp: number;
   kamonType: KamonType;
   isCurrentUser: boolean;
+  cardsLearned?: number;
+  testsCompleted?: number;
+  grammarCompleted?: number;
+  writingCount?: number;
 };
 
 export type LeaderboardData = {
