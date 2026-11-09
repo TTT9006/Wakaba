@@ -6,10 +6,17 @@ import { KikuKamon, UmeKamon, SakuraKamon, WakabaKamon } from './kamon';
 
 export function CelebrationModal() {
   const queryClient = useQueryClient();
-  const { data } = useQuery<CelebrationData>({
+  const { data } = useQuery<CelebrationData | null>({
     queryKey: ['celebration'],
-    queryFn: () => api<CelebrationData>('/leaderboard/celebration'),
+    queryFn: async () => {
+      try {
+        return await api<CelebrationData>('/leaderboard/celebration');
+      } catch {
+        return null;
+      }
+    },
     staleTime: 1000 * 60 * 10,
+    retry: false,
   });
 
   const [isOpen, setIsOpen] = useState(false);

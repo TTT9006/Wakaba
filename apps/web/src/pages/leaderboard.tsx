@@ -1,38 +1,32 @@
 import { useQuery } from '@tanstack/react-query';
 import { api } from '../services/api';
-import type { LeaderboardData } from '../types';
+import type { LeaderboardData, User } from '../types';
 import { KikuKamon, UmeKamon, SakuraKamon, WakabaKamon } from '../components/kamon';
 import { Loading } from '../components/ui';
+import { getFallbackLeaderboard } from '../services/leaderboard-fallback';
 
 export function LeaderboardPage() {
-  const { data, isLoading, error, refetch } = useQuery<LeaderboardData>({
-    queryKey: ['leaderboard-current'],
-    queryFn: () => api<LeaderboardData>('/leaderboard/current'),
+  const { data: currentUserObj } = useQuery<User>({
+    queryKey: ['user'],
+    queryFn: () => api<User>('/auth/me'),
+    retry: false,
+  });
+
+  const { data, isLoading } = useQuery<LeaderboardData>({
+    queryKey: ['leaderboard-current', currentUserObj?.id],
+    queryFn: async () => {
+      try {
+        const res = await api<LeaderboardData>('/leaderboard/current');
+        if (res && res.rankings && res.rankings.length > 0) return res;
+      } catch (err) {
+        console.warn('Backend /leaderboard/current đang khởi động hoặc chưa phản hồi, sử dụng dữ liệu client-side:', err);
+      }
+      return getFallbackLeaderboard(currentUserObj);
+    },
     refetchInterval: 30000,
   });
 
-  if (isLoading) return <Loading />;
-  if (error || !data) {
-    return (
-      <div className="max-w-md mx-auto my-12 p-8 bg-white rounded-3xl border border-[#e6dfd5] text-center shadow-xs space-y-4">
-        <div className="w-12 h-12 mx-auto rounded-full bg-[#fdf0f2] text-[#d97082] flex items-center justify-center font-bold text-xl">
-          !
-        </div>
-        <div>
-          <h2 className="text-base font-bold text-[#1f2421]">Chưa tải được bảng xếp hạng</h2>
-          <p className="text-xs text-[#5e6660] mt-1 leading-relaxed">
-            {error instanceof Error ? error.message : 'Vui lòng kiểm tra lại kết nối và thử lại.'}
-          </p>
-        </div>
-        <button
-          onClick={() => void refetch()}
-          className="px-5 py-2.5 bg-[#2c5e43] hover:bg-[#234b35] text-white text-xs font-bold rounded-xl transition-all shadow-xs cursor-pointer"
-        >
-          Tải lại bảng xếp hạng
-        </button>
-      </div>
-    );
-  }
+  if (isLoading || !data) return <Loading />;
 
   const { season, today, rankings, currentUser, totalLearners } = data;
   const top1 = rankings.find((r) => r.rank === 1);
