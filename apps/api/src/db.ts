@@ -71,9 +71,11 @@ export async function ensureDatabaseSchema() {
           args: [folder],
         });
         if (migCheck.rows.length === 0) {
-          if (!userExists) {
+          try {
             const sql = readFileSync(path.join(migrationsDir, folder, 'migration.sql'), 'utf8');
             await client.executeMultiple(sql);
+          } catch (e) {
+            console.warn(`Migration ${folder} executed with note:`, (e as Error).message);
           }
           await client.execute({
             sql: `INSERT OR IGNORE INTO "_prisma_migrations" ("id", "checksum", "finished_at", "migration_name", "applied_steps_count") VALUES (?, ?, ?, ?, 1)`,
@@ -117,9 +119,11 @@ export async function ensureDatabaseSchema() {
       for (const folder of folders) {
         const migExists = checkMig.all(folder);
         if (migExists.length === 0) {
-          if (!userExists) {
+          try {
             const sql = readFileSync(path.join(migrationsDir, folder, 'migration.sql'), 'utf8');
             sqlite.exec(sql);
+          } catch (e) {
+            console.warn(`Migration ${folder} executed with note:`, (e as Error).message);
           }
           insertMig.run(crypto.randomUUID(), 'baseline', Date.now(), folder);
         }

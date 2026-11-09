@@ -5,6 +5,70 @@ export const leaderboardRouter = Router();
 
 export const DAILY_EXP_CAP = 500;
 
+let tablesEnsured = false;
+export async function ensureLeaderboardTables() {
+  if (tablesEnsured) return;
+  try {
+    await db.$executeRawUnsafe(`
+      CREATE TABLE IF NOT EXISTS "Season" (
+        "id" TEXT NOT NULL PRIMARY KEY,
+        "year" INTEGER NOT NULL,
+        "month" INTEGER NOT NULL,
+        "title" TEXT NOT NULL,
+        "startedAt" DATETIME NOT NULL,
+        "endedAt" DATETIME NOT NULL,
+        "settled" BOOLEAN NOT NULL DEFAULT false
+      );
+    `);
+    await db.$executeRawUnsafe(`
+      CREATE TABLE IF NOT EXISTS "SeasonRank" (
+        "id" TEXT NOT NULL PRIMARY KEY,
+        "seasonId" TEXT NOT NULL,
+        "userId" TEXT NOT NULL,
+        "rank" INTEGER NOT NULL,
+        "exp" INTEGER NOT NULL,
+        "kamonType" TEXT NOT NULL,
+        "awardedAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        "seenSummary" BOOLEAN NOT NULL DEFAULT false
+      );
+    `);
+    await db.$executeRawUnsafe(`
+      CREATE TABLE IF NOT EXISTS "DailyExp" (
+        "id" TEXT NOT NULL PRIMARY KEY,
+        "userId" TEXT NOT NULL,
+        "date" TEXT NOT NULL,
+        "testExp" INTEGER NOT NULL DEFAULT 0,
+        "reviewExp" INTEGER NOT NULL DEFAULT 0,
+        "grammarExp" INTEGER NOT NULL DEFAULT 0,
+        "writingExp" INTEGER NOT NULL DEFAULT 0,
+        "streakExp" INTEGER NOT NULL DEFAULT 0,
+        "totalExp" INTEGER NOT NULL DEFAULT 0
+      );
+    `);
+    await db.$executeRawUnsafe(`
+      CREATE TABLE IF NOT EXISTS "UserExpLog" (
+        "id" TEXT NOT NULL PRIMARY KEY,
+        "userId" TEXT NOT NULL,
+        "date" TEXT NOT NULL,
+        "activityType" TEXT NOT NULL,
+        "referenceId" TEXT,
+        "amount" INTEGER NOT NULL,
+        "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+      );
+    `);
+    await db.$executeRawUnsafe(`
+      CREATE UNIQUE INDEX IF NOT EXISTS "SeasonRank_seasonId_userId_key" ON "SeasonRank"("seasonId", "userId");
+    `);
+    await db.$executeRawUnsafe(`
+      CREATE UNIQUE INDEX IF NOT EXISTS "DailyExp_userId_date_key" ON "DailyExp"("userId", "date");
+    `);
+    tablesEnsured = true;
+  } catch (err) {
+    console.warn('Leaderboard tables auto-ensure warning:', (err as Error).message);
+  }
+}
+
+
 export function getTodayDateString(d = new Date()): string {
   const year = d.getFullYear();
   const month = String(d.getMonth() + 1).padStart(2, '0');
@@ -19,6 +83,7 @@ export function getSeasonId(d = new Date()): string {
 }
 
 export async function getOrCreateCurrentSeason(now = new Date()) {
+  await ensureLeaderboardTables();
   const seasonId = getSeasonId(now);
   const year = now.getFullYear();
   const month = now.getMonth() + 1;
@@ -115,11 +180,13 @@ export async function settlePastSeasons(now = new Date()) {
 }
 
 export async function recordExp(
+
   userId: string,
   activityType: 'test' | 'review' | 'grammar' | 'writing' | 'streak',
   amount: number,
   referenceId?: string
 ): Promise<{ awarded: number; dailyTotal: number; capped: boolean }> {
+  await ensureLeaderboardTables();
   if (amount <= 0) return { awarded: 0, dailyTotal: 0, capped: false };
 
   const todayStr = getTodayDateString();

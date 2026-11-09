@@ -5,7 +5,7 @@ import { KikuKamon, UmeKamon, SakuraKamon, WakabaKamon } from '../components/kam
 import { Loading } from '../components/ui';
 
 export function LeaderboardPage() {
-  const { data, isLoading, error } = useQuery<LeaderboardData>({
+  const { data, isLoading, error, refetch } = useQuery<LeaderboardData>({
     queryKey: ['leaderboard-current'],
     queryFn: () => api<LeaderboardData>('/leaderboard/current'),
     refetchInterval: 30000,
@@ -14,8 +14,22 @@ export function LeaderboardPage() {
   if (isLoading) return <Loading />;
   if (error || !data) {
     return (
-      <div className="p-8 text-center text-[#5e6660]">
-        Không tải được thông tin bảng xếp hạng. Vui lòng thử lại sau.
+      <div className="max-w-md mx-auto my-12 p-8 bg-white rounded-3xl border border-[#e6dfd5] text-center shadow-xs space-y-4">
+        <div className="w-12 h-12 mx-auto rounded-full bg-[#fdf0f2] text-[#d97082] flex items-center justify-center font-bold text-xl">
+          !
+        </div>
+        <div>
+          <h2 className="text-base font-bold text-[#1f2421]">Chưa tải được bảng xếp hạng</h2>
+          <p className="text-xs text-[#5e6660] mt-1 leading-relaxed">
+            {error instanceof Error ? error.message : 'Vui lòng kiểm tra lại kết nối và thử lại.'}
+          </p>
+        </div>
+        <button
+          onClick={() => void refetch()}
+          className="px-5 py-2.5 bg-[#2c5e43] hover:bg-[#234b35] text-white text-xs font-bold rounded-xl transition-all shadow-xs cursor-pointer"
+        >
+          Tải lại bảng xếp hạng
+        </button>
       </div>
     );
   }
