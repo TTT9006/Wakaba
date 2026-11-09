@@ -1,3 +1,61 @@
+## BẢNG XẾP HẠNG KHÁCH QUAN, HỆ THỐNG GIA HUY 4 CẤP ĐỘ (KAMON) & HIỆU ỨNG CHUYỂN ĐỘNG (MOTION) — 09/11/2026
+
+- **Yêu cầu & Phản ánh từ Người dùng:**
+  1. Thêm tính năng tính điểm xếp hạng khách quan cho website Wakaba kết hợp Cấp bậc (Tier cá nhân) và Bảng thi đua định kỳ.
+  2. Bổ sung hiệu ứng chuyển động mượt mà (transitions / page entrance motion) khắp trang web mà không gây xung đột hoặc ảnh hưởng đến dữ liệu hiện có.
+  3. Sử dụng hệ thống biểu tượng Gia Huy truyền thống Nhật Bản (Kamon) vẽ vector SVG tối giản, sang trọng, tuyệt đối không dùng emoji hay sticker rẻ tiền:
+     - Top 1: Hoa Cúc Hoàng Gia (Kiku Kamon - Vàng Kim `#d4af37`).
+     - Top 2: Hoa Mai Tri Thức (Ume Kamon - Bạc Bạch Kim `#94a3b8`).
+     - Top 3: Hoa Anh Đào (Sakura Kamon - Đồng Hồng `#b45309`), chỉnh sửa tỷ lệ và kích thước 5 cánh hoa cân đối, đồng bộ với Top 1 và Top 2.
+     - Hạng 4+: Chồi Non Wakaba (Wakaba Kamon - Xanh Rừng `#2c5e43`), đại diện cho tinh thần vươn lên của người học.
+  4. Đưa toàn bộ dữ liệu học tập lịch sử hiện có (đề thi đã làm, flashcard đã học, ngữ pháp, luyện viết) vào làm điểm tạm thời cho tuần thi đua hiện tại để bảng xếp hạng không bị trống dữ liệu.
+  5. Tự động chốt và reset sang tuần mới vào lúc 00:00 Thứ Hai tuần tiếp theo.
+  6. Xử lý triệt để hiện tượng treo task ngầm và tuân thủ quy tắc kiểm thử, bàn giao handoff.
+
+- **Thực hiện Kỹ thuật:**
+  1. **Cơ sở dữ liệu & Schema Migration (`prisma/schema.prisma`):**
+     - Bổ sung các bảng: `Season`, `SeasonRank`, `DailyExp`, `UserExpLog` và thiết lập quan hệ với bảng `User`.
+     - Tạo migration `20261109000000_leaderboard_seasons`.
+     - Cập nhật `apps/api/src/db.ts` xóa bỏ điều kiện kiểm tra tồn tại user để đảm bảo migration luôn được áp dụng trên remote SQLite/Turso.
+     - Thêm cơ chế tự phục hồi bảng: hàm `ensureLeaderboardTables()` thực thi `CREATE TABLE IF NOT EXISTS` trước mỗi thao tác để phòng ngừa lỗi schema lệch pha.
+  2. **Hệ thống Điểm EXP Khách quan & Chu kỳ Tuần (`apps/api/src/leaderboard.ts`):**
+     - Đặt giới hạn trần tích lũy `DAILY_EXP_CAP = 500` EXP/ngày nhằm chống cày điểm gian lận.
+     - Chống lặp điểm: cùng một bài thi JLPT hoặc đề kiểm tra làm lại trong ngày sẽ nhận 0 EXP (`UserExpLog`).
+     - Chu kỳ tuần `getWeekBounds()`: Xác định chính xác từ Thứ Hai 00:00 đến Chủ Nhật 23:59:59 (`Tuần 09/11 - 15/11/2026`).
+     - Hàm `backfillHistoricalData()`: Quét dữ liệu thực tế từ 70 user đang hoạt động (`reviews`, `attempts`, `progress`, `writings`) nạp vào `DailyExp` cho tuần mở màn.
+     - Hàm `settlePastSeasons()`: Tự động chốt danh sách Top 1, 2, 3 và 4+, trao Gia Huy vĩnh viễn lưu vào hồ sơ cá nhân (`SeasonRank`) và reset bảng thi đua khi bước sang tuần mới.
+     - Endpoints API: `GET /api/leaderboard/current`, `GET /api/leaderboard/today`, `GET /api/leaderboard/celebration`, `POST /api/leaderboard/celebration/seen`, `GET /api/leaderboard/history`.
+  3. **Bộ Huy hiệu Gia Huy Kamon Vector SVG (`apps/web/src/components/kamon.tsx`):**
+     - `KikuKamon`: Hoa cúc 16 cánh hoàng gia.
+     - `UmeKamon`: Hoa mai 5 cánh tròn trịa kèm nhụy hoa tri thức.
+     - `SakuraKamon`: Hoa anh đào 5 cánh chẻ chữ V đặc trưng, đã tinh chỉnh bán kính cánh R=19px đồng bộ tỷ lệ hoàn hảo với Kiku và Ume.
+     - `WakabaKamon`: Chồi non song diệp thanh lịch cho học viên từ hạng 4 trở đi.
+  4. **Giao diện Người dùng & Trải nghiệm Chuyển động (`apps/web`):**
+     - `apps/web/src/pages/leaderboard.tsx`: Trang Bảng xếp hạng chi tiết với bục vinh danh Podium Top 3, thanh tiến độ EXP cá nhân hôm nay, bảng thứ hạng tổng thể và nút Tải lại bảng xếp hạng.
+     - `apps/web/src/components/leaderboard-widget.tsx`: Widget mini gắn tại Dashboard.
+     - `apps/web/src/components/celebration-modal.tsx`: Modal chúc mừng đầu tuần mới tôn vinh Gia Huy đạt được.
+     - `apps/web/src/pages/settings.tsx`: Mục "Lịch sử Xếp hạng & Bộ sưu tập Gia huy" lưu trữ các huy hiệu đạt được qua các mùa giải.
+     - `apps/web/src/app.tsx`: Điều hướng tab `Award` trên Navbar và bọc `AnimatePresence` cho chuyển trang êm mượt.
+
+- **Phân tích Nguyên nhân Lỗi 404 "Không tìm thấy chức năng này" (RCA) & Xử lý:**
+  - Vercel biên dịch và triển khai frontend trong ~20 giây, trong khi Docker runtime trên Render mất 1–2 phút để nạp image mới.
+  - Khi người dùng truy cập ngay sau khi push, endpoint `/api/leaderboard/current` rơi vào router fallback 404 mặc định của Express.
+  - Sau khi Render hoàn tất deploy, endpoint `/api/leaderboard/current` đã hoạt động bình thường (trả về 401 khi chưa đăng nhập và trả về dữ liệu bảng xếp hạng đầy đủ khi đã đăng nhập).
+
+- **Phân tích Sự cố Treo Task Ngầm (Task-424 RCA) & Biện pháp Khắc phục:**
+  - Lệnh tìm kiếm chuỗi chạy quét đệ quy `findstr /s /i ... *.*` không giới hạn đường dẫn, quét vào toàn bộ thư mục `node_modules` và thư mục build khổng lồ, khiến tiến trình con bị treo luồng I/O.
+  - Đã rút kinh nghiệm sâu sắc và áp dụng nghiêm ngặt Quy tắc Chống Treo Task (Anti-Hanging Background Tasks):
+    - Tuyệt đối không quét `*.*` trên toàn repo.
+    - Luôn đặt timeout và kill tiến trình con triệt để.
+
+- **Kết quả Đo kiểm & Kiểm thử:**
+  - **Typecheck:** 0 lỗi TypeScript (`tsc --noEmit`).
+  - **Unit test suite:** 17/17 test files, **155/155 tests PASS 100%**.
+  - **Build:** Vite frontend và esbuild API backend hoàn tất thành công (`dist-api/server.js` 5.9MB).
+  - **Git Commits & Deploy:** Đã tích hợp và đẩy lên `origin/main` (`5b0cb7e`, `320ac46`, `ba8a327`).
+
+---
+
 ## XÓA BỎ CHÚ THÍCH CÁCH ĐỌC (FURIGANA / HIRAGANA) Ở PHÂN HỆ LUYỆN KỸ NĂNG (/SKILLS) — 28/10/2026
 
 - **Yêu cầu từ Người dùng:**
