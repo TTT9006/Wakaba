@@ -8,7 +8,7 @@ on:
 
 jobs:
   ping-supabase:
-    name: Ping Supabase REST API
+    name: Ping Supabase Keep-Alive
     runs-on: ubuntu-latest
     steps:
       - name: Kiểm tra Secrets cấu hình
@@ -22,24 +22,18 @@ jobs:
       - name: Gửi Keep-Alive Request tới Supabase
         run: |
           BASE_URL="${{ secrets.SUPABASE_URL }}"
-          # Xóa dấu gạch chéo cuối nếu có
           BASE_URL="${BASE_URL%/}"
 
-          # Thử gửi request kèm apikey và Authorization Bearer
+          # Ping Auth Health endpoint kèm apikey để kích hoạt dự án Supabase
           HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -X GET \
             -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}" \
             -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}" \
-            "$BASE_URL/rest/v1/")
+            "$BASE_URL/auth/v1/health")
 
           echo "Mã phản hồi HTTP: $HTTP_STATUS"
 
           if [ "$HTTP_STATUS" -ge 200 ] && [ "$HTTP_STATUS" -lt 400 ]; then
             echo "✅ Ping Supabase thành công! Dự án đã được kích hoạt hoạt động."
-          elif [ "$HTTP_STATUS" -eq 401 ]; then
-            echo "❌ Lỗi 401 (Unauthorized): Sai API Key!"
-            echo "👉 Supabase REST API yêu cầu Legacy Anon Key (chuỗi JWT bắt đầu bằng 'eyJ...')."
-            echo "👉 Vui lòng bấm vào nút 'View legacy API keys' trong Supabase Dashboard để copy key 'anon public' và cập nhật vào GitHub Secret SUPABASE_ANON_KEY."
-            exit 1
           else
             echo "❌ Ping nhận mã HTTP: $HTTP_STATUS. Vui lòng kiểm tra lại SUPABASE_URL hoặc SUPABASE_ANON_KEY."
             exit 1
