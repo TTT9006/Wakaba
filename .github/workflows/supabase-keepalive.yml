@@ -1,0 +1,41 @@
+name: Keep Supabase Alive
+
+on:
+  schedule:
+    # Chạy vào 00:00 UTC mỗi 3 ngày (tránh bị pause sau 7 ngày không hoạt động)
+    - cron: '0 0 */3 * *'
+  workflow_dispatch: # Cho phép kích hoạt thủ công từ tab Actions trên GitHub để kiểm tra
+
+jobs:
+  ping-supabase:
+    name: Ping Supabase REST API
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kiểm tra Secrets cấu hình
+        run: |
+          if [ -z "${{ secrets.SUPABASE_URL }}" ] || [ -z "${{ secrets.SUPABASE_ANON_KEY }}" ]; then
+            echo "::error::Thiếu SUPABASE_URL hoặc SUPABASE_ANON_KEY trong GitHub Repository Secrets!"
+            echo "Vui lòng vào Settings -> Secrets and variables -> Actions để thêm 2 secret này."
+            exit 1
+          fi
+
+      - name: Gửi Keep-Alive Request tới Supabase
+        run: |
+          BASE_URL="${{ secrets.SUPABASE_URL }}"
+          # Xóa dấu gạch chéo cuối nếu có
+          BASE_URL="${BASE_URL%/}"
+
+          RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" -X GET \
+            -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}" \
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}" \
+            "$BASE_URL/rest/v1/")
+
+          HTTP_STATUS=$(echo "$RESPONSE" | tr -d '\r' | sed -n 's/^HTTP_STATUS://p')
+          echo "Mã phản hồi HTTP: $HTTP_STATUS"
+
+          if [ "$HTTP_STATUS" -ge 200 ] && [ "$HTTP_STATUS" -lt 400 ]; then
+            echo "✅ Ping Supabase thành công! Dự án đã được kích hoạt hoạt động."
+          else
+            echo "❌ Ping thất bại với mã HTTP: $HTTP_STATUS. Vui lòng kiểm tra lại URL hoặc Anon Key."
+            exit 1
+          fi
