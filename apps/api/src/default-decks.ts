@@ -90,27 +90,13 @@ export async function defaultDecks() {
   ];
 }
 
-// Claim the version inside the same transaction as creation: concurrent requests
-// cannot create duplicates, and deleted/edited personal copies stay deleted/edited.
+// Sample decks are no longer auto-generated to keep the flashcard feature clean.
+// Simply claim defaultDeckVersion = 1 so no sample decks clutter user accounts.
 export async function ensureDefaultDecks(userId: string) {
   const user = await db.user.findUniqueOrThrow({ where: { id: userId } });
   if (user.defaultDeckVersion >= 1) return;
-  const decks = await defaultDecks();
-  await db.$transaction(async (tx) => {
-    const claimed = await tx.user.updateMany({
-      where: { id: userId, defaultDeckVersion: 0 },
-      data: { defaultDeckVersion: 1 },
-    });
-    if (!claimed.count) return;
-    for (const deck of decks) {
-      await tx.deck.create({
-        data: {
-          userId,
-          name: deck.name,
-          description: deck.description,
-          cards: { create: deck.cards },
-        },
-      });
-    }
+  await db.user.updateMany({
+    where: { id: userId, defaultDeckVersion: 0 },
+    data: { defaultDeckVersion: 1 },
   });
 }

@@ -118,7 +118,7 @@ export function Flashcards() {
       <PageHeader
         eyebrow="TỪ VỰNG CỦA BẠN"
         title="Gặp lại để nhớ lâu hơn."
-        description="Học ngay với Hiragana, Katakana và Kanji theo chủ đề, hoặc tạo bộ thẻ của riêng bạn."
+        description="Tạo bộ thẻ của riêng bạn hoặc nhập nhanh từ file PDF, PowerPoint."
         action={
           <div className="inline-actions" style={{ gap: '8px', flexWrap: 'wrap' }}>
             <Button variant="secondary" onClick={() => setImportOpen(true)}>
@@ -650,6 +650,7 @@ export function Review() {
       void client.invalidateQueries({ queryKey: ['dashboard'] });
       void client.invalidateQueries({ queryKey: ['decks'] });
       void client.invalidateQueries({ queryKey: ['deck'] });
+      void client.invalidateQueries({ queryKey: ['leaderboard-current'] });
     },
   });
 

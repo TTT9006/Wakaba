@@ -591,6 +591,7 @@ export function JlptSession() {
     if (next.finished) {
       void client.invalidateQueries({ queryKey: ['test-history'] });
       void client.invalidateQueries({ queryKey: ['dashboard'] });
+      void client.invalidateQueries({ queryKey: ['leaderboard-current'] });
     }
   }
   useEffect(() => {

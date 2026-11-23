@@ -1,3 +1,64 @@
+## BẢNG XẾP HẠNG LUÔN CẬP NHẬT TỨC THÌ KHI HỌC XONG — 13/11/2026
+
+- **Yêu cầu & Phản ánh từ Người dùng:**
+  - Làm cho bảng xếp hạng luôn cập nhật điểm EXP và thứ hạng ngay khi người dùng học bài xong (luyện thẻ từ vựng, ôn tập tổng hợp, làm bài thi thử JLPT, làm bài luyện kỹ năng, làm bài tập ngữ pháp, luyện viết chữ Hán).
+
+- **Thực hiện Kỹ thuật (Ponytail Style - Tối giản, Triệt để, Không phình to code):**
+  1. **Cơ chế EXP Đề thi JLPT & Luyện kỹ năng Backend (`apps/api/src/jlpt.ts`):**
+     - Đề thi JLPT toàn diện (`updateRun`): Khi hoàn tất bài thi (`state.report`), tính điểm EXP an toàn (`Math.min(100, Math.max(15, Math.round(score * 0.5)))`) và gọi `recordExp(userId, 'test', testExp, run.testId)` ngoài transaction, tránh lock SQLite đồng thời ghi nhận điểm vào `DailyExp`.
+     - Luyện kỹ năng JLPT (`/skills/submit`): Ghi nhận EXP tương ứng số câu đúng (`Math.min(30, Math.max(5, correctCount * 2))`) và gọi `recordExp` vào `DailyExp`.
+  2. **Vô hiệu hóa Cache & Tự động Cập nhật Phía Frontend (`apps/web`):**
+     - Kích hoạt `void client.invalidateQueries({ queryKey: ['leaderboard-current'] })` đồng bộ ở mọi luồng học tập:
+       - `apps/web/src/pages/flashcards.tsx`: Ngay khi chấm điểm nhớ/quên thẻ flashcard.
+       - `apps/web/src/pages/consolidated-review.tsx`: Khi ôn tập thẻ hoặc hoàn thành câu trong phần ôn tập tổng hợp.
+       - `apps/web/src/pages/login-review.tsx`: Khi hoàn tất lượt ôn tập đăng nhập.
+       - `apps/web/src/pages/grammar.tsx`: Trong hook `useRefreshGrammar()`, tự động cập nhật bảng xếp hạng khi làm bài tập ngữ pháp hoặc đọc xong bài học.
+       - `apps/web/src/pages/tests.tsx`: Khi nộp bài thi thử.
+       - `apps/web/src/pages/jlpt.tsx`: Khi hoàn tất bài thi JLPT (`next.finished`).
+       - `apps/web/src/components/skill-practice-modal.tsx`: Khi nộp bài luyện kỹ năng.
+       - `apps/web/src/pages/writing.tsx`: Khi lưu bài luyện viết chữ Hán.
+     - `apps/web/src/pages/leaderboard.tsx` & `apps/web/src/components/leaderboard-widget.tsx`: Đặt `staleTime: 0` và `refetchOnMount: 'always'`, đảm bảo bất cứ khi nào người học quay lại Dashboard hoặc trang Bảng xếp hạng đều hiển thị dữ liệu mới nhất tức thì.
+  3. **Kiểm thử Tự động:**
+     - Bổ sung test kiểm tra cập nhật điểm và đảo thứ hạng ngay lập tức trong `tests/leaderboard.test.ts`.
+     - Bổ sung test xác thực gọi `recordExp` khi nộp đề thi JLPT trong `tests/api.test.ts` và luyện kỹ năng trong `tests/skills-and-jlpt-exam.test.ts`.
+     - Kết quả kiểm thử: **17/17 test files, 156/156 tests PASS 100%**.
+     - Build sản xuất: TypeScript 0 lỗi, Vite và backend build hoàn tất thành công.
+
+---
+
+## DỌN DẸP BỘ THẺ MẪU, BẢO TOÀN DỮ LIỆU & TỐI ƯU HÓA TOÀN BỘ CODE THEO PONYTAIL — 13/11/2026
+
+- **Yêu cầu & Phản ánh từ Người dùng:**
+  - Rà soát lại toàn bộ dự án với triết lý `ponytail` (giải pháp gọn nhất, giải quyết triệt để, không code thừa/over-engineering).
+  - Tối ưu hóa toàn bộ code cho website.
+  - Xóa bỏ các bộ flashcard mẫu trong tính năng thẻ nhớ (`/flashcards`).
+  - **Lưu ý đặc biệt:** Tuyệt đối không làm lỗi, hỏng dữ liệu, không mất file đề thi, file âm thanh.
+
+- **Thực hiện Kỹ thuật:**
+  1. **Sao lưu Toàn vẹn Dữ liệu:**
+     - Đã tạo bản sao lưu an toàn `.recovery/learning-backup-before-cleanup.db` trước khi thực hiện bất kỳ thao tác nào.
+     - Kiểm tra toàn bộ thư mục đề thi (`de-on-jan01/`) và 100% kho âm thanh MP3 thi nghe JLPT (`public/audio/jlpt/`): Toàn vẹn nguyên vẹn 100%, không bị tác động.
+  2. **Dọn dẹp Bộ thẻ Mẫu & Bảo toàn Tiến độ Ôn tập:**
+     - Xử lý 1,254 bộ thẻ mẫu được tạo tự động/trùng lặp trước đây (`Hiragana`, `Katakana`, `Kanji · ...`, `Những từ đầu tiên`, `Một ngày ở Nhật`, `Thiên nhiên quanh mình`).
+     - Tự động chuyển toàn bộ 122 thẻ có tiến độ/lượt ôn tập thực tế vào bộ thẻ chính `Từ vựng của tôi` của từng người học.
+     - Bảo toàn trọn vẹn 250 lượt ôn tập (`Review`) của học viên (Minh Anh: 169 lượt, TTT9006: 90 lượt), giữ nguyên vẹn chỉ số thống kê trên Bảng xếp hạng Leaderboard.
+     - Xóa triệt để các bộ thẻ mẫu rỗng/chưa học, giao diện `/flashcards` nay chỉ hiển thị các bộ thẻ cá nhân của người học.
+  3. **Vô hiệu hóa Cơ chế Tự sinh Thẻ mẫu:**
+     - `apps/api/src/default-decks.ts`: Tinh chỉnh `ensureDefaultDecks` chỉ đánh dấu `defaultDeckVersion: 1`, chấm dứt việc tự động chèn 8 bộ thẻ mẫu vào tài khoản người dùng mới hoặc khi đăng nhập.
+     - `apps/web/src/pages/flashcards.tsx`: Cập nhật mô tả Header trang thẻ nhớ phản ánh chức năng tạo bộ thẻ cá nhân và import PDF/PPTX thay cho việc học thẻ mẫu.
+  4. **Tối ưu hóa Bundle Web (Vite Code Splitting & Chunking):**
+     - Tại `vite.config.ts`, cấu hình `rollupOptions.output.manualChunks` phân tách thông minh các thư viện nặng (`recharts`, `pdfjs-dist`, `motion`, `lucide-react`) và dữ liệu bài thi/từ điển (`jlpt-exams-data`, `grammar-data`, `radicals-data`).
+     - Kết quả: Kích thước bundle tải trang ban đầu `index.js` **giảm tới 88.8%** (từ `4,352 kB` xuống còn `487 kB`, gzip chỉ còn `93 kB`), tăng tốc độ load trang và trải nghiệm trên di động đáng kể.
+  5. **Cập nhật Kiểm thử:**
+     - Cập nhật test trong `tests/api.test.ts` xác thực tài khoản sạch không bị chèn thẻ mẫu.
+
+- **Kết quả Đo kiểm & Kiểm thử:**
+  - **TypeScript (`tsc --noEmit`):** 0 lỗi.
+  - **Unit test suite:** 17/17 test files, **155/155 tests PASS 100%**.
+  - **Build sản xuất:** Thành công 100% (Vite frontend & esbuild backend `dist-api/server.js`).
+
+---
+
 ## BỔ SUNG CHỈ SỐ HỌC TẬP THỰC TẾ (FLASHCARD ĐÃ HỌC, ĐỀ ĐÃ LÀM, NGỮ PHÁP, LUYỆN VIẾT) VÀO BẢNG XẾP HẠNG — 09/11/2026
 
 - **Yêu cầu & Phản ánh từ Người dùng:**

@@ -3,7 +3,8 @@ import { toRomaji } from 'wanakana';
 import { SearchHighlight } from '../components/search-highlight';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
-import { Search, Plus, Copy, ArrowLeft, ArrowRight, BookOpen, Check, Database } from 'lucide-react';
+import { Search, Plus, Copy, ArrowLeft, ArrowRight, BookOpen, Check, Database, PenLine } from 'lucide-react';
+import type { KanjiInfo } from '../../../../packages/shared/kanji';
 import { api, post } from '../services/api';
 import { useUI } from '../stores/ui';
 import type { Deck, Entry, Status } from '../types';
@@ -38,6 +39,85 @@ const labels: Record<string, string> = {
   pref: 'Tiền tố',
 };
 const headword = (entry: Entry) => entry.kanji[0]?.text || entry.readings[0]?.text || '';
+
+export function KanjiQuickCard({ kanji }: { kanji: KanjiInfo }) {
+  return (
+    <article
+      className="panel"
+      style={{
+        borderLeft: '4px solid var(--jade)',
+        marginBottom: '14px',
+        padding: '16px 20px',
+        background: 'var(--card)',
+      }}
+    >
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'flex-start',
+          gap: '12px',
+          flexWrap: 'wrap',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+          <span
+            lang="ja"
+            style={{
+              fontSize: '36px',
+              fontFamily: '"Noto Sans JP", sans-serif',
+              fontWeight: 700,
+              lineHeight: 1,
+            }}
+          >
+            {kanji.character}
+          </span>
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+              {kanji.vietnameseNames?.length > 0 && (
+                <strong style={{ fontSize: '18px', color: 'var(--text)', textTransform: 'uppercase' }}>
+                  {kanji.vietnameseNames.join(', ')}
+                </strong>
+              )}
+              {kanji.jlpt && <span className="tag green">JLPT {kanji.jlpt}</span>}
+              {kanji.strokes && <span className="tag">{kanji.strokes} nét</span>}
+            </div>
+            {kanji.readings?.length > 0 && (
+              <p style={{ margin: '4px 0 0', fontSize: '13px', color: 'var(--muted)' }} lang="ja">
+                <strong>Âm đọc:</strong> {kanji.readings.slice(0, 5).join(' ・ ')}
+              </p>
+            )}
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
+          <Link
+            to={'/writing?char=' + encodeURIComponent(kanji.character)}
+            className="button secondary"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '13px' }}
+          >
+            <PenLine size={15} />
+            Luyện viết chữ này
+          </Link>
+          <Link
+            to={'/kanji/' + encodeURIComponent(kanji.character)}
+            className="button ghost"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '13px' }}
+          >
+            Bộ thủ & cấu tạo
+          </Link>
+        </div>
+      </div>
+
+      {kanji.meanings?.length > 0 && (
+        <p style={{ margin: '10px 0 0', fontSize: '13px', color: 'var(--text)' }}>
+          <strong>Ý nghĩa:</strong> {kanji.meanings.slice(0, 4).join('; ')}
+        </p>
+      )}
+    </article>
+  );
+}
+
 export function WordCard({
   entry,
   detail = false,
@@ -104,16 +184,33 @@ export function WordCard({
               query={query}
             />
           </p>
-          {detail && (
-            <div className="inline-actions wrap">
+          {[
+            ...new Set(
+              entry.kanji.flatMap((k) => [...k.text]).filter((c) => /\p{Script=Han}/u.test(c)),
+            ),
+          ].length > 0 && (
+            <div className="inline-actions wrap" style={{ marginTop: '8px', gap: '6px' }}>
+              <span className="muted small-text" style={{ alignSelf: 'center' }}>
+                Kanji trong từ:
+              </span>
               {[
                 ...new Set(
                   entry.kanji.flatMap((k) => [...k.text]).filter((c) => /\p{Script=Han}/u.test(c)),
                 ),
               ].map((c) => (
-                <Link key={c} className="tag" to={'/kanji/' + encodeURIComponent(c)}>
-                  Bộ thủ & cấu tạo: {c}
-                </Link>
+                <div key={c} style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                  <Link className="tag" to={'/kanji/' + encodeURIComponent(c)} title={'Xem bộ thủ của ' + c}>
+                    {c}
+                  </Link>
+                  <Link
+                    to={'/writing?char=' + encodeURIComponent(c)}
+                    className="tag"
+                    style={{ padding: '2px 6px', fontSize: '11px', display: 'inline-flex', alignItems: 'center', gap: '3px' }}
+                    title={'Luyện viết chữ ' + c}
+                  >
+                    <PenLine size={11} /> Viết
+                  </Link>
+                </div>
               ))}
             </div>
           )}
@@ -304,6 +401,12 @@ export function Dictionary() {
       ),
     enabled: !composing,
   });
+  const kanjiResults = useQuery({
+    queryKey: ['kanji-search', query],
+    queryFn: ({ signal }) =>
+      api<KanjiInfo[]>('/kanji/search?q=' + encodeURIComponent(query), { signal }),
+    enabled: !!query.trim() && !composing,
+  });
   const status = useQuery({
     queryKey: ['dictionary-status'],
     queryFn: () => api<Status>('/dictionary/status'),
@@ -372,6 +475,16 @@ export function Dictionary() {
             <span>{results.data?.total.toLocaleString('vi') || 0} từ</span>
           </div>
           {results.isFetching && <p role="status">Đang tìm kiếm…</p>}
+          {kanjiResults.data && kanjiResults.data.length > 0 && (
+            <div style={{ marginBottom: '22px' }}>
+              <div className="results-heading" style={{ marginBottom: '10px' }}>
+                <h3 style={{ fontSize: '16px', margin: 0 }}>Chữ Kanji liên quan ({kanjiResults.data.length})</h3>
+              </div>
+              {kanjiResults.data.map((k) => (
+                <KanjiQuickCard key={k.character} kanji={k} />
+              ))}
+            </div>
+          )}
           {results.data?.fuzzy && (
             <p>Không có kết quả chính xác. Các từ gần giống dưới đây chỉ là gợi ý.</p>
           )}

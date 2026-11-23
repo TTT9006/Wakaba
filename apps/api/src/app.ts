@@ -16,7 +16,7 @@ import { z, ZodError } from 'zod';
 import type { User } from '@prisma/client';
 import { db } from './db';
 import { annotate } from './annotation';
-import { kanjiData, kanjiStrokes } from './kanji';
+import { kanjiData, kanjiStrokes, jlptKanjiData, searchKanji } from './kanji';
 import { ensureDefaultDecks } from './default-decks';
 import { parsePptxBuffer, type ExtractedDeckResult } from './pptx-parser';
 import { parsePdfVocabulary } from './pdf-parser';
@@ -274,14 +274,27 @@ app.get('/api/radicals', async (_req, res) => {
     })),
   );
 });
+app.get('/api/kanji/jlpt', async (_req, res) => {
+  res.json(await jlptKanjiData());
+});
+app.get('/api/kanji/search', async (req, res) => {
+  const q = String(req.query.q || '');
+  res.json(await searchKanji(q));
+});
 app.get('/api/kanji/:character', async (req, res) => {
   const { characters, radicals } = await kanjiData();
-  const k = characters[String(req.params.character)];
+  const jlpt = await jlptKanjiData().catch(() => null);
+  const char = String(req.params.character);
+  const k = characters[char];
   if (!k) {
     res.status(404).json({ error: 'Chưa có dữ liệu Kanji này.' });
     return;
   }
-  res.json({ ...k, radical: radicals.find((r) => r.id === k.radicalId) });
+  res.json({
+    ...k,
+    jlpt: jlpt?.byCharacter[char]?.level || k.jlpt || null,
+    radical: radicals.find((r) => r.id === k.radicalId),
+  });
 });
 app.get('/api/kanji/:character/strokes', async (req, res) => {
   const data = await kanjiStrokes(String(req.params.character));

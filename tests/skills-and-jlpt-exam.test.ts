@@ -131,6 +131,15 @@ describe('JLPT Exam Qualification & Skills Practice', () => {
     const failedItem = submitRes.body.failedVocab[0];
     expect(failedItem.term).toBeDefined();
     expect(failedItem.reading).toBeDefined();
+
+    // Verify leaderboard reflects the completed skill practice attempt & awarded EXP
+    const lbRes = await request(app)
+      .get('/api/leaderboard/current')
+      .set('Cookie', cookie);
+    expect(lbRes.status).toBe(200);
+    expect(lbRes.body.currentUser).toBeDefined();
+    expect(lbRes.body.currentUser.exp).toBeGreaterThan(0);
+    expect(lbRes.body.currentUser.testsCompleted).toBeGreaterThanOrEqual(1);
   });
 
   it('provides listening skill exercises with pre-cut audio and scripts', async () => {

@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, useMemo } from 'react';
+import { useQueryClient } from '@tanstack/react-query';
 import {
   Volume2,
   VolumeX,
@@ -39,6 +40,7 @@ export function SkillPracticeModal({
   set,
   onComplete,
 }: SkillPracticeModalProps) {
+  const queryClient = useQueryClient();
   const notify = useUI((s) => s.notify);
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -206,6 +208,9 @@ export function SkillPracticeModal({
       }
 
       setResults(res);
+      void queryClient.invalidateQueries({ queryKey: ['leaderboard-current'] });
+      void queryClient.invalidateQueries({ queryKey: ['dashboard'] });
+      void queryClient.invalidateQueries({ queryKey: ['test-history'] });
       if (onComplete) onComplete();
     } catch (e) {
       notify((e as Error).message);

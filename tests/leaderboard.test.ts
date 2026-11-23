@@ -120,4 +120,32 @@ describe('Leaderboard and Daily EXP System', () => {
     expect(r4?.rank).toBe(4);
     expect(r4?.kamonType).toBe('wakaba'); // Chồi Non Wakaba
   });
+
+  it('updates rank and EXP immediately when a user completes learning activities', async () => {
+    // User 1 has 100 EXP, User 2 has 50 EXP
+    await recordExp(testUser1.id, 'review', 100);
+    await recordExp(testUser2.id, 'review', 50);
+
+    let lb = await getCurrentLeaderboard(testUser2.id);
+    let u1 = lb.rankings.find((r) => r.userId === testUser1.id);
+    let u2 = lb.rankings.find((r) => r.userId === testUser2.id);
+    expect(u1?.rank).toBe(1);
+    expect(u2?.rank).toBe(2);
+    expect(lb.currentUser.rank).toBe(2);
+    expect(lb.currentUser.exp).toBe(50);
+
+    // User 2 finishes a lesson/test and earns 80 EXP
+    await recordExp(testUser2.id, 'test', 80, 'new-test-1');
+
+    // Immediate query reflects the updated EXP and new rank 1
+    lb = await getCurrentLeaderboard(testUser2.id);
+    u1 = lb.rankings.find((r) => r.userId === testUser1.id);
+    u2 = lb.rankings.find((r) => r.userId === testUser2.id);
+    expect(u2?.exp).toBe(130);
+    expect(u2?.rank).toBe(1);
+    expect(u2?.kamonType).toBe('kiku');
+    expect(u1?.rank).toBe(2);
+    expect(lb.currentUser.rank).toBe(1);
+    expect(lb.currentUser.exp).toBe(130);
+  });
 });

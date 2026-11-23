@@ -24,4 +24,29 @@ export type KanjiInfo = {
   radicalForm?: string;
   components: { character: string; original?: string; radical?: string; position?: string }[];
   hasStrokes: boolean;
+  jlpt?: string | null;
+};
+
+export type JlptKanjiSummary = {
+  character: string;
+  level: string;
+  strokes: number | null;
+  vietnameseNames: string[];
+  readings: string[];
+  meanings: string[];
+  radicalId?: number | null;
+  hasStrokes: boolean;
+};
+
+export type JlptKanjiData = {
+  total: number;
+  byLevel: Record<string, JlptKanjiSummary[]>;
+  byCharacter: Record<string, {
+    level: string;
+    strokes: number | null;
+    vietnameseNames: string[];
+    readings: string[];
+    meanings: string[];
+    hasStrokes: boolean;
+  }>;
 };

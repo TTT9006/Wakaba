@@ -111,33 +111,34 @@ describe.sequential('Authenticated learning workflows', () => {
     expect((await session.get('/api/auth/me')).status).toBe(401);
     expect((await session.post('/api/auth/login').send({ email: 'learner@example.com', password: 'unified-new-password' })).status).toBe(200);
   });
-  it('adds defaults once for existing accounts and preserves edits, deletions and private progress', async () => {
-    // Registration has not initialized defaults yet: the first authenticated request
-    // also covers pre-existing accounts with the migration's version-zero default.
+  it('does not inject sample decks and preserves clean flashcard decks for user accounts', async () => {
     const first = await session.get('/api/flashcards/decks');
     expect(first.status).toBe(200);
     const decks = first.body as { id: string; name: string; cards: { id: string; japanese: string; note: string }[] }[];
-    expect(decks.find((d) => d.name === 'Hiragana')?.cards).toHaveLength(104);
-    expect(decks.find((d) => d.name === 'Katakana')?.cards).toHaveLength(104);
-    expect(decks.filter((d) => d.name.startsWith('Kanji ·'))).toHaveLength(6);
-    const nature = decks.find((d) => d.name === 'Kanji · Thiên nhiên')!;
-    expect(nature.cards.find((c) => c.japanese === '山')?.note).toContain('#46');
-    const card = nature.cards[0];
-    await db.card.update({ where: { id: card.id }, data: { repetitions: 4, interval: 10, note: 'Ghi chú riêng' } });
-    const kana = decks.find((d) => d.name === 'Katakana')!;
-    await session.delete('/api/flashcards/decks/' + kana.id);
-    await Promise.all([session.get('/api/flashcards/decks'), session.get('/api/flashcards/decks')]);
-    expect(await db.deck.count({ where: { userId } })).toBe(decks.length - 1);
-    expect(await db.card.findUnique({ where: { id: card.id } })).toMatchObject({ repetitions: 4, interval: 10, note: 'Ghi chú riêng' });
+    // Ensure no sample decks are injected
+    expect(decks.every((d) => !d.name.startsWith('Kanji ·') && d.name !== 'Hiragana' && d.name !== 'Katakana')).toBe(true);
+    const userDeck = decks.find((d) => d.name === 'Từ vựng của tôi')!;
+    expect(userDeck).toBeDefined();
+
+    // Add a card to user's deck and verify progress persistence
+    const newCard = await db.card.create({
+      data: {
+        deckId: userDeck.id,
+        japanese: '桜',
+        reading: 'さくら',
+        meaning: 'hoa anh đào',
+        repetitions: 4,
+        interval: 10,
+        note: 'Ghi chú riêng',
+      },
+    });
+
     const other = request.agent(app);
-    await other.post('/api/auth/register').send({ name: 'Defaults', email: 'defaults@example.com', password: 'example-password' });
+    await other.post('/api/auth/register').send({ name: 'CleanDecks', email: 'cleandecks@example.com', password: 'example-password' });
     const [a, b] = await Promise.all([other.get('/api/flashcards/decks'), other.get('/api/flashcards/decks')]);
     expect(a.status).toBe(200); expect(b.status).toBe(200);
-    expect(a.body).toHaveLength(9);
-    const otherNature = a.body.find((d: { name: string }) => d.name === nature.name);
-    expect(otherNature.id).not.toBe(nature.id);
-    expect(otherNature.cards.every((c: { repetitions: number }) => c.repetitions === 0)).toBe(true);
-    expect((await other.get('/api/flashcards/decks/' + nature.id)).status).toBe(404);
+    expect(a.body.every((d: { name: string }) => !d.name.startsWith('Kanji ·') && d.name !== 'Hiragana')).toBe(true);
+    expect((await other.get('/api/flashcards/decks/' + userDeck.id)).status).toBe(404);
   });
   it('rejects cross-origin writes', async () => {
     expect(
@@ -616,6 +617,10 @@ describe.sequential('Dictionary import, search and resumable translation', () =>
     await session.patch(route).send({action:'finish',revision:run.revision});
     await session.get(route);
     expect(await db.attempt.count({where:{userId,testId:paper.id}})).toBe(1);
+    const lbRes = await session.get('/api/leaderboard/current');
+    expect(lbRes.status).toBe(200);
+    expect(lbRes.body.currentUser.testsCompleted).toBeGreaterThanOrEqual(1);
+    expect(lbRes.body.currentUser.exp).toBeGreaterThan(0);
     expect((await outsider.get('/api/tests/history')).body).toEqual([]);
     expect((await session.post(`/api/jlpt/papers/${paper.id}/start`)).body.runId).not.toBe(runId);
   });

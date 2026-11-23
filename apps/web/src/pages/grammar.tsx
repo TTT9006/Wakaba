@@ -29,7 +29,7 @@ type Feedback = { correct: boolean; answer: string; explanation: string };
 function useRefreshGrammar() {
   const client = useQueryClient();
   return () => {
-    for (const key of ['grammar', 'grammar-roadmap', 'lesson', 'dashboard']) {
+    for (const key of ['grammar', 'grammar-roadmap', 'lesson', 'dashboard', 'leaderboard-current']) {
       void client.invalidateQueries({ queryKey: [key] });
     }
   };

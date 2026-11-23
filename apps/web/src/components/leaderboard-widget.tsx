@@ -24,7 +24,8 @@ export function LeaderboardWidget() {
       }
       return getFallbackLeaderboard(currentUserObj);
     },
-    staleTime: 1000 * 30,
+    staleTime: 0,
+    refetchOnMount: 'always',
   });
 
   if (!data) return null;

@@ -39,7 +39,7 @@ export function LoginReview({
       const next = await post<LoginReviewView>('/login-review/' + path, body);
       setState(next);
       setFlipped(false);
-      for (const key of ['dashboard', 'decks', 'deck', 'review'])
+      for (const key of ['dashboard', 'decks', 'deck', 'review', 'leaderboard-current'])
         void client.invalidateQueries({ queryKey: [key] });
     } catch (e) {
       setError((e as Error).message);

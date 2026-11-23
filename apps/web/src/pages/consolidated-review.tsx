@@ -64,6 +64,7 @@ export function ConsolidatedReview() {
     onSuccess: () => {
       void client.invalidateQueries({ queryKey: ['dashboard'] });
       void client.invalidateQueries({ queryKey: ['decks'] });
+      void client.invalidateQueries({ queryKey: ['leaderboard-current'] });
     },
   });
 

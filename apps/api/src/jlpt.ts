@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { z } from 'zod';
 import { db } from './db';
+import { recordExp } from './leaderboard';
 import { jlptPapers, paperSummary } from '../../../packages/shared/jlpt-papers';
 import { skillCategories, getSkillExercises } from '../../../packages/shared/jlpt-skills';
 import type { JlptLevel, SkillType, JlptPaper, JlptReport, JlptRunView } from '../../../packages/shared/jlpt-types';
@@ -144,20 +145,21 @@ async function updateRun(
     revision: number;
   },
 ) {
-  return db.$transaction(async (tx) => {
+  const { runView, finishedReport } = await db.$transaction(async (tx) => {
     const run = await tx.testRun.findFirst({ where: { id: runId, userId } });
     const isJlpt = run && (run.testId.startsWith('jlpt-') || run.testId.startsWith('midterm-') || jlptPapers.some((p) => p.id === run.testId));
     if (!run || !isJlpt) throw fail('Không tìm thấy bài làm.', 404);
     const state = JSON.parse(run.questions) as ExamState,
       now = Date.now();
     const changed = advanceExam(state, now, command?.action, command?.answers, command?.revision);
+    let finished: { score: number; testId: string } | null = null;
     if (changed) {
       const claimed = await tx.testRun.updateMany({
         where: { id: run.id, questions: run.questions, submitted: false },
         data: { questions: JSON.stringify(state), submitted: !!state.report },
       });
       if (!claimed.count) throw fail('Bài làm đã thay đổi. Hãy tải lại.');
-      if (state.report)
+      if (state.report) {
         await tx.attempt.create({
           data: {
             userId,
@@ -167,9 +169,20 @@ async function updateRun(
             answers: JSON.stringify(state.report.results),
           },
         });
+        finished = { score: state.report.score, testId: run.testId };
+      }
     }
-    return view(run.id, state, now);
+    return { runView: view(run.id, state, now), finishedReport: finished };
   });
+  if (finishedReport) {
+    const testExp = Math.min(100, Math.max(15, Math.round(finishedReport.score * 0.5)));
+    try {
+      await recordExp(userId, 'test', testExp, finishedReport.testId);
+    } catch (err) {
+      console.warn('Could not record exp for jlpt test:', err);
+    }
+  }
+  return runView;
 }
 jlptRouter.get('/papers', (_req, res) => res.json(jlptPapers.map(paperSummary)));
 jlptRouter.get('/papers/:id', async (req, res) => {
@@ -288,7 +301,7 @@ jlptRouter.post('/skills/submit', async (req, res) => {
       questionId: r.id,
     }));
 
-  // Save attempt to user's history
+  // Save attempt to user's history and award EXP
   try {
     await db.attempt.create({
       data: {
@@ -299,6 +312,8 @@ jlptRouter.post('/skills/submit', async (req, res) => {
         answers: JSON.stringify(results),
       },
     });
+    const skillExp = Math.min(30, Math.max(5, correctCount * 2));
+    await recordExp(res.locals.user.id, 'test', skillExp, `skill-${skill}-${level}-${setId}`);
   } catch (err) {
     console.warn('Could not save skill practice attempt:', err);
   }

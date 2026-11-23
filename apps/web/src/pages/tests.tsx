@@ -1100,6 +1100,7 @@ function LegacyTestSession() {
       setResult(await post('/tests/' + id + '/submit', { runId: run?.runId, answers }));
       void client.invalidateQueries({ queryKey: ['dashboard'] });
       void client.invalidateQueries({ queryKey: ['test-history'] });
+      void client.invalidateQueries({ queryKey: ['leaderboard-current'] });
       void exitFullscreen();
       setExamMode(false);
     } catch (e) {

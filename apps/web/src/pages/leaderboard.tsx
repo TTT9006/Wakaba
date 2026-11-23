@@ -25,6 +25,8 @@ export function LeaderboardPage() {
       return getFallbackLeaderboard(currentUserObj);
     },
     refetchInterval: 30000,
+    staleTime: 0,
+    refetchOnMount: 'always',
   });
 
   if (isLoading || !data) return <Loading />;

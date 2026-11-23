@@ -219,17 +219,41 @@ export function KanjiDetail() {
   if (!data) return <ErrorState error={error} />;
   return (
     <>
-      <Link className="back-link" to="/writing?mode=radicals">
-        ← Học bộ thủ
-      </Link>
+      <div style={{ display: 'flex', gap: '16px', marginBottom: '12px', flexWrap: 'wrap' }}>
+        <Link className="back-link" to="/writing?mode=radicals">
+          ← Học bộ thủ
+        </Link>
+        <Link className="back-link" to={'/writing?char=' + encodeURIComponent(character)}>
+          ✍️ Luyện viết chữ này
+        </Link>
+      </div>
       <section className="panel radical-detail">
         <div>
-          <h1 className="radical-glyph" lang="ja">
-            {character}
-          </h1>
-          <p>{data.readings.join('・')}</p>
-          <p>{data.meanings.join('; ')}</p>
-          <p>{data.strokes ?? '?'} nét</p>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: '16px', flexWrap: 'wrap', marginBottom: '10px' }}>
+            <h1 className="radical-glyph" lang="ja" style={{ margin: 0 }}>
+              {character}
+            </h1>
+            {data.vietnameseNames?.length > 0 && (
+              <span style={{ fontSize: '24px', fontWeight: 700, color: 'var(--text)', textTransform: 'uppercase' }}>
+                {data.vietnameseNames.join(', ')}
+              </span>
+            )}
+            {data.jlpt && <span className="tag green">JLPT {data.jlpt}</span>}
+            {data.strokes && <span className="tag">{data.strokes} nét</span>}
+          </div>
+
+          <div style={{ display: 'flex', gap: '10px', margin: '12px 0 16px', flexWrap: 'wrap' }}>
+            <Link to={'/writing?char=' + encodeURIComponent(character)} className="button">
+              Luyện viết chữ {character}
+            </Link>
+            <Link to={'/dictionary?q=' + encodeURIComponent(character)} className="button secondary">
+              Tra trong từ điển
+            </Link>
+          </div>
+
+          <p><strong>Âm đọc:</strong> {data.readings.join(' ・ ')}</p>
+          <p><strong>Ý nghĩa:</strong> {data.meanings.join('; ')}</p>
+          <p><strong>Số nét:</strong> {data.strokes ?? '?'} nét</p>
           <h2>Bộ thủ & cấu tạo</h2>
           {data.radical && (
             <p>
