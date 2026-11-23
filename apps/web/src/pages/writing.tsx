@@ -83,10 +83,19 @@ export function WritingWorkspace({
   const client = useQueryClient();
   const notify = useUI((s) => s.notify);
 
-  // Fetch JLPT kanji dataset
-  const { data: jlptData } = useQuery({
+  // Fetch JLPT kanji dataset (try static CDN first, fallback to API)
+  const { data: jlptData, isLoading: jlptLoading } = useQuery({
     queryKey: ['jlpt-kanji'],
-    queryFn: () => api<JlptKanjiData>('/kanji/jlpt'),
+    queryFn: async () => {
+      try {
+        const res = await fetch('/data/jlpt.json');
+        if (res.ok) {
+          const json = (await res.json()) as JlptKanjiData;
+          if (json && json.byLevel) return json;
+        }
+      } catch {}
+      return api<JlptKanjiData>('/kanji/jlpt');
+    },
     staleTime: Infinity,
   });
 
@@ -109,6 +118,17 @@ export function WritingWorkspace({
       }
     }
   }, [jlptData, isInitialKanji, targetInit]);
+
+  // When in kanji category, ensure a kanji is selected
+  useEffect(() => {
+    if (category === 'kanji' && jlptData && !/\p{Script=Han}/u.test(character)) {
+      const first = jlptData.byLevel[jlptLevel]?.[0]?.character;
+      if (first) {
+        setCharacter(first);
+        setStrokes([]);
+      }
+    }
+  }, [category, jlptData, jlptLevel, character]);
 
   useEffect(() => {
     let active = true;
@@ -385,11 +405,22 @@ export function WritingWorkspace({
                       </span>
                     </button>
                   ))}
-                  {filteredKanji.length === 0 && (
-                    <p className="muted small-text" style={{ gridColumn: '1 / -1', padding: '16px 0' }}>
+                  {jlptLoading ? (
+                    <p
+                      role="status"
+                      className="muted"
+                      style={{ gridColumn: '1 / -1', padding: '24px 0', textAlign: 'center' }}
+                    >
+                      Đang tải danh sách chữ Kanji…
+                    </p>
+                  ) : filteredKanji.length === 0 ? (
+                    <p
+                      className="muted small-text"
+                      style={{ gridColumn: '1 / -1', padding: '16px 0', textAlign: 'center' }}
+                    >
                       Không tìm thấy chữ Kanji phù hợp.
                     </p>
-                  )}
+                  ) : null}
                 </div>
               </>
             )}

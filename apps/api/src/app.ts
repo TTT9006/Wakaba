@@ -253,27 +253,6 @@ app.post(
     }
   },
 );
-app.use('/api', auth);
-app.use('/api/login-review', loginReviewRouter);
-app.use('/api/review/consolidated', consolidatedReviewRouter);
-app.post(
-  '/api/annotations',
-  rateLimit({ windowMs: 60000, limit: 180, standardHeaders: true, legacyHeaders: false }),
-  async (req, res) => {
-    const { text } = z.object({ text: z.string().min(1).max(2000) }).parse(req.body);
-    res.json({ segments: await annotate(text), version: 'kuromoji-0.1.2-ipadic' });
-  },
-);
-app.get('/api/radicals', async (_req, res) => {
-  const { radicals } = await kanjiData();
-  const progress = await db.radicalProgress.findMany({ where: { userId: res.locals.user.id } });
-  res.json(
-    radicals.map((r) => ({
-      ...r,
-      completed: progress.find((p) => p.radicalId === r.id)?.completed || false,
-    })),
-  );
-});
 app.get('/api/kanji/jlpt', async (_req, res) => {
   res.json(await jlptKanjiData());
 });
@@ -303,6 +282,27 @@ app.get('/api/kanji/:character/strokes', async (req, res) => {
     return;
   }
   res.json(data);
+});
+app.use('/api', auth);
+app.use('/api/login-review', loginReviewRouter);
+app.use('/api/review/consolidated', consolidatedReviewRouter);
+app.post(
+  '/api/annotations',
+  rateLimit({ windowMs: 60000, limit: 180, standardHeaders: true, legacyHeaders: false }),
+  async (req, res) => {
+    const { text } = z.object({ text: z.string().min(1).max(2000) }).parse(req.body);
+    res.json({ segments: await annotate(text), version: 'kuromoji-0.1.2-ipadic' });
+  },
+);
+app.get('/api/radicals', async (_req, res) => {
+  const { radicals } = await kanjiData();
+  const progress = await db.radicalProgress.findMany({ where: { userId: res.locals.user.id } });
+  res.json(
+    radicals.map((r) => ({
+      ...r,
+      completed: progress.find((p) => p.radicalId === r.id)?.completed || false,
+    })),
+  );
 });
 app.post('/api/radicals/:id/progress', async (req, res) => {
   const radicalId = z.coerce.number().int().min(1).max(214).parse(req.params.id);
