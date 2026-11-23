@@ -745,7 +745,7 @@ export function Tests() {
           <PageHeader
             eyebrow="CHUẨN HỌC PHẦN TIẾNG NHẬT 1 · KHÓA JAN01"
             title="Ôn thi Cuối kỳ (JAN01)"
-            description="Bộ 4 đề thi thử cuối kỳ theo chuẩn cấu trúc 100 điểm (70 phút) bám sát 100% phạm vi Minna no Nihongo Bài 6 ～ 9 & Hán tự 3A, 3B, 4A, 4B. Gồm 2 phần: Kiến thức ngôn ngữ & Đọc hiểu (60 phút, 50 câu) và Nghe hiểu (10 phút, 15 câu với audio thi thật JLPT độc bản, không trùng lặp)."
+            description="Bộ 4 đề thi thử cuối kỳ theo chuẩn cấu trúc 100 điểm (70 phút) bám sát 100% phạm vi Minna no Nihongo Bài 6 ～ 9 & Hán tự tới Bài 6 (5A, 5B, 6A, 6B). Gồm 2 phần: Kiến thức ngôn ngữ & Đọc hiểu (60 phút, 50 câu) và Nghe hiểu (10 phút, 15 câu với audio thi thật JLPT độc bản, không trùng lặp)."
           />
 
           {/* Final Syllabus & Format Specs Banner */}
@@ -784,7 +784,7 @@ export function Tests() {
                 <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>
                   ✍️ Phạm vi Hán tự (Kanji)
                 </strong>
-                4 bộ Hán tự 3A, 3B, 4A, 4B (Cách đọc chữ Hán, Cách viết chữ Hán, Ý nghĩa và Từ ghép thực tế Bài 6 ～ 9).
+                Hán tự tới Bài 6 gồm 5A, 5B, 6A, 6B (Cách đọc chữ Hán, Cách viết chữ Hán, Ý nghĩa và Từ ghép thực tế).
               </div>
               <div style={{ background: 'var(--surface-sunken)', padding: '10px 14px', borderRadius: '8px' }}>
                 <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>

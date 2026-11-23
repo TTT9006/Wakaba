@@ -1,3 +1,49 @@
+## CẬP NHẬT PHẠM VI HÁN TỰ 4 ĐỀ ÔN THI CUỐI KỲ (JAN01) TỚI BÀI 6 (5A, 5B, 6A, 6B) — 23/11/2026
+
+- **Yêu cầu & Mục tiêu từ Người dùng:**
+  - Cập nhật lại phần kiểm tra Hán tự (câu 1 đến câu 12) của trọn bộ 4 đề thi Cuối kỳ (`jlpt-final-jan01-01` đến `04`) trong phân hệ Luyện đề.
+  - Phạm vi kiến thức Hán tự chỉ giới hạn **tới Bài 6** (dựa trên 4 tệp bài giảng PDF đính kèm: `漢字5A`, `漢字5B`, `漢字6A`, `漢字6B`).
+  - Loại bỏ hoàn toàn các chữ Hán từ Bài 7 đến Bài 9 (như `食`, `飲`, `肉`, `魚`, `卵`, `書`, `読`, `買`, `友`, `映`, `画`, `音`, `楽`, `歌`, `手`, `紙`, `好`, `旅`).
+  - Bổ sung lời giải thích chi tiết tiếng Việt và tắt chú thích (`annotationDisabled: true`) cho toàn bộ các câu hỏi Hán tự.
+
+- **Chi tiết 21 Chữ Hán & Từ vựng được áp dụng trong 48 câu Hán tự mới:**
+  - **Bài 5A (6 chữ):**
+    - `行`: 行きます (いきます), 銀行員 (ぎんこういん).
+    - `来`: 来ます (きます), 来年 (らいねん), 来月 (らいげつ).
+    - `校`: 学校 (がっこう).
+    - `週`: 先週 (せんしゅう), 今週 (こんしゅう), 来週 (らいしゅう), 毎週 (まいしゅう).
+    - `去`: 去年 (きょねん).
+    - `年`: 今年 (ことし).
+  - **Bài 5B (5 chữ):**
+    - `駅`: 駅 (えき), 駅前 (えきまえ).
+    - `電`: 電車 (でんしゃ).
+    - `車`: 車 (くるま), 電車 (でんしゃ).
+    - `自`: 自分 (じぶん), 自転車 (じてんしゃ).
+    - `転`: 自転車 (じてんしゃ).
+  - **Bài 6A (4 chữ):**
+    - `高`: 高い (たかい), 高校生 (こうこうせい).
+    - `安`: 安い (やすい), 安かった (やすかった).
+    - `大`: 大きい (おおきい), 大学生 (だいがくせい).
+    - `小`: 小さい (ちいさい), 小学校 (しょうがっこう).
+  - **Bài 6B (6 chữ):**
+    - `新`: 新しい (あたらしい), 新聞 (しんぶん).
+    - `古`: 古い (ふるい).
+    - `青`: 青 (あお), 青い (あおい).
+    - `白`: 白 (しろ), 白い (しろい).
+    - `赤`: 赤 (あか), 赤い (あかい).
+    - `黒`: 黒 (くろ), 黒い (くろい).
+
+- **Thực hiện Kỹ thuật:**
+  1. `packages/shared/jlpt-papers-final-jan01.ts`: Thay thế 48 câu hỏi Hán tự (Q1 đến Q12 của cả 4 đề `01`, `02`, `03`, `04`) bằng các câu hỏi chuẩn hóa bám sát 21 chữ Hán Bài 5A–6B. Cập nhật `description` của cả 4 đề.
+  2. `apps/web/src/pages/tests.tsx`: Cập nhật mô tả phân hệ Cuối kỳ và thẻ banner "✍️ Phạm vi Hán tự (Kanji)" từ "3A, 3B, 4A, 4B" thành "Hán tự tới Bài 6 (5A, 5B, 6A, 6B)".
+  3. Kiểm tra tự động bằng script (`scripts/verify_kanji_scope.py`): Đạt 0 vi phạm (0 forbidden kanji).
+
+- **Kết quả Kiểm thử:**
+  - Build: `npm.cmd run build` hoàn thành xuất sắc 100% (Vite, TypeScript, esbuild, từ điển).
+  - Unit tests: `npm.cmd test` đạt **17/17 test files, 156/156 tests PASS 100%**.
+
+---
+
 ## TÍCH HỢP 4 ĐỀ ÔN THI CUỐI KỲ (JAN01) BÀI 6–9 & QUY TRÌNH KIỂM THỬ XÁC THỰC TOÀN DIỆN TRƯỚC VÀ SAU PUSH — 23/11/2026
 
 - **Yêu cầu & Tính năng đã thực hiện:**
