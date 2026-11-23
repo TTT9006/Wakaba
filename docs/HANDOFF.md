@@ -1,3 +1,48 @@
+## TÍCH HỢP DATA KANJI JLPT N5–N1, SỰ CỐ TRUY XUẤT SAU PUSH & BÀI HỌC KINH NGHIỆM — 23/11/2026
+
+- **Yêu cầu & Tính năng đã thực hiện:**
+  - Tích hợp toàn bộ dữ liệu 2.220 chữ Kanji từ JLPT N5 đến N1 (từ repo `trankhoi172/kanjiN5_N1`) vào hệ thống Wakaba.
+  - Chuẩn hóa 57 chữ Hán giản thể (Trung Quốc) về dạng Shinjitai chuẩn Nhật (`员` → `員`, `问` → `問`, `图` → `図`, `场` → `場`, `卖` → `売`...).
+  - Bổ sung âm Hán-Việt, âm On/Kun, số nét, nghĩa và 100% hoạt ảnh nét vẽ (strokes) cho N5, N4, N3 từ KanjiVG.
+  - Nâng cấp tính năng Luyện viết chữ (`/writing`): chọn Kanji theo cấp JLPT, lưới chữ kèm âm Hán-Việt in hoa, tìm kiếm lọc nhanh, nhúng bảng thứ tự nét vẽ trực tiếp trên canvas.
+  - Nâng cấp Từ điển (`/dictionary`): thẻ tra cứu nhanh Kanji kèm nút "Luyện viết", shortcut viết chữ Hán trong từng thẻ từ vựng.
+  - Nâng cấp Chi tiết Kanji (`/kanji/:character`): hiển thị âm Hán-Việt, cấp độ JLPT, nút chuyển nhanh sang luyện viết.
+
+- **SỰ CỐ XẢY RA KHI PUSH LÊN PRODUCTION & NGUYÊN NHÂN GỐC RỄ (RCA):**
+  - **Hiện tượng:** Sau khi push commit `ae407eb` lên GitHub `main`, người dùng truy cập trang `/writing` thì các nút cấp độ chỉ hiện `N5`, `N4` (mất số lượng trong ngoặc) và bảng vẽ báo dòng chữ `Không tìm thấy chữ Kanji phù hợp.`.
+  - **Nguyên nhân 1 - Đặt nhầm vị trí Route Backend (Bị chặn bởi Auth Middleware):**
+    - Trong `apps/api/src/app.ts`, route `/api/kanji/jlpt` được đặt sau dòng `app.use('/api', auth)`. Dữ liệu từ điển/Kanji vốn là tài nguyên dùng chung, nhưng do nằm sau middleware xác thực nên request bị chặn lại với lỗi `401 Unauthorized` (`{"error":"Vui lòng đăng nhập để tiếp tục."}`) nếu cookie session không hợp lệ hoặc chưa sẵn sàng.
+  - **Nguyên nhân 2 - Lệch pha thời gian Deploy giữa Frontend (Vercel) và Backend (Render):**
+    - Frontend trên Vercel build bằng Vite và deploy xong chỉ trong ~20 giây.
+    - Trong khi đó, Backend trên Render (gói Free) phải build lại Dockerfile từ đầu (`npm ci`, `prisma generate`, `esbuild`, `vacuum sqlite`), mất từ 3 đến 6 phút.
+    - Trong khoảng thời gian Render đang build Docker bản mới, server Render vẫn đang chạy code cũ (chưa có route `/api/kanji/jlpt`). Route này bị rơi vào handler fallback `/api/kanji/:character` với `character = 'jlpt'`, dẫn đến trả về lỗi `404 Not Found` (`{"error":"Chưa có dữ liệu Kanji này."}`).
+  - **Nguyên nhân 3 - Phụ thuộc API động cho dữ liệu hoàn toàn tĩnh (Over-engineering):**
+    - Bộ dữ liệu 2.220 chữ Kanji là dữ liệu cố định (static dataset, dung lượng nén chỉ ~850KB), nhưng ban đầu lại được thiết kế phụ thuộc 100% vào việc gọi API động tới server Render. Khi backend Render gặp sự cố trễ hoặc cold-start, toàn bộ UI frontend bị block theo.
+  - **Nguyên nhân 4 - Thiếu UI Loading State ở Frontend:**
+    - Trong `apps/web/src/pages/writing.tsx`, khi hook `useQuery` chưa nhận được data (`jlptData` đang `undefined`), hàm lọc `filteredKanji` ngay lập tức trả về mảng rỗng `[]`, khiến giao diện render ngay thông báo `Không tìm thấy chữ Kanji phù hợp.` thay vì hiển thị trạng thái "Đang tải...".
+
+- **GIẢI PHÁP ĐÃ XỬ LÝ TRIỆT ĐỂ (Commit `01fe077`):**
+  1. **Tĩnh hóa dữ liệu đưa lên Vercel Edge CDN (`public/data/jlpt.json`):**
+     - Đóng gói và nén minified file `jlpt.json` đặt vào `public/data/jlpt.json` (~850KB). Khi Vercel build, file này được phân phối ngay tại CDN Edge toàn cầu của Vercel.
+     - Tại `apps/web/src/pages/writing.tsx`, triển khai cơ chế **Dual-Fetch thông minh**: ưu tiên tải trực tiếp từ CDN `/data/jlpt.json` (tốc độ ~50ms, không phụ thuộc backend, không bao giờ lỗi 401/404); nếu thất bại mới fallback về API `/api/kanji/jlpt`.
+  2. **Mở Public các Route tra cứu Kanji trên Backend:**
+     - Đưa toàn bộ các route `/api/kanji/jlpt`, `/api/kanji/search`, `/api/kanji/:character`, `/api/kanji/:character/strokes` lên **TRƯỚC** dòng `app.use('/api', auth)` trong `apps/api/src/app.ts`. Đảm bảo các tính năng từ điển, tra cứu nét chữ luôn mở công khai.
+  3. **Thêm UI Loading State & Tự động chọn chữ đầu tiên:**
+     - Bổ sung thông báo `Đang tải danh sách chữ Kanji…` khi `jlptLoading` đang diễn ra, loại bỏ hoàn toàn việc hiển thị nhầm thông báo rỗng.
+     - Tự động gán ký tự Kanji đầu tiên của cấp độ (ví dụ `一` của N5) khi người dùng bấm chuyển sang tab Kanji.
+
+- **QUY TẮC CỐT LÕI ĐỂ KHÔNG BAO GIỜ LẶP LẠI SAI SÓT NÀY:**
+  1. **Dữ liệu tĩnh phải luôn ưu tiên phục vụ từ CDN (`public/`):**
+     - Mọi danh mục dữ liệu tham chiếu (từ điển JLPT, danh mục Kanji, bảng chữ cái, ngữ pháp tĩnh) không được phụ thuộc độc quyền vào REST API backend. Phải đóng gói vào `public/data/` để Vercel CDN phục vụ tức thì.
+  2. **Phân định ranh giới Public API vs Authenticated API:**
+     - Các endpoint tra cứu công cộng (Từ điển, Kanji, TTS, Tra cứu bộ thủ, Nét vẽ) TUYỆT ĐỐI KHÔNG ĐẶT SAU middleware `auth`. Middleware `auth` chỉ áp dụng cho dữ liệu riêng tư của người dùng (tiến độ học, kết quả thi, lưu thẻ, bookmark, lịch ôn).
+  3. **Lưu ý kiến trúc tách rời Vercel (Frontend) & Render (Backend):**
+     - Vercel deploy trong ~30s, Render deploy mất 3-6 phút và có cơ chế ngủ (cold sleep). Frontend không bao giờ được giả định backend bản mới đã live cùng lúc với frontend bản mới. Mọi thay đổi API backend có ảnh hưởng tới frontend phải có cơ chế fallback hoặc tương thích ngược (backward compatible).
+  4. **Luôn có Loading Skeleton / Loading State cho `useQuery`:**
+     - Không bao giờ dùng mảng rỗng `[]` làm giá trị mặc định để hiển thị "Không tìm thấy" khi query vẫn đang ở trạng thái `isLoading`.
+
+---
+
 ## BẢNG XẾP HẠNG LUÔN CẬP NHẬT TỨC THÌ KHI HỌC XONG — 13/11/2026
 
 - **Yêu cầu & Phản ánh từ Người dùng:**
