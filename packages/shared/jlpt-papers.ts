@@ -238,6 +238,7 @@ import { jlptN1Paper202307 } from './jlpt-papers-n1-2023-07';
 import { jlptN1Paper202212 } from './jlpt-papers-n1-2022-12';
 import { jlptN1Paper202207 } from './jlpt-papers-n1-2022-07';
 import { midtermJan01Papers } from './jlpt-papers-midterm-jan01';
+import { finalJan01Papers } from './jlpt-papers-final-jan01';
 
 export const jlptPracticePapers = (['N5', 'N4', 'N3', 'N2'] as const).map(makePaper);
 export const jlptOfficialPapers: JlptPaper[] = [
@@ -265,7 +266,7 @@ export const jlptOfficialPapers: JlptPaper[] = [
   jlptN1Paper202212,
   jlptN1Paper202207,
 ];
-export const jlptPapers: JlptPaper[] = [...jlptPracticePapers, ...jlptOfficialPapers, ...midtermJan01Papers];
+export const jlptPapers: JlptPaper[] = [...jlptPracticePapers, ...jlptOfficialPapers, ...midtermJan01Papers, ...finalJan01Papers];
 export function paperSummary(p: JlptPaper): JlptSummary {
   return {
     id: p.id,
@@ -276,6 +277,7 @@ export function paperSummary(p: JlptPaper): JlptSummary {
     keySource: p.keySource || p.answerSource,
     isPracticeExam: p.isPracticeExam,
     isMidterm: p.isMidterm || p.id.includes('midterm'),
+    isFinal: p.isFinal || p.id.includes('final'),
     isDuplicateAudio: p.isDuplicateAudio,
     duplicateNote: p.duplicateNote,
     isHidden: p.isHidden,

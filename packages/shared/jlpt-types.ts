@@ -48,6 +48,7 @@ export type JlptPaper = {
   answerSource?: AnswerSource;
   isPracticeExam?: boolean; // Eligible for "Luyện thi" (has all 3 components: vocab/grammar, reading, listening + answers)
   isMidterm?: boolean;
+  isFinal?: boolean;
   isDuplicateAudio?: boolean;
   duplicateNote?: string;
   isHidden?: boolean;
@@ -65,6 +66,7 @@ export type JlptSummary = {
   keySource?: AnswerSource;
   isPracticeExam?: boolean;
   isMidterm?: boolean;
+  isFinal?: boolean;
   isDuplicateAudio?: boolean;
   duplicateNote?: string;
   isHidden?: boolean;

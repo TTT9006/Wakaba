@@ -1,3 +1,34 @@
+## TÍCH HỢP 4 ĐỀ ÔN THI CUỐI KỲ (JAN01) BÀI 6–9 & QUY TRÌNH KIỂM THỬ XÁC THỰC TOÀN DIỆN TRƯỚC VÀ SAU PUSH — 23/11/2026
+
+- **Yêu cầu & Tính năng đã thực hiện:**
+  - Xây dựng trọn bộ 4 đề ôn thi Cuối kỳ (`jlpt-final-jan01-01` đến `04`) cho học phần Tiếng Nhật 1 - Khóa JAN01 (Đại học FPT).
+  - Cấu trúc chuẩn 70 phút / 100 điểm:
+    - Phần I: Kiến thức ngôn ngữ & Đọc hiểu (60 phút, 50 câu / 80 điểm) gồm: Hán tự 12 câu (Kanji 3A, 3B, 4A, 4B); Từ vựng 10 câu (Katakana và điền từ Bài 6–9); Ngữ pháp 25 câu (Dấu sao ★, Trợ từ を, で, に, と, が, から, Nghi vấn từ & phó từ); Đọc hiểu 3 câu (đoạn văn và tra cứu bảng biểu).
+    - Phần II: Nghe hiểu (10 phút, 15 câu / 20 điểm) gồm: 6 câu hình ảnh/tình huống, 4 câu chi tiết đối thoại, 5 câu phản xạ hỏi đáp.
+  - Tuyển chọn 60 file âm thanh MP3 thi thật JLPT độc bản, đảm bảo 0% trùng lặp với 118 audio của 8 đề giữa kỳ.
+  - Toàn bộ 260 câu hỏi có kèm lời thoại tiếng Nhật (`transcript`), đáp án chuẩn xác và giải thích chi tiết tiếng Việt (`explanation`).
+  - Giao diện Web: Bổ sung Tab `[ Ôn thi Cuối kỳ (JAN01) · 4 đề mới ]`, banner quy chuẩn đề thi và lưới thẻ bài thi màu xanh dương (`var(--ocean)`).
+
+- **SỰ CỐ ÂM THANH TRÊN VERCEL PRODUCTION & GIẢI PHÁP TRIỆT ĐỂ (RCA):**
+  - **Hiện tượng:** Trước đây các file âm thanh `public/audio/` bị đưa vào `.gitignore` do lo ngại kích thước repo, dẫn đến khi Vercel build không có file mp3 nào trên CDN. Khi thí sinh nghe trên Vercel, request tới `/audio/...` nhận về `text/html` (SPA fallback), khiến âm thanh bị lỗi hoặc phải fallback về giọng đọc máy tổng hợp TTS. Ở chế độ xem lại bài làm (Review Attempt), thẻ `<audio>` tĩnh hoàn toàn không phát được.
+  - **Giải pháp xử lý:**
+    1. Đưa 178 file âm thanh MP3 thi thật (60 câu cuối kỳ + 118 câu giữa kỳ, dung lượng nén ~134MB hoàn toàn nằm trong giới hạn cho phép của GitHub) vào git tracking trực tiếp (`git add -f public/audio/jlpt/...`). Khi Vercel build, Vite tự động copy toàn bộ vào `dist/audio/` để Vercel Edge CDN phân phối trực tiếp với `Content-Type: audio/mpeg`.
+    2. Nâng cấp bộ phát audio xem lại bài làm (`apps/web/src/pages/tests.tsx`): Tích hợp cơ chế fallback tự động `onError` -> chuyển sang Edge TTS (`/api/tts?text=...`) từ transcript câu hỏi nếu đường truyền mạng gặp sự cố.
+    3. Bộ phát phòng thi (`apps/web/src/pages/jlpt.tsx`): Đảm bảo 3 tầng phục hồi: Real MP3 CDN -> Microsoft Edge TTS Backend -> Web Speech API nội tại trình duyệt.
+
+- **QUY TRÌNH CHUẨN XÁC THỰC MỖI KHI HOÀN THÀNH TÍNH NĂNG (SOP):**
+  1. **Local Build & Test:** Chạy `npm.cmd run build` (tsc, vite, esbuild, dictionary) và `npm.cmd test` (100% tests pass).
+  2. **Asset & Path Audit:** Kiểm tra 100% file tĩnh (audio, json, image) tồn tại cả trong `public/` và `dist/`, không bị thiếu do `.gitignore`.
+  3. **Data Integrity Check:** Kiểm tra đáp án nằm trong options, transcript, prompt, explanation đầy đủ.
+  4. **Git Commit & Push:** Commit với thông điệp rõ ràng, push lên `origin main`.
+  5. **Production Verification:** Truy cập trực tiếp URL Production (`https://wakaba-pink.vercel.app/`):
+     - Kiểm tra giao diện hiển thị đúng Tab, thẻ đề thi, số lượng câu hỏi và thời gian.
+     - Kiểm tra dữ liệu bài thi load thông suốt (không bị lỗi 401/404/CORS).
+     - Kiểm tra file âm thanh tải với HTTP 200 `audio/mpeg` và nghe rõ ràng.
+     - Thử nộp bài và xem lại kết quả chi tiết kèm giải thích.
+
+---
+
 ## TÍCH HỢP DATA KANJI JLPT N5–N1, SỰ CỐ TRUY XUẤT SAU PUSH & BÀI HỌC KINH NGHIỆM — 23/11/2026
 
 - **Yêu cầu & Tính năng đã thực hiện:**

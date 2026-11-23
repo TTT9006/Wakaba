@@ -216,12 +216,17 @@ export function Tests() {
   const [reviewFilter, setReviewFilter] = useState<'all' | 'wrong' | 'correct'>('all');
   const [selectedExamLevel, setSelectedExamLevel] = useState<string>('all');
   const [searchParams, setSearchParams] = useSearchParams();
-  const initialTab = searchParams.get('tab') === 'midterm' ? 'midterm' : 'jlpt';
-  const [activeTab, setActiveTab] = useState<'jlpt' | 'midterm'>(initialTab);
+  const initialTab =
+    searchParams.get('tab') === 'midterm'
+      ? 'midterm'
+      : searchParams.get('tab') === 'final'
+      ? 'final'
+      : 'jlpt';
+  const [activeTab, setActiveTab] = useState<'jlpt' | 'midterm' | 'final'>(initialTab);
 
-  const handleTabChange = (tab: 'jlpt' | 'midterm') => {
+  const handleTabChange = (tab: 'jlpt' | 'midterm' | 'final') => {
     setActiveTab(tab);
-    setSearchParams(tab === 'midterm' ? { tab: 'midterm' } : {});
+    setSearchParams(tab === 'jlpt' ? {} : { tab });
   };
 
   const { data, isLoading, error } = useQuery({
@@ -268,8 +273,15 @@ export function Tests() {
   });
 
   const allExams = data || [];
-  const jlptExams = allExams.filter((t) => !t.isMidterm && !t.isHidden);
-  const midtermExams = allExams.filter((t) => t.isMidterm && !t.isHidden);
+  const jlptExams = allExams.filter(
+    (t) => !t.isMidterm && !t.isFinal && !t.id.includes('midterm') && !t.id.includes('final') && !t.isHidden,
+  );
+  const midtermExams = allExams.filter(
+    (t) => (t.isMidterm || t.id.includes('midterm')) && !t.isFinal && !t.id.includes('final') && !t.isHidden,
+  );
+  const finalExams = allExams.filter(
+    (t) => (t.isFinal || t.id.includes('final')) && !t.isHidden,
+  );
 
   const examLevels = ['N5', 'N4', 'N3', 'N2', 'N1'] as const;
   const examCounts = {
@@ -347,12 +359,41 @@ export function Tests() {
               fontWeight: 700,
             }}
           >
-            {midtermExams.length} đề mới
+            {midtermExams.length} đề
+          </span>
+        </button>
+        <button
+          role="tab"
+          aria-selected={activeTab === 'final'}
+          className={activeTab === 'final' ? 'active' : ''}
+          onClick={() => handleTabChange('final')}
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            fontSize: '15px',
+            fontWeight: 600,
+            padding: '10px 18px',
+            borderRadius: '8px',
+            borderColor: activeTab === 'final' ? 'var(--ocean)' : undefined,
+          }}
+        >
+          <Trophy size={18} />
+          <span>Ôn thi Cuối kỳ (JAN01)</span>
+          <span
+            className="tab-badge"
+            style={{
+              background: activeTab === 'final' ? 'var(--ocean)' : 'var(--surface-sunken)',
+              color: activeTab === 'final' ? '#fff' : 'inherit',
+              fontWeight: 700,
+            }}
+          >
+            {finalExams.length} đề mới
           </span>
         </button>
       </div>
 
-      {activeTab === 'jlpt' ? (
+      {activeTab === 'jlpt' && (
         <>
           <PageHeader
             eyebrow="BIẾT MÌNH ĐÃ ĐI ĐƯỢC BAO XA"
@@ -538,7 +579,9 @@ export function Tests() {
             .
           </p>
         </>
-      ) : (
+      )}
+
+      {activeTab === 'midterm' && (
         <>
           {/* Dedicated Midterm Practice Section */}
           <PageHeader
@@ -691,6 +734,164 @@ export function Tests() {
 
           <p className="spaced">
             Đề thi giữa kỳ khóa JAN01 được biên soạn chuẩn theo định dạng đề thi đại học với 100 điểm trong 70 phút.
+            Học viên làm bài thi theo đúng quy chế bấm giờ từng phần (Phần I: 60 phút, Phần II: 10 phút) và xem kết quả giải thích chi tiết ngay sau khi nộp bài.
+          </p>
+        </>
+      )}
+
+      {activeTab === 'final' && (
+        <>
+          {/* Dedicated Final Practice Section */}
+          <PageHeader
+            eyebrow="CHUẨN HỌC PHẦN TIẾNG NHẬT 1 · KHÓA JAN01"
+            title="Ôn thi Cuối kỳ (JAN01)"
+            description="Bộ 4 đề thi thử cuối kỳ theo chuẩn cấu trúc 100 điểm (70 phút) bám sát 100% phạm vi Minna no Nihongo Bài 6 ～ 9 & Hán tự 3A, 3B, 4A, 4B. Gồm 2 phần: Kiến thức ngôn ngữ & Đọc hiểu (60 phút, 50 câu) và Nghe hiểu (10 phút, 15 câu với audio thi thật JLPT độc bản, không trùng lặp)."
+          />
+
+          {/* Final Syllabus & Format Specs Banner */}
+          <div
+            style={{
+              padding: '16px 20px',
+              backgroundColor: 'var(--surface)',
+              borderRadius: '10px',
+              border: '1px solid var(--line)',
+              marginBlock: '16px 24px',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
+              <Trophy size={20} style={{ color: 'var(--ocean)', flexShrink: 0 }} />
+              <strong style={{ fontSize: '15px', color: 'var(--ink)' }}>
+                Quy chuẩn đề thi cuối kỳ Khóa JAN01 (Đại học FPT)
+              </strong>
+            </div>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+                gap: '12px',
+                fontSize: '13px',
+                lineHeight: 1.5,
+                color: 'var(--muted)',
+              }}
+            >
+              <div style={{ background: 'var(--surface-sunken)', padding: '10px 14px', borderRadius: '8px' }}>
+                <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>
+                  📖 Phạm vi Ngữ pháp & Từ vựng
+                </strong>
+                Minna no Nihongo Bài 6 ～ 9 (Ngoại động từ を; Địa điểm hành động で; Rủ rê ～ませんか/～ましょう; Cho nhận あげます/もらいます; Đã làm もう～ました; Tính từ đuôi な và い; Sở thích/năng khiếu が 好き/上手; Lý do から).
+              </div>
+              <div style={{ background: 'var(--surface-sunken)', padding: '10px 14px', borderRadius: '8px' }}>
+                <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>
+                  ✍️ Phạm vi Hán tự (Kanji)
+                </strong>
+                4 bộ Hán tự 3A, 3B, 4A, 4B (Cách đọc chữ Hán, Cách viết chữ Hán, Ý nghĩa và Từ ghép thực tế Bài 6 ～ 9).
+              </div>
+              <div style={{ background: 'var(--surface-sunken)', padding: '10px 14px', borderRadius: '8px' }}>
+                <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>
+                  ⏱️ Thang điểm & Thời gian
+                </strong>
+                100 điểm / 70 phút: Phần I Kiến thức ngôn ngữ & Đọc hiểu (60 phút, 50 câu) + Phần II Nghe hiểu (10 phút, 15 câu).
+              </div>
+              <div style={{ background: 'var(--surface-sunken)', padding: '10px 14px', borderRadius: '8px' }}>
+                <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>
+                  🎧 Âm thanh chuẩn thi thật JLPT
+                </strong>
+                100% audio trích từ đề JLPT N5/N4 thật, 60 audio độc bản hoàn toàn không trùng với các đề giữa kỳ.
+              </div>
+            </div>
+          </div>
+
+          {isLoading ? (
+            <Loading />
+          ) : error ? (
+            <ErrorState error={error} />
+          ) : (
+            <div className="test-grid">
+              {finalExams.map((t, i) => (
+                <Link
+                  className="test-card test-card-official"
+                  to={'/tests/' + t.id}
+                  key={t.id}
+                  style={{
+                    borderColor: 'var(--ocean)',
+                    boxShadow: '0 2px 10px rgba(0, 150, 255, 0.08)',
+                  }}
+                >
+                  <div
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      marginBottom: '8px',
+                      gap: '8px',
+                      flexWrap: 'wrap',
+                    }}
+                  >
+                    <span className="eyebrow" style={{ margin: 0, color: 'var(--ocean)', fontWeight: 700 }}>
+                      CUỐI KỲ JAN01 · ĐỀ SỐ 0{i + 1}
+                    </span>
+                    <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
+                      <span
+                        className="tag"
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '4px',
+                          color: 'var(--jade)',
+                          borderColor: 'var(--jade)',
+                          padding: '2px 8px',
+                          borderRadius: '4px',
+                          fontSize: '11px',
+                          fontWeight: 600,
+                        }}
+                      >
+                        <CheckCircle size={12} />
+                        Chuẩn 100 điểm
+                      </span>
+                      <span
+                        className="tag"
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '4px',
+                          color: 'var(--ocean)',
+                          borderColor: 'var(--ocean)',
+                          padding: '2px 8px',
+                          borderRadius: '4px',
+                          fontSize: '11px',
+                          fontWeight: 600,
+                        }}
+                      >
+                        <Headphones size={12} />
+                        Audio JLPT độc bản
+                      </span>
+                    </div>
+                  </div>
+                  <span className="test-number" style={{ color: 'var(--ocean)' }}>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <h2>{t.title}</h2>
+                  <p>
+                    {t.total} câu · {t.minutes} phút · {t.sections.length} phần thi
+                  </p>
+                  <ul className="jlpt-card-sections">
+                    {t.sections.map((s) => (
+                      <li key={s.id}>
+                        {s.title}: {s.minutes} phút ({s.count} câu)
+                      </li>
+                    ))}
+                  </ul>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 'auto', color: 'var(--ocean)', fontWeight: 600 }}>
+                    <span>Vào làm bài thi cuối kỳ</span>
+                    <ArrowRight size={19} />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
+
+          <p className="spaced">
+            Đề thi cuối kỳ khóa JAN01 được biên soạn chuẩn theo định dạng đề thi học phần tiếng Nhật 1 với 100 điểm trong 70 phút.
             Học viên làm bài thi theo đúng quy chế bấm giờ từng phần (Phần I: 60 phút, Phần II: 10 phút) và xem kết quả giải thích chi tiết ngay sau khi nộp bài.
           </p>
         </>
@@ -887,7 +1088,22 @@ export function Tests() {
 
                     {r.audioUrl && (
                       <div className="jlpt-audio-player" style={{ marginBlock: '8px' }}>
-                        <audio controls preload="auto" src={r.audioUrl} className="jlpt-audio-element" />
+                        <audio
+                          controls
+                          preload="auto"
+                          src={r.audioUrl}
+                          className="jlpt-audio-element"
+                          onError={(e) => {
+                            if (r.transcript) {
+                              const target = e.currentTarget;
+                              const ttsUrl = `/api/tts?text=${encodeURIComponent(r.transcript)}`;
+                              if (target.src !== ttsUrl) {
+                                target.src = ttsUrl;
+                                target.load();
+                              }
+                            }
+                          }}
+                        />
                       </div>
                     )}
 
