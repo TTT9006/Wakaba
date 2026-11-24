@@ -23,7 +23,13 @@ describe('Original full-length JLPT practice papers', () => {
         ).toHaveLength(1);
         expect(new Set(q.options).size, q.id).toBe(q.options.length);
         expect(q.options.length, q.id).toBeGreaterThanOrEqual(3);
-        expect(q.annotationDisabled, q.id).toBe(true);
+        if (paper.isFinal) {
+          if (q.group.startsWith('Hán tự')) {
+            expect(q.annotationDisabled, q.id).toBe(true);
+          }
+        } else {
+          expect(q.annotationDisabled, q.id).toBe(true);
+        }
         expect(q.explanation.length, q.id).toBeGreaterThan(10);
         if (q.category === 'reading') expect(q.passage?.length ?? 0, `${paper.id} ${q.id}`).toBeGreaterThan(50);
         if (q.category === 'listening') expect(q.transcript?.length, q.id).toBeGreaterThan(10);

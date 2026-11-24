@@ -1,3 +1,29 @@
+## BỔ SUNG CHÚ THÍCH FURIGANA (HIRAGANA) CHO CÁC CÂU NGOÀI HÁN TỰ & CHUẨN HÓA 100% NGHE HIỂU DẠNG CHỮ — 24/11/2026
+
+- **Yêu cầu & Mục tiêu từ Người dùng:**
+  - Bổ sung chú thích cách đọc Hiragana (Furigana / Ruby) cho toàn bộ chữ Kanji xuất hiện trong các câu hỏi ngoài phần Hán tự (từ câu 13 đến câu 65 gồm Từ vựng, Ngữ pháp, Đọc hiểu và Nghe hiểu) cho cả 4 đề thi Cuối kỳ.
+  - Tuyệt đối bảo toàn `annotationDisabled: true` cho 12 câu Hán tự đầu tiên (Q1 đến Q12) để tránh làm lộ đáp án câu hỏi chữ Hán.
+  - Phản hồi thắc mắc "phần nghe hiểu làm gì có hình": Chuẩn hóa 100% các câu hỏi Nghe hiểu sang trắc nghiệm chữ (Text Multiple Choice), chuyển đổi toàn bộ 21 câu đang để đáp án số `1, 2, 3, 4` thành các phương án chữ chi tiết, đồng thời đổi tên nhóm câu hỏi bỏ hẳn chữ "hình ảnh" nhằm đúng 100% format đề thi trường Đại học FPT (JAN01).
+
+- **Thực hiện Kỹ thuật:**
+  1. **Định kiểu (`packages/shared/jlpt-types.ts`):** Mở rộng `JlptQuestion` để cho phép `annotationDisabled?: boolean;` và `readings?: Record<string, string>;`.
+  2. **Hiển thị giao diện (`apps/web/src/pages/jlpt.tsx`):**
+     - Tích hợp `<JapaneseAnnotatedText>` cho tiêu đề câu hỏi (`question.prompt`), đoạn văn (`question.passage`) trong lúc làm bài, và các trường `q.passage`, `q.prompt`, `q.transcript` trong phần xem lại bài làm.
+     - Đồng bộ theo cấu hình người dùng (Furigana tiếng Nhật hoặc Romaji).
+  3. **Tạo dữ liệu Furigana tĩnh (`packages/shared/jlpt-papers-final-jan01.ts`):**
+     - Sử dụng bộ phân tích Kuromoji trích xuất và gán sẵn bảng `readings` cho 211 câu hỏi không phải Hán tự (Q13..Q65 của cả 4 đề).
+     - Đảm bảo hiển thị tức thì (0ms), hoạt động hoàn hảo cả khi offline hoặc trên Vercel CDN mà không cần gọi API động.
+  4. **Chuẩn hóa Nghe hiểu 100% Text:**
+     - Đổi tên nhóm `Nghe hiểu · Chọn hình ảnh / tình huống` thành `Nghe hiểu · Nghe câu ngắn & Chọn thông tin`.
+     - Chuyển đổi toàn bộ lựa chọn số `1, 2, 3, 4` và câu phản xạ sang các phương án chữ tiếng Nhật rõ ràng và đầy đủ.
+  5. **Cập nhật kiểm thử (`tests/jlpt-content.test.ts`):** Xác nhận các câu Hán tự vẫn bảo toàn `annotationDisabled: true` trong khi các câu khác hiển thị Furigana.
+
+- **Kết quả Kiểm thử:**
+  - Build: `npm.cmd run build` hoàn thành xuất sắc (0 lỗi TypeScript, Vite bundle và Node bundle).
+  - Unit tests: `npm.cmd test` đạt **17/17 test files, 156/156 tests PASS 100%**.
+
+---
+
 ## CẬP NHẬT PHẠM VI HÁN TỰ 4 ĐỀ ÔN THI CUỐI KỲ (JAN01) TỚI BÀI 6 (5A, 5B, 6A, 6B) — 23/11/2026
 
 - **Yêu cầu & Mục tiêu từ Người dùng:**

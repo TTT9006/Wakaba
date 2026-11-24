@@ -20,7 +20,8 @@ export type JlptQuestion = {
   audioOptions?: boolean;
   audioUrl?: string;
   imageUrl?: string;
-  annotationDisabled: true;
+  annotationDisabled?: boolean;
+  readings?: Record<string, string>;
   // Audio sync metadata
   syncStatus?: SyncStatus;
   audioDuration?: number;

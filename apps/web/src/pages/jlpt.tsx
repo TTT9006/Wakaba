@@ -20,6 +20,7 @@ import {
 import { api, post, patch, speak, stopSpeech } from '../services/api';
 import { useUI } from '../stores/ui';
 import { Button, ErrorState, Loading, Modal, PageHeader } from '../components/ui';
+import { JapaneseAnnotatedText } from '../components/japanese-annotated-text';
 import { QuestionInput } from './tests';
 import type { JlptRunView, JlptSummary } from '../../../../packages/shared/jlpt-types';
 import { jlptPapers, paperSummary } from '../../../../packages/shared/jlpt-papers';
@@ -1144,17 +1145,33 @@ export function JlptSession() {
                     />
                   </div>
                 )}
-                <p className="jlpt-passage" lang="ja">
-                  {q.passage}
+                {q.passage && (
+                  <p className="jlpt-passage" lang="ja">
+                    <JapaneseAnnotatedText
+                      text={q.passage}
+                      disabled={q.annotationDisabled}
+                      readings={q.readings}
+                    />
+                  </p>
+                )}
+                <p lang="ja">
+                  <JapaneseAnnotatedText
+                    text={q.prompt}
+                    disabled={q.annotationDisabled}
+                    readings={q.readings}
+                  />
                 </p>
-                <p lang="ja">{q.prompt}</p>
                 <p>
                   Bạn chọn: {q.given || '—'} · Đáp án: {q.answer}
                 </p>
                 <p>{q.explanation}</p>
                 {q.transcript && (
                   <p className="jlpt-passage" lang="ja">
-                    {q.transcript}
+                    <JapaneseAnnotatedText
+                      text={q.transcript}
+                      disabled={q.annotationDisabled}
+                      readings={q.readings}
+                    />
                   </p>
                 )}
               </details>
@@ -1210,7 +1227,11 @@ export function JlptSession() {
                   </div>
                   {question.passage && (
                     <div className="jlpt-passage" lang="ja">
-                      {question.passage}
+                      <JapaneseAnnotatedText
+                        text={question.passage}
+                        disabled={question.annotationDisabled}
+                        readings={question.readings}
+                      />
                     </div>
                   )}
                   {question.imageUrl && (
@@ -1222,7 +1243,13 @@ export function JlptSession() {
                       />
                     </div>
                   )}
-                  <h2 lang="ja">{question.prompt}</h2>
+                  <h2 lang="ja">
+                    <JapaneseAnnotatedText
+                      text={question.prompt}
+                      disabled={question.annotationDisabled}
+                      readings={question.readings}
+                    />
+                  </h2>
                   {question.category === 'listening' && (
                     <ExamAudioPlayer
                       key={question.id}
