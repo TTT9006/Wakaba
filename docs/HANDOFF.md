@@ -1,3 +1,38 @@
+## BỔ SUNG TOÀN DIỆN HÌNH ẢNH MINH HỌA (IMAGEURL) CHO PHẦN NGHE HIỂU VÀ ĐÍNH CHÍNH QUY CHUẨN UIT (K21) — 24/11/2026
+
+- **Yêu cầu & Làm rõ từ Người dùng:**
+  - **Đính chính trường học:** Người dùng là sinh viên **Trường Đại học Công nghệ Thông tin - ĐHQG-HCM (UIT)**, Khóa **K21**, không phải trường FPT. Đã cập nhật toàn bộ tiêu đề, quy chuẩn đề thi giữa kỳ và cuối kỳ trên website từ "Đại học FPT" sang "UIT - K21".
+  - **Làm rõ lỗi phần nghe:** Người dùng phản hồi *"bạn đã hiểu sai ý tôi rồi, câu hỏi nghe kêu chọn hình ảnh chứ khong phải không được có ảnh"* và *"kêu chọn mà làm j có ảnh mà chọn"*:
+    - Các câu hỏi nghe hiểu Mondai 1 & Mondai 2 trích từ đề JLPT (như câu 51 Đề 01: người nam chơi môn thể thao nào nhiều nhất, hình 1 chạy bộ, hình 2 tennis, hình 3 bóng đá, hình 4 bơi lội) yêu cầu thí sinh nhìn tranh và chọn đáp án 1, 2, 3, 4.
+    - Trước đó dữ liệu câu hỏi trong `packages/shared/jlpt-papers-final-jan01.ts` bị thiếu thuộc tính `imageUrl`, dẫn đến giao diện không render hình ảnh minh họa để thí sinh nhìn và chọn.
+
+- **Thực hiện Kỹ thuật:**
+  1. **Đính chính thông tin trường học:**
+     - `apps/web/src/pages/tests.tsx`: Đổi `Quy chuẩn đề thi giữa kỳ Khóa JAN01 (Đại học FPT)` -> `(UIT - K21)`.
+     - `apps/web/src/pages/tests.tsx`: Đổi `Quy chuẩn đề thi cuối kỳ Khóa JAN01 (Đại học FPT)` -> `(UIT - K21)`.
+  2. **Bổ sung `imageUrl` cho 22 câu nghe hiểu:**
+     - `final-jan01-01`:
+       - Q51: `imageUrl: "/images/jlpt/n5-2024-07/listening_q08.png"`, options `["1", "2", "3", "4"]`, answer `"1"`.
+       - Q52: `imageUrl: "/images/jlpt/n5-2024-07/listening_q09.png"`, options `["1", "2", "3", "4"]`, answer `"4"`.
+       - Q53: `imageUrl: "/images/jlpt/n5-2024-07/listening_q10.png"`, options `["1", "2", "3", "4"]`, answer `"4"`.
+       - Q56: `imageUrl: "/images/jlpt/n5-2017-07/listening_q01.png"`, options `["1", "2", "3", "4"]`, answer `"2"`.
+       - Q58: `imageUrl: "/images/jlpt/n5-2017-07/listening_q05.png"`, options `["1", "2", "3", "4"]`, answer `"1"`.
+       - Q59: `imageUrl: "/images/jlpt/n5-2017-07/listening_q06.png"`, options `["1", "2", "3", "4"]`, answer `"4"`.
+       - Q61..Q64 (Mondai 3 có tranh tình huống & mũi tên): `listening_q14.png`, `listening_q15.png`, `listening_q16.png`, `listening_q17.png`.
+     - `final-jan01-02`:
+       - Q61..Q64: `imageUrl: "/images/jlpt/n5-2021-12/listening_q14.png"`, `q15.png`, `q16.png`, `q18.png`.
+     - `final-jan01-03`:
+       - Q62..Q65: `imageUrl: "/images/jlpt/n5-2013-07/listening_q14.png"`, `q15.png`, `q16.png`, `q18.png`.
+     - `final-jan01-04`:
+       - Q62..Q65: `imageUrl: "/images/jlpt/n5-2017-07/listening_q14.png"`, `q15.png`, `q16.png`, `q17.png`.
+  3. **Kiểm tra hiển thị:**
+     - Cả trong lúc làm bài (`question.imageUrl` trên `apps/web/src/pages/jlpt.tsx`) và khi xem lại giải thích bài thi (`q.imageUrl`), hình ảnh minh họa đều được hiển thị rõ nét với khung bo tròn, nền trắng, responsive chuẩn thiết bị di động và máy tính.
+  4. **Kiểm thử tự động:**
+     - `npm.cmd test`: **17/17 test files, 156/156 tests PASS 100%**.
+     - `npm.cmd run build`: 0 lỗi TypeScript, đóng gói thành công Vite và server.
+
+---
+
 ## BỔ SUNG CHÚ THÍCH FURIGANA (HIRAGANA) CHO CÁC CÂU NGOÀI HÁN TỰ & CHUẨN HÓA 100% NGHE HIỂU DẠNG CHỮ — 24/11/2026
 
 - **Yêu cầu & Mục tiêu từ Người dùng:**

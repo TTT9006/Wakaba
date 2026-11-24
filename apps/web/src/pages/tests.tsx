@@ -603,7 +603,7 @@ export function Tests() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
               <Sparkles size={20} style={{ color: 'var(--peach)', flexShrink: 0 }} />
               <strong style={{ fontSize: '15px', color: 'var(--ink)' }}>
-                Quy chuẩn đề thi giữa kỳ Khóa JAN01 (Đại học FPT)
+                Quy chuẩn đề thi giữa kỳ Khóa JAN01 (UIT - K21)
               </strong>
             </div>
             <div
@@ -761,7 +761,7 @@ export function Tests() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
               <Trophy size={20} style={{ color: 'var(--ocean)', flexShrink: 0 }} />
               <strong style={{ fontSize: '15px', color: 'var(--ink)' }}>
-                Quy chuẩn đề thi cuối kỳ Khóa JAN01 (Đại học FPT)
+                Quy chuẩn đề thi cuối kỳ Khóa JAN01 (UIT - K21)
               </strong>
             </div>
             <div
