@@ -1127,9 +1127,9 @@ export const finalJan01Paper02: JlptPaper = {
           category: "grammar",
           group: "Ngữ pháp · Sắp xếp câu (Dấu ★)",
           prompt: "わたしは _____ _____ ★ _____ ありません。",
-          options: ["スポーツが","あまり","好きじゃ","きらいじゃ"],
-          answer: "好きじゃ",
-          explanation: "Thứ tự đúng: わたしは [スポーツが] [あまり] ★[好きじゃ] ありません。(Tôi không thích thể thao lắm). Vị trí ★ là số 3:「好きじゃ」.",
+          options: ["スポーツが","あまり","好き","じゃ"],
+          answer: "好き",
+          explanation: "Thứ tự đúng: わたしは [スポーツが] [あまり] ★[好き] [じゃ] ありません。(Tôi không thích thể thao lắm). Vị trí ★ là số 3:「好き」.",
           readings: {"好":"す"},
         },
         {
